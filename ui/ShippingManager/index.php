@@ -55,7 +55,7 @@
     <h4>Most Recent Order</h4>
 
     <div class="container">
-        <?php include '../../php/OrderReceived/RenderOrderTable.php'?>
+        <?php include '../../php/OrderReceived/ViewOrderReceived.php' ?>
     </div>
 
 </section>
