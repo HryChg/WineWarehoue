@@ -17,13 +17,35 @@ CloseCon($conn);
 
     <title>The HTML5 Herald</title>
     <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="SitePoint">
-
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
 
 </head>
 
 <body>
+
+
 <h1> This is a test </h1>
+
+<!--action="sum.php" directs you to sum.php page-->
+<form action="sum.php" method="post">
+
+    <label>Value of A</label>
+
+    <input name="val-a" type="text" placeholder="Type Here">
+
+    <br>
+
+    <label>Value of B</label>
+
+    <input name="val-b" type="text" placeholder="Type Here">
+
+    <br>
+
+    <br>
+
+    <input type="submit" value="Show Sum">
+
+
+</form>
+
 </body>
 </html>
