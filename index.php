@@ -6,7 +6,6 @@ echo "Connected Successfully";
 CloseCon($conn);
 
 
-
 ?>
 
 
