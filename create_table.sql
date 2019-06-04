@@ -94,10 +94,10 @@ alcoholPercent REAL,
 acidity REAL, 
 sugarLevel REAL, 
 expiryDate DATE);
-INSERT INTO WineB VALUES(98412310, 55.50, 'white', 'Yellow Tail', 'chardonnay', 'pinot grigio', 15.0, 3.2, 0.5, DATE('2020-08-15'));
-INSERT INTO WineB VALUES(98412234, 100.99, 'white', 'Tavernello', 'pinot grigio', 'gewurztraminer', 14.2, 2.1, 0.4, DATE('2070-07-16'));
+INSERT INTO WineB VALUES(98412310, 55.50, 'white', 'Yellow Tail', 'chardonnay', 'chardonnay', 15.0, 3.2, 0.5, DATE('2020-08-15'));
+INSERT INTO WineB VALUES(98412234, 100.99, 'white', 'Tavernello', 'pinot grigio', 'sauvignon blanc', 14.2, 2.1, 0.4, DATE('2070-07-16'));
 INSERT INTO WineB VALUES(97802134, 20.50, 'white', 'Blue Nun', 'sauvignon blanc', 'chardonnay', 10.0, 2.5, 0.5, DATE('2085-01-01'));
-INSERT INTO WineB VALUES(97890456, 15.99, 'red', 'Armand de Brignac', 'cabernet sauvignon', 'shiraz', 11.0, 4.1, 0.2, DATE('2101-03-15'));
+INSERT INTO WineB VALUES(97890456, 15.99, 'red', 'Armand de Brignac', 'cabernet sauvignon', 'pinot noir', 11.0, 4.1, 0.2, DATE('2101-03-15'));
 INSERT INTO WineB VALUES(96458941, 12.50, 'red', 'Ecco Domani', 'merlot', 'shiraz', 11.5, 3.5, 0.3, DATE('2025-09-17'));
 
 CREATE TABLE Restock
