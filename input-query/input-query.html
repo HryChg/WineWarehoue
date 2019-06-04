@@ -1,0 +1,35 @@
+<form action="./input-query.php" method="post">
+
+    This Page returns the table OrderReceived.
+
+    </br>
+    <h1>Columns in OrderReceived table are :</h1>
+
+    <ul>
+        <li>orderID</li>
+        <li>employeeID</li>
+        <li>wineID</li>
+        <li>retailer</li>
+        <li>address</li>
+        <li>backorder</li>
+        <li>orderReceivedDate</li>
+    </ul>
+
+
+    <label>Enter Column Name with comma Separated</label>
+
+    <input name="OrderReceived_cols" type="text" placeholder="Type Here">
+
+    <br>
+
+    <label>Where orderID is </label>
+
+    <input name="orderID" type="text" placeholder="Type Here">
+
+    <br>
+
+    <br>
+
+    <input type="submit" value="Search">
+
+</form>
