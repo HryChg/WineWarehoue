@@ -38,15 +38,49 @@
     </div>
 </nav>
 
-<section>
-    <h4 class="center">What would you like to do today?</h4>
+<!--OPTIONS-->
+<section class="center">
+    <h4 >What would you like to do today?</h4>
+    <div class="row">
+        <a href="#" class="waves-effect waves-light btn brand">view</a>
+        <a href="#" class="waves-effect waves-light btn brand">add</a>
+        <a href="#" class="waves-effect waves-light btn brand">update</a>
+        <a href="#" class="waves-effect waves-light btn brand">delete</a>
+    </div>
+</section>
 
-    <div class="row center ">
-        <a class="waves-effect waves-light btn brand">view</a>
-        <a class="waves-effect waves-light btn brand">add</a>
-        <a class="waves-effect waves-light btn brand">update</a>
-        <a class="waves-effect waves-light btn brand">delete</a>
+<!--View of All Orders-->
+<section class="center">
+    <h5>Most Recent Order</h5>
 
+    <div class="container">
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Item Name</th>
+                <th>Item Price</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td>Alvin</td>
+                <td>Eclair</td>
+                <td>$0.87</td>
+            </tr>
+            <tr>
+                <td>Alan</td>
+                <td>Jellybean</td>
+                <td>$3.76</td>
+            </tr>
+            <tr>
+                <td>Jonathan</td>
+                <td>Lollipop</td>
+                <td>$7.00</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 
 
