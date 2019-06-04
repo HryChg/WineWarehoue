@@ -55,7 +55,7 @@ function myTable($obConn, $sql)
 
 }
 
-include '../connect.php';
+include '../../connect.php';
 
 $OrderReceived_cols = $_POST['OrderReceived_cols'];
 

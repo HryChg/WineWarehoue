@@ -1,5 +1,5 @@
 <?php
-include 'connect.php';
+include '../../connect.php';
 
 $conn = OpenCon();
 echo "Connected Successfully";

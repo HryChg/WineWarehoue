@@ -1,6 +1,6 @@
 <?php
 
-include '../connect.php';
+include '../../connect.php';
 
 $orderID = $_POST['orderID'];
 $quantity = $_POST['quantity'];

@@ -10,7 +10,7 @@
 
     <?php
 
-    include '../connect.php'; $conn = OpenCon();
+    include '../../connect.php'; $conn = OpenCon();
 
     $result = $conn->query("select orderID, retailer from OrderReceived");
 

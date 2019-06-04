@@ -1,6 +1,6 @@
 <?php
 
-include 'connect.php';
+include '../connect.php';
 
 $conn = OpenCon();
 $sql = "SELECT regionName, wineID, year FROM WineOrigin";
