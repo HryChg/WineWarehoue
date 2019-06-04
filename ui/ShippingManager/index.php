@@ -55,7 +55,10 @@
     <h4>Most Recent Order</h4>
 
     <div class="container">
-        <?php include '../../php/OrderReceived/ViewOrderReceived.php' ?>
+        <?php 
+        include '../../connect.php';
+        $conn = OpenCon();
+        include '../../php/OrderReceived/ViewOrderReceived.php'; ?>
     </div>
 
 </section>
@@ -65,6 +68,7 @@
     
     <?php  
     include'../../php/ReturnedShipment/returnedShipment.php';
+    CloseCon($conn);
     ?>
 </section>
 

@@ -1,8 +1,5 @@
 <?php
 
-include '../../connect.php';
-
-$conn = OpenCon();
 $sql = "SELECT orderID, employeeID, wineID  FROM OrderReceived";
 $result = $conn->query($sql);
 
@@ -21,7 +18,5 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
-
-#CloseCon($conn);
 
 ?>
