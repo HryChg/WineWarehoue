@@ -161,16 +161,20 @@ INSERT INTO StoredIn VALUES(96458941, 'Freezer', 3000);
 CREATE TABLE OrderReceived
 (orderID INTEGER PRIMARY KEY, 
 employeeID INTEGER NOT NULL,
-quantity INTEGER, 
+wineID INTEGER,
+quantity INTEGER,
+retailer VARCHAR(40),
 address VARCHAR(40), 
 backorder CHAR(1),
 orderReceivedDate TIMESTAMP,
-FOREIGN KEY (employeeID) REFERENCES ShippingManager(employeeID));
-INSERT INTO OrderReceived VALUES(100000, 005, 100, '000 AAA Road, Vancouver, BC', 'N', TIMESTAMP('2019-05-17 10:10:30', 'YYYY-MM-DD HH24:MI:SS'));
-INSERT INTO OrderReceived VALUES(100001, 006, 200, '111 BBB Road, Vancouver, BC', 'N', TIMESTAMP('2019-05-01 11:30:44', 'YYYY-MM-DD HH24:MI:SS'));
-INSERT INTO OrderReceived VALUES(100002, 007, 150, '222 CCC Road, Vancouver, BC', 'N', TIMESTAMP('2019-04-29 10:37:12', 'YYYY-MM-DD HH24:MI:SS'));
-INSERT INTO OrderReceived VALUES(100003, 008, 130, '333 DDD Road, Vancouver, BC', 'N', TIMESTAMP('2019-05-20 09:25:18', 'YYYY-MM-DD HH24:MI:SS'));
-INSERT INTO OrderReceived VALUES(100004, 009, 111, '444 EEE Road, Vancouver, BC', 'Y', TIMESTAMP('2019-05-22 15:35:18', 'YYYY-MM-DD HH24:MI:SS'));
+FOREIGN KEY (employeeID) REFERENCES ShippingManager(employeeID),
+FOREIGN KEY (wineID) REFERENCES WineB(wineID));
+INSERT INTO OrderReceived VALUES(100000, 005, 98412310, 100, 'The Stable House Bistro', '000 AAA Road, Vancouver, BC', 'N', TIMESTAMP('2019-05-17 10:10:30'));
+INSERT INTO OrderReceived VALUES(100001, 006, 98412234, 200, 'Uva Wine & Cocktail Bar', '111 BBB Road, Vancouver, BC', 'N', TIMESTAMP('2019-05-01 11:30:44'));
+INSERT INTO OrderReceived VALUES(100002, 007, 97802134, 150, 'Gotham Steakhouse & Cocktail Bar', '222 CCC Road, Vancouver, BC', 'N', TIMESTAMP('2019-04-29 10:37:12'));
+INSERT INTO OrderReceived VALUES(100003, 008, 98412310, 130, 'Victor', '333 DDD Road, Vancouver, BC', 'N', TIMESTAMP('2019-05-20 09:25:18'));
+INSERT INTO OrderReceived VALUES(100004, 009, 98412310, 111, 'Neverland Tea Salon', '444 EEE Road, Vancouver, BC', 'Y', TIMESTAMP('2019-05-22 15:35:18'));
+INSERT INTO OrderReceived VALUES(100005, 009, 97802134, 111, 'Neverland Tea Salon', '444 EEE Road, Vancouver, BC', 'Y', TIMESTAMP('2019-05-22 15:35:18'));
 
 
 
