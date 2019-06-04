@@ -60,6 +60,14 @@
 
 </section>
 
+<section>
+    <h6>Returned Shipment</h6>
+    
+    <?php  
+    include'../../php/ReturnedShipment/returnedShipment.php';
+    ?>
+</section>
+
 
 
 
