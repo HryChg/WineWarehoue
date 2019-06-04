@@ -175,7 +175,8 @@ INSERT INTO OrderReceived VALUES(100002, 007, 97802134, 150, 'Gotham Steakhouse 
 INSERT INTO OrderReceived VALUES(100003, 008, 98412310, 130, 'Victor', '333 DDD Road, Vancouver, BC', 'N', TIMESTAMP('2019-05-20 09:25:18'));
 INSERT INTO OrderReceived VALUES(100004, 009, 98412310, 111, 'Neverland Tea Salon', '444 EEE Road, Vancouver, BC', 'Y', TIMESTAMP('2019-05-22 15:35:18'));
 INSERT INTO OrderReceived VALUES(100005, 009, 97802134, 111, 'Neverland Tea Salon', '444 EEE Road, Vancouver, BC', 'Y', TIMESTAMP('2019-05-22 15:35:18'));
-
+INSERT INTO OrderReceived VALUES(100006, 008, 98412310, 130, 'Victor', '333 DDD Road, Vancouver, BC', 'N', TIMESTAMP('2019-05-29 09:25:18'));
+INSERT INTO OrderReceived VALUES(100007, 007, 97802134, 150, 'Gotham Steakhouse & Cocktail Bar', '222 CCC Road, Vancouver, BC', 'Y', TIMESTAMP('2019-06-29 10:37:12'));
 
 
 CREATE TABLE OrderForWine
