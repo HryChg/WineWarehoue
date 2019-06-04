@@ -1,15 +1,15 @@
 <?php
 
-$sql = "SELECT orderID, employeeID, wineID  FROM OrderReceived";
+$sql = "SELECT shipmentID, returnID, returnedQuantity  FROM ReturnedShipment";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
 
-    echo "<table><tr><th class='border-class'>orderID</th><th class='border-class'>employeeID</th><th class='borderclass'>wineID</th></tr>";
+    echo "<table><tr><th class='border-class'>shipmentID</th><th class='border-class'>returnID</th><th class='borderclass'returnedQuantity</th></tr>";
 
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<tr><td class='borderclass'>".$row["orderID"]."</td><td class='borderclass'>".$row["employeeID"]."</td><td class='borderclass'>".$row["wineID"]."</td></tr>";
+        echo "<tr><td class='borderclass'>".$row["shipmentID"]."</td><td class='borderclass'>".$row["returnID"]."</td><td class='borderclass'>".$row["returnedQuantity"]."</td></tr>";
     }
     echo "</table>";
 

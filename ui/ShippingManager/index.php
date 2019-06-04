@@ -63,7 +63,7 @@
 
 </section>
 
-<section>
+<section class="center">
     <h6>Returned Shipment</h6>
     
     <?php  
