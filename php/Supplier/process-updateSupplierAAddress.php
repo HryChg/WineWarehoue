@@ -3,10 +3,11 @@
 include '../../connect.php';
 
 $name = $_POST['name'];
+$address = $_POST['address'];
 
 $conn = OpenCon();
 
-$sql = "delete from SupplierA where name = '$name'";
+$sql = "update SupplierA set address = '$address' where name = '$name'";
 
 if ($conn->query($sql) === TRUE) {
 

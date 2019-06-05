@@ -3,10 +3,11 @@
 include '../../connect.php';
 
 $name = $_POST['name'];
+$temperature = $_POST['temperature'];
 
 $conn = OpenCon();
 
-$sql = "delete from SupplierA where name = '$name'";
+$sql = "update AgriculturalRegion set temperature = '$temperature' where name = '$name'";
 
 if ($conn->query($sql) === TRUE) {
 
