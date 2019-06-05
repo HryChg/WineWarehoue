@@ -1,0 +1,41 @@
+Join:
+    //TODO
+
+Selection:
+	SELECT locationID
+	FROM storedIn
+	WHERE wineID = <>; // done (as input)
+
+Projection:
+	SELECT brandName, wineTaste1, wineTaste2
+	FROM winea
+	WHERE wineTaste1 = <> OR wineTaste2 = <>; // done
+
+	SELECT price
+	FROM wineb
+	WHERE wineID = <>; // done (as input)
+
+Aggregation:
+	SELECT MAX(price)
+	FROM wineb //done
+
+Nested Aggregation with Group By:
+	SELECT MIN(price)
+	FROM wineb
+	WHERE brandName = <>; //TODO
+
+Division:
+	-To identify top 10 wines where every retailer has ordered //TODO
+
+
+Examples of queries that the users would be able to perform include but are not limited to:
+To create a list of expired wines and their locations //TODO
+To determine the top supplier //TODO
+
+Queries that would require input:
+ -To count the number of types wines of specific attributes, such as alcohol % within a specific range, expiry date within a specific range, etc (requires input of attribute and range).
+ -To find types of wines from regions with specific attributes, such as climate, moisture, etc (requires region attribute input).
+
+The above (from the formal specification) SWITCHED TO: //TODO
+ -To find types of types wines of specific attributes, such as alcohol % within a specific range, expiry date within a specific range, etc (requires input of attribute and range).
+ -To count the number of wines from regions with specific attributes, such as climate, moisture, etc (requires region attribute input).
