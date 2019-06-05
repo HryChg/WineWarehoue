@@ -2,13 +2,17 @@
 
 include '../../connect.php';
 
-$locationID = $_POST['keys[]'][0];
-$wineID = $_POST['keys[]'][1];
+$keys = $_POST['keys'];
+$keys = explode(',', $keys);
+$locationID = $keys[0];
+$wineID =$keys[1];
 $quantityInLocation = $_POST['quantityInLocation'];
 
 $conn = OpenCon();
 
+
 $sql = "update StoredIn set quantityInLocation = '$quantityInLocation' where locationID = '$locationID' and wineID = '$wineID'";
+echo $sql;
 
 if ($conn->query($sql) === TRUE) {
 

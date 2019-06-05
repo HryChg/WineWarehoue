@@ -14,7 +14,7 @@
 
     $result = $conn->query("select locationID, wineID from StoredIn");
 
-    echo "<select name='keys[]'>";
+    echo "<select name='keys'>";
 
     while ($row = $result->fetch_assoc())
     {
@@ -23,14 +23,13 @@
         $locationID = $row['locationID'];
         $wineID = $row['wineID'];
 
-        $attributeArr = [$locationID, $wineID];
-
-        echo '<option value=$attributeArr>'.'LocationID: '.$locationID.', WineID: '.$wineID.'</option>';
+        echo '<option value="'.$locationID.','.$wineID.'">'.'LocationID: '.$locationID.', WineID: '.$wineID.'</option>';
 
         // use '.' to append string
     }
 
     echo "</select>";
+
 
     ?>
 
