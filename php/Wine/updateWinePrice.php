@@ -39,7 +39,7 @@
 
     <label>Wine Price </label>
 
-    <input name="price" type="text" placeholder="Enter price for wine">
+    <input name="price" type="text" placeholder="Enter new price for wine">
 
     <br>
 
