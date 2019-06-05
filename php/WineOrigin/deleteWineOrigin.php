@@ -1,18 +1,18 @@
-<form action="process-deleteRegionByName.php" method="post">
+<form action="process-deleteWineOrigin.php" method="post">
 
-   Delete a tuple from AgriculturalRegion using name
-
-    </br>
+    Delete a tuple from WineOrigin using regionName and wineID
 
     </br>
 
-    <label>Agricultural Region</label>
+    </br>
+
+    <label>Wine Origin</label>
 
     <?php
 
     include '../../connect.php'; $conn = OpenCon();
 
-    $result = $conn->query("select name from AgriculturalRegion");
+    $result = $conn->query("select regionName, wineID from AgriculturalRegion");
 
     echo "<select name='name'>";
 

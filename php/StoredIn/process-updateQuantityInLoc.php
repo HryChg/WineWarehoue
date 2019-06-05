@@ -2,8 +2,8 @@
 
 include '../../connect.php';
 
-$locationID = $_POST['locationID'];
-$wineID = $_POST['wineID'];
+$locationID = $_POST['keys[]'][0];
+$wineID = $_POST['keys[]'][1];
 $quantityInLocation = $_POST['quantityInLocation'];
 
 $conn = OpenCon();
