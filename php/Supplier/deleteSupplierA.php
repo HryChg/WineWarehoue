@@ -1,6 +1,6 @@
 <form action="process-deleteSupplierA.php" method="post">
 
-    Delete a tuple with SupplierA tuple using name
+    Delete a tuple from SupplierA tuple using name
 
     </br>
 
