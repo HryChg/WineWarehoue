@@ -1,7 +1,7 @@
 <?php
 
 // EXAMPLE OF USE: 
-// include '../../template/input-query/input.php';
+// include '../../template/input-query/create-table.php';
 // $sql = "SELECT * FROM Restock";
 // $result = mysqli_query($conn, $sql);
 // myTable($conn, $sql);
