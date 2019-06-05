@@ -2,11 +2,12 @@
 
 include '../../connect.php';
 
-$name = $_POST['name'];
+$supplierID = $_POST['supplierID'];
+$phoneNo = $_POST['phoneNo'];
 
 $conn = OpenCon();
 
-$sql = "delete from SupplierA where name = '$name'";
+$sql = "update SupplierB set phoneNo = '$phoneNo' where supplierID = '$supplierID'";
 
 if ($conn->query($sql) === TRUE) {
 
