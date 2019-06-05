@@ -12,7 +12,6 @@ $conn = OpenCon();
 
 
 $sql = "update StoredIn set quantityInLocation = '$quantityInLocation' where locationID = '$locationID' and wineID = '$wineID'";
-echo $sql;
 
 if ($conn->query($sql) === TRUE) {
 

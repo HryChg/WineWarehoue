@@ -2,14 +2,11 @@
 
 include '../../connect.php';
 
-$keys = $_POST['keys'];
-$keys = explode(',', $keys);
-$regionName = $keys[0];
-$wineID =$keys[1];
+$brandName = $_POST['brandName'];
 
 $conn = OpenCon();
 
-$sql = "delete from WineOrigin where regionName = '$regionName' and wineID = '$wineID'";
+$sql = "delete from WineA where brandName = '$brandName'";
 
 if ($conn->query($sql) === TRUE) {
 

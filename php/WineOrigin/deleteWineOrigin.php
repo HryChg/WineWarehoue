@@ -12,24 +12,24 @@
 
     include '../../connect.php'; $conn = OpenCon();
 
-    $result = $conn->query("select regionName, wineID from AgriculturalRegion");
+    $result = $conn->query("select regionName, wineID from WineOrigin");
 
-    echo "<select name='name'>";
+    echo "<select name='keys'>";
 
     while ($row = $result->fetch_assoc())
-
     {
+        unset($regionName, $wineID);
 
-        unset($name);
+        $regionName = $row['regionName'];
+        $wineID = $row['wineID'];
 
-        $name = $row['name'];
+        echo '<option value="'.$regionName.','.$wineID.'">'.'RegionName: '.$regionName.', WineID: '.$wineID.'</option>';
 
-        echo '<option value="'.$name.'">'.'Name: '.$name.'</option>';
         // use '.' to append string
-
     }
 
     echo "</select>";
+
 
     ?>
 
