@@ -41,10 +41,6 @@
 
     <input name="temperature" type="text" placeholder="Enter new temp for location">
 
-    <br>
-
-    <br>
-
     <input type="submit" value="Update">
 
 </form>

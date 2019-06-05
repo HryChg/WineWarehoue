@@ -41,9 +41,6 @@
 
     <input name="temperature" type="text" placeholder="Enter new temp for region">
 
-    <br>
-
-    <br>
 
     <input type="submit" value="Update">
 

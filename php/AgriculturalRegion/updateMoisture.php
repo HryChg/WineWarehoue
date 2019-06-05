@@ -41,9 +41,6 @@
 
     <input name="moisture" type="text" placeholder="Enter new moisture for region">
 
-    <br>
-
-    <br>
 
     <input type="submit" value="Update">
 
