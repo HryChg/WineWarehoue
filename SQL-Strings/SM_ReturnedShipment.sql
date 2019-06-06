@@ -1,9 +1,9 @@
 -- add:
-INSERT INTO ReturnShipment VALUES('$shipmentID', '$returnID',
+INSERT INTO ReturnedShipment VALUES('$shipmentID', '$returnID',
 '$returnedQuantity');
 
 -- view:
-SELECT * FROM ReturnShipment;
+SELECT * FROM ReturnedShipment;
 
 -- update:
 UPDATE ReturnShipment
@@ -11,4 +11,4 @@ SET <condition>
 WHERE shipmentID='$shipmentID' AND returnID='$returnID';
 
 -- delete:
-DELETE FROM ReturnShipment WHERE shipmentID='$shipmentID' AND returnID='$returnID';
+DELETE FROM ReturnedShipment WHERE shipmentID='$shipmentID' AND returnID='$returnID';

@@ -62,13 +62,14 @@
 
 </section>
 
-<section class="center">
-    <h6>Returned Shipment</h6>
+<section id="ReturnedShipment" class="center">
+    <div class="container">
+    <h5>Returned Shipment</h5>
 
     <?php
     include '../../php/ReturnedShipment/returnedShipment.php';
-    CloseCon($conn);
     ?>
+    </div>
 </section>
 
 <!------------------------------------------------------------------------->
@@ -92,7 +93,8 @@
 <!------------------------------------------------------------------------->
 <section id=Shipment class="section center">
     <h5>Shipment</h5>
-    <?php include '../../php/Shipment/index.php'; ?>
+    <?php include '../../php/Shipment/index.php'; 
+    CloseCon($conn);?>
 </section>
 
 
