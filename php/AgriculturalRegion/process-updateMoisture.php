@@ -3,10 +3,11 @@
 include '../../connect.php';
 
 $name = $_POST['name'];
+$moisture = $_POST['moisture'];
 
 $conn = OpenCon();
 
-$sql = "delete from SupplierA where name = '$name'";
+$sql = "update AgriculturalRegion set moisture = '$moisture' where name = '$name'";
 
 if ($conn->query($sql) === TRUE) {
 
@@ -17,5 +18,5 @@ if ($conn->query($sql) === TRUE) {
     echo "Error updating record: " . $conn->error;
 
 }
-
+CloseCon($conn);
 ?>

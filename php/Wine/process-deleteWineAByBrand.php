@@ -2,11 +2,11 @@
 
 include '../../connect.php';
 
-$name = $_POST['name'];
+$brandName = $_POST['brandName'];
 
 $conn = OpenCon();
 
-$sql = "delete from SupplierA where name = '$name'";
+$sql = "delete from WineA where brandName = '$brandName'";
 
 if ($conn->query($sql) === TRUE) {
 
@@ -17,5 +17,6 @@ if ($conn->query($sql) === TRUE) {
     echo "Error updating record: " . $conn->error;
 
 }
+CloseCon($conn);
 
 ?>

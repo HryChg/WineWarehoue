@@ -2,11 +2,12 @@
 
 include '../../connect.php';
 
-$name = $_POST['name'];
+$supplierID = $_POST['supplierID'];
+$phoneNo = $_POST['phoneNo'];
 
 $conn = OpenCon();
 
-$sql = "delete from SupplierA where name = '$name'";
+$sql = "delete from SupplierB where supplierID = '$supplierID' or phoneNo = '$phoneNo'";
 
 if ($conn->query($sql) === TRUE) {
 
@@ -17,5 +18,5 @@ if ($conn->query($sql) === TRUE) {
     echo "Error updating record: " . $conn->error;
 
 }
-
+CloseCon($conn);
 ?>

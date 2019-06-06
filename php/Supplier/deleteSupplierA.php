@@ -1,4 +1,4 @@
-<form action="process-delete.php" method="post">
+<form action="process-deleteSupplierA.php" method="post">
 
     Delete a tuple from SupplierA using name
 
@@ -12,19 +12,20 @@
 
     include '../../connect.php'; $conn = OpenCon();
 
-    $result = $conn->query("select name from SupplierA");
+    $result = $conn->query("select name, address from SupplierA");
 
-    echo "<select name='name'>";
+    echo "<select name='address'>";
 
     while ($row = $result->fetch_assoc())
 
     {
 
-        unset($name);
+        unset($name, $address);
 
         $name = $row['name'];
+        $address = $row['address'];
 
-        echo '<option value="'.$name.'">'.'Name: '.$name.'</option>';
+        echo '<option value="'.$address.'">'.'Name: '.$name.', Address: '.$address.'</option>';
         // use '.' to append string
 
     }

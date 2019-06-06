@@ -1,18 +1,18 @@
-<form action="process-delete.php" method="post">
+<form action="process-deleteRegionByName.php" method="post">
 
-    Delete a tuple from SupplierA using name
-
-    </br>
+   Delete a tuple from AgriculturalRegion using name
 
     </br>
 
-    <label>SupplierA</label>
+    </br>
+
+    <label>Agricultural Region</label>
 
     <?php
 
     include '../../connect.php'; $conn = OpenCon();
 
-    $result = $conn->query("select name from SupplierA");
+    $result = $conn->query("select name from AgriculturalRegion");
 
     echo "<select name='name'>";
 

@@ -39,7 +39,7 @@
 </nav>
 
 
-<section class="center">
+<section class="section center">
     <h5>Special Features</h5>
     <div class="row">
         <a href="#" class="waves-effect waves-light btn brand">Top 10 Repeat Order on Wine</a>
@@ -51,11 +51,10 @@
     </div>
 
 
-
     <h4>Most Recent Order</h4>
 
     <div class="container">
-        <?php 
+        <?php
         include '../../connect.php';
         $conn = OpenCon();
         include '../../php/OrderReceived/ViewOrderReceived.php'; ?>
@@ -65,14 +64,36 @@
 
 <section class="center">
     <h6>Returned Shipment</h6>
-    
-    <?php  
-    include'../../php/ReturnedShipment/returnedShipment.php';
+
+    <?php
+    include '../../php/ReturnedShipment/returnedShipment.php';
     CloseCon($conn);
     ?>
 </section>
 
+<!------------------------------------------------------------------------->
+<section id="ShippingManager" class="section center">
+    <h5>Shipping Manager</h5>
+    <?php include '../../php/ShippingManager/index.php'; ?>
+</section>
 
+<!------------------------------------------------------------------------->
+<section id=OrderForWine class="section center">
+    <h5>Order For Wine</h5>
+    <?php include '../../php/OrderForWine/index.php'; ?>
+</section>
+
+<!------------------------------------------------------------------------->
+<section id=OrderReceived class="section center">
+    <h5>Order Received</h5>
+    <?php include '../../php/OrderReceived/index.php'; ?>
+</section>
+
+<!------------------------------------------------------------------------->
+<section id=Shipment class="section center">
+    <h5>Shipment</h5>
+    <?php include '../../php/Shipment/index.php'; ?>
+</section>
 
 
 <footer class="section">

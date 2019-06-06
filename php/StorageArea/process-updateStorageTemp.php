@@ -2,11 +2,12 @@
 
 include '../../connect.php';
 
-$name = $_POST['name'];
+$locationID = $_POST['locationID'];
+$temperature = $_POST['temperature'];
 
 $conn = OpenCon();
 
-$sql = "delete from SupplierA where name = '$name'";
+$sql = "update StorageArea set temperature = '$temperature' where locationID = '$locationID'";
 
 if ($conn->query($sql) === TRUE) {
 
@@ -17,5 +18,5 @@ if ($conn->query($sql) === TRUE) {
     echo "Error updating record: " . $conn->error;
 
 }
-
+CloseCon($conn);
 ?>

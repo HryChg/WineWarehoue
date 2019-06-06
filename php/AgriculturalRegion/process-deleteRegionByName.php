@@ -6,7 +6,7 @@ $name = $_POST['name'];
 
 $conn = OpenCon();
 
-$sql = "delete from SupplierA where name = '$name'";
+$sql = "delete from AgriculturalRegion where name = '$name'";
 
 if ($conn->query($sql) === TRUE) {
 
@@ -17,5 +17,5 @@ if ($conn->query($sql) === TRUE) {
     echo "Error updating record: " . $conn->error;
 
 }
-
+CloseCon($conn);
 ?>
