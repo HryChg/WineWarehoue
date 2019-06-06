@@ -177,7 +177,16 @@ INSERT INTO OrderReceived VALUES(100004, 009, 98412310, 111, 'Neverland Tea Salo
 INSERT INTO OrderReceived VALUES(100005, 009, 97802134, 111, 'Neverland Tea Salon', '444 EEE Road, Vancouver, BC', 'Y', TIMESTAMP('2019-05-22 15:35:18'));
 INSERT INTO OrderReceived VALUES(100006, 008, 98412310, 130, 'Victor', '333 DDD Road, Vancouver, BC', 'N', TIMESTAMP('2019-05-29 09:25:18'));
 INSERT INTO OrderReceived VALUES(100007, 007, 97802134, 150, 'Gotham Steakhouse & Cocktail Bar', '222 CCC Road, Vancouver, BC', 'Y', TIMESTAMP('2019-06-29 10:37:12'));
-
+INSERT INTO OrderReceived VALUES(100008, 005, 96458941, 250, 'Neverland Tea Salon', '444 EEE Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-29 10:40:12'));
+INSERT INTO OrderReceived VALUES(100009, 006, 98412310, 500, 'Uva Wine & Cocktail Bar', '111 BBB Road, Vancouver, BC', 'Y', TIMESTAMP('2019-06-29 12:37:12'));
+INSERT INTO OrderReceived VALUES(100010, 007, 97890456, 25, 'High Point', '555 FFF Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-29 15:37:12'));
+INSERT INTO OrderReceived VALUES(100011, 005, 97802134, 10, 'Everything Wine', '666 GGG Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-29 18:37:12'));
+INSERT INTO OrderReceived VALUES(100012, 009, 97802134, 400, 'Gotham Steakhouse & Cocktail Bar', '222 CCC Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-30 10:37:12'));
+INSERT INTO OrderReceived VALUES(100013, 007, 98412234, 60, 'Liberty Wine Merchants', '777 HHH Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-30 10:50:12'));
+INSERT INTO OrderReceived VALUES(100014, 005, 97802134, 88, 'BottleJockey', '888 III Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-30 10:51:12'));
+INSERT INTO OrderReceived VALUES(100015, 007, 98412234, 70, 'Liberty Wine Merchants', '777 HHH Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-30 12:00:12'));
+INSERT INTO OrderReceived VALUES(100016, 008, 97890456, 280, 'High Point', '555 FFF Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-30 16:37:12'));
+INSERT INTO OrderReceived VALUES(100017, 009, 97890456, 350, 'Gotham Steakhouse & Cocktail Bar', '222 CCC Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-31 18:00:12'));
 
 CREATE TABLE OrderForWine
 (orderID INTEGER, 
