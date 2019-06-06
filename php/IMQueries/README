@@ -30,7 +30,7 @@ Division:
 
 Examples of queries that the users would be able to perform include but are not limited to:
 To create a list of expired wines and their locations //done
-To determine the top supplier //TODO
+To determine the top supplier //done
 
 Queries that would require input:
  -To count the number of types wines of specific attributes, such as alcohol % within a specific range, expiry date within a specific range, etc (requires input of attribute and range).
