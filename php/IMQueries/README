@@ -51,17 +51,13 @@ Nested Aggregation with Group By:
 	WHERE brandName = <>; //done
 
 Division:
-	-To identify top 10 wines where every retailer has ordered //TODO
+	-To identify top 10 wines where every retailer has ordered //TODO... actually orders/shipment stuff...
 
 
-Examples of queries that the users would be able to perform include but are not limited to:
+Examples of queries that the users would be able to perform include but are not limited to: //done
 To create a list of expired wines and their locations //done
 To determine the top supplier //done
 
-Queries that would require input:
- -To count the number of types wines of specific attributes, such as alcohol % within a specific range, expiry date within a specific range, etc (requires input of attribute and range).
- -To find types of wines from regions with specific attributes, such as climate, moisture, etc (requires region attribute input).
-
-The above (from the formal specification) SWITCHED TO: //TODO
- -//done To find types of wines of specific attributes, such as alcohol % within a specific range, expiry date within a specific range, etc (requires input of attribute and range).
- -To count the number of wines from regions with specific attributes, such as climate, moisture, etc (requires region attribute input).
+Queries that would require input: //done
+ - //done To count the number of types wines of specific attributes, such as alcohol % within a specific range, expiry date within a specific range, etc (requires input of attribute and range).
+ - //done To find types of wines from regions with specific attributes, such as climate, moisture, etc (requires region attribute input).
