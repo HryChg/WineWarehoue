@@ -64,12 +64,6 @@ INSERT INTO StorageArea VALUES('South Wing', 11.3);
 INSERT INTO StorageArea VALUES('Freezer', 10.0);
 
 
-
-
-
-
-
-
 CREATE TABLE WineA
 (grapeType1 VARCHAR(20), 
 grapeType2 VARCHAR(20),
@@ -82,6 +76,8 @@ INSERT INTO WineA VALUES('pinot grigio', 'sauvignon blanc', 'Tavernello', 'dry',
 INSERT INTO WineA VALUES('sauvignon blanc', 'chardonnay', 'Blue Nun', 'herbal', 'dry');
 INSERT INTO WineA VALUES('cabernet sauvignon', 'pinot noir', 'Armand de Brignac', 'herbal', 'currant');
 INSERT INTO WineA VALUES('merlot', 'shiraz', 'Ecco Domani', 'spicy', 'merlot');
+INSERT INTO WineA VALUES('cabernet sauvignon', 'chardonnay', 'Cristol', 'cherry', 'crisp');
+INSERT INTO WineA VALUES('pinot grigio', 'merlot', 'Mateus', 'rich', 'smooth');
 
 CREATE TABLE WineB
 (wineID INTEGER PRIMARY KEY, 
@@ -99,6 +95,9 @@ INSERT INTO WineB VALUES(98412234, 100.99, 'white', 'Tavernello', 'pinot grigio'
 INSERT INTO WineB VALUES(97802134, 20.50, 'white', 'Blue Nun', 'sauvignon blanc', 'chardonnay', 10.0, 2.5, 0.5, DATE('2085-01-01'));
 INSERT INTO WineB VALUES(97890456, 15.99, 'red', 'Armand de Brignac', 'cabernet sauvignon', 'pinot noir', 11.0, 4.1, 0.2, DATE('2101-03-15'));
 INSERT INTO WineB VALUES(96458941, 12.50, 'red', 'Ecco Domani', 'merlot', 'shiraz', 11.5, 3.5, 0.3, DATE('2025-09-17'));
+INSERT INTO WineB VALUES(10000000, 1200, 'red', 'Cristol', 'cabernet sauvignon', 'chardonnay', 12, 4.5, 0.4, DATE('1999-01-01'));
+INSERT INTO WineB VALUES(10000001, 350, 'red', 'Cristol', 'pinot grigio', 'merlot', 12.1, 4.2, 0, DATE('1995-04-05'));
+
 
 CREATE TABLE Restock
 (employeeID INTEGER, 
@@ -156,7 +155,8 @@ INSERT INTO StoredIn VALUES(98412234, 'East Wing', 1500);
 INSERT INTO StoredIn VALUES(97802134, 'North Wing', 2000);
 INSERT INTO StoredIn VALUES(97890456, 'South Wing', 2500);
 INSERT INTO StoredIn VALUES(96458941, 'Freezer', 3000);
-
+INSERT INTO StoredIn VALUES(10000000, 'South Wing', 10);
+INSERT INTO StoredIn VALUES(10000001, 'South Wing', 50);
 
 CREATE TABLE OrderReceived
 (orderID INTEGER PRIMARY KEY, 
@@ -177,7 +177,16 @@ INSERT INTO OrderReceived VALUES(100004, 009, 98412310, 111, 'Neverland Tea Salo
 INSERT INTO OrderReceived VALUES(100005, 009, 97802134, 111, 'Neverland Tea Salon', '444 EEE Road, Vancouver, BC', 'Y', TIMESTAMP('2019-05-22 15:35:18'));
 INSERT INTO OrderReceived VALUES(100006, 008, 98412310, 130, 'Victor', '333 DDD Road, Vancouver, BC', 'N', TIMESTAMP('2019-05-29 09:25:18'));
 INSERT INTO OrderReceived VALUES(100007, 007, 97802134, 150, 'Gotham Steakhouse & Cocktail Bar', '222 CCC Road, Vancouver, BC', 'Y', TIMESTAMP('2019-06-29 10:37:12'));
-
+INSERT INTO OrderReceived VALUES(100008, 005, 96458941, 250, 'Neverland Tea Salon', '444 EEE Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-29 10:40:12'));
+INSERT INTO OrderReceived VALUES(100009, 006, 98412310, 500, 'Uva Wine & Cocktail Bar', '111 BBB Road, Vancouver, BC', 'Y', TIMESTAMP('2019-06-29 12:37:12'));
+INSERT INTO OrderReceived VALUES(100010, 007, 97890456, 25, 'High Point', '555 FFF Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-29 15:37:12'));
+INSERT INTO OrderReceived VALUES(100011, 005, 97802134, 10, 'Everything Wine', '666 GGG Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-29 18:37:12'));
+INSERT INTO OrderReceived VALUES(100012, 009, 97802134, 400, 'Gotham Steakhouse & Cocktail Bar', '222 CCC Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-30 10:37:12'));
+INSERT INTO OrderReceived VALUES(100013, 007, 98412234, 60, 'Liberty Wine Merchants', '777 HHH Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-30 10:50:12'));
+INSERT INTO OrderReceived VALUES(100014, 005, 97802134, 88, 'BottleJockey', '888 III Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-30 10:51:12'));
+INSERT INTO OrderReceived VALUES(100015, 007, 98412234, 70, 'Liberty Wine Merchants', '777 HHH Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-30 12:00:12'));
+INSERT INTO OrderReceived VALUES(100016, 008, 97890456, 280, 'High Point', '555 FFF Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-30 16:37:12'));
+INSERT INTO OrderReceived VALUES(100017, 009, 97890456, 350, 'Gotham Steakhouse & Cocktail Bar', '222 CCC Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-31 18:00:12'));
 
 CREATE TABLE OrderForWine
 (orderID INTEGER, 

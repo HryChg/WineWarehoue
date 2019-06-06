@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Shipping Manager User Interface</title>
     <style type="text/css">
         .brand {
@@ -85,7 +86,7 @@
 </section>
 
 <!------------------------------------------------------------------------->
-<section id=OrderReceived class="section center">
+<section id=OrderReceived class="section">
     <h5>Order Received</h5>
     <?php include '../../php/OrderReceived/index.php'; ?>
 </section>

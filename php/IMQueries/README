@@ -1,5 +1,27 @@
-Join:
-    //TODO
+Join: // done
+    Wine (with WineOrigin):
+		SELECT b.*, a.wineTaste1, a.wineTaste2 FROM WineA AS a JOIN WineB AS b ON a.grapeType1 = b.grapeType1 AND a.grapeType2 = b.grapeType2 AND a.brandName = b.brandName LEFT JOIN WineOrigin AS o ON b.wineID = o.wineID;
+
+	Supplier:
+		SELECT a.name, b.* FROM SupplierA AS a INNER JOIN SupplierB AS b ON a.address = b.address;
+
+	StoredIn (with Wine Names):
+		SELECT w.brandName, s.* FROM WineB AS w INNER JOIN StoredIn AS s ON w.wineID = s.wineID;
+
+	Agricultural Region (with WineID): 
+		SELECT w.wineID, a.* FROM WineOrigin AS w INNER JOIN AgriculturalRegion AS a ON w.regionName = a.name;
+
+	Restock (with Supplier Names and Employee ID/Names):
+		SELECT r.employeeID, e.name, r.supplierID, s.name, r.wineID, r.locationID, r.quantity, r.restockDate 
+		FROM Restock AS r
+		INNER JOIN Employee AS e
+				ON r.employeeID = e.employeeID
+		INNER JOIN
+		(SELECT SupplierA.name, SupplierB.supplierID FROM SupplierA INNER JOIN SupplierB ON SupplierA.address = SupplierB.address) AS s
+					ON r.supplierID = s.supplierID;
+
+	StorageArea:
+		SELECT * FROM StorageArea;
 
 Selection:
 	SELECT locationID
@@ -33,8 +55,8 @@ Division:
 
 
 Examples of queries that the users would be able to perform include but are not limited to:
-To create a list of expired wines and their locations //TODO
-To determine the top supplier //TODO
+To create a list of expired wines and their locations //done
+To determine the top supplier //done
 
 Queries that would require input:
  -To count the number of types wines of specific attributes, such as alcohol % within a specific range, expiry date within a specific range, etc (requires input of attribute and range).
