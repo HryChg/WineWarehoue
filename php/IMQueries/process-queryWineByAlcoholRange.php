@@ -5,11 +5,12 @@ include '../../template/input-query/create-table.php';
 
 $conn = OpenCon();
 
-$wineID = $_POST['wineID'];
+$lowRange = $_POST['lowRange'];
+$highRange = $_POST['highRange'];
 
-$sql = "SELECT wineID, locationID, quantityInLocation
-	FROM StoredIn
-	WHERE wineID = '$wineID'";
+$sql = "SELECT wineID, brandName, grapeType1, grapeType2, alcoholPercent
+	FROM wineB
+	WHERE alcoholPercent >= '$lowRange' AND alcoholPercent <= '$highRange'";
 
 $result = $conn->query($sql);
 

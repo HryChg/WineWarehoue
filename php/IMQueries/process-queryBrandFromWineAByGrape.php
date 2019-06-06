@@ -5,11 +5,11 @@ include '../../template/input-query/create-table.php';
 
 $conn = OpenCon();
 
-$wineID = $_POST['wineID'];
+$grapeType = $_POST['grapeType'];
 
-$sql = "SELECT wineID, locationID, quantityInLocation
-	FROM StoredIn
-	WHERE wineID = '$wineID'";
+$sql = "SELECT brandName, grapeType1, grapeType2
+	FROM wineA
+	WHERE grapeType1 = '$grapeType' OR grapeType2 = '$grapeType'";
 
 $result = $conn->query($sql);
 
