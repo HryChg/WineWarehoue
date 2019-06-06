@@ -11,6 +11,10 @@ Projection:
 	FROM winea
 	WHERE wineTaste1 = <> OR wineTaste2 = <>; // done
 
+    SELECT brandName, grapeType1, grapeType2
+	FROM winea
+	WHERE grapeType1 = <> OR grapeType2 = <>; //done
+
 	SELECT price
 	FROM wineb
 	WHERE wineID = <>; // done (as input)
