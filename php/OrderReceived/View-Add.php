@@ -1,43 +1,67 @@
-<h4>Add Order</h4>
-<div class="row">
-    <form class="col s12">
-        <div class="row">
-            <div class="input-field col s6">
-                <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-                <label for="first_name">First Name</label>
-            </div>
-            <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate">
-                <label for="last_name">Last Name</label>
+<div class = "container">
+    <h4>Add Order</h4>
+    <div class="row">
+        <div class="col s3">
+            <div class="input">
+                <input placeholder="" id="orderID" type="text" class="validate">
+                <label for="orderID">orderID</label>
             </div>
         </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-                <label for="disabled">Disabled</label>
+        <div class="col s3">
+            <div class="input">
+                <input placeholder="" id="employeeID" type="text" class="validate">
+                <label for="employeeID">employeeID</label>
             </div>
         </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="password" type="password" class="validate">
-                <label for="password">Password</label>
+        <div class="col s3">
+            <div class="input">
+                <input placeholder="" id="wineID" type="text" class="validate">
+                <label for="wineID">wineID</label>
             </div>
         </div>
-        <div class="row">
-            <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
-                <label for="email">Email</label>
+        <div class="col s3">
+            <div class="input">
+                <input placeholder="" id="quantity" type="text" class="validate">
+                <label for="quantity">quantity</label>
             </div>
         </div>
-        <div class="row">
-            <div class="col s12">
-                This is an inline input field:
-                <div class="input-field inline">
-                    <input id="email_inline" type="email" class="validate">
-                    <label for="email_inline">Email</label>
-                    <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
-                </div>
+    </div>
+    <div class="row">
+        <div class="col s3">
+            <div class="input">
+                <input placeholder="" id="retailer" type="text" class="validate">
+                <label for="retailer">retailer</label>
             </div>
         </div>
-    </form>
+        <div class="col s3">
+            <div class="input">
+                <input placeholder="" id="address" type="text" class="validate">
+                <label for="address">address</label>
+            </div>
+        </div>
+        <div class="col s3">
+            <div class="input">
+                <input placeholder="" id="backorder" type="text" class="validate">
+                <label for="backorder">backorder</label>
+            </div>
+        </div>
+        <div class="col s3">
+            <div class="input">
+                <input placeholder="" id="orderReceivedDate" type="text" class="validate">
+                <label for="orderReceivedDate">orderReceivedDate</label>
+            </div>
+        </div>
+    </div>
+    <div class="row center">
+        <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
+    </div>
 </div>
+
+
+<!--
+
+
+
+
+
+-->
