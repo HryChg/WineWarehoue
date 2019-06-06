@@ -15,8 +15,6 @@ $address = mysqli_real_escape_string($conn, $_POST['address']);
 $backorder = mysqli_real_escape_string($conn, $_POST['backorder']);
 $orderReceivedDate = mysqli_real_escape_string($conn, $_POST['orderReceivedDate']);
 
-echo '$orderID';
-
 
 // Attempt insert query execution
 $sql = "INSERT INTO OrderReceived 

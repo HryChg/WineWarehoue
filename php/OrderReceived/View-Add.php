@@ -1,5 +1,4 @@
 <div class="container">
-
     <form action="../../php/OrderReceived/Process-Add.php" method="post">
         <h4>Add Order</h4>
         <div class="row">
@@ -59,14 +58,4 @@
         </div>
 
     </form>
-
 </div>
-
-
-<!--
-
-
-
-
-
--->
