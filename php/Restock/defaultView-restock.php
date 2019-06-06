@@ -2,12 +2,12 @@
 
 <?php
 
-include '../../connect.php';
-include '../../template/input-query/create-table.php';
+// include '../../connect.php';
+// include '../../template/input-query/create-table.php';
 
 $conn = OpenCon();
 
-$sql = "SELECT r.employeeID, e.name, r.supplierID, s.name, r.wineID, r.locationID, r.quantity, r.restockDate 
+$sql = "SELECT r.employeeID, e.name as employeeName, r.supplierID, s.name as supplierName, r.wineID, r.locationID, r.quantity, r.restockDate 
         FROM Restock AS r
         INNER JOIN Employee AS e
         ON r.employeeID = e.employeeID

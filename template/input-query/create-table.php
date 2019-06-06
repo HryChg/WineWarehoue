@@ -16,7 +16,7 @@ function myTable($obConn, $sql)
 
 //We start with header. >>>Here we retrieve the field names<<<
 
-        echo "<table width=\"100%\" border=\"0\" cellspacing=\"2\" cellpadding=\"0\"><tr align=\"center\" bgcolor=\"#CCCCCC\">";
+        echo "<table><tbody><tr>";
 
         $i = 0;
 
@@ -26,7 +26,7 @@ function myTable($obConn, $sql)
 
             $fieldName = $field->name;
 
-            echo "<td><strong>$fieldName</strong></td>";
+            echo "<th class=\"borderclass\">$fieldName</th>";
 
             $i = $i + 1;
 
@@ -39,22 +39,13 @@ function myTable($obConn, $sql)
         $bolWhite = true;
 
         while ($row = mysqli_fetch_assoc($rsResult)) {
-
-            echo $bolWhite ? "<tr bgcolor=\"#CCCCCC\">" : "<tr bgcolor=\"#FFF\">";
-
-            $bolWhite = !$bolWhite;
-
+            echo "<tr>";
             foreach ($row as $data) {
-
-                echo "<td>$data</td>";
-
+                echo "<td class=\"borderclass\">$data</td>";
             }
-
             echo "</tr>";
-
         }
-
-        echo "</table>";
+        echo "</tbody></table>";
 
     }
 
