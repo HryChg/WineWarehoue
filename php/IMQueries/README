@@ -29,7 +29,7 @@ Division:
 
 
 Examples of queries that the users would be able to perform include but are not limited to:
-To create a list of expired wines and their locations //TODO
+To create a list of expired wines and their locations //done
 To determine the top supplier //TODO
 
 Queries that would require input:

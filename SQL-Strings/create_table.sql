@@ -64,12 +64,6 @@ INSERT INTO StorageArea VALUES('South Wing', 11.3);
 INSERT INTO StorageArea VALUES('Freezer', 10.0);
 
 
-
-
-
-
-
-
 CREATE TABLE WineA
 (grapeType1 VARCHAR(20), 
 grapeType2 VARCHAR(20),
@@ -82,6 +76,8 @@ INSERT INTO WineA VALUES('pinot grigio', 'sauvignon blanc', 'Tavernello', 'dry',
 INSERT INTO WineA VALUES('sauvignon blanc', 'chardonnay', 'Blue Nun', 'herbal', 'dry');
 INSERT INTO WineA VALUES('cabernet sauvignon', 'pinot noir', 'Armand de Brignac', 'herbal', 'currant');
 INSERT INTO WineA VALUES('merlot', 'shiraz', 'Ecco Domani', 'spicy', 'merlot');
+INSERT INTO WineA VALUES('cabernet sauvignon', 'chardonnay', 'Cristol', 'cherry', 'crisp');
+INSERT INTO WineA VALUES('pinot grigio', 'merlot', 'Mateus', 'rich', 'smooth');
 
 CREATE TABLE WineB
 (wineID INTEGER PRIMARY KEY, 
@@ -99,6 +95,9 @@ INSERT INTO WineB VALUES(98412234, 100.99, 'white', 'Tavernello', 'pinot grigio'
 INSERT INTO WineB VALUES(97802134, 20.50, 'white', 'Blue Nun', 'sauvignon blanc', 'chardonnay', 10.0, 2.5, 0.5, DATE('2085-01-01'));
 INSERT INTO WineB VALUES(97890456, 15.99, 'red', 'Armand de Brignac', 'cabernet sauvignon', 'pinot noir', 11.0, 4.1, 0.2, DATE('2101-03-15'));
 INSERT INTO WineB VALUES(96458941, 12.50, 'red', 'Ecco Domani', 'merlot', 'shiraz', 11.5, 3.5, 0.3, DATE('2025-09-17'));
+INSERT INTO WineB VALUES(10000000, 1200, 'red', 'Cristol', 'cabernet sauvignon', 'chardonnay', 12, 4.5, 0.4, DATE('1999-01-01'));
+INSERT INTO WineB VALUES(10000001, 350, 'red', 'Cristol', 'pinot grigio', 'merlot', 12.1, 4.2, 0, DATE('1995-04-05'));
+
 
 CREATE TABLE Restock
 (employeeID INTEGER, 
@@ -156,7 +155,8 @@ INSERT INTO StoredIn VALUES(98412234, 'East Wing', 1500);
 INSERT INTO StoredIn VALUES(97802134, 'North Wing', 2000);
 INSERT INTO StoredIn VALUES(97890456, 'South Wing', 2500);
 INSERT INTO StoredIn VALUES(96458941, 'Freezer', 3000);
-
+INSERT INTO StoredIn VALUES(10000000, 'South Wing', 10);
+INSERT INTO StoredIn VALUES(10000001, 'South Wing', 50);
 
 CREATE TABLE OrderReceived
 (orderID INTEGER PRIMARY KEY, 
