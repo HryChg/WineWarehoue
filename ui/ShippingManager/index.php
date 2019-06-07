@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
+    <!--    Note later ui override the first-->
     <title>Shipping Manager User Interface</title>
     <style type="text/css">
         .brand {
@@ -17,6 +18,10 @@
             max-width: 460px;
             margin: 20px auto;
             padding: 20px;
+        }
+
+        h1 h2 h3 h4 h5 h6 {
+            text-align: center;
         }
 
     </style>
@@ -45,12 +50,10 @@
     <div class="row">
         <a href="#" class="waves-effect waves-light btn brand">Top 10 Repeat Order on Wine</a>
         <a href="#" class="waves-effect waves-light btn brand">Top 10 Wines Every Retailer Likes</a>
-
     </div>
     <div class="row">
         <a href="#" class="waves-effect waves-light btn brand">Top 5 BackOrdered Wine</a>
     </div>
-
 
     <h4>Most Recent Order</h4>
 
@@ -58,7 +61,7 @@
         <?php
         include '../../connect.php';
         $conn = OpenCon();
-        include '../../php/OrderReceived/ViewOrderReceived.php'; ?>
+        include '../../php/OrderReceived/View-MostRecentOrder.php'; ?>
     </div>
 
 </section>
