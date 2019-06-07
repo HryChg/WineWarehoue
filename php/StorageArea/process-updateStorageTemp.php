@@ -1,6 +1,6 @@
 <?php
 
-// include '../../connect.php';
+include '../../connect.php';
 
 $locationID = $_POST['locationID'];
 $temperature = $_POST['temperature'];
