@@ -1,6 +1,6 @@
 <?php
 echo
-'<form class="ui form container inverted" action="insert.php" method="post">
+'<form class="ui form container inverted" action="../../php/Restock/insert.php" method="post">
     <h1>Wine Restock Records</h1>
     <p>
         <label for="employeeid">Employee ID:</label>
