@@ -62,12 +62,12 @@ ORDER by backOrderedWineCount DESC
 LIMIT 5;
 ```
 
-find the top 10 repeat ordered on Wine
+find the top 10 most repeatedly ordered Wine
 
 ```sql
-SELECT retailer, wineID, count(wineID) as repeatWineCount
+SELECT wineID, count(wineID) as repeatWineCount
 FROM OrderReceived
-GROUP BY retailer, wineID
+GROUP BY wineID
 ORDER BY repeatWineCount DESC
 LIMIT 10;
 ```

@@ -11,7 +11,7 @@ $sql = "SELECT wineID, count(wineID) as wineCount
         WHERE backorder = 'Y'
         GROUP by wineID
         ORDER by wineCount DESC
-        LIMIT 10;";
+        LIMIT 10";
 
 $result = $conn->query($sql);
 
