@@ -41,7 +41,6 @@
             <!--"brand" is from our own css file-->
             <li><a hred="#" class="btn brand z-depth-0">Log Out</a></li>
         </ui>
-    </div>
 </nav>
 
 

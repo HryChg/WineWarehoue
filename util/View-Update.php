@@ -1,4 +1,5 @@
 <?php
+include '../connect.php';
 function displayOrderAttributes($conn){
     $result = $conn->query("select orderID, retailer from OrderReceived");
 
@@ -20,12 +21,16 @@ function displayOrderAttributes($conn){
 
 
 <div class="container">
-    <form action="../../php/OrderReceived/Process-Update.php" method="post">
+    <form action="./Process-Update.php" method="post">
 
         <h4>Update Order</h4>
         <label>Select the order you would like to update</label>
 
-        <?php displayOrderAttributes($conn); ?>
+        <?php
+        $conn = openCon();
+        displayOrderAttributes($conn);
+        closeCon($conn);
+        ?>
         
         <div class="row">
             <div>
