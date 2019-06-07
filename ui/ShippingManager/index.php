@@ -10,6 +10,15 @@
             margin: 20px auto;
             padding: 20px;
         }
+        h1 {
+            text-align: center;
+        }
+
+        .container{
+            margin: 8px;
+        }
+
+
     </style>
 
 </head>
@@ -42,20 +51,25 @@
 </nav>
 
 
-<div class="container"></div>
+
+<section class="section">
+    <h1 class="ui header">Special Features</h1>
 
 
-<section class="section center">
-    <h5>Special Features</h5>
-    <div class="row">
-        <a href="#" class="waves-effect waves-light btn brand">Top 10 Repeat Order on Wine</a>
-        <a href="#" class="waves-effect waves-light btn brand">Top 10 Wines Every Retailer Likes</a>
+    <div class="ui grid container">
+        <div class="ui fluid three item menu container">
+            <a class="item active">Top 5 BackOrdered Wine</a>
+            <a class="item">Top 10 Repeatedly Ordered on Wine</a>
+            <a class="item">Top 10 Wines Every Retailer Likes</a>
+        </div>
     </div>
-    <div class="row">
-        <a href="#" class="waves-effect waves-light btn brand">Top 5 BackOrdered Wine</a>
-    </div>
 
-    <h4>Most Recent Order</h4>
+
+
+
+
+
+    <h2 class="ui header">Most Recent Order</h2>
 
     <div class="container">
         <?php
