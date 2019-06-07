@@ -22,7 +22,15 @@
             margin: 8px;
         }
 
+        table {
+            margin: 8px;
+        }
+
         table th {
+            text-align: center;
+        }
+
+        table thead {
             text-align: center;
         }
 
@@ -58,11 +66,8 @@
     </div>
 </nav>
 
-
-
-<section class="section">
+<section id="Special Features">
     <h1 class="ui header">Special Features</h1>
-
 
     <div class="ui grid container">
         <div class="ui fluid three item menu container">
@@ -71,11 +76,6 @@
             <a class="item">Top 10 Wines Every Retailer Likes</a>
         </div>
     </div>
-
-
-
-
-
 
     <h2 class="ui header">Most Recent Order</h2>
 
@@ -98,25 +98,25 @@
     </div>
 </section>
 
-<!------------------------------------------------------------------------->
+
 <section id="ShippingManager" class="section center">
-    <h5>Shipping Manager</h5>
+    <h1 class="ui header">Shipping Manager</h1>
     <?php include '../../php/ShippingManager/index.php'; ?>
 </section>
 
-<!------------------------------------------------------------------------->
+
 <section id=OrderForWine class="section center">
     <h5>Order For Wine</h5>
     <?php include '../../php/OrderForWine/index.php'; ?>
 </section>
 
-<!------------------------------------------------------------------------->
+
 <section id=OrderReceived class="section">
     <h5>Order Received</h5>
     <?php include '../../php/OrderReceived/index.php'; ?>
 </section>
 
-<!------------------------------------------------------------------------->
+
 <section id=Shipment class="section center">
     <h5>Shipment</h5>
     <?php include '../../php/Shipment/index.php';
