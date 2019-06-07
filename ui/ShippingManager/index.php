@@ -24,6 +24,8 @@
 
         table {
             margin: 8px;
+
+            overflow-x: scroll
         }
 
         table th {
@@ -106,13 +108,13 @@
 
 
 <section id=OrderForWine class="section center">
-    <h5>Order For Wine</h5>
+    <h1 class="ui header">Order For Wine</h1>
     <?php include '../../php/OrderForWine/index.php'; ?>
 </section>
 
 
 <section id=OrderReceived class="section">
-    <h5>Order Received</h5>
+    <h1 class="ui header">Order Received</h1>
     <?php include '../../php/OrderReceived/index.php'; ?>
 </section>
 

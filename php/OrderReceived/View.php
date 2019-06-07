@@ -11,7 +11,12 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Table is scrollable when data is large
     echo "
-    <table class='container responsive-table centered'>
+    <table class='ui celled striped table'>
+        <thead>
+            <th colspan='16'>
+                View All Orders
+            </th>
+        </thead>
         <tr>
             <th class='border-class'>orderID</th>
             <th class='border-class'>employeeID</th>
