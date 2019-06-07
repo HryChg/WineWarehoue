@@ -1,7 +1,9 @@
 <h1 class="ui header">Add Order</h1>
-<form class="ui form" action="../../php/OrderReceived/Process-Add.php" method="post">
+
+
+<form class="ui form container " action="../../php/OrderReceived/Process-Add.php" method="post">
     <div class="four fields">
-        <div class="field">
+        <div class="five wide field">
             <input placeholder="" name="orderID" type="text" class="validate">
             <label for="orderID">orderID</label>
         </div>
@@ -19,15 +21,15 @@
         </div>
     </div>
     <div class="four fields">
-        <div class="field">
+        <div class="five wide field">
             <input placeholder="" name="retailer" type="text" class="validate">
             <label for="retailer">retailer</label>
         </div>
-        <div class="field">
+        <div class="seven wide field">
             <input placeholder="" name="address" type="text" class="validate">
             <label for="address">address</label>
         </div>
-        <div class="field">
+        <div class="one field">
             <input placeholder="" name="backorder" type="text" class="validate">
             <label for="backorder">backorder</label>
         </div>
@@ -36,8 +38,21 @@
             <label for="orderReceivedDate">orderReceivedDate</label>
         </div>
     </div>
+    <div class="ui grid equal width centered">
+        <div class="row">
+            <div class="column">
+                <div class="ui segment">
+                    <input class="ui primary button" tabindex="0" type="submit" value="Add">
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <input class="waves-effect waves-light btn" type="submit" value="Add">
+
+
+
 
 </form>
+
+
 
