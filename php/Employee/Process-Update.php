@@ -2,15 +2,14 @@
 
 include '../../connect.php';
 
+
 $employeeID = $_POST['employeeID'];
 $name = $_POST['name'];
 
 
-if (is_null($employeeID) and is_null($name)){
-    echo 'variable not assigned';
-}
 
-if (isset($employeeID) and isset($name)){
+// updateName
+if (isset($employeeID) and isset($name)) {
     $conn = OpenCon();
 
     $sql = "update Employee set name = '$name' where employeeID = '$employeeID'";
@@ -23,6 +22,13 @@ if (isset($employeeID) and isset($name)){
 
     CloseCon($conn);
     return;
+}
+
+// update
+
+
+if (is_null($employeeID) and is_null($name)) {
+    echo 'variable not assigned';
 }
 
 
