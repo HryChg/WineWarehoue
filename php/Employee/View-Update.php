@@ -14,6 +14,25 @@ function displayEmployeeOption(){
     CloseCon($conn);
 }
 
+function displayEmployeeAttributes(){
+    $conn = OpenCon();
+    $result = $conn->query("SHOW COLUMNS FROM Employee");
+    if (!$result) {
+        echo 'Could not show columns from Employees';
+        exit;
+    }
+    echo "<select name='column' class='ui dropdown'>";
+    while ($row = $result->fetch_assoc())
+    {
+        unset($type);
+        $type = $row['Field'];
+        if ($type == 'employeeID') continue;
+        echo '<option value="'.$type.'">'.$type.'</option>';
+    }
+    echo "</select>";
+    CloseCon($conn);
+}
+
 ?>
 
 
@@ -30,12 +49,19 @@ function displayEmployeeOption(){
         <br>
 
 
-        <label>Employee New Name</label>
-        <input name="name" type="text" placeholder="Enter new name">
+
+
+
+
+        <label>Choose the attribute to update</label>
+        <? displayEmployeeAttributes() ?>
+
+        <br/>
+        <label>Enter New Value</label>
+        <input name="value" type="text" placeholder="Enter new value">
 
         <div class="row center">
             <input class="waves-effect waves-light btn" type="submit" value="Update">
         </div>
-
     </form>
 </div>
