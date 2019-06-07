@@ -70,9 +70,9 @@
 
 <div class="ui grid container">
     <div class="ui fluid three item menu container">
-        <a class="item active"><!--  --></a>
-        <a class="item"><!--  --></a>
-        <a class="item"><!--  --></a>
+        <a class="item active">Check Top Supplier</a>
+        <a class="item">Check Expired Wines and Locations</a>
+        <a class="item">Check Most Expensive Wine In Inventory</a>
     </div>
 </div>
 </section>
@@ -84,6 +84,7 @@
 
 <!------------------------------------------------------------------------->
 <section id="StoredIn" class="section center">
+    <br>
     <h1 class="ui header">Current Wine Inventory</h1>
     <div class="container">
         <?php include '../../php/StoredIn/defaultView-storedin.php'; ?>
@@ -91,6 +92,15 @@
 
     <?php include '../../php/StoredIn/insert-view.php'; ?>
     <?php include '../../php/StoredIn/updateQuantityInLoc.php'; ?>
+    <?php include '../../php/IMQueries/queryLocationAndQuantityByWineID.php'; ?>
+    <?php include '../../php/IMQueries/queryBrandFromWineAByGrape.php'; ?>
+    <?php include '../../php/IMQueries/queryBrandFromWineAByWineTaste.php'; ?>
+    <?php include '../../php/IMQueries/queryPriceFromWineBByID.php'; ?>
+    <?php include '../../php/IMQueries/queryWineBByExpiryRange.php'; ?>
+    <?php include '../../php/IMQueries/queryWineByAlcoholRange.php'; ?>
+    <?php include '../../php/IMQueries/queryWineByAgriAttribute.php'; ?>
+    <?php include '../../php/IMQueries/queryMinPriceByBrand.php'; ?>
+
 
 </section>
 

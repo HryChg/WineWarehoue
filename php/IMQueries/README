@@ -43,7 +43,7 @@ Projection:
 
 Aggregation:
 	SELECT MAX(price)
-	FROM wineb //done
+	FROM wineb //done SF
 
 Nested Aggregation with Group By:
 	SELECT MIN(price)
@@ -55,8 +55,8 @@ Division:
 
 
 Examples of queries that the users would be able to perform include but are not limited to: //done
-To create a list of expired wines and their locations //done
-To determine the top supplier //done
+To create a list of expired wines and their locations //done, SF
+To determine the top supplier //done SF
 
 Queries that would require input: //done
  - //done To count the number of types wines of specific attributes, such as alcohol % within a specific range, expiry date within a specific range, etc (requires input of attribute and range).

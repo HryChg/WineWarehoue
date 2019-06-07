@@ -10,7 +10,7 @@
 
     <?php
 
-    include '../../connect.php'; $conn = OpenCon();
+    //include '../../connect.php'; $conn = OpenCon();
 
     $result1 = $conn->query("select wineTaste1 from WineA");
     $wineTaste1Array = array();

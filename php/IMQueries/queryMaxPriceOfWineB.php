@@ -6,7 +6,7 @@
 <?php
 if(array_key_exists('max',$_POST)){
 
-    include '../../connect.php';
+    //include '../../connect.php';
     $conn = OpenCon();
 
     $sql = "SELECT wineID, MAX(price)
