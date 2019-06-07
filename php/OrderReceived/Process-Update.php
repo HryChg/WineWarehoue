@@ -39,25 +39,31 @@ function constructSQLString($conn, $orderID){
         array_push($attributes, $escapedStr);
     }
 
-    echo "<br>","these are the attributes -> ";
-    print_r($attributes);
-
-
     // construct the sql string
     $partialStr = 'update OrderReceived set';
     for ($i = 0; $i < count($attributes) - 1; $i++) {
         $newVal = $_POST[$attributes[$i]];
+        if (!is_numeric($newVal)){
+            $newVal = addQuote($newVal);
+        }
         $partialStr = $partialStr." $attributes[$i] = $newVal, ";
     }
 
     // append the last bit without comma
     $lastIndex = count($attributes) - 1;
     $newVal = $_POST[$attributes[$lastIndex]];
+    if (!is_numeric($newVal)){
+        $newVal = addQuote($newVal);
+    }
     $partialStr = $partialStr." $attributes[$lastIndex] = $newVal ";
     $partialStr = $partialStr." where orderID = $orderID";
 
-    echo '<br> this partial string is ---> ', $partialStr, "<br>";
     return $partialStr;
+}
+
+// return a string wrapped with single quotes
+function addQuote($str){
+    return "'$str'";
 }
 
 ?>
