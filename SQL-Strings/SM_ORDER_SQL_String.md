@@ -80,15 +80,6 @@ FROM OrderReceived
 GROUP BY retailer;
 ```
 
-find top 10 wines where every retailer has ordered 
-
-```sql
-SELECT wineID, SUM(quantity) as totalQuantity
-FROM OrderReceived
-GROUP BY wineID
-ORDER BY totalQuantity DESC
-LIMIT 10;
-```
 
 aggregate the result so that it show the quantity of each wine being ordered
 
