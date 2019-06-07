@@ -1,71 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
     <title>Inventory Manager User Interface</title>
     <style type="text/css">
-        .brand {
-            background: #cbb09c !important; /*important trumps all other CSS rules, avoid using this as much as you can*/
-        }
-
-        .brand-text {
-            color: #cbb09c !important;
-        }
-
         form {
-            max-width: 460px;
+            max-width: 500px;
             margin: 20px auto;
             padding: 20px;
         }
+        h1, h2 {
+            text-align: center;
+        }
+
+        .container{
+            margin: 8px;
+        }
+
+        section {
+            margin: 8px;
+        }
+
+        table {
+            margin: 8px;
+        }
+
+        table th {
+            text-align: center;
+        }
+
+        table thead {
+            text-align: center;
+        }
+
 
     </style>
 
 </head>
-<body class="grey lighten-4">
+<body>
+<nav class="ui large menu">
+    <a class="active item">
+        Home
+    </a>
+    <div class="item">
+        Inventory Manager
+    </div>
+    <div class="right menu">
 
-<div class="container"></div>
+
+        <div class="ui simple dropdown item">
+            Other
+            <i class="dropdown icon"></i>
+            <div class="menu">
+                <div class="item">Employee</div>
+                <div class="item">Inventory Manager</div>
+                <div class="item"><a href="..\ShippingManager\index.php">Shipping Manager</a></div>
+            </div>
+        </div>
 
 
-<nav class="white z-depth-0">
-    <div class="container">
-        <!--"brand-text" is from our own css file-->
-        <a href="#" class="brand-logo brand-text">Inventory Manager UI</a>
-        <ui id="nav-mobile" class="right hide-on-small-and-down">
-
-            <!--"brand" is from our own css file-->
-            <li><a href="#" class="btn brand z-depth-0">Log Out</a></li>
-        </ui>
+        <div class="item">
+            <div class="ui primary button">Log Out</div>
+        </div>
     </div>
 </nav>
 
+<section id="Special Features">
+<h1 class="ui header">Special Features</h1>
 
-<section class="section center">
-    <h5>Special Features</h5>
-    <div class="row">
-        <a href="#" class="waves-effect waves-light btn brand"><!-- Dummy --></a>  
-        <a href="#" class="waves-effect waves-light btn brand"><!-- Dummy --></a>
+<div class="ui grid container">
+    <div class="ui fluid three item menu container">
+        <a class="item active"><!--  --></a>
+        <a class="item"><!--  --></a>
+        <a class="item"><!--  --></a>
     </div>
-    <div class="row">
-        <a href="#" class="waves-effect waves-light btn brand"><!-- Dummy --></a>
-    </div>
+</div>
+
+<?php
+    include '../../template/input-query/create-table.php';
+    include '../../connect.php'; 
+?>
+
+</section>
 
 
-    <h4>Most Recent Order</h4>
-
+<!------------------------------------------------------------------------->
+<section id="StoredIn" class="section center">
+    <h1 class="ui header">Current Wine Inventory</h1>
     <div class="container">
-        <?php
-        include '../../template/input-query/create-table.php';
-        include '../../connect.php';
-        // $conn = OpenCon();
-        //include '../../php/OrderReceived/ViewOrderReceived.php'; ?>
+        <?php include '../../php/StoredIn/defaultView-storedin.php'; ?>
     </div>
-
 </section>
 
 <!------------------------------------------------------------------------->
 <section id="Wine" class="section center">
-    <h5>Wine List</h5>
+    <h1 class="ui header">Wine List</h1>
     <div class="container">
         <?php include '../../php/Wine/defaultView-wine.php'; ?>
     </div>
@@ -73,16 +102,8 @@
 </section>
 
 <!------------------------------------------------------------------------->
-<section id="StoredIn" class="section center">
-    <h5>Wine Inventory</h5>
-    <div class="container">
-        <?php include '../../php/StoredIn/defaultView-storedin.php'; ?>
-    </div>
-</section>
-
-<!------------------------------------------------------------------------->
 <section id="Supplier" class="section center">
-    <h5>Supplier Details</h5>
+    <h1 class="ui header">Supplier Details</h1>
     <div class="container">
         <?php include '../../php/Supplier/defaultView-supplier.php'; ?>
     </div>
@@ -90,7 +111,7 @@
 
 <!------------------------------------------------------------------------->
 <section id="Restock" class="section center">
-    <h5>Restock</h5>
+    <h1 class="ui header">Restock</h1>
     <div class="container">
         <?php include '../../php/Restock/defaultView-restock.php'; ?>
     </div>
@@ -98,7 +119,7 @@
 
 <!------------------------------------------------------------------------->
 <section id="StorageArea" class="section center">
-    <h5>Storage Details</h5>
+    <h1 class="ui header">Storage Details</h1>
     <div class="container">
         <?php include '../../php/StorageArea/defaultView-storageArea.php'; ?>
     </div>
