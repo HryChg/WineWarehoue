@@ -10,12 +10,20 @@
             margin: 20px auto;
             padding: 20px;
         }
-        h1 {
+        h1, h2 {
             text-align: center;
         }
 
         .container{
             margin: 8px;
+        }
+
+        section {
+            margin: 8px;
+        }
+
+        table th {
+            text-align: center;
         }
 
 

@@ -9,37 +9,41 @@ $sql = "
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-
     echo "
-    <table>
+    <table class='ui celled striped table'>
+        <thead>
+            <th colspan='16'>
+                Following are the 10 most recent order...
+            </th>
+        </thead>
+    
         <tr>
-            <th class='border-class'>orderID</th>
-            <th class='border-class'>employeeID</th>
-            <th class='borderclass'>wineID</th>
-            <th class='borderclass'>quantity</th>
-            <th class='borderclass'>retailer</th>
-            <th class='borderclass'>address</th>
-            <th class='borderclass'>backorder</th>
-            <th class='borderclass'>orderReceivedDate</th>
+            <th>orderID</th>
+            <th>employeeID</th>
+            <th>wineID</th>
+            <th>quantity</th>
+            <th>retailer</th>
+            <th>address</th>
+            <th>backorder</th>
+            <th>orderReceivedDate</th>
         </tr>
         ";
 
     // output data of each row
-    while($row = $result->fetch_assoc()) {
+    while ($row = $result->fetch_assoc()) {
         echo "
         <tr>
-            <td class='borderclass'>".$row["orderID"]."</td>
-            <td class='borderclass'>".$row["employeeID"]."</td>
-            <td class='borderclass'>".$row["wineID"]."</td>
-            <td class='borderclass'>".$row["quantity"]."</td>
-            <td class='borderclass'>".$row["retailer"]."</td>
-            <td class='borderclass'>".$row["address"]."</td>
-            <td class='borderclass'>".$row["backorder"]."</td>
-            <td class='borderclass'>".$row["orderReceivedDate"]."</td>
+            <td>" . $row["orderID"] . "</td>
+            <td>" . $row["employeeID"] . "</td>
+            <td>" . $row["wineID"] . "</td>
+            <td>" . $row["quantity"] . "</td>
+            <td>" . $row["retailer"] . "</td>
+            <td>" . $row["address"] . "</td>
+            <td>" . $row["backorder"] . "</td>
+            <td>" . $row["orderReceivedDate"] . "</td>
         </tr>";
     }
     echo "</table>";
-
 
 
 } else {
