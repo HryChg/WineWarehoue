@@ -69,6 +69,6 @@ echo '<form action="insert.php" method="post">
         <label for="climate">Climate:</label>
         <input type="text" name="climate" id="climate">
     </p>
-    <input type="submit" value="Add">
+    <input class="ui button" type="submit" value="Add">
 </form>'
 ?>
