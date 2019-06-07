@@ -3,6 +3,9 @@
 
 <?php
 // Top 10 Most Recent Order (Latest --> Oldest)
+include '../../connect.php';
+$conn = OpenCon();
+
 $sql = "
   SELECT employeeID, type, name
   FROM Employee
@@ -37,4 +40,6 @@ if ($result->num_rows > 0) {
     echo "0 results";
 }
 
+
+CloseCon($conn);
 ?>
