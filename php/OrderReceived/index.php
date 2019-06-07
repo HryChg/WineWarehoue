@@ -14,6 +14,3 @@
         <?php include 'View-Update.php' ?>
     </div>
 </div>
-
-<?php include 'View-Delete.php' ?>
-<?php include 'View-Update.php' ?>

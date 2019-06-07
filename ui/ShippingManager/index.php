@@ -36,6 +36,13 @@
             text-align: center;
         }
 
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;       /* remove default arrow */
+            /*background-image: url(...);   !* add custom arrow *!*/
+        }
+
 
     </style>
 

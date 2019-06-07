@@ -2,7 +2,7 @@
 function displayOrderAttributes($conn){
     $result = $conn->query("select orderID, retailer from OrderReceived");
 
-    echo "<select name='orderID' class='ui dropdown'>";
+    echo "<select name='orderID' class='ui scrolling dropdown'>";
 
     while ($row = $result->fetch_assoc())
     {
@@ -19,9 +19,8 @@ function displayOrderAttributes($conn){
 ?>
 
 
-<div class="container">
     <h1 class="ui header">Update Order</h1>
-    <form action="../../php/OrderReceived/Process-Update.php" method="post">
+    <form class="ui form container" action="../../php/OrderReceived/Process-Update.php" method="post">
 
 
         <label>Select the order you would like to update</label>
@@ -81,4 +80,3 @@ function displayOrderAttributes($conn){
         </div>
 
     </form>
-</div>
