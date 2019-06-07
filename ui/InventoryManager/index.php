@@ -68,17 +68,17 @@
 <?php
 include '../../template/input-query/create-table.php';
 include '../../connect.php';
-$conn = OpenCon()
+$conn = OpenCon();
 ?>
 
 <section id="Special Features">
 <h1 class="ui header">Special Features</h1>
 
 <div class="ui grid container">
-    <div class="ui fluid three item menu container">
+    <div class="ui fluid two item menu container">
         <a class="item" href='../../php/IMQueries/process-queryTopSupplier.php'>Check Top Supplier</a>
-        <a class="item" href='../../php/IMQueries/process-queryExpiredWineInStorage.php'>Check Expired Wines and Locations</a>
         <a class="item" href='../../php/IMQueries/process-queryMaxPriceOfWineB.php'>Check Most Expensive Wine In Inventory</a>
+
     </div>
 </div>
 </section>
@@ -168,6 +168,8 @@ $conn = OpenCon()
 </section>
 
 <!------------------------------------------------------------------------->
+<?php CloseCon($conn); ?>
+
 <footer class="section">
     <div class="center grey-text">Copyright 2019 WineWarehouse</div>
 </footer>

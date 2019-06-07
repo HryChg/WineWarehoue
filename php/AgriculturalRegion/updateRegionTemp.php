@@ -1,4 +1,4 @@
-<form action="process-updateRegionTemp.php" method="post">
+<form action="../../php/AgriculturalRegion/process-updateRegionTemp.php" method="post">
 
     Update the temperature of a AgriculturalRegion
 

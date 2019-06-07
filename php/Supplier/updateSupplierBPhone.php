@@ -1,4 +1,4 @@
-<form action="process-updateSupplierBPhone.php" method="post">
+<form action="../../php/Supplier/process-updateSupplierBPhone.php" method="post">
 
     Update the phone number of a SupplierB
 

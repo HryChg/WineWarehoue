@@ -11,9 +11,9 @@
     //include '../../connect.php'; $conn = OpenCon();
 
     $agriRegionAttrArray = array();
+    array_push($agriRegionAttrArray, '---Select Agricultural Region Attribute---');
     array_push($agriRegionAttrArray, 'temperature');
     array_push($agriRegionAttrArray, 'moisture');
-    array_push($agriRegionAttrArray, 'climate');
 
     echo "<select name='attribute'>";
     foreach($agriRegionAttrArray as $agriRegionAtt) {

@@ -1,4 +1,4 @@
-<form action="process-updateMoisture.php" method="post">
+<form action="../../php/AgriculturalRegion/process-updateMoisture.php" method="post">
 
     Update the moisture of a AgriculturalRegion
 
