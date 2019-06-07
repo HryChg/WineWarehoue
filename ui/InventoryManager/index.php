@@ -106,6 +106,7 @@ $conn = OpenCon();
     
     <?php include '../../php/AgriculturalRegion/updateRegionTemp.php'; ?>
     <?php include '../../php/AgriculturalRegion/updateMoisture.php'; ?>
+    <?php include '../../php/AgriculturalRegion/updateClimate.php'; ?>
     <?php include '../../php/AgriculturalRegion/deleteRegionByName.php'; ?>
 
 </section>
