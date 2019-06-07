@@ -16,7 +16,7 @@ function myTable($obConn, $sql)
 
 //We start with header. >>>Here we retrieve the field names<<<
 
-        echo "<table><tbody><tr>";
+        echo "<table class=\"ui celled striped table\"><tbody><tr>";
 
         $i = 0;
 
@@ -26,7 +26,7 @@ function myTable($obConn, $sql)
 
             $fieldName = $field->name;
 
-            echo "<th class=\"borderclass\">$fieldName</th>";
+            echo "<th>$fieldName</th>";
 
             $i = $i + 1;
 
@@ -41,7 +41,7 @@ function myTable($obConn, $sql)
         while ($row = mysqli_fetch_assoc($rsResult)) {
             echo "<tr>";
             foreach ($row as $data) {
-                echo "<td class=\"borderclass\">$data</td>";
+                echo "<td>$data</td>";
             }
             echo "</tr>";
         }

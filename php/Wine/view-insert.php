@@ -1,12 +1,5 @@
-<!-- TODO: Copy this over to UI -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Wine Warehouse</title>
-</head>
-<body>
-<form action="insert.php" method="post">
+<?php
+echo '<form action="insert.php" method="post">
     <h1>Add Wine</h1>
     <p>
         <label for="wineid">Wine Barcode:</label>
@@ -77,8 +70,5 @@
         <input type="text" name="climate" id="climate">
     </p>
     <input type="submit" value="Add">
-</form>
-<!-- TODO: Add view of records in here -->
-</body>
-</html>
-
+</form>'
+?>

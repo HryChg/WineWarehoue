@@ -1,12 +1,6 @@
-<!-- TODO: Copy this over to UI -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Wine Warehouse</title>
-</head>
-<body>
-<form action="insert.php" method="post">
+<?php
+echo
+'<form action="insert.php" method="post">
     <h1>Add Storage Quantity</h1>
     <p>
         <label for="id">Wine Barcode:</label>
@@ -21,8 +15,5 @@
         <input type="text" name="quantity" id="quantity">
     </p>
     <input type="submit" value="Add">
-</form>
-<!-- TODO: Add view of records in here -->
-</body>
-</html>
-
+</form>'
+?>

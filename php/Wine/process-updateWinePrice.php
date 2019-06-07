@@ -1,6 +1,6 @@
 <?php
 
-include '../../connect.php';
+// include '../../connect.php';
 
 $wineID = $_POST['wineID'];
 $price = $_POST['price'];
