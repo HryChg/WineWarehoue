@@ -3,7 +3,7 @@
 //include '../../connect.php';
 include '../../template/input-query/create-table.php';
 
-$conn = OpenCon();
+//$conn = OpenCon();
 
 $grapeType = $_POST['grapeType'];
 
@@ -19,6 +19,6 @@ if ($result->num_rows > 0) {
     echo "0 results";
 }
 
-CloseCon($conn);
+//CloseCon($conn);
 
 ?>

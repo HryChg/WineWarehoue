@@ -1,4 +1,4 @@
-<form action="process-queryWineByAlcoholRange.php" method="post">
+<form action="../../php/IMQueries/process-queryWineByAlcoholRange.php" method="post">
 
     Query WineB By Alcohol Percentage
 

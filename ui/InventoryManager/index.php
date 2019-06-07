@@ -65,22 +65,24 @@
     </div>
 </nav>
 
+<?php
+include '../../template/input-query/create-table.php';
+include '../../connect.php';
+$conn = OpenCon()
+?>
+
 <section id="Special Features">
 <h1 class="ui header">Special Features</h1>
 
 <div class="ui grid container">
     <div class="ui fluid three item menu container">
-        <a class="item active">Check Top Supplier</a>
-        <a class="item">Check Expired Wines and Locations</a>
-        <a class="item">Check Most Expensive Wine In Inventory</a>
+        <a class="item" href='../../php/IMQueries/process-queryTopSupplier.php'>Check Top Supplier</a>
+        <a class="item" href='../../php/IMQueries/process-queryExpiredWineInStorage.php'>Check Expired Wines and Locations</a>
+        <a class="item" href='../../php/IMQueries/process-queryMaxPriceOfWineB.php'>Check Most Expensive Wine In Inventory</a>
     </div>
 </div>
 </section>
 
-<?php
-    include '../../template/input-query/create-table.php';
-    include '../../connect.php'; 
-?>
 
 <!------------------------------------------------------------------------->
 <section id="StoredIn" class="section center">
