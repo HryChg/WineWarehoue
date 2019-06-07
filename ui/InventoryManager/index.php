@@ -75,14 +75,12 @@
         <a class="item"><!--  --></a>
     </div>
 </div>
+</section>
 
 <?php
     include '../../template/input-query/create-table.php';
     include '../../connect.php'; 
 ?>
-
-</section>
-
 
 <!------------------------------------------------------------------------->
 <section id="StoredIn" class="section center">
@@ -101,6 +99,10 @@
     
 </section>
 
+<?php include '../../php/Wine/view-insert.php'; ?>
+<?php include '../../php/Wine/updateWinePrice.php'; ?>
+<?php include '../../php/Wine/deleteWineAByBrand.php'; ?>
+<?php include '../../php/Wine/deleteWineBByBrandOrID.php'; ?>
 <!------------------------------------------------------------------------->
 <section id="Supplier" class="section center">
     <h1 class="ui header">Supplier Details</h1>
@@ -125,6 +127,9 @@
     </div>
 </section>
 
+
+
+<!------------------------------------------------------------------------->
 <footer class="section">
     <div class="center grey-text">Copyright 2019 WineWarehouse</div>
 </footer>
