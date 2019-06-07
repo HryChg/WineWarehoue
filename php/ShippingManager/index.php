@@ -1,4 +1,5 @@
-
+<div class="ui two column centered grid">
+    <div class="column">
 
 
 <?php
@@ -44,3 +45,7 @@ if ($result->num_rows > 0) {
 }
 
 ?>
+
+    </div>
+
+</div>

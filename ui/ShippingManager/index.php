@@ -108,7 +108,7 @@
 </section>
 
 
-<section id="ShippingManager" class="section center">
+<section id="ShippingManager" class="section" style="alignment: center">
     <h1 class="ui header">Shipping Manager</h1>
     <?php include '../../php/ShippingManager/index.php'; ?>
 </section>
