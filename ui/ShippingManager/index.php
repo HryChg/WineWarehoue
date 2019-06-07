@@ -1,47 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
     <!--    Note later ui override the first-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
     <title>Shipping Manager User Interface</title>
     <style type="text/css">
-        .brand {
-            background: #cbb09c !important; /*important trumps all other CSS rules, avoid using this as much as you can*/
-        }
-
-        .brand-text {
-            color: #cbb09c !important;
-        }
-
         form {
-            max-width: 460px;
+            max-width: 500px;
             margin: 20px auto;
             padding: 20px;
         }
-
-        h1 h2 h3 h4 h5 h6 {
-            text-align: center;
-        }
-
     </style>
 
 </head>
-<body class="grey lighten-4">
+<body>
+<nav class="ui large menu">
+    <a class="active item">
+        Home
+    </a>
+    <div class="item">
+        Shipping Manager
+    </div>
+    <div class="right menu">
+
+
+        <div class="ui simple dropdown item">
+            Other
+            <i class="dropdown icon"></i>
+            <div class="menu">
+                <div class="item">Employee</div>
+                <div class="item">Inventory Manager</div>
+                <div class="item">Shipping Manager</div>
+            </div>
+        </div>
+
+
+        <div class="item">
+            <div class="ui primary button">Log Out</div>
+        </div>
+    </div>
+</nav>
+
 
 <div class="container"></div>
-
-
-<nav class="white z-depth-0">
-    <div class="container">
-        <!--"brand-text" is from our own css file-->
-        <a href="#" class="brand-logo brand-text">Shipping Manager UI</a>
-        <ui id="nav-mobile" class="right hide-on-small-and-down">
-
-            <!--"brand" is from our own css file-->
-            <li><a hred="#" class="btn brand z-depth-0">Log Out</a></li>
-        </ui>
-</nav>
 
 
 <section class="section center">
@@ -67,11 +68,11 @@
 
 <section id="ReturnedShipment" class="center">
     <div class="container">
-    <h5>Returned Shipment</h5>
+        <h5>Returned Shipment</h5>
 
-    <?php
-    include '../../php/ReturnedShipment/returnedShipment.php';
-    ?>
+        <?php
+        include '../../php/ReturnedShipment/returnedShipment.php';
+        ?>
     </div>
 </section>
 
@@ -96,8 +97,8 @@
 <!------------------------------------------------------------------------->
 <section id=Shipment class="section center">
     <h5>Shipment</h5>
-    <?php include '../../php/Shipment/index.php'; 
-    CloseCon($conn);?>
+    <?php include '../../php/Shipment/index.php';
+    CloseCon($conn); ?>
 </section>
 
 
