@@ -14,6 +14,6 @@ echo
         <label for="quantity">Quantity:</label>
         <input type="text" name="quantity" id="quantity">
     </p>
-    <input type="submit" value="Add">
+    <input class="ui button" type="submit" value="Add">
 </form>'
 ?>

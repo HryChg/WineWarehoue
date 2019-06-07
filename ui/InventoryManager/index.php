@@ -38,38 +38,15 @@
 
 </head>
 <body>
-<nav class="ui large menu">
-    <a class="active item">
-        Home
-    </a>
-    <div class="item">
-        Inventory Manager
-    </div>
-    <div class="right menu">
-
-
-        <div class="ui simple dropdown item">
-            Other
-            <i class="dropdown icon"></i>
-            <div class="menu">
-                <div class="item">Employee</div>
-                <div class="item">Inventory Manager</div>
-                <div class="item"><a href="..\ShippingManager\index.php">Shipping Manager</a></div>
-            </div>
-        </div>
-
-
-        <div class="item">
-            <div class="ui primary button">Log Out</div>
-        </div>
-    </div>
-</nav>
 
 <?php
 include '../../template/input-query/create-table.php';
+include '../../util/Display-NavBar.php';
 include '../../connect.php';
 $conn = OpenCon();
 ?>
+
+<?php displayNav("Inventory Manager")?>
 
 <section id="Special Features">
 <h1 class="ui header">Special Features</h1>
