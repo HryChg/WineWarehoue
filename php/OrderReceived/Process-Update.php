@@ -4,40 +4,13 @@ include '../../connect.php';
 
 $conn = openCon();
 
-// init all variable as empty str
 $orderID = mysqli_real_escape_string($conn, $_POST['orderID']);
-
-
-// get submitted keys in _POST
-$postedKeys = array_keys($_POST);
-
-// populate that attributes array with escaped strings
-$attributes = array();
-foreach ($postedKeys as $item) {
-    if ($item == 'orderID') continue; // skip adding orderID
-    $escapedStr = mysqli_real_escape_string($conn, $item);
-    array_push($attributes, $escapedStr);
+if (is_null($orderID)){
+    echo'Your Order Is is null';
+    return;
 }
 
-// construct the sql string
-$partialStr = 'update OrderReceived ';
-for ($i = 0; $i < count($attributes) - 1; $i++) {
-    $newVal = $_POST[$attributes[$i]];
-    $partialStr = $partialStr."set $attributes[$i] = $newVal, ";
-}
-$lastIndex = count($attributes) - 1;
-$newVal = $_POST[$attributes[$lastIndex]];
-$partialStr = $partialStr."set $attributes[$lastIndex] = $newVal ";
-$partialStr = $partialStr." where orderID = $orderID";
-
-
-print_r($postedKeys);
-print_r($attributes);
-printf($partialStr);
-
-
-
-$sql = $partialStr;
+$sql = constructSQLString($conn, $orderID);
 if ($conn->query($sql) === TRUE) {
     echo '<br/>';
     echo "Record updated successfully";
@@ -47,25 +20,44 @@ if ($conn->query($sql) === TRUE) {
 
 closeCon($conn);
 
+// EFFECTS: inspect posted keys and create SQL string for updating every key posted
+function constructSQLString($conn, $orderID){
+    // get submitted keys in _POST
+    $postedKeys = array_keys($_POST);
 
-function collect($conn)
-{
-    if (mysqli_real_escape_string($conn, $_POST['backorder']) == 'Undefined') {
-        echo 'backorder is null';
+    // filter out empty value in postedKeys
+    $attributes = array();
+    print_r($postedKeys);
+    foreach ($postedKeys as $item) {
+        if ($_POST[$item] === 'orderID') {
+            continue; // skip adding orderID
+        }
+        if ($_POST[$item] === '') {
+            continue; // skipp adding empty string
+        };
+        $escapedStr = mysqli_real_escape_string($conn, $item);
+        array_push($attributes, $escapedStr);
     }
-}
+
+    echo "<br>","these are the attributes -> ";
+    print_r($attributes);
 
 
-function updateOrder($orderID, $col, $newVal)
-{
-    $conn = OpenCon();
-    $sql = "update OrderReceived set '$col' = '$newVal' where orderID = '$orderID'";
-    if ($conn->query($sql) === TRUE) {
-        echo "Record updated successfully";
-    } else {
-        echo "Error updating record: " . $conn->error;
+    // construct the sql string
+    $partialStr = 'update OrderReceived set';
+    for ($i = 0; $i < count($attributes) - 1; $i++) {
+        $newVal = $_POST[$attributes[$i]];
+        $partialStr = $partialStr." $attributes[$i] = $newVal, ";
     }
-    closeCon($conn);
+
+    // append the last bit without comma
+    $lastIndex = count($attributes) - 1;
+    $newVal = $_POST[$attributes[$lastIndex]];
+    $partialStr = $partialStr." $attributes[$lastIndex] = $newVal ";
+    $partialStr = $partialStr." where orderID = $orderID";
+
+    echo '<br> this partial string is ---> ', $partialStr, "<br>";
+    return $partialStr;
 }
 
 ?>

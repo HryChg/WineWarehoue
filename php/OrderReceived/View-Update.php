@@ -54,12 +54,59 @@ function displayOrderAttributes(){
 
 
 
-        <label>Order Quantity </label>
+<!--        <label>Order Quantity </label>-->
+<!--        <input name="quantity" type="text" placeholder="Enter new quantity">-->
+<!--        <br/>-->
 
-        <input name="quantity" type="text" placeholder="Enter new quantity">
 
-        <br/>
-<!--        --><?php //displayOrderAttributes() ?>
+        <div class="row">
+            <div>
+                <div class="input">
+                    <input placeholder="" name="employeeID" type="text" class="validate">
+                    <label for="employeeID">employeeID</label>
+                </div>
+            </div>
+            <div>
+                <div class="input">
+                    <input placeholder="" name="wineID" type="text" class="validate">
+                    <label for="wineID">wineID</label>
+                </div>
+            </div>
+            <div>
+                <div class="input">
+                    <input placeholder="" name="quantity" type="text" class="validate">
+                    <label for="quantity">quantity</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <div class="input">
+                    <input placeholder="" name="retailer" type="text" class="validate">
+                    <label for="retailer">retailer</label>
+                </div>
+            </div>
+            <div>
+                <div class="input">
+                    <input placeholder="" name="address" type="text" class="validate">
+                    <label for="address">address</label>
+                </div>
+            </div>
+            <div>
+                <div class="input">
+                    <input placeholder="" name="backorder" type="text" class="validate">
+                    <label for="backorder">backorder</label>
+                </div>
+            </div>
+            <div>
+                <div class="input">
+                    <input placeholder="" name="orderReceivedDate" type="text" class="validate">
+                    <label for="orderReceivedDate">orderReceivedDate</label>
+                </div>
+            </div>
+        </div>
+
+
 
         <div class="row center">
             <input class="waves-effect waves-light btn" type="submit" value="Update">
