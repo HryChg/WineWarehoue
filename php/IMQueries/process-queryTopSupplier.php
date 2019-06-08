@@ -21,6 +21,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     setStyle();
     displayNav("Inventory Manager");
+    echo "<h1>Top Supplier</h1>";
     myTable($conn, $sql);
 } else {
     echo "0 results";

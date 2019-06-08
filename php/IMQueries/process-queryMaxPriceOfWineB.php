@@ -2,15 +2,20 @@
 
 include '../../connect.php';
 include '../../template/input-query/create-table.php';
+include '../../util/Display-IM-Header.php';
+include '../../util/Display-NavBar.php';
 
     $conn = OpenCon();
 
-    $sql = "SELECT wineID, MAX(price)
+    $sql = "SELECT wineID, MAX(price) AS price
             FROM WineB";
 
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
+        setStyle();
+        displayNav("Inventory Manager");
+        echo "<h1>Most Expensive Wine</h1>";
         myTable($conn, $sql);
     } else {
         echo "0 results";
