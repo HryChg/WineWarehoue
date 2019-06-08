@@ -1,5 +1,5 @@
 <?php
-echo '<form action="../../php/Wine/insert.php" method="post">
+echo '<form class="ui form" action="../../php/Wine/insert.php" method="post">
     <h1>Add Wine</h1>
     <p>
         <label for="wineid">Wine Barcode:</label>

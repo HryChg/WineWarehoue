@@ -1,0 +1,11 @@
+.form {
+    border: 1px solid lightgrey;
+    border-radius: 8px;
+    width: 33%;
+}
+
+#form {
+    width: 30%;
+    position: absolute;
+    margin: 8px;
+}

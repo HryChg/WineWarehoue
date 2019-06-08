@@ -1,4 +1,4 @@
-<form action="../../php/IMQueries/process-queryWineByAgriAttribute.php" method="post">
+<form class="ui form" action="../../php/IMQueries/process-queryWineByAgriAttribute.php" method="post">
 
     Query Wine By Agricultural Region Attribute
 

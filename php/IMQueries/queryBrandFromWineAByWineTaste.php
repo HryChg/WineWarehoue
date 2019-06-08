@@ -1,4 +1,4 @@
-<form action="../../php/IMQueries/process-queryBrandFromWineAByWineTaste.php" method="post">
+<form class="ui form" action="../../php/IMQueries/process-queryBrandFromWineAByWineTaste.php" method="post">
 
     Query WineA by WineTaste1 or WineTaste2
 

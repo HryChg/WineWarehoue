@@ -1,4 +1,4 @@
-<form action="../../php/Wine/process-updateWinePrice.php" method="post">
+<form class="ui form" action="../../php/Wine/process-updateWinePrice.php" method="post">
 
     Update the price of a wineB
 

@@ -1,4 +1,4 @@
-<form action="../../php/IMQueries/process-queryTopSupplier.php" method="post">
+<form class="ui form" action="../../php/IMQueries/process-queryTopSupplier.php" method="post">
 
     Query Top Supplier
 

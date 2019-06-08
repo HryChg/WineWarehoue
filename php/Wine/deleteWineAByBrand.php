@@ -1,4 +1,4 @@
-<form action="../../php/Wine/process-deleteWineAByBrand.php" method="post">
+<form class="ui form" action="../../php/Wine/process-deleteWineAByBrand.php" method="post">
 
     Delete a tuple from WineA using brandName
 

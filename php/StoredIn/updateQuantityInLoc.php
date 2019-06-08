@@ -1,6 +1,6 @@
-<form action="../../php/StoredIn/process-updateQuantityInLoc.php" method="post">
+<form class="ui form" action="../../php/StoredIn/process-updateQuantityInLoc.php" method="post">
 
-    Update the quantity of a wine in a location
+    Update Wine Quantity in Storage
 
     </br>
 

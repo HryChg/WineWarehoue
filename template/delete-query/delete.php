@@ -1,4 +1,4 @@
-<form action="process-delete.php" method="post">
+<form class="ui form" action="process-delete.php" method="post">
 
     Delete a tuple from SupplierA using name
 

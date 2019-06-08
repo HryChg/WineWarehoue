@@ -1,4 +1,4 @@
-<form action="../../php/IMQueries/process-queryBrandFromWineAByGrape.php" method="post">
+<form class="ui form" action="../../php/IMQueries/process-queryBrandFromWineAByGrape.php" method="post">
 
     Query WineA by grapeType1 or grapeType2
 

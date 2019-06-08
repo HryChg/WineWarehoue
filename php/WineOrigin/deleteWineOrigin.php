@@ -1,4 +1,4 @@
-<form action="../../php/WineOrigin/process-deleteWineOrigin.php" method="post">
+<form class="ui form" action="../../php/WineOrigin/process-deleteWineOrigin.php" method="post">
 
     Delete a tuple from WineOrigin using regionName and wineID
 
