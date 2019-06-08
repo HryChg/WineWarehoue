@@ -1,13 +1,14 @@
 <?php
 
 // Displays navigation bar with given parameter
-function displayNav($title) {
+function displayNav($user) {
+    $link = str_replace(' ','', $user);
     echo '<nav class="ui large menu">
-    <a class="active item">
+    <a class="item" href="../../ui/'.$link.'/index.php">
         Home
     </a>
     <div class="item">'.
-        $title.
+        $user.
     '</div>
     <div class="right menu">
 
@@ -15,9 +16,9 @@ function displayNav($title) {
             Other
             <i class="dropdown icon"></i>
             <div class="menu">
-                <div class="item">Employee</div>
-                <div class="item">Inventory Manager</div>
-                <div class="item"><a href="..\ShippingManager\index.php">Shipping Manager</a></div>
+                <div class="item"><a class="item" href="../Employee/index.php">Employee</a></div>
+                <div class="item"><a class="item" href="../InventoryManager/index.php">Inventory Manager</a></div>
+                <div class="item"><a class="item" href="../ShippingManager/index.php">Shipping Manager</a></div>
             </div>
         </div>
 

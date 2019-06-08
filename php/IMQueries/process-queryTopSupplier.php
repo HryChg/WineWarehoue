@@ -2,6 +2,8 @@
 
 include '../../connect.php';
 include '../../template/input-query/create-table.php';
+include '../../util/Display-IM-Header.php';
+include '../../util/Display-NavBar.php';
 
 $conn = OpenCon();
 $sql = "SELECT sb.supplierID, sa.name, sa.address, sb.phoneNo, tot.total 
@@ -17,11 +19,14 @@ $sql = "SELECT sb.supplierID, sa.name, sa.address, sb.phoneNo, tot.total
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
+    setStyle();
+    displayNav("Inventory Manager");
     myTable($conn, $sql);
 } else {
     echo "0 results";
 }
 
 CloseCon($conn);
+
 
 ?>

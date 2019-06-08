@@ -13,6 +13,7 @@ $sql = "SELECT brandName, grapeType1, grapeType2
 
 $result = $conn->query($sql);
 
+
 if ($result->num_rows > 0) {
     myTable($conn, $sql);
 } else {
