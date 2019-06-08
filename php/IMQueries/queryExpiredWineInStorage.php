@@ -1,4 +1,4 @@
-<form action="process-queryExpiredWineInStorage.php" method="post">
+<form action="../../php/IMQueries/process-queryExpiredWineInStorage.php" method="post">
 
     Query Expired Wine in Storage
 

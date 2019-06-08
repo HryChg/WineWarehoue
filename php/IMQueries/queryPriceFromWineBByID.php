@@ -1,4 +1,4 @@
-<form action="process-queryPriceFromWineBByID.php" method="post">
+<form action="../../php/IMQueries/process-queryPriceFromWineBByID.php" method="post">
 
     Query WineB Price by WineID
 

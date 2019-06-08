@@ -1,6 +1,6 @@
 <?php
 echo
-'<form action="insert.php" method="post">
+'<form action="../../php/StoredIn/insert.php" method="post">
     <h1>Add Storage Quantity</h1>
     <p>
         <label for="id">Wine Barcode:</label>
@@ -14,6 +14,6 @@ echo
         <label for="quantity">Quantity:</label>
         <input type="text" name="quantity" id="quantity">
     </p>
-    <input type="submit" value="Add">
+    <input class="ui button" type="submit" value="Add">
 </form>'
 ?>

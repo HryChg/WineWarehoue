@@ -1,6 +1,6 @@
 <?php
 echo
-'<form action="insert.php" method="post">
+'<form class="ui form container inverted" action="../../php/Restock/insert.php" method="post">
     <h1>Wine Restock Records</h1>
     <p>
         <label for="employeeid">Employee ID:</label>
@@ -26,6 +26,6 @@ echo
         <label for="date">Restock Date (YYYY-MM-DD):</label>
         <input type="text" name="date" id="date">
     </p>
-    <input type="submit" value="Add">
+    <input class="ui button" type="submit" value="Add">
 </form>'
 ?>

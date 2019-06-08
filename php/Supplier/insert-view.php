@@ -1,6 +1,6 @@
 <?php
 echo
-'<form action="insert.php" method="post">
+'<form action="../../php/Supplier/insert.php" method="post">
     <h1>Add Supplier</h1>
     <p>
         <label for="id">Supplier ID:</label>

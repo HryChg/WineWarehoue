@@ -1,5 +1,5 @@
 <?php
-echo '<form action="insert.php" method="post">
+echo '<form action="../../php/Wine/insert.php" method="post">
     <h1>Add Wine</h1>
     <p>
         <label for="wineid">Wine Barcode:</label>
@@ -69,6 +69,6 @@ echo '<form action="insert.php" method="post">
         <label for="climate">Climate:</label>
         <input type="text" name="climate" id="climate">
     </p>
-    <input type="submit" value="Add">
+    <input class="ui button" type="submit" value="Add">
 </form>'
 ?>

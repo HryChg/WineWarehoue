@@ -1,4 +1,4 @@
-<form action="process-updateStorageTemp.php" method="post">
+<form action="../../php/StorageArea/process-updateStorageTemp.php" method="post">
 
     Update the temperature of a StorageArea
 

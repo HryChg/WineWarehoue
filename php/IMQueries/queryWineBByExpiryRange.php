@@ -1,4 +1,4 @@
-<form action="process-queryWineBByExpiryRange.php" method="post">
+<form action="../../php/IMQueries/process-queryWineBByExpiryRange.php" method="post">
 
     Query Wine By Expiry Date
 

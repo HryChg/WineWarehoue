@@ -1,4 +1,4 @@
-<form action="process-queryMinPriceByBrand.php" method="post">
+<form action="../../php/IMQueries/process-queryMinPriceByBrand.php" method="post">
 
     Query WineB Minimum Price by Brand
 

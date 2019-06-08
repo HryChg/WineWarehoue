@@ -1,4 +1,4 @@
-<form action="process-queryBrandFromWineAByWineTaste.php" method="post">
+<form action="../../php/IMQueries/process-queryBrandFromWineAByWineTaste.php" method="post">
 
     Query WineA by WineTaste1 or WineTaste2
 
@@ -10,7 +10,7 @@
 
     <?php
 
-    include '../../connect.php'; $conn = OpenCon();
+    //include '../../connect.php'; $conn = OpenCon();
 
     $result1 = $conn->query("select wineTaste1 from WineA");
     $wineTaste1Array = array();

@@ -1,4 +1,4 @@
-<form action="process-queryWineByAgriAttribute.php" method="post">
+<form action="../../php/IMQueries/process-queryWineByAgriAttribute.php" method="post">
 
     Query Wine By Agricultural Region Attribute
 
@@ -8,12 +8,12 @@
 
     <?php
 
-    include '../../connect.php'; $conn = OpenCon();
+    //include '../../connect.php'; $conn = OpenCon();
 
     $agriRegionAttrArray = array();
+    array_push($agriRegionAttrArray, '---Select Agricultural Region Attribute---');
     array_push($agriRegionAttrArray, 'temperature');
     array_push($agriRegionAttrArray, 'moisture');
-    array_push($agriRegionAttrArray, 'climate');
 
     echo "<select name='attribute'>";
     foreach($agriRegionAttrArray as $agriRegionAtt) {

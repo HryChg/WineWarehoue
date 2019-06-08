@@ -1,89 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
-    <title>Inventory Manager User Interface</title>
-    <style type="text/css">
-        form {
-            max-width: 500px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-        h1, h2 {
-            text-align: center;
-        }
+<?php
+include '../../template/input-query/create-table.php';
+include '../../util/Display-NavBar.php';
+include '../../util/Display-IM-Header.php';
+include '../../connect.php';
+$conn = OpenCon();
 
-        .container{
-            margin: 8px;
-        }
-
-        section {
-            margin: 8px;
-        }
-
-        table {
-            margin: 8px;
-        }
-
-        table th {
-            text-align: center;
-        }
-
-        table thead {
-            text-align: center;
-        }
-
-
-    </style>
-
-</head>
+setStyle();
+?>
 <body>
-<nav class="ui large menu">
-    <a class="active item">
-        Home
-    </a>
-    <div class="item">
-        Inventory Manager
-    </div>
-    <div class="right menu">
 
 
-        <div class="ui simple dropdown item">
-            Other
-            <i class="dropdown icon"></i>
-            <div class="menu">
-                <div class="item">Employee</div>
-                <div class="item">Inventory Manager</div>
-                <div class="item"><a href="..\ShippingManager\index.php">Shipping Manager</a></div>
-            </div>
-        </div>
 
-
-        <div class="item">
-            <div class="ui primary button">Log Out</div>
-        </div>
-    </div>
-</nav>
+<?php displayNav("Inventory Manager")?>
 
 <section id="Special Features">
 <h1 class="ui header">Special Features</h1>
 
 <div class="ui grid container">
-    <div class="ui fluid three item menu container">
-        <a class="item active"><!--  --></a>
-        <a class="item"><!--  --></a>
-        <a class="item"><!--  --></a>
+    <div class="ui fluid two item menu container">
+        <a class="item" href='../../php/IMQueries/process-queryTopSupplier.php'>Check Top Supplier</a>
+        <a class="item" href='../../php/IMQueries/process-queryMaxPriceOfWineB.php'>Check Most Expensive Wine In Inventory</a>
+
     </div>
 </div>
 </section>
 
-<?php
-    include '../../template/input-query/create-table.php';
-    include '../../connect.php'; 
-?>
 
 <!------------------------------------------------------------------------->
 <section id="StoredIn" class="section center">
+    <br>
     <h1 class="ui header">Current Wine Inventory</h1>
     <div class="container">
         <?php include '../../php/StoredIn/defaultView-storedin.php'; ?>
@@ -91,6 +38,15 @@
 
     <?php include '../../php/StoredIn/insert-view.php'; ?>
     <?php include '../../php/StoredIn/updateQuantityInLoc.php'; ?>
+    <?php include '../../php/IMQueries/queryLocationAndQuantityByWineID.php'; ?>
+    <?php include '../../php/IMQueries/queryBrandFromWineAByGrape.php'; ?>
+    <?php include '../../php/IMQueries/queryBrandFromWineAByWineTaste.php'; ?>
+    <?php include '../../php/IMQueries/queryPriceFromWineBByID.php'; ?>
+    <?php include '../../php/IMQueries/queryWineBByExpiryRange.php'; ?>
+    <?php include '../../php/IMQueries/queryWineByAlcoholRange.php'; ?>
+    <?php include '../../php/IMQueries/queryWineByAgriAttribute.php'; ?>
+    <?php include '../../php/IMQueries/queryMinPriceByBrand.php'; ?>
+
 
 </section>
 
@@ -117,6 +73,7 @@
     
     <?php include '../../php/AgriculturalRegion/updateRegionTemp.php'; ?>
     <?php include '../../php/AgriculturalRegion/updateMoisture.php'; ?>
+    <?php include '../../php/AgriculturalRegion/updateClimate.php'; ?>
     <?php include '../../php/AgriculturalRegion/deleteRegionByName.php'; ?>
 
 </section>
@@ -156,6 +113,8 @@
 </section>
 
 <!------------------------------------------------------------------------->
+<?php CloseCon($conn); ?>
+
 <footer class="section">
     <div class="center grey-text">Copyright 2019 WineWarehouse</div>
 </footer>

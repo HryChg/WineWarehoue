@@ -1,4 +1,4 @@
-<form action="process-queryBrandFromWineAByGrape.php" method="post">
+<form action="../../php/IMQueries/process-queryBrandFromWineAByGrape.php" method="post">
 
     Query WineA by grapeType1 or grapeType2
 
@@ -10,10 +10,11 @@
 
     <?php
 
-    include '../../connect.php'; $conn = OpenCon();
+    //include '../../connect.php';$conn = OpenCon();
 
     $result1 = $conn->query("select grapeType1 from WineA");
     $grapeType1Array = array();
+    array_push($grapeType1Array, "---Select grape type---");
     while ($row = $result1->fetch_assoc()) {
         unset($grapeType1);
         $grapeType1 = $row['grapeType1'];
@@ -33,6 +34,7 @@
         echo '<option value="'.$grapeType.'">'.'grapeType: '.$grapeType.'</option>';
     }
     echo "</select>";
+
 
     ?>
 

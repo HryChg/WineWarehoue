@@ -100,9 +100,8 @@
 <section id="ReturnedShipment" class="center">
     <div class="container">
         <h5>Returned Shipment</h5>
-
         <?php
-        include '../../php/ReturnedShipment/returnedShipment.php';
+        include '../../php/ReturnedShipment/index.php';
         ?>
     </div>
 </section>

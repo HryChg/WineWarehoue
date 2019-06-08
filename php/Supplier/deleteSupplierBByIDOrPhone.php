@@ -1,4 +1,4 @@
-<form action="process-deleteSupplierBByIDOrPhone.php" method="post">
+<form action="../../php/Supplier/process-deleteSupplierBByIDOrPhone.php" method="post">
 
     Delete a tuple from SupplierB using supplierID or phoneNo
 

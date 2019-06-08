@@ -1,6 +1,6 @@
-<form action="../../php/AgriculturalRegion/process-updateMoisture.php" method="post">
+<form action="../../php/AgriculturalRegion/process-updateClimate.php" method="post">
 
-    Update the moisture of a AgriculturalRegion
+    Update the climate of a AgriculturalRegion
 
     </br>
 
@@ -10,7 +10,7 @@
 
     <?php
 
-    // include '../../connect.php'; 
+    // include '../../connect.php';
     $conn = OpenCon();
 
     $result = $conn->query("select name from AgriculturalRegion");
@@ -38,9 +38,9 @@
 
 
 
-    <label>Region Moisture </label>
+    <label>Region climate </label>
 
-    <input name="moisture" type="text" placeholder="Enter new moisture for region">
+    <input name="climate" type="text" placeholder="Enter new climate for region">
 
 
     <input type="submit" value="Update">

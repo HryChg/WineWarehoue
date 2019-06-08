@@ -2,12 +2,12 @@
 
 include '../../connect.php';
 
-$wineID = $_POST['wineID'];
-$price = $_POST['price'];
+$name = $_POST['name'];
+$climate = $_POST['climate'];
 
 $conn = OpenCon();
 
-$sql = "update WineB set price = '$price' where wineID = '$wineID'";
+$sql = "update AgriculturalRegion set climate = '$climate' where name = '$name'";
 
 if ($conn->query($sql) === TRUE) {
 
