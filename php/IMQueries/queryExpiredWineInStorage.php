@@ -9,7 +9,7 @@
     <label>Expiry Date (YYYY-MM-DD)</label>
     </br>
     <input type="text" name="expiry">    
-    <input type="submit" value="Query">    
+    <input class="ui button" type="submit" value="Query">    
     </br>
     (If empty, date will be set to TODAY)
     

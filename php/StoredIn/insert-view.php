@@ -1,7 +1,7 @@
 <?php
 echo
 '<form class="ui form" id="form" action="../../php/StoredIn/insert.php" method="post">
-    <h1>Add Storage Quantity</h1>
+    <h3>Add Storage Quantity</h3>
     <p>
         <label for="id">Wine Barcode:</label>
         <input type="text" name="id" id="id">

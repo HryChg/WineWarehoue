@@ -36,6 +36,6 @@
     ?>
 
 
-    <input type="submit" value="Delete">
+    <input class="ui button" type="submit" value="Delete">
 
 </form>

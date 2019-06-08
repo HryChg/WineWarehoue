@@ -35,7 +35,7 @@ setStyle();
     <div class="container">
         <?php include '../../php/StoredIn/defaultView-storedin.php'; ?>
     </div>
-
+    
     <?php include '../../php/StoredIn/insert-view.php'; ?>
     <?php include '../../php/StoredIn/updateQuantityInLoc.php'; ?>
     <?php include '../../php/IMQueries/queryLocationAndQuantityByWineID.php'; ?>

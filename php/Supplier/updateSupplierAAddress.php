@@ -46,6 +46,6 @@
 
     <br>
 
-    <input type="submit" value="Update">
+    <input class="ui button" type="submit" value="Update">
 
 </form>

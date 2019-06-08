@@ -1,11 +1,6 @@
 <form class="ui form" action="../../php/IMQueries/process-queryBrandFromWineAByGrape.php" method="post">
 
-    Query WineA by grapeType1 or grapeType2
-
-    </br>
-
-    </br>
-
+    <h1>Query WineA by grapeType1 or grapeType2</h1>
     <label>grapeType</label>
 
     <?php
@@ -38,6 +33,6 @@
 
     ?>
 
-    <input type="submit" value="Query">
+    <input class="ui button" type="submit" value="Query">
 
 </form>

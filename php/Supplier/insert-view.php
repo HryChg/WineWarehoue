@@ -18,6 +18,6 @@ echo
         <label for="address">Address:</label>
         <input type="text" name="address" id="address">
     </p>
-    <input type="submit" value="Add">
+    <input class="ui button" type="submit" value="Add">
 </form>'
 ?>

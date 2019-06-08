@@ -25,6 +25,6 @@
     <label> value: </label>
     <input type="text" name="val">
 
-    <input type="submit" value="Query">
+    <input class="ui button" type="submit" value="Query">
 
 </form>

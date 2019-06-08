@@ -1,12 +1,8 @@
 <form class="ui form" action="../../php/StoredIn/process-updateQuantityInLoc.php" method="post">
 
-    Update Wine Quantity in Storage
+    <h3>Update Wine Quantity in Storage</h3>
 
-    </br>
-
-    </br>
-
-    <label>StoredIn Wine and Location</label>
+    <label>Location and WineID</label>
 
     <?php
 
@@ -35,10 +31,10 @@
     ?>
 
     <br>
-    <label>StoredIn Quantity</label>
+    <label>New Quantity</label>
 
     <input name="quantityInLocation" type="text" placeholder="Enter new quantity">
 
-    <input type="submit" value="Update">
+    <input class="ui button" type="submit" value="Update">
 
 </form>

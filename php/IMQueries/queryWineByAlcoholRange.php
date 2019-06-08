@@ -10,6 +10,6 @@
     <label> to </label>
     <input type="text" name="highRange">
 
-    <input type="submit" value="Query">
+    <input class="ui button" type="submit" value="Query">
 
 </form>
