@@ -62,9 +62,9 @@
             Other
             <i class="dropdown icon"></i>
             <div class="menu">
-                <div class="item">Employee</div>
-                <div class="item">Inventory Manager</div>
-                <div class="item">Shipping Manager</div>
+                <div class="item"><a class="item" href="../Employee/index.php">Employee</a></div>
+                <div class="item"><a class="item" href="../InventoryManager/index.php">Inventory Manager</a></div>
+                <div class="item"><a class="item" href="../ShippingManager/index.php">Shipping Manager</a></div>
             </div>
         </div>
 
