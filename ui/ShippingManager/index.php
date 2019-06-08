@@ -107,7 +107,6 @@
     </div>
 </section>
 
-
 <section id="ShippingManager" class="section" style="alignment: center">
     <h1 class="ui header">Shipping Manager</h1>
     <?php include '../../php/ShippingManager/index.php'; ?>
@@ -127,14 +126,16 @@
 
 
 <section id=Shipment class="section center">
-    <h5>Shipment</h5>
+    <h1 class="ui header">Shipment</h1>
     <?php include '../../php/Shipment/index.php';
     CloseCon($conn); ?>
 </section>
 
 
-<footer class="section">
-    <div class="center grey-text">Copyright 2019 WineWarehouse</div>
+<footer class="ui inverted vertical footer segment">
+    <div class="ui container">
+        Copyright 2019 WineWarehouse
+    </div>
 </footer>
 
 </body>
