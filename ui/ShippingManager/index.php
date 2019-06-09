@@ -62,9 +62,9 @@
             Other
             <i class="dropdown icon"></i>
             <div class="menu">
-                <div class="item">Employee</div>
-                <div class="item">Inventory Manager</div>
-                <div class="item">Shipping Manager</div>
+                <div class="item"><a class="item" href="../Employee/index.php">Employee</a></div>
+                <div class="item"><a class="item" href="../InventoryManager/index.php">Inventory Manager</a></div>
+                <div class="item"><a class="item" href="../ShippingManager/index.php">Shipping Manager</a></div>
             </div>
         </div>
 
@@ -106,7 +106,6 @@
     </div>
 </section>
 
-
 <section id="ShippingManager" class="section" style="alignment: center">
     <h1 class="ui header">Shipping Manager</h1>
     <?php include '../../php/ShippingManager/index.php'; ?>
@@ -126,14 +125,16 @@
 
 
 <section id=Shipment class="section center">
-    <h5>Shipment</h5>
+    <h1 class="ui header">Shipment</h1>
     <?php include '../../php/Shipment/index.php';
     CloseCon($conn); ?>
 </section>
 
 
-<footer class="section">
-    <div class="center grey-text">Copyright 2019 WineWarehouse</div>
+<footer class="ui inverted vertical footer segment">
+    <div class="ui container">
+        Copyright 2019 WineWarehouse
+    </div>
 </footer>
 
 </body>
