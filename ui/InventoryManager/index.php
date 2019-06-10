@@ -85,9 +85,7 @@ setStyle();
     
     <div class="ui equal width relaxed grid">
         <div class="column">
-            <?php include '../../php/AgriculturalRegion/updateRegionTemp.php'; ?>
-            <?php include '../../php/AgriculturalRegion/updateMoisture.php'; ?>
-            <?php include '../../php/AgriculturalRegion/updateClimate.php'; ?>
+            <?php include '../../php/AgriculturalRegion/updateRegion.php'; ?>
         </div>
         <div class="column">
             <?php include '../../php/AgriculturalRegion/deleteRegionByName.php'; ?>
