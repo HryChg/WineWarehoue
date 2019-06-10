@@ -20,7 +20,7 @@ $sql = "SELECT s.employeeID
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    header("Location: ../../ui/InventoryManager/index.php");
+    header("Location: ../../ui/ShippingManager/index.php");
     die();
 } else {
     echo "NOT FOUND: username or password does not match or does not exist";
