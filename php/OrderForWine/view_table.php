@@ -9,7 +9,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 
 	echo "
-	<table>
+	<table class='ui celled striped table'>
 	<tr>
 	<th class='border-class'>orderID</th>
 	<th class='border-class'>wineID</th>

@@ -99,7 +99,7 @@
 
 <section id="ReturnedShipment" class="center">
     <div class="container">
-        <h5>Returned Shipment</h5>
+        <h1 class="ui header">Returned Shipment</h1>
         <?php
         include '../../php/ReturnedShipment/index.php';
         ?>
