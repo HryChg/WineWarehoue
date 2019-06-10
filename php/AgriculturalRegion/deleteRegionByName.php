@@ -1,6 +1,6 @@
 <form class="ui form" action="../../php/AgriculturalRegion/process-deleteRegionByName.php" method="post">
 
-   <h3>Delete a tuple from AgriculturalRegion using name</h3>
+   <h3>Delete an Agricultural Region</h3>
 
     <label>Agricultural Region</label>
 

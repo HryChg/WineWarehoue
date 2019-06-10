@@ -1,6 +1,6 @@
 <form class="ui form" action="../../php/AgriculturalRegion/process-updateRegion.php" method="post">
 
-    <h3>Update the temperature of a AgriculturalRegion</h3>
+    <h3>Update Agricultural Region</h3>
     
     
     <p>

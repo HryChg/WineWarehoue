@@ -2,10 +2,6 @@
 
     Query Top Supplier
 
-    </br>
-
-    </br>
-
     <input class="ui button" type="submit" value="Query">
 
 </form>

@@ -1,8 +1,8 @@
 <form class="ui form" action="../../php/StorageArea/process-updateStorageTemp.php" method="post">
 
-    <h3>Update the temperature of a StorageArea</h3>
+    <h3>Update the Storage Area</h3>
 
-    <label>StorageArea</label>
+    <label>Location ID</label>
 
     <?php
 
@@ -24,7 +24,7 @@
     ?>
 
     <p>
-        <label>StorageArea Temperature </label>
+        <label>Temperature </label>
         <input name="temperature" type="text" placeholder="Enter new temp for location">
     </p>
 
