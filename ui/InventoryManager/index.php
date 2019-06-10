@@ -38,17 +38,11 @@ setStyle();
         <?php include '../../php/StoredIn/defaultView-storedin.php'; ?>
     </div>
 
-    <?php include '../../php/StoredIn/insert-view.php'; ?>
-    <?php include '../../php/StoredIn/updateQuantityInLoc.php'; ?>
-    <?php include '../../php/IMQueries/queryLocationAndQuantityByWineID.php'; ?>
-    <?php include '../../php/IMQueries/queryBrandFromWineAByGrape.php'; ?>
-    <?php include '../../php/IMQueries/queryBrandFromWineAByWineTaste.php'; ?>
-    <?php include '../../php/IMQueries/queryPriceFromWineBByID.php'; ?>
-    <?php include '../../php/IMQueries/queryWineBByExpiryRange.php'; ?>
-    <?php include '../../php/IMQueries/queryWineByAlcoholRange.php'; ?>
-    <?php include '../../php/IMQueries/queryWineByAgriAttribute.php'; ?>
-    <?php include '../../php/IMQueries/queryMinPriceByBrand.php'; ?>
-
+    <div class="ui equal width relaxed grid">
+            <div class="column"><?php include '../../php/StoredIn/insert-view.php'; ?></div>
+            <div class="column"><?php include '../../php/StoredIn/updateQuantityInLoc.php'; ?></div>
+            <div class="column"><?php include '../../php/IMQueries/queryLocationAndQuantityByWineID.php'; ?></div>
+    </div>
 
 </section>
 
@@ -59,11 +53,27 @@ setStyle();
         <?php include '../../php/Wine/defaultView-wine.php'; ?>
     </div>
     
-    <?php include '../../php/Wine/insert-view.php'; ?>
-    <?php include '../../php/Wine/updateWinePrice.php'; ?>
-    <?php include '../../php/Wine/deleteWineAByBrand.php'; ?>
-    <?php include '../../php/Wine/deleteWineBByBrandOrID.php'; ?>
-    <?php include '../../php/WineOrigin/deleteWineOrigin.php'; ?>
+    <div class="ui equal width relaxed grid">
+        <div class="column">
+            <?php include '../../php/Wine/insert-view.php'; ?>
+        </div>
+        <div class="column">
+            <?php include '../../php/Wine/updateWinePrice.php'; ?>
+            <?php include '../../php/Wine/deleteWineAByBrand.php'; ?>
+            <?php include '../../php/Wine/deleteWineBByBrandOrID.php'; ?>
+            <?php include '../../php/WineOrigin/deleteWineOrigin.php'; ?>
+        </div>
+        <div class="column">
+            <?php include '../../php/IMQueries/queryBrandFromWineAByGrape.php'; ?>
+            <?php include '../../php/IMQueries/queryBrandFromWineAByWineTaste.php'; ?>
+            <?php include '../../php/IMQueries/queryPriceFromWineBByID.php'; ?>
+            <?php include '../../php/IMQueries/queryWineBByExpiryRange.php'; ?>
+            <?php include '../../php/IMQueries/queryWineByAlcoholRange.php'; ?>
+            <?php include '../../php/IMQueries/queryWineByAgriAttribute.php'; ?>
+            <?php include '../../php/IMQueries/queryMinPriceByBrand.php'; ?>        
+        </div>
+    </div>
+
 </section>
 
 <!------------------------------------------------------------------------->
@@ -73,11 +83,17 @@ setStyle();
         <?php include '../../php/AgriculturalRegion/defaultView-agriculturalRegion.php'; ?>
     </div>
     
-    <?php include '../../php/AgriculturalRegion/updateRegionTemp.php'; ?>
-    <?php include '../../php/AgriculturalRegion/updateMoisture.php'; ?>
-    <?php include '../../php/AgriculturalRegion/updateClimate.php'; ?>
-    <?php include '../../php/AgriculturalRegion/deleteRegionByName.php'; ?>
-
+    <div class="ui equal width relaxed grid">
+        <div class="column">
+            <?php include '../../php/AgriculturalRegion/updateRegionTemp.php'; ?>
+            <?php include '../../php/AgriculturalRegion/updateMoisture.php'; ?>
+            <?php include '../../php/AgriculturalRegion/updateClimate.php'; ?>
+        </div>
+        <div class="column">
+            <?php include '../../php/AgriculturalRegion/deleteRegionByName.php'; ?>
+        </div>
+    </div>
+    
 </section>
 <!------------------------------------------------------------------------->
 <section id="Supplier" class="section center">
@@ -86,11 +102,19 @@ setStyle();
         <?php include '../../php/Supplier/defaultView-supplier.php'; ?>
     </div>
 
-    <?php include '../../php/Supplier/insert-view.php'; ?>
-    <?php include '../../php/Supplier/updateSupplierAAddress.php'; ?>
-    <?php include '../../php/Supplier/updateSupplierBPhone.php'; ?>
-    <?php include '../../php/Supplier/deleteSupplierA.php'; ?>
-    <?php include '../../php/Supplier/deleteSupplierBByIDOrPhone.php'; ?>
+    <div class="ui equal width relaxed grid">
+        <div class="column">
+            <?php include '../../php/Supplier/insert-view.php'; ?>
+        </div>
+        <div class="column">    
+            <?php include '../../php/Supplier/updateSupplierAAddress.php'; ?>
+            <?php include '../../php/Supplier/updateSupplierBPhone.php'; ?>
+        </div>
+        <div class="column">
+            <?php include '../../php/Supplier/deleteSupplierA.php'; ?>
+            <?php include '../../php/Supplier/deleteSupplierBByIDOrPhone.php'; ?>
+        </div>
+    </div>
 
 </section>
 
@@ -101,17 +125,27 @@ setStyle();
         <?php include '../../php/Restock/defaultView-restock.php'; ?>
     </div>
 
-    <?php include '../../php/Restock/insert-view.php'; ?>
+    <div class="ui equal width relaxed grid">
+        <div class="column">
+            <?php include '../../php/Restock/insert-view.php'; ?>
+        </div>
+    </div>
+
 </section>
 
 <!------------------------------------------------------------------------->
 <section id="StorageArea" class="section center">
-    <h1 class="ui header">Storage Details</h1>
+    <h1 class="ui header">Storage Temperature</h1>
     <div class="container" id="storage-area-table">
         <?php include '../../php/StorageArea/defaultView-storageArea.php'; ?>
     </div>
 
-    <?php include '../../php/StorageArea/updateStorageTemp.php'; ?>
+    <div class="ui equal width relaxed grid">
+        <div class="column">
+            <?php include '../../php/StorageArea/updateStorageTemp.php'; ?>
+        </div>
+    </div>
+    
 </section>
 
 <!------------------------------------------------------------------------->

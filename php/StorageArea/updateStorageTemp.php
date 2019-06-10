@@ -1,10 +1,6 @@
 <form class="ui form" action="../../php/StorageArea/process-updateStorageTemp.php" method="post">
 
-    Update the temperature of a StorageArea
-
-    </br>
-
-    </br>
+    <h3>Update the temperature of a StorageArea</h3>
 
     <label>StorageArea</label>
 
