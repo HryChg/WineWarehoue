@@ -19,4 +19,7 @@ echo
     </p>
     <input class="ui button submit-form" type="submit" value="Add">
 </form>'
-// ?>
+?>
+<script>
+
+</script>

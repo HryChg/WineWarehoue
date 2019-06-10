@@ -17,9 +17,9 @@ $result = mysqli_query($conn, $sql);
 
 <?php 
 
-if (!$result) {
-    echo "Record unable to be added.";
-} 
+// if (!$result) {
+//     echo "Record unable to be added.";
+// } 
  
 // Close connection
 CloseCon($conn);
