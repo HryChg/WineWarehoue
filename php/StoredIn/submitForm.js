@@ -19,13 +19,14 @@ $(document).ready(function() {
         $(form).each(function(id, obj){
             data[obj.name] = obj.value;
         });
-        alert($("#storedin-form").serialize()); // Debug Tool
+        // alert($("#storedin-form").serialize()); // Debug Tool
         $.ajax({
             url: $("#storedin-form").attr("url"),
             method: "POST",
             data: data,
             success: function(){
-                $("#storedin-form")[0].reset();                
+                $("#storedin-form")[0].reset(); 
+                $("#storedin-table").load('../../php/StoredIn/defaultView-storedin.php');               
             },
             error: function(xhr){
                 var err = JSON.parse(xhr.responseText);

@@ -145,7 +145,7 @@ setStyle();
 </section>
 
 <!------------------------------------------------------------------------->
-<?php //CloseCon($conn); ?>
+<?php CloseCon($conn); ?>
 
 <footer class="section">
     <div class="center grey-text">Copyright 2019 WineWarehouse</div>

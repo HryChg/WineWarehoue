@@ -40,10 +40,10 @@
     <input class="ui button submit-form" type="submit" value="Update">
 
 </form>
-<script>
+<!-- <script>
 $(document).ready(function() {
     $(".submit-form").click(function(e) {
         $("#storedin-table").load('../../php/StoredIn/defaultView-storedin.php');
     });
 });
-</script>
+</script> -->

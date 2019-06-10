@@ -15,10 +15,10 @@
     </p>
     <input class="ui button storedin-submit submit-form" type="submit" value="Add">
 </form>
-<script>
+<!-- <script>
 $(document).ready(function() {
     $(".storedin-submit.submit-form").click(function(e) {
         $("#storedin-table").load('../../php/StoredIn/defaultView-storedin.php');
     });
 });
-</script>
+</script> -->

@@ -1,5 +1,5 @@
 <script src="./../../php/Supplier/submitForm.js"></script>
-<form class="ui form" id="supplier" method="post" url="../../php/Supplier/insert.php">
+<form class="ui form" id="supplier-form" method="post" url="../../php/Supplier/insert.php">
     <h3>Add Supplier</h3>
     <p>
         <label for="id">Supplier ID:</label>
@@ -19,10 +19,10 @@
     </p>
     <input class="ui button supplier-submit submit-form" type="submit" value="Add">
 </form>
-<script>
+<!-- <script>
 $(document).ready(function() {
     $(".supplier-submit.submit-form").click(function(e) {
         $("#supplier-table").load('../../php/Supplier/defaultView-supplier.php');
     });
 });
-</script>
+</script> -->

@@ -19,13 +19,14 @@ $(document).ready(function() {
         $(form).each(function(id, obj){
             data[obj.name] = obj.value;
         });
-        alert($("#supplier-form").serialize()); // Debug Tool
+        // alert($("#supplier-form").serialize()); // Debug Tool
         $.ajax({
             url: $("#supplier-form").attr("url"),
             method: "POST",
             data: data,
             success: function(){
-                $("#supplier-form")[0].reset();                
+                $("#supplier-form")[0].reset();   
+                $("#supplier-table").load('../../php/Supplier/defaultView-supplier.php');             
             },
             error: function(xhr){
                 var err = JSON.parse(xhr.responseText);

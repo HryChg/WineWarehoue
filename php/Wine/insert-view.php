@@ -71,10 +71,10 @@
     </p>
     <input class="ui button submit-form wine-submit" type="submit" value="Add">
 </form>
-<script>
+<!-- <script>
 $(document).ready(function() {
     $(".wine-submit.submit-form").click(function(e) {
         $("#wine-table").load('../../php/Wine/defaultView-wine.php');
     });
 });
-</script>
+</script> -->
