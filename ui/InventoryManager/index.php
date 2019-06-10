@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-<script src="./../../util/submitForm.js"></script>
 <?php
 include_once '../../template/input-query/create-table.php';
 include '../../util/Display-NavBar.php';

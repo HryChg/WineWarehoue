@@ -1,4 +1,5 @@
-<form class="ui form" id="form" method="post" url="./../../php/StoredIn/insert.php">
+<script src="./../../php/StoredIn/submitForm.js"></script>
+<form class="ui form" id="storedin-form" method="post" url="./../../php/StoredIn/insert.php">
     <h3>Add Storage Quantity</h3>
     <p>
         <label for="id">Wine Barcode:</label>

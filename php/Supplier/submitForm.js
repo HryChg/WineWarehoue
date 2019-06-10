@@ -12,20 +12,20 @@ $(document).ready(function() {
 </script>' */}
 
 $(document).ready(function() {
-    $(".submit-form").click(function(e) {
+    $(".supplier-submit.submit-form").click(function(e) {
         e.preventDefault();
-        var form = $("#form").serializeArray();
+        var form = $("#supplier-form").serializeArray();
         var data = {};
         $(form).each(function(id, obj){
             data[obj.name] = obj.value;
         });
-        // alert($("#form").serialize()); // Debug Tool
+        alert($("#supplier-form").serialize()); // Debug Tool
         $.ajax({
-            url: $("#form").attr("url"),
+            url: $("#supplier-form").attr("url"),
             method: "POST",
             data: data,
             success: function(){
-                $("#form")[0].reset();                
+                $("#supplier-form")[0].reset();                
             },
             error: function(xhr){
                 var err = JSON.parse(xhr.responseText);

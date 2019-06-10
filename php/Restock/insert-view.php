@@ -1,4 +1,5 @@
-<form class="ui form" id="form" url="../../php/Restock/insert.php" method="post">
+<script src="./../../php/Restock/submitForm.js"></script>
+<form class="ui form" id="form" method="post" url="./../../php/Restock/insert.php">
     <h3>Add Wine Restock Records</h3>
     <p>
         <label for="employeeid">Employee ID:</label>

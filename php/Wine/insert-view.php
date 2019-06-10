@@ -1,4 +1,5 @@
-<form class="ui form" id="form" url="../../php/Wine/insert.php" method="post">
+<script src="./../../php/Wine/submitForm.js"></script>
+<form class="ui form" id="wine-form" method="post" url="../../php/Wine/insert.php">
     <h3>Add Wine</h3>
     <p>
         <label for="wineid">Wine Barcode:</label>

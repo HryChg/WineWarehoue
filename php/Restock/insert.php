@@ -2,6 +2,8 @@
 include_once '../../connect.php';
 include_once '../../template/input-query/create-table.php';
 
+echo '<script>alert("inside insert.php!")</script>';
+
 /* Attempt MySQL server connection. */
 $conn = OpenCon();
  
