@@ -2,11 +2,11 @@
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <?php
-include '../../template/input-query/create-table.php';
+// include '../../template/input-query/create-table.php';
 include '../../util/Display-NavBar.php';
 include '../../util/Display-IM-Header.php';
-include '../../connect.php';
-$conn = OpenCon();
+// include '../../connect.php';
+// $conn = OpenCon();
 
 setStyle();
 ?>
@@ -37,14 +37,6 @@ setStyle();
         <?php include '../../php/StoredIn/defaultView-storedin.php'; ?>
     </div>
     
-    <!-- <script type="text/javascript">
-        $(document).ready(function() {
-            setInterval(function() {
-                // alert();
-                $("#storedin-table").load('../../php/StoredIn/defaultView-storedin.php');
-            }, 10000);
-        })
-    </script> -->
 
     <?php include '../../php/StoredIn/insert-view.php'; ?>
     <?php include '../../php/StoredIn/updateQuantityInLoc.php'; ?>

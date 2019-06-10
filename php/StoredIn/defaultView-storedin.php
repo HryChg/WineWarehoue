@@ -2,8 +2,8 @@
 
 <?php
 
-// include '../../connect.php';
-// include '../../template/input-query/create-table.php';
+include '../../connect.php';
+include '../../template/input-query/create-table.php';
 
 $conn = OpenCon();
 
@@ -15,10 +15,10 @@ $sql = "SELECT s.wineID, w.brandName, s.locationID, s.quantityInLocation
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-        myTable($conn, $sql);
-    } else {
-        echo "0 results";
-    }
+    myTable($conn, $sql);
+} else {
+    echo "0 results";
+}
 
 CloseCon($conn);
 
