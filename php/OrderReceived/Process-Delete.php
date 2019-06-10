@@ -1,5 +1,5 @@
 <?php
-include '../../connect.php';
+include_once '../../connect.php';
 
 /* Attempt MySQL server connection. */
 $conn = OpenCon();

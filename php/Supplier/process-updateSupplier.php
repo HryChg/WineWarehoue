@@ -1,6 +1,6 @@
 <?php
 
-include '../../connect.php';
+include_once '../../connect.php';
 
 $supplierID = $_POST['supplierID'];
 $name = $_POST['name'];

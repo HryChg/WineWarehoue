@@ -1,6 +1,4 @@
-<?php
-echo
-'<form class="ui form" url="../../php/Supplier/insert.php" method="post">
+<form class="ui form" id="form" url="../../php/Supplier/insert.php" method="post">
     <h3>Add Supplier</h3>
     <p>
         <label for="id">Supplier ID:</label>
@@ -18,13 +16,12 @@ echo
         <label for="address">Address:</label>
         <input type="text" name="address" id="address">
     </p>
-    <input class="ui button submit-form" type="submit" value="Add">
+    <input class="ui button supplier-submit submit-form" type="submit" value="Add">
 </form>
 <script>
 $(document).ready(function() {
-    $(".submit-form").click(function(e) {
-        $("#supplier-table").load(\'../../php/Supplier/defaultView-supplier.php\');
+    $(".supplier-submit.submit-form").click(function(e) {
+        $("#supplier-table").load('../../php/Supplier/defaultView-supplier.php');
     });
 });
-</script>'
-?>
+</script>

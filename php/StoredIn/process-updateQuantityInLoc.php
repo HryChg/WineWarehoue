@@ -1,6 +1,6 @@
 <?php
 
-include '../../connect.php';
+include_once '../../connect.php';
 
 $keys = $_POST['keys'];
 $keys = explode(',', $keys);

@@ -6,7 +6,7 @@
 
     <?php
 
-    // include '../../connect.php'; 
+    include_once '../../connect.php'; 
     $conn = OpenCon();
 
     $result1 = $conn->query("select supplierID from SupplierB");

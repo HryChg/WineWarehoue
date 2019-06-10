@@ -1,8 +1,8 @@
 <!--To identify top 10 wines where every retailer has ordered-->
 <?php
 
-include '../../connect.php';
-include '../../template/input-query/create-table.php';
+include_once '../../connect.php';
+include_once '../../template/input-query/create-table.php';
 
 $conn = OpenCon();
 

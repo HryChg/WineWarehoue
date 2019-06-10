@@ -1,7 +1,7 @@
 <?php
 
-include '../../connect.php';
-include '../../template/input-query/create-table.php';
+include_once '../../connect.php';
+include_once '../../template/input-query/create-table.php';
 include '../../util/Display-IM-Header.php';
 include '../../util/Display-NavBar.php';
 

@@ -8,7 +8,7 @@
 
     <?php
 
-    // include '../../connect.php'; 
+    include_once '../../connect.php'; 
     $conn = OpenCon();
 
     $result = $conn->query("select locationID, wineID from StoredIn");

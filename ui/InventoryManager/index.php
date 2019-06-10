@@ -3,11 +3,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="./../../util/submitForm.js"></script>
 <?php
-// include '../../template/input-query/create-table.php';
+include_once '../../template/input-query/create-table.php';
 include '../../util/Display-NavBar.php';
 include '../../util/Display-IM-Header.php';
-// include '../../connect.php';
-// $conn = OpenCon();
+include_once '../../connect.php';
+$conn = OpenCon();
 
 setStyle();
 ?>

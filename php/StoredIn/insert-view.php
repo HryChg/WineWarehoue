@@ -1,6 +1,4 @@
-<?php
-echo
-'<form class="ui form" id="form" method="post" url="./../../php/StoredIn/insert.php">
+<form class="ui form" id="form" method="post" url="./../../php/StoredIn/insert.php">
     <h3>Add Storage Quantity</h3>
     <p>
         <label for="id">Wine Barcode:</label>
@@ -14,13 +12,12 @@ echo
         <label for="quantity">Quantity:</label>
         <input type="text" name="quantity" id="quantity">
     </p>
-    <input class="ui button submit-form" type="submit" value="Add">
+    <input class="ui button storedin-submit submit-form" type="submit" value="Add">
 </form>
 <script>
 $(document).ready(function() {
-    $(".submit-form").click(function(e) {
-        $("#storedin-table").load(\'../../php/StoredIn/defaultView-storedin.php\');
+    $(".storedin-submit.submit-form").click(function(e) {
+        $("#storedin-table").load('../../php/StoredIn/defaultView-storedin.php');
     });
 });
-</script>'
-?>
+</script>

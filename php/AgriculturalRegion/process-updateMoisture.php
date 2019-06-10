@@ -1,6 +1,6 @@
 <?php
 
-include '../../connect.php';
+include_once '../../connect.php';
 
 $name = $_POST['name'];
 $moisture = $_POST['moisture'];
