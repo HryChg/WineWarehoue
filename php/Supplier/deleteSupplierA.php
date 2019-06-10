@@ -1,11 +1,8 @@
 <form class="ui form" action="../../php/Supplier/process-deleteSupplierA.php" method="post">
 
-    Delete a tuple from SupplierA using name
+    <h3>Delete a tuple from SupplierA using name</h3>
 
-    </br>
-
-    </br>
-
+    <p>
     <label>SupplierA</label>
 
     <?php
@@ -31,7 +28,7 @@
 
     }
 
-    echo "</select>";
+    echo "</select></p>";
 
     ?>
 

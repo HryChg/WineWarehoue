@@ -1,7 +1,7 @@
 <?php
 echo
 '<form class="ui form" action="../../php/Restock/insert.php" method="post">
-    <h1>Wine Restock Records</h1>
+    <h3>Add Wine Restock Records</h3>
     <p>
         <label for="employeeid">Employee ID:</label>
         <input type="text" name="employeeid" id="employeeid">

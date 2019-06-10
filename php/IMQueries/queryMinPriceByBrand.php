@@ -1,12 +1,11 @@
 <form class="ui form" action="../../php/IMQueries/process-queryMinPriceByBrand.php" method="post">
 
-    Query WineB Minimum Price by Brand
+    <h3>Query WineB Minimum Price by Brand</h3>
 
-    </br>
-
-    <label>Wine Brand</label>
-
-    <input type="text" name="brandName">
+    <p>
+        <label>Wine Brand</label>
+        <input type="text" name="brandName">
+    </p>
 
     <input class="ui button" type="submit" value="Query">
 

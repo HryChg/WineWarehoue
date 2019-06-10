@@ -1,10 +1,6 @@
 <form class="ui form" action="../../php/AgriculturalRegion/process-updateMoisture.php" method="post">
 
-    Update the moisture of a AgriculturalRegion
-
-    </br>
-
-    </br>
+    <h3>Update the moisture of a AgriculturalRegion</h3>
 
     <label>AgriculturalRegion</label>
 
@@ -15,7 +11,7 @@
 
     $result = $conn->query("select name from AgriculturalRegion");
 
-    echo "<select name='name'>";
+    echo "<p><select name='name'>";
 
     while ($row = $result->fetch_assoc())
 
@@ -26,22 +22,17 @@
         $name = $row['name'];
 
         echo '<option value="'.$name.'">'.'Region Name: '.$name.'</option>';
-        // use '.' to append string
 
     }
 
-    echo "</select>";
+    echo "</select></p>";
 
     ?>
 
-    <br>
-
-
-
-    <label>Region Moisture </label>
-
-    <input name="moisture" type="text" placeholder="Enter new moisture for region">
-
+    <p>
+        <label>Region Moisture </label>
+        <input name="moisture" type="text" placeholder="Enter new moisture for region">
+    </p>
 
     <input class="ui button" type="submit" value="Update">
 

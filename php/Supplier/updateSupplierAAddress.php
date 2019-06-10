@@ -1,10 +1,6 @@
 <form class="ui form" action="../../php/Supplier/process-updateSupplierAAddress.php" method="post">
 
-    Update the address of a SupplierA
-
-    </br>
-
-    </br>
+    <h3>Update the address of a SupplierA</h3>
 
     <label>Supplier</label>
 
@@ -15,7 +11,7 @@
 
     $result = $conn->query("select name from SupplierA");
 
-    echo "<select name='name'>";
+    echo "<p><select name='name'>";
 
     while ($row = $result->fetch_assoc())
 
@@ -26,25 +22,17 @@
         $name = $row['name'];
 
         echo '<option value="'.$name.'">'.'Supplier: '.$name.'</option>';
-        // use '.' to append string
 
     }
 
-    echo "</select>";
+    echo "</select></p>";
 
     ?>
 
-    <br>
-
-
-
-    <label>SupplierA Address </label>
-
-    <input name="address" type="text" placeholder="Enter new address">
-
-    <br>
-
-    <br>
+    <p>
+        <label>SupplierA Address </label>
+        <input name="address" type="text" placeholder="Enter new address">
+    </p>
 
     <input class="ui button" type="submit" value="Update">
 

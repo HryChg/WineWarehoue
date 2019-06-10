@@ -1,7 +1,7 @@
 <?php
 echo
-'<form class="ui form" action="../../php/Supplier/insert.php" method="post">
-    <h1>Add Supplier</h1>
+'<form class="ui form" url="../../php/Supplier/insert.php" method="post">
+    <h3>Add Supplier</h3>
     <p>
         <label for="id">Supplier ID:</label>
         <input type="text" name="id" id="id">
@@ -18,6 +18,13 @@ echo
         <label for="address">Address:</label>
         <input type="text" name="address" id="address">
     </p>
-    <input class="ui button" type="submit" value="Add">
-</form>'
+    <input class="ui button submit-form" type="submit" value="Add">
+</form>
+<script>
+$(document).ready(function() {
+    $(".submit-form").click(function(e) {
+        $("#supplier-table").load(\'../../php/Supplier/defaultView-supplier.php\');
+    });
+});
+</script>'
 ?>

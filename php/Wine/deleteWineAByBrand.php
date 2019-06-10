@@ -1,10 +1,6 @@
 <form class="ui form" action="../../php/Wine/process-deleteWineAByBrand.php" method="post">
 
-    Delete a tuple from WineA using brandName
-
-    </br>
-
-    </br>
+    <h3>Delete a tuple from WineA using brandName</h3>
 
     <label>WineA BrandName</label>
 
@@ -15,7 +11,7 @@
 
     $result = $conn->query("select brandName from WineA");
 
-    echo "<select name='brandName'>";
+    echo "<p><select name='brandName'>";
 
     while ($row = $result->fetch_assoc())
     {
@@ -25,14 +21,11 @@
 
         echo '<option value="'.$brandName.'">'.'BrandName: '.$brandName.'</option>';
 
-        // use '.' to append string
     }
 
-    echo "</select>";
-
+    echo "</select></p>";
 
     ?>
-
 
     <input class="ui button" type="submit" value="Delete">
 

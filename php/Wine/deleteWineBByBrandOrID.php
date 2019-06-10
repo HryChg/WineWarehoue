@@ -1,10 +1,6 @@
 <form class="ui form" action="../../php/Wine/process-deleteWineBByBrandOrID.php" method="post">
 
-    Delete a tuple from WineB using brandName or wineID
-
-    </br>
-
-    </br>
+    <h3>Delete a tuple from WineB using brandName or wineID</h3>
 
     <label>WineB BrandName and WineID</label>
 
@@ -15,7 +11,7 @@
 
     $result1 = $conn->query("select brandName from WineB");
 
-    echo "<select name='brandName'>";
+    echo "<p><select name='brandName'>";
 
     echo '<option value="">---Select brandName---</option>';
     while ($row = $result1->fetch_assoc())
@@ -25,11 +21,11 @@
         echo '<option value="'.$brandName.'">'.'BrandName: '.$brandName.'</option>';
     }
 
-    echo "</select>";
+    echo "</select></p>";
 
     $result2 = $conn->query("select wineID from WineB");
 
-    echo "<select name='wineID'>";
+    echo "<p><select name='wineID'>";
     echo '<option value="">---Select wineID---</option>';
     while ($row = $result2->fetch_assoc())
     {
@@ -38,9 +34,7 @@
         echo '<option value="'.$wineID.'">'.'WineID: '.$wineID.'</option>';
     }
 
-    echo "</select>";
-
-
+    echo "</select></p>";
     ?>
 
     <input class="ui button" type="submit" value="Delete">

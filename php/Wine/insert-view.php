@@ -1,6 +1,6 @@
 <?php
 echo '<form class="ui form" action="../../php/Wine/insert.php" method="post">
-    <h1>Add Wine</h1>
+    <h3>Add Wine</h3>
     <p>
         <label for="wineid">Wine Barcode:</label>
         <input type="text" name="wineid" id="wineid">
