@@ -12,7 +12,7 @@
     $result = $conn->query("select wineID from WineB");
 
     echo "<p><select name='wineID'>";
-
+    echo '<option value="">---Select wineID---</option>';
     while ($row = $result->fetch_assoc())
 
     {
@@ -21,13 +21,13 @@
 
         $wineID = $row['wineID'];
 
-        echo '<option value="'.$wineID.'">'.'WineID: '.$wineID.'</option>';
+        echo '<option value="'.$wineID.'">'.$wineID.'</option>';
         // use '.' to append string
 
     }
 
     echo "</select></p>";
-
+    CloseCon($conn);
     ?>
 
     <p>

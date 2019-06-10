@@ -32,7 +32,7 @@
     }
 
     echo "</select>";
-
+    CloseCon($conn);
     ?>
 
     <br>

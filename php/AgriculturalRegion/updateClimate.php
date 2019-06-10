@@ -27,7 +27,7 @@
     }
 
     echo "</select></p>";
-
+    CloseCon($conn);
     ?>
     <p>
         <label>Region climate </label>

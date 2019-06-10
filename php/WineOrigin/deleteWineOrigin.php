@@ -26,7 +26,7 @@
     }
 
     echo "</select></p>";
-
+    CloseCon($conn);
 
     ?>
 

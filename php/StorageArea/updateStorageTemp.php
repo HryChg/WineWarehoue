@@ -12,15 +12,15 @@
     $result = $conn->query("select locationID from StorageArea");
 
     echo "<select name='locationID'>";
-
+    echo '<option value="">---Select locationID---</option>';
     while ($row = $result->fetch_assoc()) {
         unset($locationID);
         $locationID = $row['locationID'];
-        echo '<option value="'.$locationID.'">'.'LocationID: '.$locationID.'</option>';
+        echo '<option value="'.$locationID.'">'.$locationID.'</option>';
     }
 
     echo "</select>";
-
+    CloseCon($conn);
     ?>
 
     <p>

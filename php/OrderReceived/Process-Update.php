@@ -19,7 +19,7 @@ if ($conn->query($sql) === TRUE) {
     echo "Error updating record: " . $conn->error;
 }
 
-closeCon($conn);
+CloseCon($conn);
 
 
 //EFFECTS: inspect posted keys and create SQL string for updating every key posted

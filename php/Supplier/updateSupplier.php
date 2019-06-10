@@ -31,7 +31,7 @@
         echo '<option value="'.$supplierID.'">'.'SupplierID: '.$supplierID.'</option>';
     }
     echo "</select></p>";
-
+    CloseCon($conn);
     ?>
     <p>
         <label>New Phone </label>

@@ -1,10 +1,6 @@
 <form class="ui form" action="process-delete.php" method="post">
 
-    Delete a tuple from SupplierA using name
-
-    </br>
-
-    </br>
+    <h3>Delete a tuple from SupplierA using name</h3>
 
     <label>SupplierA</label>
 
@@ -30,7 +26,7 @@
     }
 
     echo "</select>";
-
+    CloseCon($conn);
     ?>
 
 

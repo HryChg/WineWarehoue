@@ -35,6 +35,7 @@
     }
 
     echo "</select></p>";
+    CloseCon($conn);
     ?>
 
     <input class="ui button" type="submit" value="Delete">

@@ -26,10 +26,10 @@
 
     echo "<p><select name='wineTaste'>";
     foreach($combinedArray as $wineTaste) {
-        echo '<option value="'.$wineTaste.'">'.'WineTaste: '.$wineTaste.'</option>';
+        echo '<option value="'.$wineTaste.'">'.$wineTaste.'</option>';
     }
     echo "</select></p>";
-
+    CloseCon($conn);
     ?>
 
     <input class="ui button" type="submit" value="Query">

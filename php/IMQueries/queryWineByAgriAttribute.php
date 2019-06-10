@@ -12,12 +12,14 @@
     array_push($agriRegionAttrArray, '---Select Agricultural Region Attribute---');
     array_push($agriRegionAttrArray, 'temperature');
     array_push($agriRegionAttrArray, 'moisture');
+    // array_push($agriRegionAttrArray, 'climate'); // TODO
 
     echo "<p><select name='attribute'>";
     foreach($agriRegionAttrArray as $agriRegionAtt) {
-        echo '<option value="'.$agriRegionAtt.'">'.'Agricultural Region Attribute: '.$agriRegionAtt.'</option>';
+        echo '<option value="'.$agriRegionAtt.'">'.$agriRegionAtt.'</option>';
     }
     echo "</select></p>";
+    CloseCon($conn);
     ?>
     <p>
         <label> value: </label>

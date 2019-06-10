@@ -12,7 +12,7 @@
     $result = $conn->query("select name from AgriculturalRegion");
 
     echo "<p><select name='name'>";
-
+    echo '<option value="">---Select name---</option>';
     while ($row = $result->fetch_assoc())
 
     {
@@ -21,12 +21,12 @@
 
         $name = $row['name'];
 
-        echo '<option value="'.$name.'">'.'Name: '.$name.'</option>';
+        echo '<option value="'.$name.'">'.$name.'</option>';
 
     }
 
     echo "</select></p>";
-
+    CloseCon($conn);
     ?>
 
     <input class="ui button" type="submit" value="Delete">
