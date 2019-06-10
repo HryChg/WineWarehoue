@@ -1,10 +1,6 @@
 <form class="ui form" action="../../php/AgriculturalRegion/process-updateClimate.php" method="post">
 
-    Update the climate of a AgriculturalRegion
-
-    </br>
-
-    </br>
+    <h3>Update the climate of a AgriculturalRegion</h3>
 
     <label>AgriculturalRegion</label>
 
@@ -15,7 +11,7 @@
 
     $result = $conn->query("select name from AgriculturalRegion");
 
-    echo "<select name='name'>";
+    echo "<p><select name='name'>";
 
     while ($row = $result->fetch_assoc())
 
@@ -30,18 +26,13 @@
 
     }
 
-    echo "</select>";
+    echo "</select></p>";
 
     ?>
-
-    <br>
-
-
-
-    <label>Region climate </label>
-
-    <input name="climate" type="text" placeholder="Enter new climate for region">
-
+    <p>
+        <label>Region climate </label>
+        <input name="climate" type="text" placeholder="Enter new climate for region">
+    </p>
 
     <input class="ui button" type="submit" value="Update">
 

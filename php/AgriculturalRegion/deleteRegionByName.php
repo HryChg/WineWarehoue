@@ -1,10 +1,6 @@
 <form class="ui form" action="../../php/AgriculturalRegion/process-deleteRegionByName.php" method="post">
 
-   Delete a tuple from AgriculturalRegion using name
-
-    </br>
-
-    </br>
+   <h3>Delete a tuple from AgriculturalRegion using name</h3>
 
     <label>Agricultural Region</label>
 
@@ -15,7 +11,7 @@
 
     $result = $conn->query("select name from AgriculturalRegion");
 
-    echo "<select name='name'>";
+    echo "<p><select name='name'>";
 
     while ($row = $result->fetch_assoc())
 
@@ -26,14 +22,12 @@
         $name = $row['name'];
 
         echo '<option value="'.$name.'">'.'Name: '.$name.'</option>';
-        // use '.' to append string
 
     }
 
-    echo "</select>";
+    echo "</select></p>";
 
     ?>
-
 
     <input class="ui button" type="submit" value="Delete">
 

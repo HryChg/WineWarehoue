@@ -1,15 +1,13 @@
 <form class="ui form" action="../../php/IMQueries/process-queryWineByAlcoholRange.php" method="post">
 
-    Query WineB By Alcohol Percentage
+    <h3>Query WineB By Alcohol Percentage</h3>
 
-    </br>
-
-    <label>Alcohol percentage: </label>
-
-    <input type="text" name="lowRange">
-    <label> to </label>
-    <input type="text" name="highRange">
-
+    <p>
+        <label>Alcohol percentage: </label>
+        <input type="text" name="lowRange">
+        <label> to </label>
+        <input type="text" name="highRange">
+    </p>
     <input class="ui button" type="submit" value="Query">
 
 </form>

@@ -1,10 +1,6 @@
 <form class="ui form" action="../../php/Wine/process-updateWinePrice.php" method="post">
 
-    Update the price of a wineB
-
-    </br>
-
-    </br>
+    <h3>Update the price of a wineB</h3>
 
     <label>Wine</label>
 
@@ -15,7 +11,7 @@
 
     $result = $conn->query("select wineID from WineB");
 
-    echo "<select name='wineID'>";
+    echo "<p><select name='wineID'>";
 
     while ($row = $result->fetch_assoc())
 
@@ -30,21 +26,14 @@
 
     }
 
-    echo "</select>";
+    echo "</select></p>";
 
     ?>
 
-    <br>
-
-
-
-    <label>Wine Price </label>
-
-    <input name="price" type="text" placeholder="Enter new price for wine">
-
-    <br>
-
-    <br>
+    <p>
+        <label>Wine Price </label>
+        <input name="price" type="text" placeholder="Enter new price for wine">
+    <p>
 
     <input class="ui button" type="submit" value="Update">
 
