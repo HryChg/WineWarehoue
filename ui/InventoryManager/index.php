@@ -105,8 +105,7 @@ setStyle();
             <?php include '../../php/Supplier/insert-view.php'; ?>
         </div>
         <div class="column">    
-            <?php include '../../php/Supplier/updateSupplierAAddress.php'; ?>
-            <?php include '../../php/Supplier/updateSupplierBPhone.php'; ?>
+            <?php include '../../php/Supplier/updateSupplier.php'; ?>
         </div>
         <div class="column">
             <?php include '../../php/Supplier/deleteSupplierA.php'; ?>

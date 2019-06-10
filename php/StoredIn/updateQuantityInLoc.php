@@ -3,7 +3,7 @@
 <form class="ui form" url="./../../php/StoredIn/process-updateQuantityInLoc.php" method="post">
 
     <h3>Update Wine Quantity in Storage</h3>
-
+    <p>
     <label>Location and WineID</label>
 
     <?php
@@ -27,16 +27,16 @@
         // use '.' to append string
     }
 
-    echo "</select>";
+    echo "</select></p>";
 
 
     ?>
 
-    <br>
+    <p>
     <label>New Quantity</label>
 
     <input name="quantityInLocation" type="text" placeholder="Enter new quantity">
-
+    </p>
     <input class="ui button submit-form" type="submit" value="Update">
 
 </form>
