@@ -16,7 +16,7 @@ setStyle();
 
 
 <!------------------------------------------------------------------------->
-<section id="StoredIn" class="section center">
+<section id="Login" class="section center">
     <br>
     <h1 class="ui header">Login Page</h1>
 
