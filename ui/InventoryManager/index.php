@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <?php
 include '../../template/input-query/create-table.php';
 include '../../util/Display-NavBar.php';
@@ -32,10 +33,19 @@ setStyle();
 <section id="StoredIn" class="section center">
     <br>
     <h1 class="ui header">Current Wine Inventory</h1>
-    <div class="container">
+    <div class="container" id="storedin-table">
         <?php include '../../php/StoredIn/defaultView-storedin.php'; ?>
     </div>
     
+    <!-- <script type="text/javascript">
+        $(document).ready(function() {
+            setInterval(function() {
+                // alert();
+                $("#storedin-table").load('../../php/StoredIn/defaultView-storedin.php');
+            }, 10000);
+        })
+    </script> -->
+
     <?php include '../../php/StoredIn/insert-view.php'; ?>
     <?php include '../../php/StoredIn/updateQuantityInLoc.php'; ?>
     <?php include '../../php/IMQueries/queryLocationAndQuantityByWineID.php'; ?>
