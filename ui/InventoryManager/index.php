@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="./../../util/submitForm.js"></script>
 <?php
 // include '../../template/input-query/create-table.php';
 include '../../util/Display-NavBar.php';
@@ -36,7 +37,6 @@ setStyle();
     <div class="container" id="storedin-table">
         <?php include '../../php/StoredIn/defaultView-storedin.php'; ?>
     </div>
-    
 
     <?php include '../../php/StoredIn/insert-view.php'; ?>
     <?php include '../../php/StoredIn/updateQuantityInLoc.php'; ?>
@@ -55,11 +55,11 @@ setStyle();
 <!------------------------------------------------------------------------->
 <section id="Wine" class="section center">
     <h1 class="ui header">Wine List</h1>
-    <div class="container">
+    <div class="container" id="wine-table">
         <?php include '../../php/Wine/defaultView-wine.php'; ?>
     </div>
     
-    <?php include '../../php/Wine/view-insert.php'; ?>
+    <?php include '../../php/Wine/insert-view.php'; ?>
     <?php include '../../php/Wine/updateWinePrice.php'; ?>
     <?php include '../../php/Wine/deleteWineAByBrand.php'; ?>
     <?php include '../../php/Wine/deleteWineBByBrandOrID.php'; ?>
@@ -69,7 +69,7 @@ setStyle();
 <!------------------------------------------------------------------------->
 <section id="AgriculturalRegion" class="section center">
     <h1 class="ui header">Agricultural Regions of Wine in Stock</h1>
-    <div class="container">
+    <div class="container" id="agricultural-region-table">
         <?php include '../../php/AgriculturalRegion/defaultView-agriculturalRegion.php'; ?>
     </div>
     
@@ -82,7 +82,7 @@ setStyle();
 <!------------------------------------------------------------------------->
 <section id="Supplier" class="section center">
     <h1 class="ui header">Supplier Details</h1>
-    <div class="container">
+    <div class="container" id="supplier-table">
         <?php include '../../php/Supplier/defaultView-supplier.php'; ?>
     </div>
 
@@ -97,7 +97,7 @@ setStyle();
 <!------------------------------------------------------------------------->
 <section id="Restock" class="section center">
     <h1 class="ui header">Restock</h1>
-    <div class="container">
+    <div class="container" id="restock-table">
         <?php include '../../php/Restock/defaultView-restock.php'; ?>
     </div>
 
@@ -107,7 +107,7 @@ setStyle();
 <!------------------------------------------------------------------------->
 <section id="StorageArea" class="section center">
     <h1 class="ui header">Storage Details</h1>
-    <div class="container">
+    <div class="container" id="storage-area-table">
         <?php include '../../php/StorageArea/defaultView-storageArea.php'; ?>
     </div>
 

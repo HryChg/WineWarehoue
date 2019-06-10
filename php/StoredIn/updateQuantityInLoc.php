@@ -1,4 +1,6 @@
-<form class="ui form" action="../../php/StoredIn/process-updateQuantityInLoc.php" method="post">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="./../../util/submitForm.js"></script>
+<form class="ui form" url="./../../php/StoredIn/process-updateQuantityInLoc.php" method="post">
 
     <h3>Update Wine Quantity in Storage</h3>
 
@@ -35,6 +37,13 @@
 
     <input name="quantityInLocation" type="text" placeholder="Enter new quantity">
 
-    <input class="ui button" type="submit" value="Update">
+    <input class="ui button submit-form" type="submit" value="Update">
 
 </form>
+<script>
+$(document).ready(function() {
+    $(".submit-form").click(function(e) {
+        $("#storedin-table").load('../../php/StoredIn/defaultView-storedin.php');
+    });
+});
+</script>
