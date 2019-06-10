@@ -6,7 +6,8 @@
 
     <?php
 
-    //include '../../connect.php'; $conn = OpenCon();
+    //include '../../connect.php'; 
+    $conn = OpenCon();
 
     $agriRegionAttrArray = array();
     array_push($agriRegionAttrArray, '---Select Agricultural Region Attribute---');
