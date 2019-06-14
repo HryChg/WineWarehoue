@@ -26,7 +26,7 @@
 
         table {
             margin: 8px;
-            overflow-x: scroll
+            overflow-x: scroll;
         }
 
         table th {
@@ -74,34 +74,29 @@
     </div>
 </nav>
 
-
 <section id="ViewEmployee" class="section" style="alignment: center">
-    <h1 class="ui header">View All Employees</h1>
-    <div class="ui three column centered grid">
-        <div class="two column">
-            <div class="column">
-                <?php include '../../php/Employee/View.php' ?>
-            </div>
-        </div>
+
+    <div class="ui two column centered grid">
         <div class="column">
-            <div class="ui two column centered grid">
-                <div class="column">
-                    <h1 class="ui header">Add Employee</h1>
-                    <?php include '../../php/Employee/View-Add.php' ?>
-                </div>
-
-                <div class="column">
-                    <h1 class="ui header">Update Employee</h1>
-                    <?php include '../../php/Employee/View-Update.php' ?>
-                </div>
-
-                <div class="column">
-                    <h1 class="ui header">Delete Employee</h1>
-                    <?php include '../../php/Employee/View-Delete.php' ?>
-                </div>
-            </div>
+            <h1 class="ui header">View All Employees</h1>
+            <?php include '../../php/Employee/View.php' ?>
         </div>
     </div>
+    <div class="ui equal width grid cards">
+        <div class="column card">
+            <h1 class="ui header">Add Employee</h1>
+            <?php include '../../php/Employee/View-Add.php' ?>
+        </div>
+        <div class="column card">
+            <h1 class="ui header">Update Employee</h1>
+            <?php include '../../php/Employee/View-Update.php' ?>
+        </div>
+        <div class="column card">
+            <h1 class="ui header">Delete Employee</h1>
+            <?php include '../../php/Employee/View-Delete.php' ?>
+        </div>
+    </div>
+
 </section>
 
 
