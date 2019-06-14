@@ -1,5 +1,4 @@
 <?php
-
 include_once '../../connect.php';
 
 $name = $_POST['name'];
@@ -21,8 +20,6 @@ if (!empty($climate)) {
     $sql3 = "update AgriculturalRegion set climate = '$climate' where name = '$name'";
     $result3 = $conn->query($sql3);
 }
-
-
 
 if ($result1 || $result2 || $result3) {
     echo "Record updated successfully";

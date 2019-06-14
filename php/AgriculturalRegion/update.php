@@ -1,8 +1,9 @@
-<form class="ui form" action="../../php/AgriculturalRegion/process-updateRegion.php" method="post">
+<script src="./../../php/AgriculturalRegion/submit-update.js"></script>
+<form class="ui form" id="update-ar" method="post" url="../../php/AgriculturalRegion/process-update.php">
 
     <h3>Update Agricultural Region</h3>
 
-    <label>Agricultural Region</label>
+    <label for="name">Agricultural Region</label>
 
     <?php
 
@@ -20,17 +21,17 @@
     echo "</select></p>";
     ?>
     <p>
-        <label>Temperature </label>
+        <label for="temperature">Temperature </label>
         <input name="temperature" type="text" placeholder="Enter new temperature">
     </p>
     <p>
-        <label>Moisture </label>
+        <label for="moisture">Moisture </label>
         <input name="moisture" type="text" placeholder="Enter new moisture">
     </p>
     <p>
-        <label>Climate </label>
+        <label for="climate">Climate </label>
         <input name="climate" type="text" placeholder="Enter new climate">
     </p>
-    <input class="ui button" type="submit" value="Update">
+    <input class="ui button update-ar" type="submit" value="Update">
 
 </form>
