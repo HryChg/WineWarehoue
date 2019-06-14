@@ -4,8 +4,6 @@
     <!--    Note later ui override the first-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../animate.css">
-
 
     <title>Shipping Manager User Interface</title>
     <style type="text/css">
