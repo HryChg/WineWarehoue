@@ -3,6 +3,7 @@
 include_once '../../connect.php';
 
 $keys = $_POST['keys'];
+echo $keys;
 $keys = explode(',', $keys);
 $locationID = $keys[0];
 $wineID =$keys[1];
