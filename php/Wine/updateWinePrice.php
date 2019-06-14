@@ -1,6 +1,8 @@
-<form class="ui form" action="../../php/Wine/process-updateWinePrice.php" method="post">
 
-    <h3>Update the price of a wineB</h3>
+<script src="./../../php/Wine/update-submit.js"></script>
+<form class="ui form" id="update-wine" url="../../php/Wine/process-updateWinePrice.php" method="post">
+
+    <h3>Update Wine Price</h3>
 
     <label>Wine</label>
 
@@ -14,16 +16,10 @@
     echo "<p><select name='wineID'>";
     echo '<option value="">---Select wineID---</option>';
     while ($row = $result->fetch_assoc())
-
     {
-
         unset($wineID);
-
         $wineID = $row['wineID'];
-
         echo '<option value="'.$wineID.'">'.$wineID.'</option>';
-        // use '.' to append string
-
     }
 
     echo "</select></p>";
@@ -35,6 +31,6 @@
         <input name="price" type="text" placeholder="Enter new price for wine">
     <p>
 
-    <input class="ui button" type="submit" value="Update">
+    <input class="ui button update-wine" type="submit" value="Update">
 
 </form>
