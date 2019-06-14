@@ -36,21 +36,20 @@ function displayEmployeeAttributes()
 ?>
 
 
-<div class="ui form card container">
+<div class="ui form">
     <form action="../../php/Employee/Process-Update.php" method="post">
-        <h4 class="ui header"> Select the name of an employee </h4>
         <div class="field">
             <?php displayEmployeeOption() ?>
-            <label>Employee</label>
+            <label>Select the name of an employee:</label>
         </div>
         <div class="field">
             <? displayEmployeeAttributes() ?>
-            <label>Choose the attribute to update</label>
+            <label>Choose the attribute to update:</label>
         </div>
 
         <div class="field">
             <input name="value" type="text" placeholder="Enter new value">
-            <label>Enter New Value</label>
+            <label>Enter New Value:</label>
         </div>
         <input class="positive ui button" type="submit" value="Update">
 

@@ -4,6 +4,9 @@
     <!--    Note later ui override the first-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../animate.css">
+
+
     <title>Shipping Manager User Interface</title>
     <style type="text/css">
         form {
@@ -11,11 +14,12 @@
             margin: 20px auto;
             padding: 20px;
         }
+
         h1, h2 {
             text-align: center;
         }
 
-        .container{
+        .container {
             margin: 8px;
         }
 
@@ -40,7 +44,7 @@
         select {
             -webkit-appearance: none;
             -moz-appearance: none;
-            appearance: none;       /* remove default arrow */
+            appearance: none; /* remove default arrow */
             /*background-image: url(...);   !* add custom arrow *!*/
         }
 
@@ -50,13 +54,18 @@
 </head>
 <body>
 <nav class="ui large menu">
-    <a class="active item">
+    <a class="item" href="#SpecialFeatures">
         Home
     </a>
-    <div class="item">
-        Shipping Manager
+    <div class="active item">
+        <h4>Shipping Manager User Interface</h4>
     </div>
     <div class="right menu">
+        <a class="item" href="#OrderReceived">OrderReceived</a>
+        <a class="item" href="#OrderForWine">OrderForWine</a>
+        <a class="item" href="#Shipment">Shipment</a>
+        <a class="item" href="#ReturnedShipment">ReturnedShipment</a>
+        <a class="item" href="#ShippingManager">View Other ShippingManagers</a>
 
 
         <div class="ui simple dropdown item">
@@ -69,25 +78,24 @@
             </div>
         </div>
 
-
         <div class="item">
             <div class="ui primary button">Log Out</div>
         </div>
     </div>
 </nav>
 
-<section id="Special Features">
+<section id="SpecialFeatures">
     <h1 class="ui header">Special Features</h1>
 
     <div class="ui grid container">
         <div class="ui fluid three item menu container">
-            <a class="item" onclick="top10BackOrderedWine()"            >Top 10 BackOrdered Wine    </a>
-            <a class="item" onclick="top10TenRepeatWineOrder()"         >Top 10 Repeatedly Ordered on Wine</a>
+            <a class="item" onclick="top10BackOrderedWine()">Top 10 BackOrdered Wine </a>
+            <a class="item" onclick="top10TenRepeatWineOrder()">Top 10 Repeatedly Ordered on Wine</a>
             <a class="item" onclick="top10TenWineEveryRetailerOrdered()">Top 10 Wines Every Retailer Likes</a>
         </div>
 
     </div>
-    <div  class="ui two column centered grid">
+    <div class="ui two column centered grid">
         <div id="displaySpecialQueryResult" class="column"></div>
     </div>
     <script>
@@ -95,8 +103,8 @@
             $.ajax({
                 type: "POST",
                 url: '../../php/SMQueries/process-queryTopTenMostBackorderedWine.php',
-                data:{action:'queryTopTenMostBackorderedWine'},
-                success:function(resultHTML) {
+                data: {action: 'queryTopTenMostBackorderedWine'},
+                success: function (resultHTML) {
                     document.querySelector('#displaySpecialQueryResult').innerHTML = resultHTML;
                 }
             });
@@ -106,8 +114,8 @@
             $.ajax({
                 type: "POST",
                 url: '../../php/SMQueries/process-queryTopTenRepeatWineOrder.php',
-                data:{action:'queryTopTenRepeatWineOrder'},
-                success:function(resultHTML) {
+                data: {action: 'queryTopTenRepeatWineOrder'},
+                success: function (resultHTML) {
                     document.querySelector('#displaySpecialQueryResult').innerHTML = resultHTML;
                 }
             });
@@ -117,8 +125,8 @@
             $.ajax({
                 type: "POST",
                 url: '../../php/SMQueries/process-queryTopTenWineEveryRetailerOrdered.php',
-                data:{action:'queryTopTenWineEveryRetailerOrdered'},
-                success:function(resultHTML) {
+                data: {action: 'queryTopTenWineEveryRetailerOrdered'},
+                success: function (resultHTML) {
                     document.querySelector('#displaySpecialQueryResult').innerHTML = resultHTML;
                 }
             });
@@ -152,25 +160,21 @@
     <?php include '../../php/ShippingManager/index.php'; ?>
 </section>
 
-
-<section id=OrderForWine class="section center">
+<section id="OrderForWine" class="section center">
     <h1 class="ui header">Order For Wine</h1>
     <?php include '../../php/OrderForWine/index.php'; ?>
 </section>
 
-
-<section id=OrderReceived class="section">
+<section id="OrderReceived" class="section">
     <h1 class="ui header">Order Received</h1>
     <?php include '../../php/OrderReceived/index.php'; ?>
 </section>
 
-
-<section id=Shipment class="section center">
+<section id="Shipment" class="section center">
     <h1 class="ui header">Shipment</h1>
     <?php include '../../php/Shipment/index.php';
     CloseCon($conn); ?>
 </section>
-
 
 <footer class="ui inverted vertical footer segment">
     <div class="ui container">

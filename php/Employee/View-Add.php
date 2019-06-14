@@ -1,4 +1,4 @@
-<div class="ui form card">
+<div class="ui form">
     <form action="../../php/Employee/Process-Add.php" method="post">
         <div class="field">
             <div class="input">
