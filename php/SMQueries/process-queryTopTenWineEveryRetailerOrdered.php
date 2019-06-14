@@ -4,31 +4,39 @@
 include_once '../../connect.php';
 include_once '../../template/input-query/create-table.php';
 
-$conn = OpenCon();
+// TODO have to use division at some point
+// TODO populate at least two wine that every retailer has bought
 
-$sqlForRetailerCount = "SELECT COUNT(DISTINCT retailer) FROM OrderReceived";
-$retailerCount = $conn->query($sqlForRetailerCount);
-$row = $retailerCount->fetch_assoc();
-$totalNumberOfRetailers = $row["COUNT(DISTINCT retailer)"];
+if (isset($_POST['action'])) {
+    if ($_POST['action'] == 'queryTopTenWineEveryRetailerOrdered') {
 
-$sql = "SELECT retailerCountAndQuantityForEachWine.*
-FROM (
-      SELECT wineID, COUNT(retailer) as retailerCount, SUM(quantity) as totalQuantity
-      FROM OrderReceived
-      GROUP BY wineID
-      ) AS retailerCountAndQuantityForEachWine
-WHERE retailerCountAndQuantityForEachWine.retailerCount = '$totalNumberOfRetailers'
-ORDER BY totalQuantity DESC
-LIMIT 10";
+        $conn = OpenCon();
 
-$result = $conn->query($sql);
+        $sqlForRetailerCount = "SELECT COUNT(DISTINCT retailer) FROM OrderReceived";
+        $retailerCount = $conn->query($sqlForRetailerCount);
+        $row = $retailerCount->fetch_assoc();
+        $totalNumberOfRetailers = $row["COUNT(DISTINCT retailer)"];
 
-if ($result->num_rows > 0) {
-    myTable($conn, $sql);
-} else {
-    echo "0 results";
+        $sql = "SELECT retailerCountAndQuantityForEachWine.*
+                FROM (
+                      SELECT wineID, COUNT(retailer) as retailerCount, SUM(quantity) as totalQuantity
+                      FROM OrderReceived
+                      GROUP BY wineID
+                      ) AS retailerCountAndQuantityForEachWine
+                WHERE retailerCountAndQuantityForEachWine.retailerCount = '$totalNumberOfRetailers'
+                ORDER BY totalQuantity DESC
+                LIMIT 10";
+
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            myTable($conn, $sql);
+        } else {
+            echo "0 results";
+        }
+
+        CloseCon($conn);
+
+    }
 }
-
-CloseCon($conn);
-
 ?>

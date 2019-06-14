@@ -3,6 +3,7 @@
 <head>
     <!--    Note later ui override the first-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <title>Shipping Manager User Interface</title>
     <style type="text/css">
         form {
@@ -80,11 +81,48 @@
 
     <div class="ui grid container">
         <div class="ui fluid three item menu container">
-            <a class="item active">Top 5 BackOrdered Wine</a>
-            <a class="item">Top 10 Repeatedly Ordered on Wine</a>
-            <a class="item">Top 10 Wines Every Retailer Likes</a>
+            <a class="item" onclick="top10BackOrderedWine()"            >Top 10 BackOrdered Wine    </a>
+            <a class="item" onclick="top10TenRepeatWineOrder()"         >Top 10 Repeatedly Ordered on Wine</a>
+            <a class="item" onclick="top10TenWineEveryRetailerOrdered()">Top 10 Wines Every Retailer Likes</a>
         </div>
+        <div id="displaySpecialQueryResult"></div>
     </div>
+    <script>
+        function top10BackOrderedWine() {
+            $.ajax({
+                type: "POST",
+                url: '../../php/SMQueries/process-queryTopTenMostBackorderedWine.php',
+                data:{action:'queryTopTenMostBackorderedWine'},
+                success:function(resultHTML) {
+                    document.querySelector('#displaySpecialQueryResult').innerHTML = resultHTML;
+                }
+            });
+        }
+
+        function top10TenRepeatWineOrder() {
+            $.ajax({
+                type: "POST",
+                url: '../../php/SMQueries/process-queryTopTenRepeatWineOrder.php',
+                data:{action:'queryTopTenRepeatWineOrder'},
+                success:function(resultHTML) {
+                    document.querySelector('#displaySpecialQueryResult').innerHTML = resultHTML;
+                }
+            });
+        }
+
+        function top10TenWineEveryRetailerOrdered() {
+            $.ajax({
+                type: "POST",
+                url: '../../php/SMQueries/process-queryTopTenWineEveryRetailerOrdered.php',
+                data:{action:'queryTopTenWineEveryRetailerOrdered'},
+                success:function(resultHTML) {
+                    document.querySelector('#displaySpecialQueryResult').innerHTML = resultHTML;
+                }
+            });
+        }
+
+
+    </script>
 
     <h2 class="ui header">Most Recent Order</h2>
 
