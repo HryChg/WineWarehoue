@@ -11,11 +11,12 @@
             margin: 20px auto;
             padding: 20px;
         }
+
         h1, h2 {
             text-align: center;
         }
 
-        .container{
+        .container {
             margin: 8px;
         }
 
@@ -40,11 +41,9 @@
         select {
             -webkit-appearance: none;
             -moz-appearance: none;
-            appearance: none;       /* remove default arrow */
+            appearance: none; /* remove default arrow */
             /*background-image: url(...);   !* add custom arrow *!*/
         }
-
-
     </style>
 
 </head>
@@ -75,7 +74,19 @@
         </div>
     </div>
 </nav>
+<!--<section>-->
+<!--    --><?php //include '../../php/Employee/View.php'?>
+<!--</section>-->
 
+
+<section id="ViewEmployee" class="section" style="alignment: center">
+    <h1 class="ui header">View All Employees</h1>
+    <div class="ui two column centered grid">
+        <div class="column">
+            <?php include '../../php/Employee/View.php' ?>
+        </div>
+    </div>
+</section>
 
 
 

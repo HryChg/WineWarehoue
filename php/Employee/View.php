@@ -1,5 +1,5 @@
 
-<h4>View All Employees</h4>
+
 
 <?php
 // Top 10 Most Recent Order (Latest --> Oldest)
@@ -15,7 +15,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Table is scrollable when data is large
     echo "
-    <table class='container responsive-table centered'>
+    <table class='ui celled striped table'>
         <tr>
             <th class='border-class'>employeeID</th>
             <th class='border-class'>type</th>
