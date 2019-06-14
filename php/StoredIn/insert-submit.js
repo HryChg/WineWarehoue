@@ -12,7 +12,7 @@ $(document).ready(function() {
 </script>' */}
 
 $(document).ready(function() {
-    $(".storedin-submit.submit-form").click(function(e) {
+    $(".storedin-submit").click(function(e) {
         e.preventDefault();
         var form = $("#storedin-form").serializeArray();
         var data = {};
