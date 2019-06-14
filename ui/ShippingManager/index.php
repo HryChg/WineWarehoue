@@ -85,7 +85,10 @@
             <a class="item" onclick="top10TenRepeatWineOrder()"         >Top 10 Repeatedly Ordered on Wine</a>
             <a class="item" onclick="top10TenWineEveryRetailerOrdered()">Top 10 Wines Every Retailer Likes</a>
         </div>
-        <div id="displaySpecialQueryResult"></div>
+
+    </div>
+    <div  class="ui two column centered grid">
+        <div id="displaySpecialQueryResult" class="column"></div>
     </div>
     <script>
         function top10BackOrderedWine() {
