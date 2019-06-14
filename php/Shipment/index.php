@@ -1,3 +1,9 @@
+<?php
+require_once '../../connect.php';
+$conn = OpenCon();
+?>
+
+
 <section>
 
     <div class="ui grid centered">
@@ -15,3 +21,7 @@
         </div>
     </div>
 </section>
+
+<?php
+CloseCon($conn);
+?>

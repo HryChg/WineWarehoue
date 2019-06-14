@@ -84,7 +84,6 @@
 
 <section id="SpecialFeatures">
     <h1 class="ui header">Special Features</h1>
-
     <div class="ui grid container">
         <div class="ui fluid three item menu container">
             <a class="item" onclick="top10BackOrderedWine()">Top 10 BackOrdered Wine </a>
@@ -134,33 +133,9 @@
     </script>
 
     <h2 class="ui header">Most Recent Order</h2>
-
     <div class="container">
-        <?php
-        include '../../connect.php';
-        $conn = OpenCon();
-        include '../../php/OrderReceived/View-MostRecentOrder.php'; ?>
+        <?php include '../../php/OrderReceived/View-MostRecentOrder.php'; ?>
     </div>
-
-</section>
-
-<section id="ReturnedShipment" class="center">
-    <div class="container">
-        <h1 class="ui header">Returned Shipment</h1>
-        <?php
-        include '../../php/ReturnedShipment/index.php';
-        ?>
-    </div>
-</section>
-
-<section id="ShippingManager" class="section" style="alignment: center">
-    <h1 class="ui header">Shipping Manager</h1>
-    <?php include '../../php/ShippingManager/index.php'; ?>
-</section>
-
-<section id="OrderForWine" class="section center">
-    <h1 class="ui header">Order For Wine</h1>
-    <?php include '../../php/OrderForWine/index.php'; ?>
 </section>
 
 <section id="OrderReceived" class="section">
@@ -168,10 +143,26 @@
     <?php include '../../php/OrderReceived/index.php'; ?>
 </section>
 
+<section id="OrderForWine" class="section center">
+    <h1 class="ui header">Order For Wine</h1>
+    <?php include '../../php/OrderForWine/index.php'; ?>
+</section>
+
 <section id="Shipment" class="section center">
     <h1 class="ui header">Shipment</h1>
-    <?php include '../../php/Shipment/index.php';
-    CloseCon($conn); ?>
+    <?php include '../../php/Shipment/index.php';?>
+</section>
+
+<section id="ReturnedShipment" class="center">
+    <div class="container">
+        <h1 class="ui header">Returned Shipment</h1>
+        <?php include '../../php/ReturnedShipment/index.php'; ?>
+    </div>
+</section>
+
+<section id="ShippingManager" class="section" style="alignment: center">
+    <h1 class="ui header">Shipping Manager</h1>
+    <?php include '../../php/ShippingManager/index.php'; ?>
 </section>
 
 <footer class="ui inverted vertical footer segment">

@@ -1,3 +1,9 @@
+<?php
+
+require_once '../../connect.php';
+$conn = OpenCon();
+?>
+
 <div class="ui grid centered">
     <div class="eight wide column">
         <?php include 'view_table.php'; ?>
@@ -11,3 +17,8 @@
         </div>
     </div>
 </div>
+
+
+<?php
+CloseCon($conn);
+?>

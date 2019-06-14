@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
         $wineID = mysqli_real_escape_string($conn, $_POST['wineID']);
         $locationID = mysqli_real_escape_string($conn, $_POST['locationID']);
         // create sql
-        $sql = "INSERT INTO ReturnedShipment VALUES('$orderID', '$wineID', '$locationID')";
+        $sql = "INSERT INTO OrderForWine VALUES('$orderID', '$wineID', '$locationID')";
         // save to db and check
         if (mysqli_query($conn, $sql)) {
             // success

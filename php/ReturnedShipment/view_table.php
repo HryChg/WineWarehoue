@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 $sql = "
 SELECT shipmentID, returnID, returnedQuantity  
 FROM ReturnedShipment";

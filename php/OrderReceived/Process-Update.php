@@ -1,7 +1,6 @@
 <?php
 
 include_once '../../connect.php';
-
 $conn = openCon();
 
 $orderID = mysqli_real_escape_string($conn, $_POST['orderID']);
@@ -19,7 +18,7 @@ if ($conn->query($sql) === TRUE) {
     echo "Error updating record: " . $conn->error;
 }
 
-CloseCon($conn);
+
 
 
 //EFFECTS: inspect posted keys and create SQL string for updating every key posted
@@ -69,4 +68,5 @@ function addQuote($str){
     return "'$str'";
 }
 
+CloseCon($conn);
 ?>

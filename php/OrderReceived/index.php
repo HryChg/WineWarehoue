@@ -1,11 +1,3 @@
-
-<style>
-</style>
-
-
-
-
-
 <div class="ui grid centered">
     <div class="fifteen wide column">
         <?php include 'View.php' ?>

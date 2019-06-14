@@ -1,6 +1,10 @@
 
 <?php
-// Top 10 Most Recent Order (Latest --> Oldest)
+
+require_once '../../connect.php';
+$conn = OpenCon();
+
+
 $sql = "
   SELECT orderID, employeeID, wineID, quantity, retailer, address, backorder, orderReceivedDate  
   FROM OrderReceived
@@ -50,4 +54,5 @@ if ($result->num_rows > 0) {
     echo "0 results";
 }
 
+CloseCon($conn);
 ?>
