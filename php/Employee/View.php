@@ -3,7 +3,7 @@
 
 <?php
 // Top 10 Most Recent Order (Latest --> Oldest)
-include '../../connect.php';
+require_once '../../connect.php';
 $conn = OpenCon();
 
 $sql = "

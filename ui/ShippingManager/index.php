@@ -52,9 +52,6 @@
 </head>
 <body>
 <nav class="ui large menu">
-    <a class="item" href="#SpecialFeatures">
-        Home
-    </a>
     <div class="active item">
         <h4>Shipping Manager User Interface</h4>
     </div>
@@ -77,7 +74,7 @@
         </div>
 
         <div class="item">
-            <div class="ui primary button">Log Out</div>
+            <a class="ui primary button" href="../Login/index.php">Log Out</a>
         </div>
     </div>
 </nav>
