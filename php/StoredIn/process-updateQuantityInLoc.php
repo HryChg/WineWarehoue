@@ -5,8 +5,8 @@ include_once '../../connect.php';
 $keys = $_POST['keys'];
 echo $keys;
 $keys = explode(',', $keys);
-$locationID = $keys[0];
-$wineID =$keys[1];
+$wineID =$keys[0];
+$locationID = $keys[1];
 $quantityInLocation = $_POST['quantityInLocation'];
 
 $conn = OpenCon();

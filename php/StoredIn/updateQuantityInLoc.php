@@ -3,7 +3,7 @@
 
     <h3>Update Wine Quantity in Storage</h3>
     <p>
-    <label>Location and WineID</label>
+    <label>WineID and Location</label>
 
     <?php
 
@@ -21,7 +21,7 @@
         $locationID = $row['locationID'];
         $wineID = $row['wineID'];
 
-        echo '<option value="'.$locationID.','.$wineID.'">'.'LocationID: '.$locationID.', WineID: '.$wineID.'</option>';
+        echo '<option value="'.$wineID.','.$locationID.'">'.'WineID: '.$wineID.', LocationID: '.$locationID.'</option>';
     }
 
     echo "</select></p>";
