@@ -1,7 +1,8 @@
 <script src="./../../php/Wine/delete-submit-brandname.js"></script>
 <form class="ui form" id="delete-wine-brandname" url="../../php/Wine/process-deleteWineAByBrand.php" method="post">
 
-    <h3>Delete Wine with BrandName</h3>
+    <h3>Delete BrandName (WineA)</h3>
+    <!-- TODO: Merge this with Delete BrandName (WineB) -->
 
     <label>BrandName</label>
 

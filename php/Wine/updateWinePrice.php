@@ -1,4 +1,3 @@
-
 <script src="./../../php/Wine/update-submit.js"></script>
 <form class="ui form" id="update-wine" url="../../php/Wine/process-updateWinePrice.php" method="post">
 

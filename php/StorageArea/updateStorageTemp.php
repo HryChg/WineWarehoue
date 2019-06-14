@@ -1,4 +1,5 @@
-<form class="ui form" action="../../php/StorageArea/process-updateStorageTemp.php" method="post">
+<script src="./../../php/StorageArea/update-submit.js"></script>
+<form class="ui form" id="update-storage-temp" url="../../php/StorageArea/process-updateStorageTemp.php" method="post">
 
     <h3>Update the Storage Area</h3>
 
@@ -28,6 +29,6 @@
         <input name="temperature" type="text" placeholder="Enter new temp for location">
     </p>
 
-    <input class="ui button" type="submit" value="Update">
+    <input class="ui button update-storage-temp" type="submit" value="Update">
 
 </form>
