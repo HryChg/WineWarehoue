@@ -6,6 +6,4 @@ include 'add.php';
 
 include 'update.php';
 
-include 'delete.php';
-
 ?>
