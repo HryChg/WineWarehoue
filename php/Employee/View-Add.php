@@ -1,4 +1,4 @@
-<div class="container">
+<div class="ui form">
     <form action="../../php/Employee/Process-Add.php" method="post">
         <div class="">
             <div class="">
@@ -23,7 +23,7 @@
         </div>
 
         <div class="">
-            <input class="" type="submit" value="Add">
+            <input class="ui primary button" type="submit" value="Add">
         </div>
     </form>
 </div>

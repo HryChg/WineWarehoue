@@ -26,7 +26,6 @@
 
         table {
             margin: 8px;
-
             overflow-x: scroll
         }
 
@@ -79,30 +78,37 @@
 
 <section id="ViewEmployee" class="section" style="alignment: center">
     <h1 class="ui header">View All Employees</h1>
-    <div class="ui two column centered grid">
-        <div class="column">
-            <?php include '../../php/Employee/View.php' ?>
-        </div>
-    </div>
-</section>
-
-<section class="section" style="alignment: center">
     <div class="ui three column centered grid">
         <div class="column">
-            <h1 class="ui header">Add Employee</h1>
-            <?php include '../../php/Employee/View-Add.php' ?>
+            <div class="ui one column grid">
+                <div class="column">
+                    <?php include '../../php/Employee/View.php' ?>
+                </div>
+                <div class="column">
+                    <h1 class="ui header">Delete Employee</h1>
+                    <?php include '../../php/Employee/View-Delete.php' ?>
+                </div>
+
+            </div>
+
         </div>
         <div class="column">
-            <h1 class="ui header">Delete Employee</h1>
-            <?php include '../../php/Employee/View-Delete.php' ?>
-        </div>
-        <div class="column">
-            <h1 class="ui header">Update Employee</h1>
-            <?php include '../../php/Employee/View-Update.php' ?>
+            <div class="ui one column centered grid">
+                <div class="column">
+                    <h1 class="ui header">Add Employee</h1>
+                    <?php include '../../php/Employee/View-Add.php' ?>
+                </div>
+
+                <div class="column">
+                    <h1 class="ui header">Update Employee</h1>
+                    <?php include '../../php/Employee/View-Update.php' ?>
+                </div>
+
+            </div>
+
         </div>
     </div>
 </section>
-
 
 
 
