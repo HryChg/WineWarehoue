@@ -3,14 +3,23 @@
 </style>
 
 
-<?php include 'View.php' ?>
-<?php include 'View-Add.php' ?>
 
-<div class="ui grid">
-    <div class="eight wide column">
-        <?php include 'View-Delete.php' ?>
+
+
+<div class="ui grid centered">
+    <div class="fifteen wide column">
+        <?php include 'View.php' ?>
     </div>
-    <div class="eight wide column">
+
+    <div class="five wide column">
+        <?php include 'View-Add.php' ?>
+    </div>
+
+
+    <div class="five wide column">
         <?php include 'View-Update.php' ?>
+    </div>
+    <div class="five wide column">
+        <?php include 'View-Delete.php' ?>
     </div>
 </div>
