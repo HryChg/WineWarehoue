@@ -1,5 +1,5 @@
-<script src="./../../php/Wine/submitForm.js"></script>
-<form class="ui form" id="wine-form" method="post" url="../../php/Wine/insert.php">
+<script src="./../../php/Wine/insert-submit.js"></script>
+<form class="ui form" id="add-wine" method="post" url="../../php/Wine/insert.php">
     <h3>Add Wine</h3>
     <p>
         <label for="wineid">Wine Barcode:</label>
@@ -69,12 +69,5 @@
         <label for="climate">Climate:</label>
         <input type="text" name="climate" id="climate">
     </p>
-    <input class="ui button submit-form wine-submit" type="submit" value="Add">
+    <input class="ui button add-wine" type="submit" value="Add">
 </form>
-<!-- <script>
-$(document).ready(function() {
-    $(".wine-submit.submit-form").click(function(e) {
-        $("#wine-table").load('../../php/Wine/defaultView-wine.php');
-    });
-});
-</script> -->
