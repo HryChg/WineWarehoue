@@ -1,8 +1,9 @@
-<form class="ui form" action="../../php/Wine/process-deleteWineAByBrand.php" method="post">
+<script src="./../../php/Wine/delete-submit-brandname.js"></script>
+<form class="ui form" id="delete-wine-brandname" url="../../php/Wine/process-deleteWineAByBrand.php" method="post">
 
-    <h3>Delete a tuple from WineA using brandName</h3>
+    <h3>Delete Wine with BrandName</h3>
 
-    <label>WineA BrandName</label>
+    <label>BrandName</label>
 
     <?php
 
@@ -19,7 +20,7 @@
 
         $brandName = $row['brandName'];
 
-        echo '<option value="'.$brandName.'">'.'BrandName: '.$brandName.'</option>';
+        echo '<option value="'.$brandName.'">'.$brandName.'</option>';
 
     }
 
@@ -27,6 +28,6 @@
     CloseCon($conn);
     ?>
 
-    <input class="ui button" type="submit" value="Delete">
+    <input class="ui button delete-wine-brandname" type="submit" value="Delete">
 
 </form>
