@@ -4,23 +4,29 @@
 include_once '../../connect.php';
 include_once '../../template/input-query/create-table.php';
 
-$conn = OpenCon();
+if (isset($_POST['action'])) {
+    if ($_POST['action'] == 'queryTopTenRepeatWineOrder') {
 
 
-$sql = "SELECT wineID, count(wineID) as repeatWineCount
+        $conn = OpenCon();
+
+        $sql = "SELECT wineID, count(wineID) as repeatWineCount
         FROM OrderReceived
         GROUP BY wineID
         ORDER BY repeatWineCount DESC
         LIMIT 10";
 
-$result = $conn->query($sql);
+        $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-    myTable($conn, $sql);
-} else {
-    echo "0 results";
+        if ($result->num_rows > 0) {
+            myTable($conn, $sql);
+        } else {
+            echo "0 results";
+        }
+
+        CloseCon($conn);
+
+    }
 }
-
-CloseCon($conn);
 
 ?>

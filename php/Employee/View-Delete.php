@@ -1,18 +1,17 @@
-<div class="container">
+<div class="ui form card">
     <form action="../../php/Employee/Process-Delete.php" method="post">
-        <h4>Delete Order</h4>
-        <div class="row">
-            <div class="col s12">
-                <div class="input">
-                    <input placeholder="" name="employeeID" type="text" class="validate">
-                    <label for="employeeID">employeeID</label>
-                </div>
+
+
+        <div class="field">
+            <div class="input">
+                <input placeholder="" name="employeeID" type="text" class="validate">
+                <label for="employeeID">employeeID</label>
             </div>
         </div>
 
-        <div class="row center">
-            <input class="waves-effect waves-light btn" type="submit" value="Delete">
-        </div>
+
+        <input class="negative ui button" type="submit" value="Delete">
+
 
     </form>
 </div>
