@@ -1,7 +1,8 @@
-<form class="ui form" action="../../php/AgriculturalRegion/process-deleteRegionByName.php" method="post">
+<script src="./../../php/AgriculturalRegion/delete-submit.js"></script>
+<form class="ui form" id="delete-ar" url="../../php/AgriculturalRegion/process-deleteRegionByName.php" method="post">
 
-   <h3>Delete an Agricultural Region</h3>
-
+   <h3>Delete Agricultural Region</h3>
+    <!-- TODO: Fix bug -- won't update/reload -->
     <label>Agricultural Region</label>
 
     <?php
@@ -29,6 +30,6 @@
     CloseCon($conn);
     ?>
 
-    <input class="ui button" type="submit" value="Delete">
+    <input class="ui button delete-ar" type="submit" value="Delete">
 
 </form>

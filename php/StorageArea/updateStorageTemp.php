@@ -1,7 +1,7 @@
 <script src="./../../php/StorageArea/update-submit.js"></script>
 <form class="ui form" id="update-storage-temp" url="../../php/StorageArea/process-updateStorageTemp.php" method="post">
 
-    <h3>Update the Storage Area</h3>
+    <h3>Update Storage Temperature</h3>
 
     <label>Location ID</label>
 

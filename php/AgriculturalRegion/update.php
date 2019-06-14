@@ -1,9 +1,9 @@
-<script src="./../../php/AgriculturalRegion/submit-update.js"></script>
+<script src="./../../php/AgriculturalRegion/update-submit.js"></script>
 <form class="ui form" id="update-ar" method="post" url="../../php/AgriculturalRegion/process-update.php">
 
     <h3>Update Agricultural Region</h3>
-
-    <label for="name">Agricultural Region</label>
+    <!-- TODO: This has a bug -- not sure where as not updating upon submit - might be async -->
+    <label>Agricultural Region</label>
 
     <?php
 
@@ -19,6 +19,7 @@
         echo '<option value="'.$name.'">'.$name.'</option>';
     }
     echo "</select></p>";
+    CloseCon($conn);
     ?>
     <p>
         <label for="temperature">Temperature </label>
