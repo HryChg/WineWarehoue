@@ -26,7 +26,8 @@ $(document).ready(function() {
             data: data,
             success: function(){
                 $("#supplier-form")[0].reset();   
-                $("#supplier-table").load('../../php/Supplier/defaultView-supplier.php');             
+                $("#supplier-table").load('../../php/Supplier/defaultView-supplier.php');
+                // $("#supplier-update-form").load('../../php/Supplier/updateSupplier.php');
             },
             error: function(xhr){
                 var err = JSON.parse(xhr.responseText);

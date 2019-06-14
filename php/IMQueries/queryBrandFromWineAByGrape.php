@@ -1,7 +1,7 @@
 <form class="ui form" action="../../php/IMQueries/process-queryBrandFromWineAByGrape.php" method="post">
 
-    <h3>Query WineA by grapeType1 or grapeType2</h3>
-    <label>grapeType</label>
+    <h3>Search for Wine by Grape Type</h3>
+    <label>GrapeType</label>
 
     <?php
 

@@ -1,6 +1,7 @@
+<!-- Query WineA by WineTaste1 or WineTaste2 -->
 <form class="ui form" action="../../php/IMQueries/process-queryBrandFromWineAByWineTaste.php" method="post">
-
-    <h3>Query WineA by WineTaste1 or WineTaste2</h3>
+    
+    <h3>Search for Wine By Taste</h3>
 
     <label>WineTaste</label>
 
