@@ -138,20 +138,28 @@
     </div>
 </section>
 
+<div class="ui section divider"></div>
+
 <section id="OrderReceived" class="section">
     <h1 class="ui header">Order Received</h1>
     <?php include '../../php/OrderReceived/index.php'; ?>
 </section>
+
+<div class="ui section divider"></div>
 
 <section id="OrderForWine" class="section center">
     <h1 class="ui header">Order For Wine</h1>
     <?php include '../../php/OrderForWine/index.php'; ?>
 </section>
 
+<div class="ui section divider"></div>
+
 <section id="Shipment" class="section center">
     <h1 class="ui header">Shipment</h1>
     <?php include '../../php/Shipment/index.php';?>
 </section>
+
+<div class="ui section divider"></div>
 
 <section id="ReturnedShipment" class="center">
     <div class="container">
@@ -160,10 +168,14 @@
     </div>
 </section>
 
+<div class="ui section divider"></div>
+
 <section id="ShippingManager" class="section" style="alignment: center">
     <h1 class="ui header">Shipping Manager</h1>
     <?php include '../../php/ShippingManager/index.php'; ?>
 </section>
+
+<div class="ui section divider"></div>
 
 <footer class="ui inverted vertical footer segment">
     <div class="ui container">
