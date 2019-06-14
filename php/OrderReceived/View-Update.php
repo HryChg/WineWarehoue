@@ -20,7 +20,7 @@ function displayOrderAttributes($conn)
 
 
 <h1 class="ui header">Update Order</h1>
-<form class="ui form container" action="../../php/OrderReceived/Process-Update.php" method="post">
+<form class="ui form segment container" action="../../php/OrderReceived/Process-Update.php" method="post">
 
     <h4>Select the order you would like to update:</h4>
     <?php displayOrderAttributes($conn); ?>

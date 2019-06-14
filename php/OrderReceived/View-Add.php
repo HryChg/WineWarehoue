@@ -1,7 +1,7 @@
 <h1 class="ui header">Add Order</h1>
 
-<div class="ui inverted segment">
-    <form class="ui form container inverted" action="../../php/OrderReceived/Process-Add.php" method="post">
+<div class="ui segment">
+    <form class="ui form container " action="../../php/OrderReceived/Process-Add.php" method="post">
         <div class="four fields">
             <div class="five wide field">
                 <input placeholder="" name="orderID" type="text" class="validate">
