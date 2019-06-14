@@ -1,3 +1,5 @@
+<!-- Data has been restricted to show only if in both tables -->
+
 <script src="./../../php/Supplier/delete-submit-supplier-id.js"></script>
 <form class="ui form" id="delete-supplier-id" url="../../php/Supplier/process-deleteSupplierBByIDOrPhone.php" method="post">
 
@@ -10,7 +12,11 @@
     include_once '../../connect.php'; 
     $conn = OpenCon();
 
-    $result1 = $conn->query("select supplierID from SupplierB");
+    $sql1 = "SELECT b.supplierID
+            FROM SupplierA AS a 
+            INNER JOIN SupplierB AS b 
+            ON a.address = b.address";
+    $result1 = $conn->query($sql1);
 
     echo "<p><select name='supplierID'>";
 
@@ -23,8 +29,11 @@
     }
 
     echo "</select></p>";
-
-    $result2 = $conn->query("select phoneNo from SupplierB");
+    $sql2 = "SELECT b.phoneNo
+            FROM SupplierA AS a 
+            INNER JOIN SupplierB AS b 
+            ON a.address = b.address";
+    $result2 = $conn->query($sql2);
 
     echo "<p><select name='phoneNo'>";
     echo '<option value="">---Select phoneNo---</option>';

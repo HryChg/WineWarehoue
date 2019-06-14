@@ -9,7 +9,11 @@
     <?php
     include_once '../../connect.php'; 
     $conn = OpenCon();
-    $result = $conn->query("select name, address from SupplierA");
+    $sql = "SELECT a.name, a.address
+            FROM SupplierA AS a 
+            INNER JOIN SupplierB AS b 
+            ON a.address = b.address";
+    $result = $conn->query($sql);
 
     echo "<select name='address'>";
     while ($row = $result->fetch_assoc())
