@@ -38,20 +38,12 @@ function displayEmployeeAttributes(){
 
 <div class="container">
     <form action="../../php/Employee/Process-Update.php" method="post">
-        <h4>Update Employee</h4>
-        Update the name of an employee
-
+        Select the name of an employee
         <br/>
+
         <label>Employee</label>
-
         <?php displayEmployeeOption() ?>
-
         <br>
-
-
-
-
-
 
         <label>Choose the attribute to update</label>
         <? displayEmployeeAttributes() ?>

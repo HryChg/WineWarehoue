@@ -1,6 +1,6 @@
 <div class="container">
     <form action="../../php/Employee/Process-Delete.php" method="post">
-        <h4>Delete Order</h4>
+
         <div class="row">
             <div class="col s12">
                 <div class="input">
