@@ -1,20 +1,19 @@
 $(document).ready(function() {
-    $(".storedin-submit").click(function(e) {
+    $(".update-supplier").click(function(e) {
         e.preventDefault();
-        var form = $("#storedin-form").serializeArray();
+        var form = $("#update-supplier").serializeArray();
         var data = {};
         $(form).each(function(id, obj){
             data[obj.name] = obj.value;
         });
-        // alert($("#storedin-form").serialize()); // Debug Tool
+        // alert($("#update-supplier").serialize()); // Debug Tool
         $.ajax({
-            url: $("#storedin-form").attr("url"),
+            url: $("#update-supplier").attr("url"),
             method: "POST",
             data: data,
             success: function(){
-                $("#storedin-form")[0].reset(); 
-                $("#storedin-table").load('../../php/StoredIn/defaultView-storedin.php');
-                // $("#storedin-update-form").load('../../php/StoredIn/updateQuantityInLoc.php');
+                $("#update-supplier")[0].reset();   
+                $("#supplier-table").load('../../php/Supplier/defaultView-supplier.php');             
             },
             error: function(xhr){
                 var err = JSON.parse(xhr.responseText);

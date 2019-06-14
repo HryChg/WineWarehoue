@@ -1,6 +1,7 @@
-<form class="ui form" action="../../php/Supplier/process-deleteSupplierBByIDOrPhone.php" method="post">
+<script src="./../../php/Supplier/delete-submit-supplier-id.js"></script>
+<form class="ui form" id="delete-supplier-id" url="../../php/Supplier/process-deleteSupplierBByIDOrPhone.php" method="post">
 
-    <h3>Delete a tuple from SupplierB using supplierID or phoneNo</h3>
+    <h3>Delete Supplier by supplierID (SupplierB) or phoneNo</h3>
 
     <label>SupplierB supplierID and/or phoneNo</label>
 
@@ -39,6 +40,6 @@
 
     ?>
 
-    <input class="ui button" type="submit" value="Delete">
+    <input class="ui button delete-supplier-id" type="submit" value="Delete">
 
 </form>

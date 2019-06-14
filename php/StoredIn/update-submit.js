@@ -26,7 +26,7 @@ $(document).ready(function() {
             data: data,
             success: function(){
                 $("#update-storedin")[0].reset(); 
-                $("#storedin-table").load('../../php/StoredIn/defaultView-storedin.php');               
+                $("#storedin-table").load('../../php/StoredIn/defaultView-storedin.php');
             },
             error: function(xhr){
                 var err = JSON.parse(xhr.responseText);

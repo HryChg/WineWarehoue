@@ -10,7 +10,6 @@ $locationID = $keys[1];
 $quantityInLocation = $_POST['quantityInLocation'];
 
 $conn = OpenCon();
-
 $sql = "update StoredIn set quantityInLocation = '$quantityInLocation' where locationID = '$locationID' and wineID = '$wineID'";
 
 if ($conn->query($sql) === TRUE) {

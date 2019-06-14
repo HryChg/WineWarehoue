@@ -1,6 +1,7 @@
-<form class="ui form" action="../../php/Supplier/process-updateSupplier.php" method="post">
+<script src="./../../php/Supplier/update-submit-supplier.js"></script>
+<form class="ui form" id="update-supplier" url="../../php/Supplier/process-updateSupplier.php" method="post">
 
-    <h3>Update the address of a SupplierA</h3>
+    <h3>Update Supplier Details</h3>
 
     <label>Supplier</label>
 
@@ -16,7 +17,7 @@
     while ($row = $result->fetch_assoc()){
         unset($name);
         $name = $row['name'];
-        echo '<option value="'.$name.'">'.'Supplier: '.$name.'</option>';
+        echo '<option value="'.$name.'">'.$name.'</option>';
     }
     echo "</select>";
 
@@ -28,7 +29,7 @@
     while ($row = $result->fetch_assoc()) {
         unset($supplierID);
         $supplierID = $row['supplierID'];
-        echo '<option value="'.$supplierID.'">'.'SupplierID: '.$supplierID.'</option>';
+        echo '<option value="'.$supplierID.'">'.$supplierID.'</option>';
     }
     echo "</select></p>";
     CloseCon($conn);
@@ -42,6 +43,6 @@
         <input name="address" type="text" placeholder="Enter new address">
     </p>
 
-    <input class="ui button" type="submit" value="Update">
+    <input class="ui button update-supplier" type="submit" value="Update">
 
 </form>

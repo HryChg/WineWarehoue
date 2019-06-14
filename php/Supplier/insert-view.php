@@ -19,10 +19,3 @@
     </p>
     <input class="ui button supplier-submit submit-form" type="submit" value="Add">
 </form>
-<!-- <script>
-$(document).ready(function() {
-    $(".supplier-submit.submit-form").click(function(e) {
-        $("#supplier-table").load('../../php/Supplier/defaultView-supplier.php');
-    });
-});
-</script> -->

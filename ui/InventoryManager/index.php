@@ -39,7 +39,9 @@ setStyle();
 
     <div class="ui equal width relaxed grid">
             <div class="column"><?php include '../../php/StoredIn/insert-view.php'; ?></div>
-            <div class="column"><?php include '../../php/StoredIn/updateQuantityInLoc.php'; ?></div>
+            <div class="column" id="storedin-update-form">
+                <?php include '../../php/StoredIn/updateQuantityInLoc.php'; ?>
+            </div>
             <div class="column"><?php include '../../php/IMQueries/queryLocationAndQuantityByWineID.php'; ?></div>
     </div>
 
@@ -103,7 +105,7 @@ setStyle();
         <div class="column">
             <?php include '../../php/Supplier/insert-view.php'; ?>
         </div>
-        <div class="column">    
+        <div class="column" id="supplier-update-form">
             <?php include '../../php/Supplier/updateSupplier.php'; ?>
         </div>
         <div class="column">
