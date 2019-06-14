@@ -1,7 +1,7 @@
 <section>
 
     <div class="ui grid centered">
-        <div class="sixteen wide column">
+        <div class="fifteen wide column">
             <?php include 'view_table.php'; ?>
         </div>
         <div class="five wide column">

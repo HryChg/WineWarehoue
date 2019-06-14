@@ -43,36 +43,38 @@ if (isset($_POST['submit'])) {
 
 
 <h1 class="ui header">Add a Shipment</h1>
-<form class="ui form" action="../../ui/ShippingManager/index.php" method="POST">
-    <div class="field">
-        <input type="text" name="shipmentID" value="<?php echo htmlspecialchars($shipmentID) ?>">
-        <label>shipmentID</label>
-    </div>
-    <div class="field">
-        <input type="text" name="transportationMode"
-               value="<?php echo htmlspecialchars($transportationMode) ?>">
-        <label>Transportation Mode</label>
-    </div>
-    <div class="field">
-        <input type="text" name="expectedDeliveryDate"
-               value="<?php echo htmlspecialchars($expectedDeliveryDate) ?>">
-        <label>Expected Delivery Date</label>
-    </div>
-    <div class="field">
-        <input type="text" name="actualDeliveryDate"
-               value="<?php echo htmlspecialchars($actualDeliveryDate) ?>">
-        <label>Actual Delivery Date</label>
-    </div>
-    <div class="field">
-        <input type="text" name="orderID" value="<?php echo htmlspecialchars($orderID) ?>">
-        <label>orderID</label>
-    </div>
-    <div class="field">
-        <input type="text" name="employeeID" value="<?php echo htmlspecialchars($employeeID) ?>">
-        <label>employeeID</label>
-    </div>
-    <div class="red-text"><?php echo $errors; ?></div>
-    <div class="center">
-        <input class="ui primary button" type="submit" name="submit" value="Add">
-    </div>
-</form>
+<div class="ui segment">
+    <form class="ui form" action="../../ui/ShippingManager/index.php" method="POST">
+        <div class="field">
+            <input type="text" name="shipmentID" value="<?php echo htmlspecialchars($shipmentID) ?>">
+            <label>shipmentID</label>
+        </div>
+        <div class="field">
+            <input type="text" name="transportationMode"
+                   value="<?php echo htmlspecialchars($transportationMode) ?>">
+            <label>Transportation Mode</label>
+        </div>
+        <div class="field">
+            <input type="text" name="expectedDeliveryDate"
+                   value="<?php echo htmlspecialchars($expectedDeliveryDate) ?>">
+            <label>Expected Delivery Date</label>
+        </div>
+        <div class="field">
+            <input type="text" name="actualDeliveryDate"
+                   value="<?php echo htmlspecialchars($actualDeliveryDate) ?>">
+            <label>Actual Delivery Date</label>
+        </div>
+        <div class="field">
+            <input type="text" name="orderID" value="<?php echo htmlspecialchars($orderID) ?>">
+            <label>orderID</label>
+        </div>
+        <div class="field">
+            <input type="text" name="employeeID" value="<?php echo htmlspecialchars($employeeID) ?>">
+            <label>employeeID</label>
+        </div>
+        <div class="red-text"><?php echo $errors; ?></div>
+        <div class="center">
+            <input class="ui primary button" type="submit" name="submit" value="Add">
+        </div>
+    </form>
+</div>
