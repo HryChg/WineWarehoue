@@ -1,16 +1,5 @@
-<?php
-//
-//include 'view_table.php';
-//
-//include 'add.php';
-//
-//include 'update.php';
-//
-//?>
-
-
 <div class="ui grid centered">
-    <div class="fourteen wide column">
+    <div class="fifteen wide column">
         <?php include 'view_table.php'; ?>
     </div>
     <div class="row">
