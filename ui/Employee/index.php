@@ -75,25 +75,16 @@
 </nav>
 
 
-
 <section id="ViewEmployee" class="section" style="alignment: center">
     <h1 class="ui header">View All Employees</h1>
     <div class="ui three column centered grid">
-        <div class="column">
-            <div class="ui one column grid">
-                <div class="column">
-                    <?php include '../../php/Employee/View.php' ?>
-                </div>
-                <div class="column">
-                    <h1 class="ui header">Delete Employee</h1>
-                    <?php include '../../php/Employee/View-Delete.php' ?>
-                </div>
-
+        <div class="two column">
+            <div class="column">
+                <?php include '../../php/Employee/View.php' ?>
             </div>
-
         </div>
         <div class="column">
-            <div class="ui one column centered grid">
+            <div class="ui two column centered grid">
                 <div class="column">
                     <h1 class="ui header">Add Employee</h1>
                     <?php include '../../php/Employee/View-Add.php' ?>
@@ -104,12 +95,14 @@
                     <?php include '../../php/Employee/View-Update.php' ?>
                 </div>
 
+                <div class="column">
+                    <h1 class="ui header">Delete Employee</h1>
+                    <?php include '../../php/Employee/View-Delete.php' ?>
+                </div>
             </div>
-
         </div>
     </div>
 </section>
-
 
 
 <footer class="ui inverted vertical footer segment">
