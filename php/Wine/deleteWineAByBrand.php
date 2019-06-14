@@ -1,39 +1,34 @@
-<form class="ui form" action="../../php/Wine/process-deleteWineAByBrand.php" method="post">
+<script src="./../../php/Wine/delete-submit-brandname.js"></script>
+<form class="ui form" id="delete-wine-brandname" url="../../php/Wine/process-deleteWineAByBrand.php" method="post">
 
-    Delete a tuple from WineA using brandName
+    <h3>Delete BrandName (WineA)</h3>
+    <!-- TODO: Merge this with Delete BrandName (WineB) -->
 
-    </br>
-
-    </br>
-
-    <label>WineA BrandName</label>
+    <label>BrandName</label>
 
     <?php
 
-    // include '../../connect.php'; 
+    include_once '../../connect.php'; 
     $conn = OpenCon();
 
     $result = $conn->query("select brandName from WineA");
 
-    echo "<select name='brandName'>";
-
+    echo "<p><select name='brandName'>";
+    echo '<option value="">---Select brandName---</option>';
     while ($row = $result->fetch_assoc())
     {
         unset($brandName);
 
         $brandName = $row['brandName'];
 
-        echo '<option value="'.$brandName.'">'.'BrandName: '.$brandName.'</option>';
+        echo '<option value="'.$brandName.'">'.$brandName.'</option>';
 
-        // use '.' to append string
     }
 
-    echo "</select>";
-
-
+    echo "</select></p>";
+    CloseCon($conn);
     ?>
 
-
-    <input class="ui button" type="submit" value="Delete">
+    <input class="ui button delete-wine-brandname" type="submit" value="Delete">
 
 </form>

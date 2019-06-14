@@ -1,6 +1,6 @@
-<?php
-echo '<form class="ui form" action="../../php/Wine/insert.php" method="post">
-    <h1>Add Wine</h1>
+<script src="./../../php/Wine/insert-submit.js"></script>
+<form class="ui form" id="add-wine" method="post" url="../../php/Wine/insert.php">
+    <h3>Add Wine</h3>
     <p>
         <label for="wineid">Wine Barcode:</label>
         <input type="text" name="wineid" id="wineid">
@@ -69,6 +69,5 @@ echo '<form class="ui form" action="../../php/Wine/insert.php" method="post">
         <label for="climate">Climate:</label>
         <input type="text" name="climate" id="climate">
     </p>
-    <input class="ui button" type="submit" value="Add">
-</form>'
-?>
+    <input class="ui button add-wine" type="submit" value="Add">
+</form>

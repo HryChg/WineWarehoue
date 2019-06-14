@@ -1,22 +1,19 @@
-<form class="ui form" action="../../php/AgriculturalRegion/process-deleteRegionByName.php" method="post">
+<script src="./../../php/AgriculturalRegion/delete-submit.js"></script>
+<form class="ui form" id="delete-ar" url="../../php/AgriculturalRegion/process-deleteRegionByName.php" method="post">
 
-   Delete a tuple from AgriculturalRegion using name
-
-    </br>
-
-    </br>
-
+   <h3>Delete Agricultural Region</h3>
+    <!-- TODO: Fix bug -- won't update/reload -->
     <label>Agricultural Region</label>
 
     <?php
 
-    // include '../../connect.php'; 
+    include_once '../../connect.php'; 
     $conn = OpenCon();
 
     $result = $conn->query("select name from AgriculturalRegion");
 
-    echo "<select name='name'>";
-
+    echo "<p><select name='name'>";
+    echo '<option value="">---Select name---</option>';
     while ($row = $result->fetch_assoc())
 
     {
@@ -25,16 +22,14 @@
 
         $name = $row['name'];
 
-        echo '<option value="'.$name.'">'.'Name: '.$name.'</option>';
-        // use '.' to append string
+        echo '<option value="'.$name.'">'.$name.'</option>';
 
     }
 
-    echo "</select>";
-
+    echo "</select></p>";
+    CloseCon($conn);
     ?>
 
-
-    <input class="ui button" type="submit" value="Delete">
+    <input class="ui button delete-ar" type="submit" value="Delete">
 
 </form>

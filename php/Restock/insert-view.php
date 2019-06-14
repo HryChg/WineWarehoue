@@ -1,7 +1,6 @@
-<?php
-echo
-'<form class="ui form" action="../../php/Restock/insert.php" method="post">
-    <h1>Wine Restock Records</h1>
+<script src="./../../php/Restock/submitForm.js"></script>
+<form class="ui form" id="restock-form" method="post" url="./../../php/Restock/insert.php">
+    <h3>Add Wine Restock Records</h3>
     <p>
         <label for="employeeid">Employee ID:</label>
         <input type="text" name="employeeid" id="employeeid">
@@ -26,6 +25,12 @@ echo
         <label for="date">Restock Date (YYYY-MM-DD):</label>
         <input type="text" name="date" id="date">
     </p>
-    <input class="ui button" type="submit" value="Add">
-</form>'
-?>
+    <input class="ui button restock-submit submit-form" type="submit" value="Add">
+</form>
+<!-- <script>
+$(document).ready(function() {
+    $(".restock-submit.submit-form").click(function(e) {
+        $("#restock-table").load('../../php/Restock/defaultView-restock.php');
+    });
+});
+</script> -->

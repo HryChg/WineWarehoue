@@ -1,47 +1,34 @@
-<form class="ui form" action="../../php/StorageArea/process-updateStorageTemp.php" method="post">
+<script src="./../../php/StorageArea/update-submit.js"></script>
+<form class="ui form" id="update-storage-temp" url="../../php/StorageArea/process-updateStorageTemp.php" method="post">
 
-    Update the temperature of a StorageArea
+    <h3>Update Storage Temperature</h3>
 
-    </br>
-
-    </br>
-
-    <label>StorageArea</label>
+    <label>Location ID</label>
 
     <?php
 
-    // include '../../connect.php'; 
+    include_once '../../connect.php'; 
     $conn = OpenCon();
 
     $result = $conn->query("select locationID from StorageArea");
 
     echo "<select name='locationID'>";
-
-    while ($row = $result->fetch_assoc())
-
-    {
-
+    echo '<option value="">---Select locationID---</option>';
+    while ($row = $result->fetch_assoc()) {
         unset($locationID);
-
         $locationID = $row['locationID'];
-
-        echo '<option value="'.$locationID.'">'.'LocationID: '.$locationID.'</option>';
-        // use '.' to append string
-
+        echo '<option value="'.$locationID.'">'.$locationID.'</option>';
     }
 
     echo "</select>";
-
+    CloseCon($conn);
     ?>
 
-    <br>
+    <p>
+        <label>Temperature </label>
+        <input name="temperature" type="text" placeholder="Enter new temp for location">
+    </p>
 
-
-
-    <label>StorageArea Temperature </label>
-
-    <input name="temperature" type="text" placeholder="Enter new temp for location">
-
-    <input class="ui button" type="submit" value="Update">
+    <input class="ui button update-storage-temp" type="submit" value="Update">
 
 </form>

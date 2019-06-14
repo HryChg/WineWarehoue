@@ -1,21 +1,17 @@
 <form class="ui form" action="../../php/Supplier/process-deleteSupplierBByIDOrPhone.php" method="post">
 
-    Delete a tuple from SupplierB using supplierID or phoneNo
-
-    </br>
-
-    </br>
+    <h3>Delete a tuple from SupplierB using supplierID or phoneNo</h3>
 
     <label>SupplierB supplierID and/or phoneNo</label>
 
     <?php
 
-    // include '../../connect.php'; 
+    include_once '../../connect.php'; 
     $conn = OpenCon();
 
     $result1 = $conn->query("select supplierID from SupplierB");
 
-    echo "<select name='supplierID'>";
+    echo "<p><select name='supplierID'>";
 
     echo '<option value="">---Select supplierID---</option>';
     while ($row = $result1->fetch_assoc())
@@ -25,11 +21,11 @@
         echo '<option value="'.$supplierID.'">'.'SupplierID: '.$supplierID.'</option>';
     }
 
-    echo "</select>";
+    echo "</select></p>";
 
     $result2 = $conn->query("select phoneNo from SupplierB");
 
-    echo "<select name='phoneNo'>";
+    echo "<p><select name='phoneNo'>";
     echo '<option value="">---Select phoneNo---</option>';
     while ($row = $result2->fetch_assoc())
     {
@@ -38,8 +34,8 @@
         echo '<option value="'.$phoneNo.'">'.'PhoneNo: '.$phoneNo.'</option>';
     }
 
-    echo "</select>";
-
+    echo "</select></p>";
+    CloseCon($conn);
 
     ?>
 

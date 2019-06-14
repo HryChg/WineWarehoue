@@ -1,51 +1,35 @@
-<form class="ui form" action="../../php/Wine/process-updateWinePrice.php" method="post">
+<script src="./../../php/Wine/update-submit.js"></script>
+<form class="ui form" id="update-wine" url="../../php/Wine/process-updateWinePrice.php" method="post">
 
-    Update the price of a wineB
-
-    </br>
-
-    </br>
+    <h3>Update Wine Price</h3>
 
     <label>Wine</label>
 
     <?php
 
-    // include '../../connect.php'; 
+    include_once '../../connect.php'; 
     $conn = OpenCon();
 
     $result = $conn->query("select wineID from WineB");
 
-    echo "<select name='wineID'>";
-
+    echo "<p><select name='wineID'>";
+    echo '<option value="">---Select wineID---</option>';
     while ($row = $result->fetch_assoc())
-
     {
-
         unset($wineID);
-
         $wineID = $row['wineID'];
-
-        echo '<option value="'.$wineID.'">'.'WineID: '.$wineID.'</option>';
-        // use '.' to append string
-
+        echo '<option value="'.$wineID.'">'.$wineID.'</option>';
     }
 
-    echo "</select>";
-
+    echo "</select></p>";
+    CloseCon($conn);
     ?>
 
-    <br>
+    <p>
+        <label>Wine Price </label>
+        <input name="price" type="text" placeholder="Enter new price for wine">
+    <p>
 
-
-
-    <label>Wine Price </label>
-
-    <input name="price" type="text" placeholder="Enter new price for wine">
-
-    <br>
-
-    <br>
-
-    <input class="ui button" type="submit" value="Update">
+    <input class="ui button update-wine" type="submit" value="Update">
 
 </form>

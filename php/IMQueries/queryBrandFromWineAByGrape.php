@@ -1,11 +1,12 @@
 <form class="ui form" action="../../php/IMQueries/process-queryBrandFromWineAByGrape.php" method="post">
 
-    <h1>Query WineA by grapeType1 or grapeType2</h1>
+    <h3>Query WineA by grapeType1 or grapeType2</h3>
     <label>grapeType</label>
 
     <?php
 
-    //include '../../connect.php';$conn = OpenCon();
+    //include_once '../../connect.php';
+    $conn = OpenCon();
 
     $result1 = $conn->query("select grapeType1 from WineA");
     $grapeType1Array = array();
@@ -26,11 +27,11 @@
 
     echo "<select name='grapeType'>";
     foreach($combinedArray as $grapeType) {
-        echo '<option value="'.$grapeType.'">'.'grapeType: '.$grapeType.'</option>';
+        echo '<option value="'.$grapeType.'">'.$grapeType.'</option>';
     }
     echo "</select>";
 
-
+    CloseCon($conn);
     ?>
 
     <input class="ui button" type="submit" value="Query">

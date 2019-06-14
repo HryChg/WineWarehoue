@@ -1,11 +1,8 @@
 .form {
     border: 1px solid lightgrey;
     border-radius: 8px;
-    width: 33%;
-}
-
-#form {
-    width: 30%;
-    position: absolute;
-    margin: 8px;
+    width: 100%;
+    position: relative;
+    margin-left: 8px;
+    /* margin-right: 8px; */
 }

@@ -17,21 +17,23 @@ INSERT INTO Employee VALUES(010, 'GeneralEmployee', 'Deep M');
 
 CREATE TABLE InventoryManager
 (employeeID INTEGER PRIMARY KEY,
+password varchar(40),
 FOREIGN KEY (employeeID) REFERENCES Employee(employeeID));
-INSERT INTO InventoryManager VALUES(000);
-INSERT INTO InventoryManager VALUES(001);
-INSERT INTO InventoryManager VALUES(002);
-INSERT INTO InventoryManager VALUES(003);
-INSERT INTO InventoryManager VALUES(004);
+INSERT INTO InventoryManager VALUES(000, 000);
+INSERT INTO InventoryManager VALUES(001, 111);
+INSERT INTO InventoryManager VALUES(002, 222);
+INSERT INTO InventoryManager VALUES(003, 333);
+INSERT INTO InventoryManager VALUES(004, 444);
 
 CREATE TABLE ShippingManager
 (employeeID INTEGER PRIMARY KEY,
+password varchar(40),
 FOREIGN KEY (employeeID) REFERENCES Employee(employeeID));
-INSERT INTO ShippingManager VALUES(005);
-INSERT INTO ShippingManager VALUES(006);
-INSERT INTO ShippingManager VALUES(007);
-INSERT INTO ShippingManager VALUES(008);
-INSERT INTO ShippingManager VALUES(009);
+INSERT INTO ShippingManager VALUES(005, 555);
+INSERT INTO ShippingManager VALUES(006, 666);
+INSERT INTO ShippingManager VALUES(007, 777);
+INSERT INTO ShippingManager VALUES(008, 888);
+INSERT INTO ShippingManager VALUES(009, 999);
 
 
 

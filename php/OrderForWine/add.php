@@ -39,7 +39,7 @@ if($errors){
  <html>
 
  <section class="container grey-text">
- 	<h4 class="center">Add a Wine Order</h4>
+ 	<h1 class="ui header">Add a Wine Order</h1>
  	<form class="white" action="../../ui/ShippingManager/index.php" method="POST">
  		<div class="row">
  			<div class="col s3">

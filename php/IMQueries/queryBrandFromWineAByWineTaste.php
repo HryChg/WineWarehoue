@@ -1,16 +1,13 @@
 <form class="ui form" action="../../php/IMQueries/process-queryBrandFromWineAByWineTaste.php" method="post">
 
-    Query WineA by WineTaste1 or WineTaste2
-
-    </br>
-
-    </br>
+    <h3>Query WineA by WineTaste1 or WineTaste2</h3>
 
     <label>WineTaste</label>
 
     <?php
 
-    //include '../../connect.php'; $conn = OpenCon();
+    //include_once '../../connect.php'; 
+    $conn = OpenCon();
 
     $result1 = $conn->query("select wineTaste1 from WineA");
     $wineTaste1Array = array();
@@ -28,12 +25,12 @@
     }
     $combinedArray = array_unique(array_merge($wineTaste1Array, $wineTaste2Array));
 
-    echo "<select name='wineTaste'>";
+    echo "<p><select name='wineTaste'>";
     foreach($combinedArray as $wineTaste) {
-        echo '<option value="'.$wineTaste.'">'.'WineTaste: '.$wineTaste.'</option>';
+        echo '<option value="'.$wineTaste.'">'.$wineTaste.'</option>';
     }
-    echo "</select>";
-
+    echo "</select></p>";
+    CloseCon($conn);
     ?>
 
     <input class="ui button" type="submit" value="Query">

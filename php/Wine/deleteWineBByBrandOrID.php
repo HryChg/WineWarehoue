@@ -1,21 +1,18 @@
-<form class="ui form" action="../../php/Wine/process-deleteWineBByBrandOrID.php" method="post">
+<script src="./../../php/Wine/delete-submit-wineid.js"></script>
+<form class="ui form" id="delete-wine-wineid" url="../../php/Wine/process-deleteWineBByBrandOrID.php" method="post">
 
-    Delete a tuple from WineB using brandName or wineID
-
-    </br>
-
-    </br>
-
-    <label>WineB BrandName and WineID</label>
-
+    <h3>Delete BrandName (WineB) or WineID</h3>
+    <!-- TODO: Fix Bug - no update -->
+    <label>WineB BrandName</label>
+    
     <?php
 
-    // include '../../connect.php'; 
+    include_once '../../connect.php'; 
     $conn = OpenCon();
 
     $result1 = $conn->query("select brandName from WineB");
 
-    echo "<select name='brandName'>";
+    echo "<p><select name='brandName'>";
 
     echo '<option value="">---Select brandName---</option>';
     while ($row = $result1->fetch_assoc())
@@ -24,12 +21,11 @@
         $brandName = $row['brandName'];
         echo '<option value="'.$brandName.'">'.'BrandName: '.$brandName.'</option>';
     }
-
-    echo "</select>";
+    echo "</select></p>";
 
     $result2 = $conn->query("select wineID from WineB");
-
-    echo "<select name='wineID'>";
+    echo "<label>WineID</label>";
+    echo "<p><select name='wineID'>";
     echo '<option value="">---Select wineID---</option>';
     while ($row = $result2->fetch_assoc())
     {
@@ -38,11 +34,10 @@
         echo '<option value="'.$wineID.'">'.'WineID: '.$wineID.'</option>';
     }
 
-    echo "</select>";
-
-
+    echo "</select></p>";
+    CloseCon($conn);
     ?>
 
-    <input class="ui button" type="submit" value="Delete">
+    <input class="ui button delete-wine-wineid" type="submit" value="Delete">
 
 </form>

@@ -1,21 +1,17 @@
 <form class="ui form" action="../../php/WineOrigin/process-deleteWineOrigin.php" method="post">
 
-    Delete a tuple from WineOrigin using regionName and wineID
-
-    </br>
-
-    </br>
+    <h3>Delete a tuple from WineOrigin using regionName and wineID</h3>
 
     <label>Wine Origin</label>
 
     <?php
 
-    // include '../../connect.php'; 
+    include_once '../../connect.php'; 
     $conn = OpenCon();
 
     $result = $conn->query("select regionName, wineID from WineOrigin");
 
-    echo "<select name='keys'>";
+    echo "<p><select name='keys'>";
 
     while ($row = $result->fetch_assoc())
     {
@@ -29,8 +25,8 @@
         // use '.' to append string
     }
 
-    echo "</select>";
-
+    echo "</select></p>";
+    CloseCon($conn);
 
     ?>
 

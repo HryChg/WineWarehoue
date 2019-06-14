@@ -1,15 +1,15 @@
 <?php
-include '../../connect.php';
-include '../../template/input-query/create-table.php';
+include_once '../../connect.php';
+include_once '../../template/input-query/create-table.php';
 
 /* Attempt MySQL server connection. */
 $conn = OpenCon();
  
 // Escape user inputs for security
-$id = mysqli_real_escape_string($conn, $_REQUEST['id']);
-$name = mysqli_real_escape_string($conn, $_REQUEST['name']);
-$phone = mysqli_real_escape_string($conn, $_REQUEST['phone']);
-$address = mysqli_real_escape_string($conn, $_REQUEST['address']);
+$id = $_POST['id'];
+$name = $_POST['name'];
+$phone = $_POST['phone'];
+$address = $_POST['address'];
  
 // Attempt insert query execution
 $sql = "INSERT INTO SupplierA VALUES ('$address', '$name')";

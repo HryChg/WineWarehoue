@@ -1,43 +1,41 @@
 <?php
-include '../../connect.php';
-include '../../template/input-query/create-table.php';
+include_once '../../connect.php';
+include_once '../../template/input-query/create-table.php';
 
 /* Attempt MySQL server connection. */
 $conn = OpenCon();
  
 // Escape user inputs for security
-$wineid = mysqli_real_escape_string($conn, $_REQUEST['wineid']);
-$price = mysqli_real_escape_string($conn, $_REQUEST['price']);
-$color = mysqli_real_escape_string($conn, $_REQUEST['color']);
-$brand = mysqli_real_escape_string($conn, $_REQUEST['brand']);
-$year = mysqli_real_escape_string($conn, $_REQUEST['year']);
-$grape1 = mysqli_real_escape_string($conn, $_REQUEST['grape1']);
-$grape2 = mysqli_real_escape_string($conn, $_REQUEST['grape2']);
-$taste1 = mysqli_real_escape_string($conn, $_REQUEST['taste1']);
-$taste2 = mysqli_real_escape_string($conn, $_REQUEST['taste2']);
-$alcohol = mysqli_real_escape_string($conn, $_REQUEST['alcohol']);
-$acid = mysqli_real_escape_string($conn, $_REQUEST['acid']);
-$sugar = mysqli_real_escape_string($conn, $_REQUEST['sugar']);
-$expiry = mysqli_real_escape_string($conn, $_REQUEST['expiry']);
-$region = mysqli_real_escape_string($conn, $_REQUEST['region']);
-$temperature = mysqli_real_escape_string($conn, $_REQUEST['temperature']);
-$moisture = mysqli_real_escape_string($conn, $_REQUEST['moisture']);
-$climate = mysqli_real_escape_string($conn, $_REQUEST['climate']);
+$wineid = $_POST['wineid'];
+$price = $_POST['price'];
+$color = $_POST['color'];
+$brand = $_POST['brand'];
+$year = $_POST['year'];
+$grape1 = $_POST['grape1'];
+$grape2 = $_POST['grape2'];
+$taste1 = $_POST['taste1'];
+$taste2 = $_POST['taste2'];
+$alcohol = $_POST['alcohol'];
+$acid = $_POST['acid'];
+$sugar = $_POST['sugar'];
+$expiry = $_POST['expiry'];
+$region = $_POST['region'];
+$temperature = $_POST['temperature'];
+$moisture = $_POST['moisture'];
+$climate = $_POST['climate'];
 
 // Attempt insert query execution
-$sql = "INSERT INTO WineA VALUES ('$grape1', '$grape2', '$brand', '$taste1', '$taste2')";
-$resultWA = mysqli_query($conn, $sql);
+$sql1 = "INSERT INTO WineA VALUES ('$grape1', '$grape2', '$brand', '$taste1', '$taste2')";
+$result1 = mysqli_query($conn, $sql1);
 
-$sql = "INSERT INTO WineB VALUES ('$wineid', '$price', '$color', '$brand', '$grape1', '$grape2', '$alcohol', '$acid', '$sugar', DATE('$expiry'))";
-echo $sql;
-$resultWB = mysqli_query($conn, $sql);
-var_dump($resultWB);
+$sql2 = "INSERT INTO WineB VALUES ('$wineid', '$price', '$color', '$brand', '$grape1', '$grape2', '$alcohol', '$acid', '$sugar', DATE('$expiry'))";
+$result2 = mysqli_query($conn, $sql2);
 
-$sql = "INSERT INTO AgriculturalRegion VALUES ('$region', '$temperature', '$moisture', '$climate')";
-$resultAR = mysqli_query($conn, $sql);
+$sql3 = "INSERT INTO AgriculturalRegion VALUES ('$region', '$temperature', '$moisture', '$climate')";
+$result3 = mysqli_query($conn, $sql3);
 
-$sql = "INSERT INTO WineOrigin VALUES ('$region', '$wineid', '$year')";
-$resultWO = mysqli_query($conn, $sql);
+$sql4 = "INSERT INTO WineOrigin VALUES ('$region', '$wineid', '$year')";
+$result4 = mysqli_query($conn, $sql4);
 
 if (!$resultWA && !$resultWB && !$resultWO && !$resultAR) {
     echo "Record unable to be added.";

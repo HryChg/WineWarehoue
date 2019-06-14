@@ -1,16 +1,13 @@
 <form class="ui form" action="../../php/Supplier/process-deleteSupplierA.php" method="post">
 
-    Delete a tuple from SupplierA using name
+    <h3>Delete a tuple from SupplierA using name</h3>
 
-    </br>
-
-    </br>
-
+    <p>
     <label>SupplierA</label>
 
     <?php
 
-    // include '../../connect.php'; 
+    include_once '../../connect.php'; 
     $conn = OpenCon();
 
     $result = $conn->query("select name, address from SupplierA");
@@ -31,8 +28,8 @@
 
     }
 
-    echo "</select>";
-
+    echo "</select></p>";
+    CloseCon($conn);
     ?>
 
 
