@@ -60,8 +60,8 @@ setStyle();
         </div>
         <div class="column">
             <?php include '../../php/Wine/updateWinePrice.php'; ?>
-            <?php include '../../php/Wine/deleteWineAByBrand.php'; ?>
-            <?php include '../../php/Wine/deleteWineBByBrandOrID.php'; ?>
+            <?php include '../../php/Wine/deleteWineByBrand.php'; ?>
+            <?php include '../../php/Wine/deleteWineByID.php'; ?>
             <?php include '../../php/WineOrigin/deleteWineOrigin.php'; ?>
         </div>
         <div class="column">

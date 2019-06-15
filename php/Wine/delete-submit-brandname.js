@@ -7,7 +7,7 @@ $(document).ready(function() {
         $(form).each(function(id, obj){
             data[obj.name] = obj.value;
         });
-        // alert($("#delete-wine-brandname").serialize()); // Debug Tool
+        alert($("#delete-wine-brandname").serialize()); // Debug Tool
         $.ajax({
             url: $("#delete-wine-brandname").attr("url"),
             method: "POST",

@@ -1,12 +1,12 @@
 <?php
 
-include '../../connect.php';
+include_once '../../connect.php';
 
 $brandName = $_POST['brandName'];
 
 $conn = OpenCon();
 
-$sql = "delete from WineA where brandName = '$brandName'";
+$sql = "delete from WineA where brandName = '$brandName'; delete from WineB where brandName = '$brandName'";
 
 if ($conn->query($sql) === TRUE) {
 
