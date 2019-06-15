@@ -35,23 +35,24 @@ function displayEmployeeAttributes()
 
 ?>
 
+<div class="ui segment">
+    <div class="ui form">
+        <form action="../../php/Employee/Process-Update.php" method="post">
+            <div class="field">
+                <?php displayEmployeeOption() ?>
+                <label>Select the name of an employee:</label>
+            </div>
+            <div class="field">
+                <? displayEmployeeAttributes() ?>
+                <label>Choose the attribute to update:</label>
+            </div>
 
-<div class="ui form">
-    <form action="../../php/Employee/Process-Update.php" method="post">
-        <div class="field">
-            <?php displayEmployeeOption() ?>
-            <label>Select the name of an employee:</label>
-        </div>
-        <div class="field">
-            <? displayEmployeeAttributes() ?>
-            <label>Choose the attribute to update:</label>
-        </div>
+            <div class="field">
+                <input name="value" type="text" placeholder="Enter new value">
+                <label>Enter New Value:</label>
+            </div>
+            <input class="positive ui button" type="submit" value="Update">
 
-        <div class="field">
-            <input name="value" type="text" placeholder="Enter new value">
-            <label>Enter New Value:</label>
-        </div>
-        <input class="positive ui button" type="submit" value="Update">
-
-    </form>
+        </form>
+    </div>
 </div>

@@ -4,8 +4,6 @@
     <!--    Note later ui override the first-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../animate.css">
-
 
     <title>Shipping Manager User Interface</title>
     <style type="text/css">
@@ -54,9 +52,6 @@
 </head>
 <body>
 <nav class="ui large menu">
-    <a class="item" href="#SpecialFeatures">
-        Home
-    </a>
     <div class="active item">
         <h4>Shipping Manager User Interface</h4>
     </div>
@@ -79,14 +74,13 @@
         </div>
 
         <div class="item">
-            <div class="ui primary button">Log Out</div>
+            <a class="ui primary button" href="../Login/index.php">Log Out</a>
         </div>
     </div>
 </nav>
 
 <section id="SpecialFeatures">
     <h1 class="ui header">Special Features</h1>
-
     <div class="ui grid container">
         <div class="ui fluid three item menu container">
             <a class="item" onclick="top10BackOrderedWine()">Top 10 BackOrdered Wine </a>
@@ -136,45 +130,49 @@
     </script>
 
     <h2 class="ui header">Most Recent Order</h2>
-
     <div class="container">
-        <?php
-        include '../../connect.php';
-        $conn = OpenCon();
-        include '../../php/OrderReceived/View-MostRecentOrder.php'; ?>
-    </div>
-
-</section>
-
-<section id="ReturnedShipment" class="center">
-    <div class="container">
-        <h1 class="ui header">Returned Shipment</h1>
-        <?php
-        include '../../php/ReturnedShipment/index.php';
-        ?>
+        <?php include '../../php/OrderReceived/View-MostRecentOrder.php'; ?>
     </div>
 </section>
 
-<section id="ShippingManager" class="section" style="alignment: center">
-    <h1 class="ui header">Shipping Manager</h1>
-    <?php include '../../php/ShippingManager/index.php'; ?>
-</section>
-
-<section id="OrderForWine" class="section center">
-    <h1 class="ui header">Order For Wine</h1>
-    <?php include '../../php/OrderForWine/index.php'; ?>
-</section>
+<div class="ui section divider"></div>
 
 <section id="OrderReceived" class="section">
     <h1 class="ui header">Order Received</h1>
     <?php include '../../php/OrderReceived/index.php'; ?>
 </section>
 
+<div class="ui section divider"></div>
+
+<section id="OrderForWine" class="section center">
+    <h1 class="ui header">Order For Wine</h1>
+    <?php include '../../php/OrderForWine/index.php'; ?>
+</section>
+
+<div class="ui section divider"></div>
+
 <section id="Shipment" class="section center">
     <h1 class="ui header">Shipment</h1>
-    <?php include '../../php/Shipment/index.php';
-    CloseCon($conn); ?>
+    <?php include '../../php/Shipment/index.php';?>
 </section>
+
+<div class="ui section divider"></div>
+
+<section id="ReturnedShipment" class="center">
+    <div class="container">
+        <h1 class="ui header">Returned Shipment</h1>
+        <?php include '../../php/ReturnedShipment/index.php'; ?>
+    </div>
+</section>
+
+<div class="ui section divider"></div>
+
+<section id="ShippingManager" class="section" style="alignment: center">
+    <h1 class="ui header">Shipping Manager</h1>
+    <?php include '../../php/ShippingManager/index.php'; ?>
+</section>
+
+<div class="ui section divider"></div>
 
 <footer class="ui inverted vertical footer segment">
     <div class="ui container">

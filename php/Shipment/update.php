@@ -134,13 +134,8 @@ if(isset($_POST['submit_shipment_update']))
 
 ?>
 
-
-
-<!DOCTYPE html>
-<html>
-
-
 <h1 class="ui header">Update Shipment</h1>
+<div class="ui segment">
 <form class="ui form container" method="POST">
 
     <h4>Select the return shipment you would like to update:</h4>
@@ -175,5 +170,4 @@ if(isset($_POST['submit_shipment_update']))
     <div class="red-text"><?php echo $success; ?></div>
     <input class="positive ui button" type="submit" value="Update" name=submit_shipment_update>
 </form>
-
-</html>
+</div>

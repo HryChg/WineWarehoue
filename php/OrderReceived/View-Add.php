@@ -29,15 +29,22 @@
                 <input placeholder="" name="address" type="text" class="validate">
                 <label for="address">address</label>
             </div>
-            <div class="one field">
+
+        </div>
+
+        <div class="four fields">
+
+            <div class="field">
                 <input placeholder="" name="backorder" type="text" class="validate">
                 <label for="backorder">backorder</label>
             </div>
-            <div class="field">
+            <div class="eight wide field">
                 <input placeholder="" name="orderReceivedDate" type="text" class="validate">
                 <label for="orderReceivedDate">orderReceivedDate</label>
             </div>
         </div>
+
+
         <input class="ui primary button" tabindex="0" type="submit" value="Add">
     </form>
 </div>

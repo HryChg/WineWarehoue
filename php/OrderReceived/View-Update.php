@@ -1,10 +1,9 @@
 <?php
-function displayOrderAttributes($conn)
-{
+function displayOrderAttributes($conn){
+    include_once '../../connect.php';
+    $conn = openCon();
     $result = $conn->query("select orderID, retailer from OrderReceived");
-
     echo "<select name='orderID'>";
-
     while ($row = $result->fetch_assoc()) {
         unset($orderID, $retailer);
         $orderID = $row['orderID'];
@@ -14,6 +13,7 @@ function displayOrderAttributes($conn)
 
     }
     echo "</select>";
+    CloseCon($conn);
 }
 
 ?>

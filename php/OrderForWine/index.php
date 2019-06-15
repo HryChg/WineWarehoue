@@ -1,10 +1,24 @@
 <?php
 
-include 'view_table.php';
-
-include 'add.php';
-
-include 'delete.php';
-
+require_once '../../connect.php';
+$conn = OpenCon();
 ?>
 
+<div class="ui grid centered">
+    <div class="eight wide column">
+        <?php include 'view_table.php'; ?>
+    </div>
+    <div class="row">
+        <div class="four wide column">
+            <?php include 'add.php'; ?>
+        </div>
+        <div class="four wide column">
+            <?php include 'delete.php'; ?>
+        </div>
+    </div>
+</div>
+
+
+<?php
+CloseCon($conn);
+?>
