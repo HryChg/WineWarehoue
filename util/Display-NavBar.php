@@ -11,6 +11,12 @@ function displayNav($user) {
         $user.
     '</div>
     <div class="right menu">
+        <a class="item" href="#StoredIn">Current Inventory</a>
+        <a class="item" href="#Wine">Wines</a>
+        <a class="item" href="#AgriculturalRegion">Wine Agricultural Regions</a>
+        <a class="item" href="#Supplier">Supplier</a>
+        <a class="item" href="#Restock">Restock</a>
+        <a class="item" href="#StorageArea">Storage Temperature</a>
 
         <div class="ui simple dropdown item">
             Other
