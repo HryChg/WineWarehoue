@@ -6,6 +6,7 @@ $(document).ready(function() {
         $(form).each(function(id, obj){
             data[obj.name] = obj.value;
         });
+        // alert($("#update-ar").serialize()); // Debug Tool
         $.ajax({
             url: $("#update-ar").attr("url"),
             method: "POST",
