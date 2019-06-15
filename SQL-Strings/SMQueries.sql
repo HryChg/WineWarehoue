@@ -28,6 +28,15 @@ WHERE wineID NOT IN (
 ))
 LIMIT 3;
 
+--figure out best transportation mode by comparing actual and expected delivery dates
+CREATE VIEW difference_view AS
+SELECT TIMESTAMPDIFF(SECOND, expectedDeliveryDate, actualDeliveryDate) AS difference 
+FROM SHIPMENT;
+
+SELECT x.*
+FROM Shipment s
+WHERE s.transportationMode =    (SELECT MAX(d.difference)
+                                FROM difference_view d);
 
 ---------------------
 -- Order Received ---
