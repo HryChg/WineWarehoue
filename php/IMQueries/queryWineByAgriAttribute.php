@@ -14,7 +14,7 @@
     array_push($agriRegionAttrArray, 'temperature');
 
     echo "<div class='field'>
-        <label>Agricultural Region Attribute </label>
+        <label>Attribute </label>
         <select name='attribute'>";
     foreach($agriRegionAttrArray as $agriRegionAtt) {
         echo '<option value="'.$agriRegionAtt.'">'.$agriRegionAtt.'</option>';

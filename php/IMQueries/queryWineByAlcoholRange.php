@@ -2,7 +2,7 @@
 
     <h3>Search Wine By Alcohol Content</h3>
 
-    <div class="field"><label>Alcohol percentage (%): </label></div>
+    <div class="field"><label>Alcohol percentage (%) </label></div>
     <div class="two fields">
         <div class="field">
             <input type="text" name="lowRange">
