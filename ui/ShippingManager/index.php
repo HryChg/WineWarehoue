@@ -54,6 +54,15 @@ session_start();
             overflow-y:scroll;
         }
 
+        section::before{
+            display: block;
+            content: " ";
+            margin-top: -70px;
+            height: 70px;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
     </style>
 
 </head>
@@ -65,9 +74,49 @@ if($_SESSION['employeeType'] != "SM") {
 }
 ?>
 
+<style type="text/css">
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1
+    }
+</style>
+<div class="navbar">
+    <nav class="ui large menu">
+        <div class="active item">
+            <h4>Shipping Manager User Interface</h4>
+        </div>
+        <div class="right menu">
+            <a class="item" href="#OrderReceived">OrderReceived</a>
+            <a class="item" href="#OrderForWine">OrderForWine</a>
+            <a class="item" href="#Shipment">Shipment</a>
+            <a class="item" href="#ReturnedShipment">ReturnedShipment</a>
+            <a class="item" href="#ShippingManager">View Other ShippingManagers</a>
+
+
+            <div class="ui simple dropdown item">
+                Other
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <div class="item"><a class="item" href="../Employee/index.php">Employee</a></div>
+                    <div class="item"><a class="item" href="../InventoryManager/index.php">Inventory Manager</a></div>
+                    <div class="item"><a class="item" href="../ShippingManager/index.php">Shipping Manager</a></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <a class="ui primary button" href="../Login/index.php">Log Out</a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<br>
+<br>
+<br>
 <section id="SpecialFeatures">
-    <br>
-    <br>
+
     <h1 class="ui header">Special Features</h1>
     <div class="ui grid container">
         <div class="ui fluid three item menu container">
@@ -131,8 +180,7 @@ if($_SESSION['employeeType'] != "SM") {
 <div class="ui section divider"></div>
 
 <section id="OrderReceived" class="section">
-    <br>
-    <br>
+
     <h1 class="ui header">Order Received</h1>
     <?php include '../../php/OrderReceived/index.php'; ?>
 </section>
@@ -140,8 +188,7 @@ if($_SESSION['employeeType'] != "SM") {
 <div class="ui section divider"></div>
 
 <section id="OrderForWine" class="section center">
-    <br>
-    <br>
+
     <h1 class="ui header">Order For Wine</h1>
     <?php include '../../php/OrderForWine/index.php'; ?>
 </section>
@@ -149,8 +196,7 @@ if($_SESSION['employeeType'] != "SM") {
 <div class="ui section divider"></div>
 
 <section id="Shipment" class="section center">
-    <br>
-    <br>
+
     <h1 class="ui header">Shipment</h1>
     <?php include '../../php/Shipment/index.php';?>
 </section>
@@ -158,8 +204,7 @@ if($_SESSION['employeeType'] != "SM") {
 <div class="ui section divider"></div>
 
 <section id="ReturnedShipment" class="center">
-    <br>
-    <br>
+
     <div class="container">
         <h1 class="ui header">Returned Shipment</h1>
         <?php include '../../php/ReturnedShipment/index.php'; ?>
@@ -169,8 +214,7 @@ if($_SESSION['employeeType'] != "SM") {
 <div class="ui section divider"></div>
 
 <section id="ShippingManager" class="section" style="alignment: center">
-    <br>
-    <br>
+
     <h1 class="ui header">Shipping Manager</h1>
     <?php include '../../php/ShippingManager/index.php'; ?>
 </section>
@@ -178,8 +222,7 @@ if($_SESSION['employeeType'] != "SM") {
 <div class="ui section divider"></div>
 
 <footer class="ui inverted vertical footer segment">
-    <br>
-    <br>
+
     <div class="ui container">
         Copyright 2019 WineWarehouse
     </div>
@@ -187,41 +230,4 @@ if($_SESSION['employeeType'] != "SM") {
 
 </body>
 
-
-<style type="text/css">
-    .navbar {
-        position: fixed;
-        top: 0;
-        width: 100%;
-    }
-</style>
-<div class="navbar">
-    <nav class="ui large menu">
-        <div class="active item">
-            <h4>Shipping Manager User Interface</h4>
-        </div>
-        <div class="right menu">
-            <a class="item" href="#OrderReceived">OrderReceived</a>
-            <a class="item" href="#OrderForWine">OrderForWine</a>
-            <a class="item" href="#Shipment">Shipment</a>
-            <a class="item" href="#ReturnedShipment">ReturnedShipment</a>
-            <a class="item" href="#ShippingManager">View Other ShippingManagers</a>
-
-
-            <div class="ui simple dropdown item">
-                Other
-                <i class="dropdown icon"></i>
-                <div class="menu">
-                    <div class="item"><a class="item" href="../Employee/index.php">Employee</a></div>
-                    <div class="item"><a class="item" href="../InventoryManager/index.php">Inventory Manager</a></div>
-                    <div class="item"><a class="item" href="../ShippingManager/index.php">Shipping Manager</a></div>
-                </div>
-            </div>
-
-            <div class="item">
-                <a class="ui primary button" href="../Login/index.php">Log Out</a>
-            </div>
-        </div>
-    </nav>
-</div>
 </html>

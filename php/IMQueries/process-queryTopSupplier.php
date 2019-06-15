@@ -19,13 +19,15 @@ $sql = "SELECT sb.supplierID, sa.name, sa.address, sb.phoneNo, tot.total
 $result = $conn->query($sql);
 
 setStyle();
-displayNav("Inventory Manager");
+
 echo "<h1>Top Supplier</h1>";
 if ($result->num_rows > 0) {
     myTable($conn, $sql);
 } else {
     echo "0 results";
 }
+
+echo '<a class="ui button" href="../../ui/InventoryManager/index.php">Back</a>';
 
 CloseCon($conn);
 

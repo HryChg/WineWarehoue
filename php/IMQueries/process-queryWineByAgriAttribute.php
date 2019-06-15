@@ -19,13 +19,15 @@ $sql = "SELECT w.wineID, a.name, a.$attribute, b.brandName, b.grapeType1, b.grap
 $result = $conn->query($sql);
 
 setStyle();
-displayNav("Inventory Manager");
+
 echo "<h1>Wine Query Results</h1>";
 if ($result->num_rows > 0) {
     myTable($conn, $sql);
 } else {
     echo "0 results";
 }
+
+echo '<a class="ui button" href="../../ui/InventoryManager/index.php">Back</a>';
 
 CloseCon($conn);
 

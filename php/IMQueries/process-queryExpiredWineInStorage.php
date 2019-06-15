@@ -2,6 +2,8 @@
 
 include_once '../../connect.php';
 include_once '../../template/input-query/create-table.php';
+include '../../util/Display-IM-Header.php';
+include '../../util/Display-NavBar.php';
 
 $conn = OpenCon();
 $expiry = $_POST['expiry'];
@@ -24,12 +26,15 @@ if ($expiry == '') {
 }
 
 $result = $conn->query($sql);
-
+setStyle();
+echo "<h1>Wine Query Results</h1>";
 if ($result->num_rows > 0) {
     myTable($conn, $sql);
 } else {
     echo "0 results";
 }
+
+echo '<a class="ui button" href="../../ui/InventoryManager/index.php">Back</a>';
 
 CloseCon($conn);
 
