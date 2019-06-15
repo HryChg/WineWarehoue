@@ -29,13 +29,13 @@ $conn = OpenCon();
 //         ON a.address = b.address";
 
 $sql = "SELECT b.supplierID, a.name, b.phoneNo, a.address 
-        FROM SupplierA AS a 
-        LEFT JOIN SupplierB AS b 
+        FROM SupplierA a 
+        LEFT JOIN SupplierB b 
         ON a.address = b.address
         UNION
         SELECT b.supplierID, a.name, b.phoneNo, b.address 
-        FROM SupplierA AS a 
-        RIGHT JOIN SupplierB AS b 
+        FROM SupplierA a 
+        RIGHT JOIN SupplierB b 
         ON a.address = b.address
         ORDER BY supplierID;";
 
