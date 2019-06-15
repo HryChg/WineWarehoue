@@ -11,30 +11,9 @@ function setStyle() {
             margin: 20px auto;
             padding: 20px;
         }
-        h1, h2 {
+        h1 {
             text-align: center;
         }
-
-        .container{
-            margin: 8px;
-        }
-
-        section {
-            margin: 8px;
-        }
-
-        table {
-            margin: 8px;
-        }
-
-        table th {
-            text-align: center;
-        }
-
-        table thead {
-            text-align: center;
-        }
-
 
     </style>
 

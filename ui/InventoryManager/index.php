@@ -13,7 +13,7 @@ $conn = OpenCon();
 
 setStyle();
 ?>
-<body>
+
 
 <?php
 if($_SESSION['employeeType'] != "IM") {
@@ -21,8 +21,13 @@ if($_SESSION['employeeType'] != "IM") {
 }
 ?>
 
-<?php displayNav("Inventory Manager")?>
 
+
+
+<body>
+<br>
+<br>
+<br>
 <section id="Special Features">
 <h1 class="ui header">Special Features</h1>
 
@@ -38,6 +43,7 @@ if($_SESSION['employeeType'] != "IM") {
 
 <!------------------------------------------------------------------------->
 <section id="StoredIn" class="section center">
+    <br>
     <br>
     <h1 class="ui header">Current Wine Inventory</h1>
     <div class="container" id="storedin-table">
@@ -56,6 +62,8 @@ if($_SESSION['employeeType'] != "IM") {
 
 <!------------------------------------------------------------------------->
 <section id="Wine" class="section center">
+    <br>
+    <br>
     <h1 class="ui header">Wine List</h1>
     <div class="container" id="wine-table">
         <?php include '../../php/Wine/defaultView-wine.php'; ?>
@@ -87,6 +95,8 @@ if($_SESSION['employeeType'] != "IM") {
 
 <!------------------------------------------------------------------------->
 <section id="AgriculturalRegion" class="section center">
+    <br>
+    <br>
     <h1 class="ui header">Agricultural Regions of Wine in Stock</h1>
     <div class="container" id="agricultural-region-table">
         <?php include '../../php/AgriculturalRegion/defaultView-agriculturalRegion.php'; ?>
@@ -104,6 +114,8 @@ if($_SESSION['employeeType'] != "IM") {
 </section>
 <!------------------------------------------------------------------------->
 <section id="Supplier" class="section center">
+    <br>
+    <br>
     <h1 class="ui header">Supplier Details</h1>
     <div class="container" id="supplier-table">
         <?php include '../../php/Supplier/defaultView-supplier.php'; ?>
@@ -126,6 +138,8 @@ if($_SESSION['employeeType'] != "IM") {
 
 <!------------------------------------------------------------------------->
 <section id="Restock" class="section center">
+    <br>
+    <br>
     <h1 class="ui header">Restock</h1>
     <div class="container" id="restock-table">
         <?php include '../../php/Restock/defaultView-restock.php'; ?>
@@ -141,6 +155,8 @@ if($_SESSION['employeeType'] != "IM") {
 
 <!------------------------------------------------------------------------->
 <section id="StorageArea" class="section center">
+    <br>
+    <br>
     <h1 class="ui header">Storage Temperature</h1>
     <div class="container" id="storage-area-table">
         <?php include '../../php/StorageArea/defaultView-storageArea.php'; ?>
@@ -161,4 +177,5 @@ if($_SESSION['employeeType'] != "IM") {
 </footer>
 
 </body>
+<?php displayNav("Inventory Manager")?>
 </html>

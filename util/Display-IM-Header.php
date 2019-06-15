@@ -35,6 +35,14 @@ function setStyle() {
         table thead {
             text-align: center;
         }
+        
+        .navbar {
+            overflow: hidden;
+            background-color: #8d253e;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
 
 
     </style>
