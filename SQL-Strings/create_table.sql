@@ -1,3 +1,20 @@
+DROP TABLE ReturnedShipment;
+DROP TABLE Shipment;
+DROP TABLE OrderForWine;
+DROP TABLE OrderReceived;
+DROP TABLE StoredIn;
+DROP TABLE WineOrigin;
+DROP TABLE AgriculturalRegion;
+DROP TABLE Restock;
+DROP TABLE WineB;
+DROP TABLE WineA;
+DROP TABLE StorageArea;
+DROP TABLE SupplierB;
+DROP TABLE SupplierA;
+DROP TABLE ShippingManager;
+DROP TABLE InventoryManager;
+DROP TABLE Employee;
+
 CREATE TABLE Employee
 (employeeID INTEGER PRIMARY KEY, 
 type VARCHAR(20), 
