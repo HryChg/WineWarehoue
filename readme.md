@@ -8,3 +8,8 @@ password: 555
 InventoryManager
 username: Bob B
 password: 222
+
+
+GeneralManager:
+username: Jenny K
+password: 11
