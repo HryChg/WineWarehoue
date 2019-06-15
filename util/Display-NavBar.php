@@ -14,6 +14,7 @@ function displayNav($user) {
             width: 100%;
             margin:0;
             margin-bottom: 10px;
+            z-index: 1
         }
     </style>
 

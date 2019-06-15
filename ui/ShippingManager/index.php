@@ -65,6 +65,44 @@ if($_SESSION['employeeType'] != "SM") {
 }
 ?>
 
+<style type="text/css">
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1
+    }
+</style>
+<div class="navbar">
+    <nav class="ui large menu">
+        <div class="active item">
+            <h4>Shipping Manager User Interface</h4>
+        </div>
+        <div class="right menu">
+            <a class="item" href="#OrderReceived">OrderReceived</a>
+            <a class="item" href="#OrderForWine">OrderForWine</a>
+            <a class="item" href="#Shipment">Shipment</a>
+            <a class="item" href="#ReturnedShipment">ReturnedShipment</a>
+            <a class="item" href="#ShippingManager">View Other ShippingManagers</a>
+
+
+            <div class="ui simple dropdown item">
+                Other
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <div class="item"><a class="item" href="../Employee/index.php">Employee</a></div>
+                    <div class="item"><a class="item" href="../InventoryManager/index.php">Inventory Manager</a></div>
+                    <div class="item"><a class="item" href="../ShippingManager/index.php">Shipping Manager</a></div>
+                </div>
+            </div>
+
+            <div class="item">
+                <a class="ui primary button" href="../Login/index.php">Log Out</a>
+            </div>
+        </div>
+    </nav>
+</div>
+
 <section id="SpecialFeatures">
     <br>
     <br>
@@ -187,41 +225,4 @@ if($_SESSION['employeeType'] != "SM") {
 
 </body>
 
-
-<style type="text/css">
-    .navbar {
-        position: fixed;
-        top: 0;
-        width: 100%;
-    }
-</style>
-<div class="navbar">
-    <nav class="ui large menu">
-        <div class="active item">
-            <h4>Shipping Manager User Interface</h4>
-        </div>
-        <div class="right menu">
-            <a class="item" href="#OrderReceived">OrderReceived</a>
-            <a class="item" href="#OrderForWine">OrderForWine</a>
-            <a class="item" href="#Shipment">Shipment</a>
-            <a class="item" href="#ReturnedShipment">ReturnedShipment</a>
-            <a class="item" href="#ShippingManager">View Other ShippingManagers</a>
-
-
-            <div class="ui simple dropdown item">
-                Other
-                <i class="dropdown icon"></i>
-                <div class="menu">
-                    <div class="item"><a class="item" href="../Employee/index.php">Employee</a></div>
-                    <div class="item"><a class="item" href="../InventoryManager/index.php">Inventory Manager</a></div>
-                    <div class="item"><a class="item" href="../ShippingManager/index.php">Shipping Manager</a></div>
-                </div>
-            </div>
-
-            <div class="item">
-                <a class="ui primary button" href="../Login/index.php">Log Out</a>
-            </div>
-        </div>
-    </nav>
-</div>
 </html>
