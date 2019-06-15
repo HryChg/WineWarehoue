@@ -2,12 +2,16 @@
 
     <h3>Search Wine By Alcohol Percentage</h3>
 
-    <p>
-        <label>Alcohol percentage: </label>
-        <input type="text" name="lowRange">
-        <label> to </label>
-        <input type="text" name="highRange">
-    </p>
+    <label>Alcohol percentage: </label>
+    <div class="two fields">
+        <div class="field">
+            <input type="text" name="lowRange">
+        </div>
+        <div class="to"> to </div>
+        <div class="field">
+            <input type="text" name="highRange">    
+        </div>
+    </div>
     <input class="ui secondary button" type="submit" value="Query">
 
 </form>
