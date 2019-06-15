@@ -2,36 +2,26 @@
 <form class="ui form" action="../../php/IMQueries/process-queryBrandFromWineAByWineTaste.php" method="post">
     
     <h3>Search for Wine By Taste</h3>
-
-    <label>WineTaste</label>
-
+    
     <?php
 
-    include_once '../../connect.php'; 
+    include_once '../../connect.php';
     $conn = OpenCon();
 
-    $result1 = $conn->query("select wineTaste1 from WineA");
-    $wineTaste1Array = array();
-    array_push($wineTaste1Array, "---Select wine taste---");
-    while ($row = $result1->fetch_assoc()) {
-        unset($wineTaste1);
-        $wineTaste1 = $row['wineTaste1'];
-        array_push($wineTaste1Array, $wineTaste1);
-    }
-    $result2 = $conn->query("select wineTaste2 from WineA");
-    $wineTaste2Array = array();
-    while ($row = $result2->fetch_assoc()) {
-        unset($wineTaste2);
-        $wineTaste2 = $row['wineTaste2'];
-        array_push($wineTaste2Array, $wineTaste2);
-    }
-    $combinedArray = array_unique(array_merge($wineTaste1Array, $wineTaste2Array));
-    sort($combinedArray);
-    echo "<p><select name='wineTaste'>";
-    foreach($combinedArray as $wineTaste) {
+    echo "<p>
+        <label>WineTaste</label>
+        <select name='wineTaste'>";
+    echo '<option value="">---Select wineTaste---</option>';
+    $result = $conn->query("SELECT wineTaste1 AS wineTaste from WineA UNION SELECT wineTaste2 AS wineTaste from WineA");
+    while ($row = $result->fetch_assoc())
+    {
+        unset($wineTaste);
+        $wineTaste = $row['wineTaste'];
         echo '<option value="'.$wineTaste.'">'.$wineTaste.'</option>';
     }
+    
     echo "</select></p>";
+
     CloseCon($conn);
     ?>
 
