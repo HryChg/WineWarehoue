@@ -1,16 +1,16 @@
 <!-- Supplier -->
-<!-- To view all Supplier data:
+<!-- To view all Supplier data, use the following sql instead
 
-SELECT b.supplierID, a.name, b.phoneNo, a.address 
-FROM SupplierA AS a 
-LEFT JOIN SupplierB AS b 
-ON a.address = b.address
-UNION
-SELECT b.supplierID, a.name, b.phoneNo, b.address 
-FROM SupplierA AS a 
-RIGHT JOIN SupplierB AS b 
-ON a.address = b.address
-ORDER BY supplierID
+// $sql = "SELECT b.supplierID, a.name, b.phoneNo, a.address 
+//         FROM SupplierA AS a 
+//         LEFT JOIN SupplierB AS b 
+//         ON a.address = b.address
+//         UNION
+//         SELECT b.supplierID, a.name, b.phoneNo, b.address 
+//         FROM SupplierA AS a 
+//         RIGHT JOIN SupplierB AS b 
+//         ON a.address = b.address
+//         ORDER BY supplierID;";
 
 Decided to show only full contact information 
 as Managers may not find much use without all the information
