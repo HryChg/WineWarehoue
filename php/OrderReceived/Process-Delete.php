@@ -18,13 +18,13 @@ $result = mysqli_query($conn, $sql);
 
 
 if (!$result) {
-    echo "Record unable to be deleted.";
-    echo "<br/>";
+    echo "Record unable to be deleted. <br> Something else may be referencing to this orderID <br/>";
+    echo 'query error: ' . mysqli_error($conn);
+    return;
 }
 if ($result) {
     echo "Record has been deleted";
     echo "<br/>";
-
     redirect('http://localhost/WineWarehouse/ui/ShippingManager/index.php');
 }
 

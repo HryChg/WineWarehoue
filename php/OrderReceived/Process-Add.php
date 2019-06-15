@@ -5,6 +5,11 @@ include_once '../../template/input-query/create-table.php';
 /* Attempt MySQL server connection. */
 
 $conn = OpenCon();
+
+
+
+
+
 // Escape user inputs for security
 $orderID = mysqli_real_escape_string($conn, $_POST['orderID']);
 $employeeID = mysqli_real_escape_string($conn, $_POST['employeeID']);
@@ -16,6 +21,13 @@ $backorder = mysqli_real_escape_string($conn, $_POST['backorder']);
 $orderReceivedDate = mysqli_real_escape_string($conn, $_POST['orderReceivedDate']);
 
 
+if ($orderID === '' || $employeeID === '' || $wineID === '' || $quantity === '' ||
+    $retailer === '' || $address === '' || $backorder = '' || $orderReceivedDate === ''){
+    echo 'one of your field in empty';
+    return;
+}
+
+
 // Attempt insert query execution
 $sql = "INSERT INTO OrderReceived 
   VALUES ('$orderID', '$employeeID', '$wineID', '$quantity', '$retailer','$address','$backorder','$orderReceivedDate')";
@@ -24,12 +36,12 @@ $result = mysqli_query($conn, $sql);
 
 if (!$result) {
     echo "Record unable to be added.";
+
     echo "<br/>";
+    echo 'query error: ' . mysqli_error($conn);
+    return;
 }
-if ($result) {
-    echo "Record has been added";
-    echo "<br/>";
-}
+
 
 
 CloseCon($conn);
