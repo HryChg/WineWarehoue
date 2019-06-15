@@ -127,8 +127,12 @@ if(isset($_POST['submit_shipment_update']))
                 echo 'query error: '. mysqli_error($conn);
             }
         }
+
+
         
     }
+
+    $_POST = array();
 }
 
 
@@ -168,6 +172,6 @@ if(isset($_POST['submit_shipment_update']))
     </div>
     <div class="red-text"><?php echo $errors; ?></div>
     <div class="red-text"><?php echo $success; ?></div>
-    <input class="positive ui button" type="submit" value="Update" name=submit_shipment_update>
+    <input class="positive ui button" type="submit" value="Update" name="submit_shipment_update">
 </form>
 </div>
