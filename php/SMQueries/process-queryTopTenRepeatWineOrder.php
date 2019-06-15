@@ -10,10 +10,10 @@ if (isset($_POST['action'])) {
 
         $conn = OpenCon();
 
-        $sql = "SELECT wineID, count(wineID) as repeatWineCount
+        $sql = "SELECT wineID, count(wineID) as RepeatedOrder
         FROM OrderReceived
         GROUP BY wineID
-        ORDER BY repeatWineCount DESC
+        ORDER BY RepeatedOrder DESC
         LIMIT 10";
 
         $result = $conn->query($sql);

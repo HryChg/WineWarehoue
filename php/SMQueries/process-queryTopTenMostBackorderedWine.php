@@ -8,11 +8,11 @@ if (isset($_POST['action'])) {
     if ($_POST['action'] == 'queryTopTenMostBackorderedWine') {
         $conn = OpenCon();
 
-        $sql = "SELECT wineID, count(wineID) as wineCount
+        $sql = "SELECT wineID, count(wineID) as backOrderCount
         FROM OrderReceived 
         WHERE backorder = 'Y'
         GROUP by wineID
-        ORDER by wineCount DESC
+        ORDER by backOrderCount DESC
         LIMIT 10";
 
         $result = $conn->query($sql);
