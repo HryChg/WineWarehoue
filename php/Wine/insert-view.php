@@ -1,4 +1,4 @@
-<script src="./../../php/Wine/insert-submit.js"></script>
+<script src="./../../php/Wine/insert-wine.js"></script>
 <form class="ui form" id="add-wine" method="post" url="../../php/Wine/insert.php">
     <h3>Add Wine</h3>
     <p>

@@ -2,7 +2,7 @@
 
     <h3>Search Wine By Agricultural Region Attribute</h3>
 
-    <label>Agricultural Region Attribute (temperature or moisture): </label>
+    <label>Agricultural Region Attribute: </label>
 
     <?php
 

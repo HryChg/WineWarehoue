@@ -7,7 +7,7 @@
 
     <?php
 
-    //include_once '../../connect.php'; 
+    include_once '../../connect.php'; 
     $conn = OpenCon();
 
     $result1 = $conn->query("select wineTaste1 from WineA");
