@@ -54,6 +54,15 @@ session_start();
             overflow-y:scroll;
         }
 
+        section::before{
+            display: block;
+            content: " ";
+            margin-top: -70px;
+            height: 70px;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
     </style>
 
 </head>
@@ -103,9 +112,11 @@ if($_SESSION['employeeType'] != "SM") {
     </nav>
 </div>
 
+<br>
+<br>
+<br>
 <section id="SpecialFeatures">
-    <br>
-    <br>
+
     <h1 class="ui header">Special Features</h1>
     <div class="ui grid container">
         <div class="ui fluid three item menu container">
@@ -169,8 +180,7 @@ if($_SESSION['employeeType'] != "SM") {
 <div class="ui section divider"></div>
 
 <section id="OrderReceived" class="section">
-    <br>
-    <br>
+
     <h1 class="ui header">Order Received</h1>
     <?php include '../../php/OrderReceived/index.php'; ?>
 </section>
@@ -178,8 +188,7 @@ if($_SESSION['employeeType'] != "SM") {
 <div class="ui section divider"></div>
 
 <section id="OrderForWine" class="section center">
-    <br>
-    <br>
+
     <h1 class="ui header">Order For Wine</h1>
     <?php include '../../php/OrderForWine/index.php'; ?>
 </section>
@@ -187,8 +196,7 @@ if($_SESSION['employeeType'] != "SM") {
 <div class="ui section divider"></div>
 
 <section id="Shipment" class="section center">
-    <br>
-    <br>
+
     <h1 class="ui header">Shipment</h1>
     <?php include '../../php/Shipment/index.php';?>
 </section>
@@ -196,8 +204,7 @@ if($_SESSION['employeeType'] != "SM") {
 <div class="ui section divider"></div>
 
 <section id="ReturnedShipment" class="center">
-    <br>
-    <br>
+
     <div class="container">
         <h1 class="ui header">Returned Shipment</h1>
         <?php include '../../php/ReturnedShipment/index.php'; ?>
@@ -207,8 +214,7 @@ if($_SESSION['employeeType'] != "SM") {
 <div class="ui section divider"></div>
 
 <section id="ShippingManager" class="section" style="alignment: center">
-    <br>
-    <br>
+
     <h1 class="ui header">Shipping Manager</h1>
     <?php include '../../php/ShippingManager/index.php'; ?>
 </section>
@@ -216,8 +222,7 @@ if($_SESSION['employeeType'] != "SM") {
 <div class="ui section divider"></div>
 
 <footer class="ui inverted vertical footer segment">
-    <br>
-    <br>
+
     <div class="ui container">
         Copyright 2019 WineWarehouse
     </div>
