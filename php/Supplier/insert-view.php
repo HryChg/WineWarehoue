@@ -1,4 +1,4 @@
-<script src="./../../php/Supplier/submitForm.js"></script>
+<script src="./../../php/Supplier/insert-supplier.js"></script>
 <form class="ui form" id="supplier-form" method="post" url="../../php/Supplier/insert.php">
     <h3>Add Supplier</h3>
     <p>
