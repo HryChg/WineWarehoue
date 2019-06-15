@@ -11,7 +11,7 @@
 
     $agriRegionAttrArray = array();
     array_push($agriRegionAttrArray, '---Select Agricultural Region Attribute---');
-    // array_push($agriRegionAttrArray, 'climate'); // TODO
+    // array_push($agriRegionAttrArray, 'climate');
     array_push($agriRegionAttrArray, 'moisture');
     array_push($agriRegionAttrArray, 'temperature');
 
