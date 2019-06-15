@@ -14,7 +14,17 @@
 
     <div class="row">
         <div class="four wide column" >
-            <?php include 'View-QueryBackOrder.php' ?>
+            <div class="container">
+                <?php include 'View-QueryBackOrder.php' ?>
+            </div>
+            <div class="container">
+                <?php include 'View-QueryWineOrderQuantity.php' ?>
+            </div>
+            <div class="container">
+                <?php include 'View-QueryBackOrder.php' ?>
+            </div>
+
+
         </div>
         <div id="orderResult" class="eleven wide column" >
             <h1>Display Result</h1>

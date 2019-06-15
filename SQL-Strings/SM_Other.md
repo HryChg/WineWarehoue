@@ -14,12 +14,7 @@ SELECT retailer, count(retailer) as repeatRetailerCount
 FROM OrderReceived
 GROUP BY retailer;
 ```
-aggregate the result so that it show the quantity of each wine being ordered
-```sql
-SELECT wineID, SUM(quantity) as totalQuantity
-FROM OrderReceived
-GROUP BY wineID;
-```
+
 group every order by wineID
 ```sql
 SELECT orderID, wineID

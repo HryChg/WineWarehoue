@@ -16,7 +16,7 @@ session_start();
             padding: 20px;
         }
 
-        h1, h2 {
+        h1, h2, h3 {
             text-align: center;
         }
 

@@ -29,7 +29,6 @@ WHERE wineID NOT IN (
 LIMIT 3;
 
 
-
 ---------------------
 -- Order Received ---
 ---------------------
@@ -53,6 +52,16 @@ WHERE
 
 -- delete order
 DELETE FROM OrderReceived WHERE orderID = $orderID;
+
+-- find all the backOrder
+SELECT * FROM OrderReceived WHERE backorder = 'Y';
+
+-- find the quantity of each wine being ordered
+SELECT wineID, SUM(quantity) as totalQuantity
+FROM OrderReceived
+GROUP BY wineID;
+
+
 
 
 ---------------------

@@ -10,7 +10,7 @@
         $.ajax({
             type: "POST",
             url: '../../php/OrderReceived/Process-QueryBackOrder.php',
-            data: {action: 'queryTopTenRepeatWineOrder'},
+            data: {action: 'queryBackOrder'},
             success: function (resultHTML) {
                 document.querySelector('#orderResult').innerHTML = resultHTML;
             }
