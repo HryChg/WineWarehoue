@@ -14,7 +14,9 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // Table is scrollable when data is large
+
     echo "
+<div class='table-container'>
     <table class='ui celled striped table'>
         <thead>
             <th colspan='16'>
@@ -47,7 +49,7 @@ if ($result->num_rows > 0) {
             <td class='borderclass'>" . $row["orderReceivedDate"] . "</td>
         </tr>";
     }
-    echo "</table>";
+    echo "</table> </div>";
 
 
 } else {
