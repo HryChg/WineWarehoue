@@ -5,7 +5,7 @@ $shipmentID = $returnID = $returnedQuantity = '';
 $errors = '';
 
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['add-return-shipment'])) {
     if (empty($_POST['shipmentID']) or
         empty($_POST['returnID']) or
         empty($_POST['returnedQuantity'])) {
@@ -29,6 +29,9 @@ if (isset($_POST['submit'])) {
         } else {
             echo 'query error: ' . mysqli_error($conn);
         }
+
+
+        $_POST = array();
     }
 }
 
@@ -53,7 +56,7 @@ if (isset($_POST['submit'])) {
         <label>Returned Quantity</label>
     </div>
     <div class="red-text"><?php echo $errors; ?></div>
-    <input type="submit" name="submit" value="Add" class="ui primary button">
+    <input type="submit" name="add-return-shipment" value="Add" class="ui primary button">
 
 </form>
 </div>
