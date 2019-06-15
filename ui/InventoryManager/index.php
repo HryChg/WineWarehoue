@@ -87,9 +87,7 @@ if($_SESSION['employeeType'] != "IM") {
         </div>
         <div class="column">
             <div id="update-wine-form"><?php include '../../php/Wine/updateWinePrice.php'; ?></div>
-            <div id="delete-wine-brand-form"><?php include '../../php/Wine/deleteWineByBrand.php'; ?></div>
-            <div id="delete-wine-wineid-form"><?php include '../../php/Wine/deleteWineByID.php'; ?></div>
-            <div id="delete-wine-region-form"><?php include '../../php/WineOrigin/deleteWineOrigin.php'; ?></div>
+            <div id="delete-wine-form"><?php include '../../php/Wine/deleteWine.php'; ?></div>
         </div>        
         <div class="column">
             <div id="query-wine-price-form"><?php include '../../php/IMQueries/queryPriceFromWineBByID.php'; ?></div>
