@@ -92,7 +92,7 @@ if(($_SESSION['employeeType'] != "SM") && ($_SESSION['employeeType'] != "GM")) {
             <a class="item" href="#OrderForWine">OrderForWine</a>
             <a class="item" href="#Shipment">Shipment</a>
             <a class="item" href="#ReturnedShipment">ReturnedShipment</a>
-            <a class="item" href="#ShippingManager">View Other ShippingManagers</a>
+            <a class="item" href="#ShippingManager">ShippingManagers</a>
 
 
             <div class="ui simple dropdown item">
