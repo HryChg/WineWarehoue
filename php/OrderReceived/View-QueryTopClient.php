@@ -1,12 +1,12 @@
 <div class="">
     <div class="ui segment">
         <h2 class="ui header">View Top Clients</h2>
-        <button class="ui black button"onclick="queryBackOrder()">Query</button>
+        <button class="ui black button"onclick="queryTopClient()">Query</button>
     </div>
 </div>
 
 <script>
-    function queryBackOrder() {
+    function queryTopClient() {
         $.ajax({
             type: "POST",
             url: '../../php/OrderReceived/Process-QueryTopClient.php',
