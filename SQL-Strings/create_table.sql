@@ -97,6 +97,11 @@ INSERT INTO WineA VALUES('cabernet sauvignon', 'pinot noir', 'Armand de Brignac'
 INSERT INTO WineA VALUES('merlot', 'shiraz', 'Ecco Domani', 'spicy', 'merlot');
 INSERT INTO WineA VALUES('cabernet sauvignon', 'chardonnay', 'Cristol', 'cherry', 'crisp');
 INSERT INTO WineA VALUES('pinot grigio', 'merlot', 'Mateus', 'rich', 'smooth');
+INSERT INTO WineA VALUES('cabernet sauvignon', 'merlot', 'Beringer', 'currant', 'crisp');
+INSERT INTO WineA VALUES('pinot grigio', 'cabernet sauvignon', 'Foxglove', 'spicy', 'herbal');
+INSERT INTO WineA VALUES('shiraz', 'shiraz', 'Pine Ridge', 'rich', 'smooth');
+INSERT INTO WineA VALUES('chardonnay', 'zinfandel', 'Folonari', 'dry', 'smooth');
+INSERT INTO WineA VALUES('pinot grigio', 'zinfandel', 'Acrobat', 'rich', 'buttery');
 
 CREATE TABLE WineB
 (wineID INTEGER PRIMARY KEY, 
@@ -115,7 +120,12 @@ INSERT INTO WineB VALUES(97802134, 20.50, 'white', 'Blue Nun', 'sauvignon blanc'
 INSERT INTO WineB VALUES(97890456, 15.99, 'red', 'Armand de Brignac', 'cabernet sauvignon', 'pinot noir', 11.0, 4.1, 0.2, DATE('2101-03-15'));
 INSERT INTO WineB VALUES(96458941, 12.50, 'red', 'Ecco Domani', 'merlot', 'shiraz', 11.5, 3.5, 0.3, DATE('2025-09-17'));
 INSERT INTO WineB VALUES(10000000, 1200, 'red', 'Cristol', 'cabernet sauvignon', 'chardonnay', 12, 4.5, 0.4, DATE('1999-01-01'));
-INSERT INTO WineB VALUES(10000001, 350, 'red', 'Cristol', 'pinot grigio', 'merlot', 12.1, 4.2, 0, DATE('1995-04-05'));
+INSERT INTO WineB VALUES(10000001, 350, 'red', 'Bogle', 'pinot grigio', 'merlot', 12.1, 4.1, 0.2, DATE('1995-04-05'));
+INSERT INTO WineB VALUES(10000002, 35, 'red', 'Beringer', 'cabernet sauvignon', 'merlot', 12.2, 3, 0.1, DATE('2075-01-05'));
+INSERT INTO WineB VALUES(10000003, 49.99, 'white', 'Foxglove', 'pinot grigio', 'cabernet sauvignon', 11.1, 4, 0.3, DATE('2055-04-01'));
+INSERT INTO WineB VALUES(10000004, 5, 'white', 'Pine Ridge', 'shiraz', 'shiraz', 13.1, 2, 0.2, DATE('2045-11-25'));
+INSERT INTO WineB VALUES(10000005, 3.50, 'red', 'Folonari', 'chardonnay', 'zinfandel', 15.1, 3.2, 0.4, DATE('2045-12-22'));
+INSERT INTO WineB VALUES(10000006, 20, 'red', 'Acrobat', 'pinot grigio', 'zinfandel', 14.4, 2.2, 0.3, DATE('2035-04-05'));
 
 
 CREATE TABLE Restock
@@ -145,7 +155,12 @@ INSERT INTO AgriculturalRegion VALUES('Thompson-Okanagan', 10.0, 40.0, 'continen
 INSERT INTO AgriculturalRegion VALUES('Champagne', 11.0, 35.0, 'continential');
 INSERT INTO AgriculturalRegion VALUES('Provence', 15.0, 42.0, 'Mediterranean');
 INSERT INTO AgriculturalRegion VALUES('Tuscany', 16.0, 43.0, 'Mediterranean');
-INSERT INTO AgriculturalRegion VALUES('Sicily', 17.0, 43.0, 'Mediterranean');
+INSERT INTO AgriculturalRegion VALUES('Sicily', 17.0, 43.7, 'Mediterranean');
+INSERT INTO AgriculturalRegion VALUES('Bordeaux', 16.0, 42.2, 'Maritime');
+INSERT INTO AgriculturalRegion VALUES('Burgundy', 18.0, 43.0, 'Maritime');
+INSERT INTO AgriculturalRegion VALUES('Liechtenstein', 12.0, 41.0, 'Maritime');
+INSERT INTO AgriculturalRegion VALUES('Saxony', 13.0, 42.8, 'continential');
+INSERT INTO AgriculturalRegion VALUES('Sardinia', 17.5, 43.0, 'Mediterranean');
 
 
 
@@ -207,7 +222,7 @@ INSERT INTO OrderReceived VALUES(100015, 007, 98412234, 70, 'Liberty Wine Mercha
 INSERT INTO OrderReceived VALUES(100016, 008, 97890456, 280, 'High Point', '555 FFF Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-30 16:37:12'));
 INSERT INTO OrderReceived VALUES(100017, 009, 97890456, 350, 'Gotham Steakhouse & Cocktail Bar', '222 CCC Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-31 18:00:12'));
 
-#Additional
+-- Additional
 INSERT INTO OrderReceived VALUES(100018, 007, 98412234, 25, 'High Point', '555 FFF Road, Vancouver, BC', 'N', TIMESTAMP('2019-08-29 12:00:00'));
 INSERT INTO OrderReceived VALUES(100019, 007, 97802134, 25, 'High Point', '555 FFF Road, Vancouver, BC', 'N', TIMESTAMP('2019-08-29 12:00:00'));
 INSERT INTO OrderReceived VALUES(100020, 007, 98412234, 10, 'Gotham Steakhouse & Cocktail Bar', '222 CCC Road, Vancouver, BC', 'N', TIMESTAMP('2019-04-29 12:00:00'));
