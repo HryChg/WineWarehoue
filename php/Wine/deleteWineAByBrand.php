@@ -11,7 +11,7 @@
     include_once '../../connect.php'; 
     $conn = OpenCon();
 
-    $result = $conn->query("select brandName from WineA");
+    $result = $conn->query("select brandName from WineA ORDER BY brandName");
 
     echo "<p><select name='brandName'>";
     echo '<option value="">---Select brandName---</option>';
