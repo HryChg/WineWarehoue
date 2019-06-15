@@ -2,8 +2,9 @@
 <form class="ui form" id="delete-supplier" method="post" url="../../php/Supplier/process-deleteSupplier.php">
 
     <h3>Delete Supplier</h3>
+    <p>Choose <b>one</b> of the following:</p>
 
-    <p>
+    <div class='field'>
     <label>Name</label>
 
     <?php
@@ -22,15 +23,13 @@
         $name = $row['name'];
         echo '<option value="'.$name.'">'.$name.'</option>';
     }
-    echo "</select></p>";
-
-    echo "or";
+    echo "</select></div>";
 
     // Delete by ID
     $sql = "SELECT supplierID FROM SupplierB ORDER BY supplierID";
     $result = $conn->query($sql);
 
-    echo "<p><label>SupplierID</label>";
+    echo "<div class='field'><label>SupplierID</label>";
     echo "<select name='supplierID'>";
     echo '<option value="">---Select supplierID---</option>';
     while ($row = $result->fetch_assoc())
@@ -39,15 +38,13 @@
         $supplierID = $row['supplierID'];
         echo '<option value="'.$supplierID.'">'.$supplierID.'</option>';
     }
-    echo "</select></p>";
-
-    echo "or";
+    echo "</select></div>";
 
     // Delete by Phone
     $sql = "SELECT phoneNo FROM SupplierB ORDER BY phoneNo";
     $result = $conn->query($sql);
 
-    echo "<p><label>PhoneNo</label>";
+    echo "<div class='field'><label>PhoneNo</label>";
     echo "<select name='phoneNo'>";
     echo '<option value="">---Select phoneNo---</option>';
     while ($row = $result->fetch_assoc())
@@ -56,7 +53,7 @@
         $phoneNo = $row['phoneNo'];
         echo '<option value="'.$phoneNo.'">'.$phoneNo.'</option>';
     }
-    echo "</select></p>";
+    echo "</select></div>";
 
     CloseCon($conn);
     ?>

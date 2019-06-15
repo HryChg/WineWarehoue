@@ -1,6 +1,6 @@
 <form class="ui form" action="../../php/IMQueries/process-queryPriceFromWineBByID.php" method="post">
 
-    <h3>Search for Wine Price by WineID</h3>
+    <h3>Search for Wine Price</h3>
     <?php
 
     include_once '../../connect.php'; 
@@ -8,7 +8,7 @@
 
     $result = $conn->query("select wineID from WineB");
 
-    echo "<p>
+    echo "<div class='field'>
         <label>WineID</label>
         <select name='wineID'>";
     echo '<option value="">---Select wineID---</option>';
@@ -19,7 +19,7 @@
         echo '<option value="'.$wineID.'">'.$wineID.'</option>';
     }
 
-    echo "</select></p>";
+    echo "</select></div>";
     CloseCon($conn);
     ?>
 

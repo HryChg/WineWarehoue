@@ -1,6 +1,6 @@
 <form class="ui form" action="../../php/IMQueries/process-queryLocationAndQuantityByWineID.php" method="post">
 
-    <h3>Search for Wine in Storage</h3>
+    <h3>Search Inventory</h3>
 
     <!-- Selection dropdown -->
     <?php
@@ -10,7 +10,7 @@
 
     // WineID selector
     $result = $conn->query("select wineID from StoredIn");
-    echo "<p>
+    echo "<div class='field'>
         <label>WineID</label>
         <select name='wineID'>";
     echo '<option value="">---Select wineID---</option>';
@@ -20,11 +20,11 @@
         $wineID = $row['wineID'];
         echo '<option value="'.$wineID.'">'.$wineID.'</option>';
     }
-    echo "</select></p>";
+    echo "</select></div>";
 
     // LocationID selector
     $result = $conn->query("select locationID from StoredIn");
-    echo "<p>
+    echo "<div class='field'>
         <label>LocationID</label>
         <select name='locationID'>";
     echo '<option value="">---Select locationID---</option>';
@@ -34,7 +34,7 @@
         $locationID = $row['locationID'];
         echo '<option value="'.$locationID.'">'.$locationID.'</option>';
     }
-    echo "</select></p>";
+    echo "</select></div>";
 
 
     CloseCon($conn);

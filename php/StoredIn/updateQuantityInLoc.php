@@ -1,8 +1,8 @@
 <script src="./../../php/StoredIn/update-submit.js"></script>
 <form class="ui form" id="update-storedin" url="./../../php/StoredIn/process-updateQuantityInLoc.php" method="post">
 
-    <h3>Update Wine Quantity in Storage</h3>
-    <p>
+    <h3>Update Inventory Quantity</h3>
+    <div class="field">
     <label>WineID and Location</label>
 
     <?php
@@ -19,15 +19,15 @@
         $wineID = $row['wineID'];
         echo '<option value="'.$wineID.','.$locationID.'">'.'WineID: '.$wineID.', LocationID: '.$locationID.'</option>';
     }
-    echo "</select></p>";
+    echo "</select></div>";
 
     CloseCon($conn);
     ?>
 
-    <p>
+    <div class="field">
     <label>New Quantity</label>
     <input name="quantityInLocation" type="text" placeholder="Enter new quantity">
-    </p>
+    </div>
 
     <input class="ui positive button update-storedin" type="submit" value="Update">
 
