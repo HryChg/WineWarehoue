@@ -16,9 +16,8 @@ setStyle();
 <body>
 
 <?php
-if($_SESSION['employeeType'] == "IM") {
-    print_r($_SESSION['employeeType']);
-    //header("Location:../../ui/Login/index.php");
+if($_SESSION['employeeType'] != "IM") {
+    header("Location:../../ui/Login/index.php");
 }
 ?>
 

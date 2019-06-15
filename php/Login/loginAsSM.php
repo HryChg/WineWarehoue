@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 include '../../connect.php';
 
@@ -20,8 +21,14 @@ $sql = "SELECT s.employeeID
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
+    printf("logged in");
+
+    $_SESSION['username'] = $user;
+    $_SESSION['employeeType'] = "SM";
+
     header("Location: ../../ui/ShippingManager/index.php");
-    die();
+    exit();
+
 } else {
     echo "NOT FOUND: username or password does not match or does not exist";
 }
