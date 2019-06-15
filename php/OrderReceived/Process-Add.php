@@ -33,4 +33,8 @@ if ($result) {
 
 
 CloseCon($conn);
+
+
+include_once '../../util/redirectHelper.php';
+redirect('http://localhost/WineWarehouse/ui/ShippingManager/index.php');
 ?>

@@ -1,6 +1,7 @@
 <?php
 
 include_once '../../connect.php';
+include_once '../../util/redirectHelper.php';
 $conn = openCon();
 
 $orderID = mysqli_real_escape_string($conn, $_POST['orderID']);
@@ -14,6 +15,9 @@ $sql = constructSQLStringForUpdate($conn, 'OrderReceived', 'orderID', $orderID);
 if ($conn->query($sql) === TRUE) {
     echo '<br/>';
     echo "Record updated successfully";
+
+
+    redirect('http://localhost/WineWarehouse/ui/ShippingManager/index.php');
 } else {
     echo "Error updating record: " . $conn->error;
 }
@@ -69,4 +73,7 @@ function addQuote($str){
 }
 
 CloseCon($conn);
+
+
+
 ?>
