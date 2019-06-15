@@ -25,7 +25,8 @@ setStyle();
     <div class="ui equal width relaxed grid">
         <div class="column"><?php include '../../php/Login/loginAsSM-view.php'; ?></div>
         <div class="column"><?php include '../../php/Login/loginAsIM-view.php'; ?></div>
-        <div class="column"><?php include '../../php/Login/loginAsGeneralEmp-view.php'; ?></div>
+        <div class="column"><?php include '../../php/Login/loginAsEmp-view.php'; ?></div>
+        <div class="column"><?php include '../../php/Login/loginAsGM-view.php'; ?></div>
     </div>
 
 </section>
