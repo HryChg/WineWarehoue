@@ -6,7 +6,9 @@ $(document).ready(function() {
         $(form).each(function(id, obj){
             data[obj.name] = obj.value;
         });
-        // alert($("#update-supplier").serialize()); // Debug Tool
+        if (data['supplierID'] && data['name']){
+            alert("Please only select one!");
+        }
         $.ajax({
             url: $("#update-supplier").attr("url"),
             method: "POST",
