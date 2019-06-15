@@ -119,10 +119,11 @@ if($_SESSION['employeeType'] != "SM") {
 
     <h1 class="ui header">Special Features</h1>
     <div class="ui grid container">
-        <div class="ui fluid three item menu container">
+        <div class="ui fluid four item menu container">
             <a class="item" onclick="top10BackOrderedWine()">Top 10 BackOrdered Wine </a>
             <a class="item" onclick="top10TenRepeatWineOrder()">Top 10 Repeatedly Ordered on Wine</a>
             <a class="item" onclick="top3TenWineEveryRetailerOrdered()">Top 3 Wines Every Retailer Likes</a>
+            <a class="item" onclick="bestTransportationMode()">Best Transportation Modes</a>
         </div>
 
     </div>
@@ -157,6 +158,17 @@ if($_SESSION['employeeType'] != "SM") {
                 type: "POST",
                 url: '../../php/SMQueries/process-queryTopThreeWineEveryRetailerOrdered.php',
                 data: {action: 'queryTopThreeWineEveryRetailerOrdered'},
+                success: function (resultHTML) {
+                    document.querySelector('#displaySpecialQueryResult').innerHTML = resultHTML;
+                }
+            });
+        }
+
+        function bestTransportationMode() {
+            $.ajax({
+                type: "POST",
+                url: '../../php/SMQueries/process-queryBestTransportationMode.php',
+                data: {action: 'queryBestTransportationMode'},
                 success: function (resultHTML) {
                     document.querySelector('#displaySpecialQueryResult').innerHTML = resultHTML;
                 }

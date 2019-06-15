@@ -77,31 +77,20 @@
             <h1 class="ui header">View All Employees</h1>
             <?php include '../../php/Employee/View.php' ?>
         </div>
-        <div class="fifteen wide column">
-            <h1>View All Wine</h1>
-            <?php include '../../php/Wine/defaultView-wine.php'; ?>
+        <div class="row">
+            <div class="five wide column">
+                <h1 class="ui header">Add Employee</h1>
+                <?php include '../../php/Employee/View-Add.php' ?>
+            </div>
+            <div class="five wide column">
+                <h1 class="ui header">Update Employee</h1>
+                <?php include '../../php/Employee/View-Update.php' ?>
+            </div>
+            <div class="five wide column">
+                <h1 class="ui header">Delete Employee</h1>
+                <?php include '../../php/Employee/View-Delete.php' ?>
+            </div>
         </div>
-
-        <div class="fifteen wide column">
-            <h1>Suppliers</h1>
-            <?php include '../../php/Supplier/defaultView-supplier.php'; ?>
-        </div>
-
-        <div class="fifteen wide column">
-            <h1>View Most Recent Order</h1>
-            <?php include '../../php/OrderReceived/View-MostRecentOrder.php'; ?>
-        </div>
-
-        <div class="fifteen wide column">
-            <h1>View Shipment</h1>
-            <?php
-            require_once '../../connect.php';
-            $conn = OpenCon();
-            include '../../php/Shipment/view_table.php';
-            CloseCon($conn);
-            ?>
-        </div>
-
     </div>
 </section>
 
