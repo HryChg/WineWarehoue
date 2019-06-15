@@ -66,20 +66,20 @@ if($_SESSION['employeeType'] != "IM") {
             <?php include '../../php/Wine/insert-view.php'; ?>
         </div>
         <div class="column">
-            <?php include '../../php/Wine/updateWinePrice.php'; ?>
-            <?php include '../../php/Wine/deleteWineByBrand.php'; ?>
-            <?php include '../../php/Wine/deleteWineByID.php'; ?>
-            <?php include '../../php/WineOrigin/deleteWineOrigin.php'; ?>
+            <div id="update-wine-form"><?php include '../../php/Wine/updateWinePrice.php'; ?></div>
+            <div id="delete-wine-brand-form"><?php include '../../php/Wine/deleteWineByBrand.php'; ?></div>
+            <div id="delete-wine-wineid-form"><?php include '../../php/Wine/deleteWineByID.php'; ?></div>
+            <div id="delete-wine-region-form"><?php include '../../php/WineOrigin/deleteWineOrigin.php'; ?></div>
         </div>        
         <div class="column">
-            <?php include '../../php/IMQueries/queryPriceFromWineBByID.php'; ?>
-            <?php include '../../php/IMQueries/queryBrandFromWineAByGrape.php'; ?>
-            <?php include '../../php/IMQueries/queryBrandFromWineAByWineTaste.php'; ?>
-            <?php include '../../php/IMQueries/queryWineByAlcoholRange.php'; ?>
-            <?php include '../../php/IMQueries/queryWineBySugarRange.php'; ?>
-            <?php include '../../php/IMQueries/queryWineBByExpiryRange.php'; ?>
-            <?php include '../../php/IMQueries/queryWineByAgriAttribute.php'; ?>
-            <?php include '../../php/IMQueries/queryMinPriceByBrand.php'; ?>        
+            <div id="query-wine-price-form"><?php include '../../php/IMQueries/queryPriceFromWineBByID.php'; ?></div>
+            <div id="query-wine-grape-form"><?php include '../../php/IMQueries/queryBrandFromWineAByGrape.php'; ?></div>
+            <div id="query-wine-taste-form"><?php include '../../php/IMQueries/queryBrandFromWineAByWineTaste.php'; ?></div>
+            <div id="query-wine-alcohol-form"><?php include '../../php/IMQueries/queryWineByAlcoholRange.php'; ?></div>
+            <div id="query-wine-sugar-form"><?php include '../../php/IMQueries/queryWineBySugarRange.php'; ?></div>
+            <div id="query-wine-expiry-form"><?php include '../../php/IMQueries/queryWineBByExpiryRange.php'; ?></div>
+            <div id="query-wine-agri-form"><?php include '../../php/IMQueries/queryWineByAgriAttribute.php'; ?></div>
+            <div id="query-wine-minprice-form"><?php include '../../php/IMQueries/queryMinPriceByBrand.php'; ?></div>        
         </div>
     </div>
 
@@ -94,10 +94,10 @@ if($_SESSION['employeeType'] != "IM") {
     
     <div class="ui equal width relaxed grid">
         <div class="column">
-            <?php include '../../php/AgriculturalRegion/update-ar.php'; ?>
+            <div id="update-ar-form"><?php include '../../php/AgriculturalRegion/update-ar.php'; ?></div>
         </div>
         <div class="column">
-            <?php include '../../php/AgriculturalRegion/deleteRegionByName.php'; ?>
+            <div id="delete-ar-form"><?php include '../../php/AgriculturalRegion/deleteRegionByName.php'; ?></div>
         </div>
     </div>
     
@@ -111,14 +111,14 @@ if($_SESSION['employeeType'] != "IM") {
 
     <div class="ui equal width relaxed grid">
         <div class="column">
-            <?php include '../../php/Supplier/insert-view.php'; ?>
-        </div>
-        <div class="column" id="supplier-update-form">
-            <?php include '../../php/Supplier/updateSupplier.php'; ?>
+            <div><?php include '../../php/Supplier/insert-view.php'; ?></div>
         </div>
         <div class="column">
-            <?php include '../../php/Supplier/deleteSupplierA.php'; ?>
-            <?php include '../../php/Supplier/deleteSupplierBByIDOrPhone.php'; ?>
+            <div id="update-supplier-form"><?php include '../../php/Supplier/updateSupplier.php'; ?></div>
+        </div>
+        <div class="column">
+            <div id="delete-supplier-name"><?php include '../../php/Supplier/deleteSupplierA.php'; ?></div>
+            <div id="delete-supplier-id-phone"><?php include '../../php/Supplier/deleteSupplierBByIDOrPhone.php'; ?></div>
         </div>
     </div>
 

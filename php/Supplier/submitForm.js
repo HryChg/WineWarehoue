@@ -27,7 +27,9 @@ $(document).ready(function() {
             success: function(){
                 $("#supplier-form")[0].reset();   
                 $("#supplier-table").load('../../php/Supplier/defaultView-supplier.php');
-                // $("#supplier-update-form").load('../../php/Supplier/updateSupplier.php');
+                $("#update-supplier-form").load('../../php/Supplier/updateSupplier.php');
+                $("#delete-supplier-name").load('../../php/Supplier/deleteSupplierA.php');
+                $("#delete-supplier-id-phone").load('../../php/Supplier/deleteSupplierBByIDOrPhone.php');
             },
             error: function(xhr){
                 var err = JSON.parse(xhr.responseText);
