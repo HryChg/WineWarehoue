@@ -22,7 +22,6 @@ if (!$result) {
 }
 if ($result) {
     echo "Record has been added";
-    myTable($conn, $sql);
     echo "<br/>";
 }
 
