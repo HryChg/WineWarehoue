@@ -1,4 +1,4 @@
-<script src="./../../php/Wine/insert-submit.js"></script>
+<script src="./../../php/Wine/insert-wine.js"></script>
 <form class="ui form" id="add-wine" method="post" url="../../php/Wine/insert.php">
     <h3>Add Wine</h3>
     <p>
@@ -69,5 +69,5 @@
         <label for="climate">Climate:</label>
         <input type="text" name="climate" id="climate">
     </p>
-    <input class="ui button add-wine" type="submit" value="Add">
+    <input class="ui primary button add-wine" type="submit" value="Add">
 </form>

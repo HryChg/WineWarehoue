@@ -23,6 +23,6 @@
     CloseCon($conn);
     ?>
 
-    <input class="ui button" type="submit" value="Query">
+    <input class="ui secondary button" type="submit" value="Query">
 
 </form>

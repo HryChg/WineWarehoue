@@ -13,8 +13,9 @@ $(document).ready(function() {
             data: data,
             success: function(){
                 $("#storedin-form")[0].reset(); 
-                $("#storedin-table").load('../../php/StoredIn/defaultView-storedin.php');
-                // $("#storedin-update-form").load('../../php/StoredIn/updateQuantityInLoc.php');
+                $("#storedin-table").load('../../php/StoredIn/defaultView-storedin.php', function () {
+                    $("#storedin-update-form").load('../../php/StoredIn/updateQuantityInLoc.php');
+                });
             },
             error: function(xhr){
                 var err = JSON.parse(xhr.responseText);

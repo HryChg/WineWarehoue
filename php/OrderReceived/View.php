@@ -8,7 +8,7 @@ $conn = OpenCon();
 $sql = "
   SELECT orderID, employeeID, wineID, quantity, retailer, address, backorder, orderReceivedDate  
   FROM OrderReceived
-  ORDER by orderReceivedDate DESC
+  ORDER by orderID DESC
   ";
 $result = $conn->query($sql);
 

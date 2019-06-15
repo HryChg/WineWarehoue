@@ -43,6 +43,6 @@
 
     ?>
 
-    <input class="ui button delete-supplier-id" type="submit" value="Delete">
+    <input class="ui red button delete-supplier-id" type="submit" value="Delete">
 
 </form>

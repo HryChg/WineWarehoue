@@ -27,6 +27,6 @@
     CloseCon($conn);
     ?>
 
-    <input class="ui button delete-wine-brandname" type="submit" value="Delete">
+    <input class="ui red button delete-wine-brandname" type="submit" value="Delete">
 
 </form>

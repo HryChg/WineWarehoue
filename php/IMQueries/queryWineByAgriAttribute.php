@@ -2,7 +2,7 @@
 
     <h3>Search Wine By Agricultural Region Attribute</h3>
 
-    <label>Agricultural Region Attribute (temperature or moisture): </label>
+    <label>Agricultural Region Attribute: </label>
 
     <?php
 
@@ -26,6 +26,6 @@
         <label> Value: </label>
         <input type="text" name="val">
     </p>
-    <input class="ui button" type="submit" value="Query">
+    <input class="ui secondary button" type="submit" value="Query">
 
 </form>

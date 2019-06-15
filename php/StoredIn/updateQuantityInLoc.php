@@ -29,6 +29,6 @@
     <input name="quantityInLocation" type="text" placeholder="Enter new quantity">
     </p>
 
-    <input class="ui button update-storedin" type="submit" value="Update">
+    <input class="ui positive button update-storedin" type="submit" value="Update">
 
 </form>

@@ -7,14 +7,16 @@ $(document).ready(function() {
         $(form).each(function(id, obj){
             data[obj.name] = obj.value;
         });
-        alert($("#delete-ar").serialize()); // Debug Tool
+        // alert($("#delete-ar").serialize()); // Debug Tool
         $.ajax({
             url: $("#delete-ar").attr("url"),
             method: "POST",
             data: data,
             success: function(){
                 $("#delete-ar")[0].reset();   
-                $("#agricultural-region-table").load('../../php/AgriculturalRegion/defaultView-agriculturalRegion.php');             
+                $("#agricultural-region-table").load('../../php/AgriculturalRegion/defaultView-agriculturalRegion.php');
+                $("#update-ar-form").load('../../php/AgriculturalRegion/update-ar.php');
+                $("#delete-ar-form").load('../../php/AgriculturalRegion/deleteRegionByName.php');
             },
             error: function(xhr){
                 var err = JSON.parse(xhr.responseText);

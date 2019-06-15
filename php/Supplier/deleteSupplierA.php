@@ -24,6 +24,6 @@
     CloseCon($conn);
     ?>
 
-    <input class="ui button delete-supplier-name" type="submit" value="Delete">
+    <input class="ui red button delete-supplier-name" type="submit" value="Delete">
 
 </form>

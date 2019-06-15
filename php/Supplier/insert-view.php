@@ -1,4 +1,4 @@
-<script src="./../../php/Supplier/submitForm.js"></script>
+<script src="./../../php/Supplier/insert-supplier.js"></script>
 <form class="ui form" id="supplier-form" method="post" url="../../php/Supplier/insert.php">
     <h3>Add Supplier</h3>
     <p>
@@ -17,5 +17,5 @@
         <label for="address">Address:</label>
         <input type="text" name="address" id="address">
     </p>
-    <input class="ui button supplier-submit submit-form" type="submit" value="Add">
+    <input class="ui primary button supplier-submit submit-form" type="submit" value="Add">
 </form>

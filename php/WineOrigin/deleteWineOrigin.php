@@ -25,6 +25,6 @@
 
     ?>
 
-    <input class="ui button" type="submit" value="Delete">
+    <input class="ui red button" type="submit" value="Delete">
 
 </form>

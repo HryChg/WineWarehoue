@@ -5,7 +5,7 @@
 
     <?php
 
-    //include_once '../../connect.php';
+    include_once '../../connect.php';
     $conn = OpenCon();
 
     $result1 = $conn->query("select grapeType1 from WineA");
@@ -35,6 +35,6 @@
     CloseCon($conn);
     ?>
 
-    <input class="ui button" type="submit" value="Query">
+    <input class="ui secondary button" type="submit" value="Query">
 
 </form>

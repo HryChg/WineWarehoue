@@ -30,6 +30,6 @@
         <input name="price" type="text" placeholder="Enter new price for wine">
     <p>
 
-    <input class="ui button update-wine" type="submit" value="Update">
+    <input class="ui positive button update-wine" type="submit" value="Update">
 
 </form>
