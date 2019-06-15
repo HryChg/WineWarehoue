@@ -17,7 +17,7 @@
     {
         unset($wineID);
         $wineID = $row['wineID'];
-        echo '<option value="'.$wineID.'">'.'WineID: '.$wineID.'</option>';
+        echo '<option value="'.$wineID.'">'.$wineID.'</option>';
     }
 
     echo "</select></p>";
