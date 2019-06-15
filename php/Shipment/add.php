@@ -5,7 +5,7 @@ $shipmentID = $transportationMode = $expectedDeliveryDate = $actualDeliveryDate 
 $errors = '';
 
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['add-shipment'])) {
     if (empty($_POST['shipmentID']) or
         empty($_POST['transportationMode']) or
         empty($_POST['expectedDeliveryDate']) or
@@ -36,6 +36,8 @@ if (isset($_POST['submit'])) {
             echo 'query error: ' . mysqli_error($conn);
         }
     }
+
+    $_POST = array();
 }
 
 
@@ -74,7 +76,7 @@ if (isset($_POST['submit'])) {
         </div>
         <div class="red-text"><?php echo $errors; ?></div>
         <div class="center">
-            <input class="ui primary button" type="submit" name="submit" value="Add">
+            <input class="ui primary button" type="submit" name="add-shipment" value="Add">
         </div>
     </form>
 </div>
