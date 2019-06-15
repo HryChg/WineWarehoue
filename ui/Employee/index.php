@@ -43,16 +43,40 @@
             appearance: none; /* remove default arrow */
             /*background-image: url(...);   !* add custom arrow *!*/
         }
+
+        section::before{
+            display: block;
+            content: " ";
+            margin-top: -70px;
+            height: 70px;
+            visibility: hidden;
+            pointer-events: none;
+        }
     </style>
 
 </head>
+
+
 <body>
+<style type="text/css">
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1
+    }
+</style>
+<div class="navbar">
 <nav class="ui large menu">
     <div class="active item">
         Employee
     </div>
     <div class="right menu">
-
+        <a class="item" href="#ViewEmployee">Employees</a>
+        <a class="item" href="#ViewWine">Wine</a>
+        <a class="item" href="#ViewSuppliers">Suppliers</a>
+        <a class="item" href="#ViewRecentOrder">Recent Orders</a>
+        <a class="item" href="#ViewShipment">Shipments</a>
 
         <div class="ui simple dropdown item">
             Other
@@ -61,6 +85,7 @@
                 <div class="item"><a class="item" href="../Employee/index.php">Employee</a></div>
                 <div class="item"><a class="item" href="../InventoryManager/index.php">Inventory Manager</a></div>
                 <div class="item"><a class="item" href="../ShippingManager/index.php">Shipping Manager</a></div>
+                <div class="item"><a class="item" href="../GeneralManager/index.php">General Manager</a></div>
             </div>
         </div>
 
@@ -70,28 +95,57 @@
         </div>
     </div>
 </nav>
+</div>
 
+<br>
+<br>
+<br>
 <section id="ViewEmployee" class="section">
     <div class="ui grid centered">
         <div class="fifteen wide column">
-            <h1 class="ui header">View All Employees</h1>
+            <h1 class="ui header">Employees</h1>
             <?php include '../../php/Employee/View.php' ?>
         </div>
+    </div>
+</section>
+
+<div class="ui section divider"></div>
+
+<section id="ViewWine" class="section">
+    <div class="ui grid centered">
         <div class="fifteen wide column">
-            <h1>View All Wine</h1>
+            <h1>Wine Details</h1>
             <?php include '../../php/Wine/defaultView-wine.php'; ?>
         </div>
+    </div>
+</section>
 
+<div class="ui section divider"></div>
+
+<section id="ViewSuppliers" class="section">
+    <div class="ui grid centered">
         <div class="fifteen wide column">
             <h1>Suppliers</h1>
             <?php include '../../php/Supplier/defaultView-supplier.php'; ?>
         </div>
+    </div>
+</section>
 
+<div class="ui section divider"></div>
+
+<section id="ViewRecentOrder" class="section">
+    <div class="ui grid centered">
         <div class="fifteen wide column">
             <h1>View Most Recent Order</h1>
             <?php include '../../php/OrderReceived/View-MostRecentOrder.php'; ?>
         </div>
+    </div>
+</section>
 
+<div class="ui section divider"></div>
+
+<section id="ViewShipment" class="section">
+    <div class="ui grid centered">
         <div class="fifteen wide column">
             <h1>View Shipment</h1>
             <?php
@@ -101,10 +155,12 @@
             CloseCon($conn);
             ?>
         </div>
-
     </div>
 </section>
 
+</div>
+
+<br/>
 
 <footer class="ui inverted vertical footer segment">
     <div class="ui container">

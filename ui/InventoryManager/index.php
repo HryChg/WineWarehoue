@@ -16,7 +16,7 @@ setStyle();
 
 
 <?php
-if($_SESSION['employeeType'] != "IM") {
+if(($_SESSION['employeeType'] != "IM") && ($_SESSION['employeeType'] != "GM")) {
     header("Location:../../ui/Login/index.php");
 }
 ?>
@@ -68,7 +68,7 @@ if($_SESSION['employeeType'] != "IM") {
             <div class="column" id="storedin-update-form">
                 <?php include '../../php/StoredIn/updateQuantityInLoc.php'; ?>
             </div>
-            <div class="column"><?php include '../../php/IMQueries/queryLocationAndQuantityByWineID.php'; ?></div>
+            <div class="column" id="storedin-search-form"><?php include '../../php/IMQueries/queryLocationAndQuantityByWineID.php'; ?></div>
     </div>
 
 </section>
@@ -185,8 +185,10 @@ if($_SESSION['employeeType'] != "IM") {
 <div class="ui section divider"></div>
 <!------------------------------------------------------------------------->
 
-<footer class="section">
-    <div class="center grey-text">Copyright 2019 WineWarehouse</div>
+<footer class="ui inverted vertical footer segment">
+    <div class="ui container">
+        Copyright 2019 WineWarehouse
+    </div>
 </footer>
 
 </body>

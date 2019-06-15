@@ -25,7 +25,8 @@ setStyle();
     <div class="ui equal width relaxed grid">
         <div class="column"><?php include '../../php/Login/loginAsSM-view.php'; ?></div>
         <div class="column"><?php include '../../php/Login/loginAsIM-view.php'; ?></div>
-        <div class="column"><?php include '../../php/Login/loginAsGeneralEmp-view.php'; ?></div>
+        <div class="column"><?php include '../../php/Login/loginAsEmp-view.php'; ?></div>
+        <div class="column"><?php include '../../php/Login/loginAsGM-view.php'; ?></div>
     </div>
 
 </section>
@@ -34,8 +35,10 @@ setStyle();
 
 <!------------------------------------------------------------------------->
 
-<footer class="section">
-    <div class="center grey-text">Copyright 2019 WineWarehouse</div>
+<footer class="ui inverted vertical footer segment">
+    <div class="ui container">
+        Copyright 2019 WineWarehouse
+    </div>
 </footer>
 
 </body>

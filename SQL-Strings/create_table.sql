@@ -13,6 +13,7 @@ DROP TABLE SupplierB;
 DROP TABLE SupplierA;
 DROP TABLE ShippingManager;
 DROP TABLE InventoryManager;
+DROP TABLE GeneralEmployee;
 DROP TABLE Employee;
 
 CREATE TABLE Employee
@@ -30,7 +31,13 @@ INSERT INTO Employee VALUES(007, 'ShippingManager', 'Gerda G');
 INSERT INTO Employee VALUES(008, 'ShippingManager', 'Hilda H');
 INSERT INTO Employee VALUES(009, 'ShippingManager', 'Ian I');
 INSERT INTO Employee VALUES(010, 'GeneralEmployee', 'Deep M');
+INSERT INTO Employee VALUES(011, 'GeneralManager', 'Jenny J');
 
+CREATE TABLE GeneralManager
+(employeeID INTEGER PRIMARY KEY,
+password varchar(40),
+FOREIGN KEY (employeeID) REFERENCES Employee(employeeID));
+INSERT INTO GeneralManager VALUES(011, 011);
 
 CREATE TABLE InventoryManager
 (employeeID INTEGER PRIMARY KEY,
