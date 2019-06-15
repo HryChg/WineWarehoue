@@ -73,6 +73,7 @@ if($_SESSION['employeeType'] != "IM") {
 
 </section>
 
+<div class="ui section divider"></div>
 <!------------------------------------------------------------------------->
 <section id="Wine" class="section center">
 
@@ -104,6 +105,7 @@ if($_SESSION['employeeType'] != "IM") {
 
 </section>
 
+<div class="ui section divider"></div>
 <!------------------------------------------------------------------------->
 <section id="AgriculturalRegion" class="section center">
 
@@ -122,6 +124,8 @@ if($_SESSION['employeeType'] != "IM") {
     </div>
     
 </section>
+
+<div class="ui section divider"></div>
 <!------------------------------------------------------------------------->
 <section id="Supplier" class="section center">
 
@@ -144,6 +148,7 @@ if($_SESSION['employeeType'] != "IM") {
 
 </section>
 
+<div class="ui section divider"></div>
 <!------------------------------------------------------------------------->
 <section id="Restock" class="section center">
 
@@ -160,6 +165,7 @@ if($_SESSION['employeeType'] != "IM") {
 
 </section>
 
+<div class="ui section divider"></div>
 <!------------------------------------------------------------------------->
 <section id="StorageArea" class="section center">
 
@@ -176,6 +182,7 @@ if($_SESSION['employeeType'] != "IM") {
     
 </section>
 
+<div class="ui section divider"></div>
 <!------------------------------------------------------------------------->
 
 <footer class="section">

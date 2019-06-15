@@ -19,7 +19,7 @@ $sql = "SELECT w.wineID, a.name, a.$attribute, b.brandName, b.grapeType1, b.grap
 $result = $conn->query($sql);
 
 setStyle();
-
+echo "<body><div class='queryResult'>";
 echo "<h1>Wine Query Results</h1>";
 if ($result->num_rows > 0) {
     myTable($conn, $sql);
@@ -28,7 +28,7 @@ if ($result->num_rows > 0) {
 }
 
 echo '<a class="ui button" href="../../ui/InventoryManager/index.php">Back</a>';
-
+echo "</div></body>";
 CloseCon($conn);
 
 ?>

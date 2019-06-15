@@ -22,7 +22,7 @@ $result1 = $conn->query($sql1);
 $result2 = $conn->query($sql2);
 
 setStyle();
-
+echo "<body><div class='queryResult'>";
 echo "<h1>Wine Query Results</h1>";
 if ($result1->num_rows > 0) {
     myTable($conn, $sql1);
@@ -36,7 +36,7 @@ if ($result2->num_rows > 0) {
 }
 
 echo '<a class="ui button" href="../../ui/InventoryManager/index.php">Back</a>';
-
+echo "</div></body>";
 CloseCon($conn);
 
 ?>

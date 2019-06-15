@@ -44,6 +44,9 @@ function setStyle() {
             width: 100%;
         }
 
+        .queryResult {
+            padding: 20px;
+        }
 
     </style>
 

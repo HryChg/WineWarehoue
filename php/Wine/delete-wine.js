@@ -7,7 +7,15 @@ $(document).ready(function() {
         $(form).each(function(id, obj){
             data[obj.name] = obj.value;
         });
-        alert($("#delete-wine").serialize()); // Debug Tool
+        let count = 0;
+        data['brandName'] ? count++ : count;
+        data['wineID'] ? count++ : count;
+        data['regionName'] ? count++ : count;
+        if (count > 1){
+            alert("Please only select one!");
+            data = {};
+        }
+        // alert($("#delete-wine").serialize()); // Debug Tool
         $.ajax({
             url: $("#delete-wine").attr("url"),
             method: "POST",

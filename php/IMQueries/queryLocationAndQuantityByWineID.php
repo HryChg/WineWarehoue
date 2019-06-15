@@ -3,31 +3,43 @@
     <h3>Search for Wine in Storage</h3>
 
     <!-- Selection dropdown -->
-    <!-- <label>WineID</label>
-    <?php 
-    // include_once '../../connect.php'; 
-    // $conn = OpenCon();
-    // $result = $conn->query("select wineID from StoredIn");
+    <?php
 
-    // echo "<select name='wineID'>";
-    // echo '<option value="">---Select wineID---</option>';
-    // while ($row = $result->fetch_assoc()) {
-    //     unset($wineID);
-    //     $name = $row['wineID'];
-    //     echo '<option value="'.$wineID.'">'.$wineID.'</option>';
-    // }
+    include_once '../../connect.php'; 
+    $conn = OpenCon();
 
-    // echo "</select></p>";
-    // CloseCon($conn);
-    ?> -->
-    <p>
+    // WineID selector
+    $result = $conn->query("select wineID from StoredIn");
+    echo "<p>
         <label>WineID</label>
-        <input type="text" name="wineID">
-    </p>
-    <p>
+        <select name='wineID'>";
+    echo '<option value="">---Select wineID---</option>';
+    while ($row = $result->fetch_assoc())
+    {
+        unset($wineID);
+        $wineID = $row['wineID'];
+        echo '<option value="'.$wineID.'">'.$wineID.'</option>';
+    }
+    echo "</select></p>";
+
+    // LocationID selector
+    $result = $conn->query("select locationID from StoredIn");
+    echo "<p>
         <label>LocationID</label>
-        <input type="text" name="locationID">
-    </p>
+        <select name='locationID'>";
+    echo '<option value="">---Select locationID---</option>';
+    while ($row = $result->fetch_assoc())
+    {
+        unset($locationID);
+        $locationID = $row['locationID'];
+        echo '<option value="'.$locationID.'">'.$locationID.'</option>';
+    }
+    echo "</select></p>";
+
+
+    CloseCon($conn);
+    ?>
+
     <input class="ui secondary button" type="submit" value="Query">
 
 </form>
