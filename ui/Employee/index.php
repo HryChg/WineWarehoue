@@ -66,7 +66,7 @@
 
 
         <div class="item">
-            <div class="ui primary button">Log Out</div>
+            <a class="ui primary button" href="../../ui/Login/index.php">Log Out</a>
         </div>
     </div>
 </nav>

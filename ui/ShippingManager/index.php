@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,6 +58,13 @@
 
 </head>
 <body>
+
+<?php
+if($_SESSION['employeeType'] != "SM") {
+    header("Location:../../ui/Login/index.php");
+}
+?>
+
 <nav class="ui large menu">
     <div class="active item">
         <h4>Shipping Manager User Interface</h4>

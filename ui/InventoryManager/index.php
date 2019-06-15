@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -12,7 +15,11 @@ setStyle();
 ?>
 <body>
 
-
+<?php
+if($_SESSION['employeeType'] != "IM") {
+    header("Location:../../ui/Login/index.php");
+}
+?>
 
 <?php displayNav("Inventory Manager")?>
 
@@ -147,7 +154,6 @@ setStyle();
 </section>
 
 <!------------------------------------------------------------------------->
-<?php //CloseCon($conn); ?>
 
 <footer class="section">
     <div class="center grey-text">Copyright 2019 WineWarehouse</div>

@@ -8,7 +8,7 @@ echo '
     </p>
     <p>
         <label for="pass">Password:</label>
-        <input type="text" name="pass">
+        <input type="password" name="pass">
     </p>
     <input class="ui button" type="submit" value="Login">
 </form>'
