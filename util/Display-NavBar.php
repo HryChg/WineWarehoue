@@ -23,7 +23,7 @@ function displayNav($user) {
         </div>
 
         <div class="item">
-            <a class="ui primary button" href="../../ui/Login/index.php">Log Out</a>
+            <a class="ui primary button" href="../../php/Login/logout.php">Log Out</a>
         </div>
     </div>
 </nav>';

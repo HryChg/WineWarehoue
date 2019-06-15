@@ -12,7 +12,11 @@ setStyle();
 ?>
 <body>
 
-
+<?php
+if(!isset($_SESSION['user'])) {
+    header("Location:../../ui/Login/index.php");
+}
+?>
 
 <?php displayNav("Inventory Manager")?>
 
@@ -147,7 +151,7 @@ setStyle();
 </section>
 
 <!------------------------------------------------------------------------->
-<?php CloseCon($conn); ?>
+
 
 <footer class="section">
     <div class="center grey-text">Copyright 2019 WineWarehouse</div>
