@@ -7,7 +7,7 @@
     include_once '../../connect.php';
     $conn = OpenCon();
 
-    echo "<p>
+    echo "<div class='field'>
         <label>GrapeType</label>
         <select name='grapeType'>";
     echo '<option value="">---Select grapeType---</option>';
@@ -19,7 +19,7 @@
         echo '<option value="'.$grapeType.'">'.$grapeType.'</option>';
     }
     
-    echo "</select></p>";
+    echo "</select></div>";
 
     CloseCon($conn);
     ?>

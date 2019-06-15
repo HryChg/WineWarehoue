@@ -8,7 +8,7 @@
     include_once '../../connect.php';
     $conn = OpenCon();
 
-    echo "<p>
+    echo "<div class='field'>
         <label>WineTaste</label>
         <select name='wineTaste'>";
     echo '<option value="">---Select wineTaste---</option>';
@@ -20,7 +20,7 @@
         echo '<option value="'.$wineTaste.'">'.$wineTaste.'</option>';
     }
     
-    echo "</select></p>";
+    echo "</select></div>";
 
     CloseCon($conn);
     ?>

@@ -2,7 +2,7 @@
 
     <h3>Search Wine By Expiry Date</h3>
 
-    <label>Expiry Date Range(YYYY-MM-DD): </label>
+    <div class="field"><label>Expiry Date Range(YYYY-MM-DD): </label></div>
     <div class="two fields">
         <div class="field">
             <input type="text" name="lowRange">

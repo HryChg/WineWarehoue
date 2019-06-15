@@ -1,8 +1,8 @@
 <form class="ui form" action="../../php/IMQueries/process-queryWineByAlcoholRange.php" method="post">
 
-    <h3>Search Wine By Alcohol Percentage</h3>
+    <h3>Search Wine By Alcohol Content</h3>
 
-    <label>Alcohol percentage: </label>
+    <div class="field"><label>Alcohol percentage (%): </label></div>
     <div class="two fields">
         <div class="field">
             <input type="text" name="lowRange">

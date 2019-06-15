@@ -3,8 +3,6 @@
 
     <h3>Update Wine Price</h3>
 
-    <label>Wine</label>
-
     <?php
 
     include_once '../../connect.php'; 
@@ -12,7 +10,9 @@
 
     $result = $conn->query("select wineID from WineB");
 
-    echo "<p><select name='wineID'>";
+    echo "<div class='field'>
+        <label>Wine</label>
+        <select name='wineID'>";
     echo '<option value="">---Select wineID---</option>';
     while ($row = $result->fetch_assoc())
     {
@@ -21,14 +21,14 @@
         echo '<option value="'.$wineID.'">'.$wineID.'</option>';
     }
 
-    echo "</select></p>";
+    echo "</select></div>";
     CloseCon($conn);
     ?>
 
-    <p>
+    <div class='field'>
         <label>Wine Price </label>
         <input name="price" type="text" placeholder="Enter new price for wine">
-    <p>
+    </div>
 
     <input class="ui positive button update-wine" type="submit" value="Update">
 

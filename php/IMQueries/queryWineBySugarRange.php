@@ -2,7 +2,7 @@
 
     <h3>Search Wine By Sugar Levels</h3>
 
-    <label>Sugar level (0-1): </label>
+    <div class="field"><label>Sugar level (0-1): </label></div>
     <div class="two fields">
         <div class="field">
             <input type="text" name="lowRange">

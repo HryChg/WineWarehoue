@@ -2,8 +2,6 @@
 
     <h3>Search Wine By Agricultural Region Attribute</h3>
 
-    <label>Agricultural Region Attribute: </label>
-
     <?php
 
     include_once '../../connect.php'; 
@@ -15,17 +13,19 @@
     array_push($agriRegionAttrArray, 'moisture');
     array_push($agriRegionAttrArray, 'temperature');
 
-    echo "<p><select name='attribute'>";
+    echo "<div class='field'>
+        <label>Agricultural Region Attribute </label>
+        <select name='attribute'>";
     foreach($agriRegionAttrArray as $agriRegionAtt) {
         echo '<option value="'.$agriRegionAtt.'">'.$agriRegionAtt.'</option>';
     }
-    echo "</select></p>";
+    echo "</select></div>";
     CloseCon($conn);
     ?>
-    <p>
-        <label> Value: </label>
+    <div class='field'>
+        <label> Value </label>
         <input type="text" name="val">
-    </p>
+    </div>
     <input class="ui secondary button" type="submit" value="Query">
 
 </form>

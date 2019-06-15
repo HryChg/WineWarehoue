@@ -3,8 +3,6 @@
 
     <h3>Update Storage Temperature</h3>
 
-    <label>Location ID</label>
-
     <?php
 
     include_once '../../connect.php'; 
@@ -12,6 +10,8 @@
 
     $result = $conn->query("select locationID from StorageArea");
 
+    echo "<div class='field'>
+        <label>Location ID</label>";
     echo "<select name='locationID'>";
     echo '<option value="">---Select locationID---</option>';
     while ($row = $result->fetch_assoc()) {
@@ -20,14 +20,14 @@
         echo '<option value="'.$locationID.'">'.$locationID.'</option>';
     }
 
-    echo "</select>";
+    echo "</select></div>";
     CloseCon($conn);
     ?>
 
-    <p>
+    <div class='field'>
         <label>Temperature </label>
         <input name="temperature" type="text" placeholder="Enter new temp for location">
-    </p>
+    </div>
 
     <input class="ui positive button update-storage-temp" type="submit" value="Update">
 
