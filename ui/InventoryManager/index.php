@@ -99,7 +99,8 @@ if($_SESSION['employeeType'] != "IM") {
             <div id="query-wine-sugar-form"><?php include '../../php/IMQueries/queryWineBySugarRange.php'; ?></div>
             <div id="query-wine-expiry-form"><?php include '../../php/IMQueries/queryWineBByExpiryRange.php'; ?></div>
             <div id="query-wine-agri-form"><?php include '../../php/IMQueries/queryWineByAgriAttribute.php'; ?></div>
-            <div id="query-wine-minprice-form"><?php include '../../php/IMQueries/queryMinPriceByBrand.php'; ?></div>        
+            <div id="query-wine-minprice-form"><?php include '../../php/IMQueries/queryMinPriceByBrand.php'; ?></div>
+            <div id="query-wine-minprice-form"><?php include '../../php/IMQueries/queryExpiredWineInStorage.php'; ?></div>
         </div>
     </div>
 

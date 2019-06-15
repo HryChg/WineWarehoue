@@ -1,6 +1,6 @@
 <form class="ui form" action="../../php/IMQueries/process-queryExpiredWineInStorage.php" method="post">
 
-    Query Expired Wine in Storage
+    <h3>Query Expired Wine in Storage</h3>
 
     </br>
 
