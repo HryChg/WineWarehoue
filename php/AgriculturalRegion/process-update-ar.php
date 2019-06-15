@@ -1,4 +1,5 @@
 <?php
+
 include_once '../../connect.php';
 
 $name = $_POST['name'];
@@ -7,7 +8,7 @@ $moisture = $_POST['moisture'];
 $climate = $_POST['climate'];
 
 $conn = OpenCon();
-
+$result1; $result2; $result3;
 if (!empty($temperature)) {
     $sql1 = "update AgriculturalRegion set temperature = '$temperature' where name = '$name'";
     $result1 = $conn->query($sql1);

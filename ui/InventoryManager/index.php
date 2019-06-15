@@ -63,11 +63,11 @@ setStyle();
             <?php include '../../php/Wine/deleteWineByBrand.php'; ?>
             <?php include '../../php/Wine/deleteWineByID.php'; ?>
             <?php include '../../php/WineOrigin/deleteWineOrigin.php'; ?>
-        </div>
+        </div>        
         <div class="column">
+            <?php include '../../php/IMQueries/queryPriceFromWineBByID.php'; ?>
             <?php include '../../php/IMQueries/queryBrandFromWineAByGrape.php'; ?>
             <?php include '../../php/IMQueries/queryBrandFromWineAByWineTaste.php'; ?>
-            <?php include '../../php/IMQueries/queryPriceFromWineBByID.php'; ?>
             <?php include '../../php/IMQueries/queryWineBByExpiryRange.php'; ?>
             <?php include '../../php/IMQueries/queryWineByAlcoholRange.php'; ?>
             <?php include '../../php/IMQueries/queryWineByAgriAttribute.php'; ?>
@@ -86,7 +86,7 @@ setStyle();
     
     <div class="ui equal width relaxed grid">
         <div class="column">
-            <?php include '../../php/AgriculturalRegion/update.php'; ?>
+            <?php include '../../php/AgriculturalRegion/update-ar.php'; ?>
         </div>
         <div class="column">
             <?php include '../../php/AgriculturalRegion/deleteRegionByName.php'; ?>
@@ -147,7 +147,7 @@ setStyle();
 </section>
 
 <!------------------------------------------------------------------------->
-<?php CloseCon($conn); ?>
+<?php //CloseCon($conn); ?>
 
 <footer class="section">
     <div class="center grey-text">Copyright 2019 WineWarehouse</div>
