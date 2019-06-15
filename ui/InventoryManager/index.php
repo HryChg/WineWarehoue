@@ -139,8 +139,7 @@ if($_SESSION['employeeType'] != "IM") {
             <div id="update-supplier-form"><?php include '../../php/Supplier/updateSupplier.php'; ?></div>
         </div>
         <div class="column">
-            <div id="delete-supplier-name"><?php include '../../php/Supplier/deleteSupplierA.php'; ?></div>
-            <div id="delete-supplier-id-phone"><?php include '../../php/Supplier/deleteSupplierBByIDOrPhone.php'; ?></div>
+            <div id="delete-supplier-form"><?php include '../../php/Supplier/deleteSupplier.php'; ?></div>
         </div>
     </div>
 
