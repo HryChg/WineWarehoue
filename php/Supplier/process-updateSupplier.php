@@ -6,33 +6,54 @@ $supplierID = $_POST['supplierID'];
 $name = $_POST['name'];
 $address = $_POST['address'];
 $phoneNo = $_POST['phoneNo'];
-echo '<script>alert('.$supplierID.$name.$address.$phoneNo.');</script>';
+
 $conn = OpenCon();
+$resultA;
+$resultB;
 // If both supplierID and name are empty, alert error
-if (strpos($supplierID, '---') === false && strpos($name, '---') === false) {
-    echo '<script>alert("Please select only one.");</script>'; //TODO: This echo is not working
+if (!empty($supplierID) && !empty($name)) {
+    // do nothing
+} elseif (!empty($address)) { // address update
+    // Given name:
+    if (!empty($name)) {
+        // update address of SupplierB
+        $sqlB = "UPDATE supplierb SET address = '$address'
+        WHERE address = (SELECT a.address
+                        FROM SupplierA a
+                        WHERE a.name='$name');";
+        $resultB = $conn->query($sqlB);
+        // update address of SupplierA
+        $sqlA = "update SupplierA set address = '$address' where name = '$name'";
+        $resultA = $conn->query($sqlA);
+    // Given id:
+    } else if (!empty($supplierID)) {
+        // update address of SupplierA
+        $sqlA = "UPDATE suppliera SET address = '$address'
+                WHERE address = (SELECT b.address
+                                FROM SupplierB b
+                                WHERE b.supplierID='$supplierID')";
+        $resultA = $conn->query($sqlA);
+        // update address of SupplierB
+        $sqlB = "update SupplierB set address = '$address' where supplierID = '$supplierID'";
+        $resultB = $conn->query($sqlB);
+    }
+} elseif (!empty($phoneNo)) { //phone number update
+    $resultA = true;
+    // Given name
+    if (!empty($name)) {
+        $sqlB = "UPDATE supplierb b SET phoneNo = '$phoneNo'
+                WHERE b.address = (SELECT a.address
+                                    FROM SupplierA a
+                                    WHERE a.name='$name');";
+        $resultB = $conn->query($sqlB);
+    // Given id
+    } else if (!empty($supplierID)) {
+        $sqlB = "update SupplierB set phoneNo = '$phoneNo' where supplierID = '$supplierID'";
+        $resultB = $conn->query($sqlB);
+    }
 }
-// If address is present, update address
-if (!empty($address)) {
-    // if updating with name + address
-    // update address of SupplierB
-    $sql1 = "UPDATE supplierb SET address = '$address'
-            WHERE address = (SELECT a.address
-                            FROM SupplierA a
-                            WHERE a.name='$name');";
-    $result1 = $conn->query($sql1);
-    // update address of SupplierA
-    $sql2 = "update SupplierA set address = '$address' where name = '$name'";
-    $result2 = $conn->query($sql2);
 
-}
-// If phoneNo is present, update phoneNo
-if (!empty($phoneNo)) {
-    $sql3 = "update SupplierB set phoneNo = '$phoneNo' where supplierID = '$supplierID'";
-    $result3 = $conn->query($sql3);
-}
-
-if (($result1 && $result2) || $result3) {
+if ($resultA && $resultB) {
     echo "Record updated successfully";
 } else {
     echo "Error updating record: " . $conn->error;
