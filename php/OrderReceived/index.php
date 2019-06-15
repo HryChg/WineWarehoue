@@ -23,11 +23,12 @@
             <div class="container">
                 <?php include 'View-QueryTopClient.php' ?>
             </div>
-
-
         </div>
-        <div id="orderResult" class="eleven wide column" >
+        <div class="eleven wide column" >
             <h1>Display Result</h1>
+            <div id="orderResult" class="container">
+
+            </div>
         </div>
     </div>
 
