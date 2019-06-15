@@ -17,5 +17,5 @@
         <label for="address">Address:</label>
         <input type="text" name="address" id="address">
     </p>
-    <input class="ui button supplier-submit submit-form" type="submit" value="Add">
+    <input class="ui primary button supplier-submit submit-form" type="submit" value="Add">
 </form>

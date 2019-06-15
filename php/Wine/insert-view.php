@@ -69,5 +69,5 @@
         <label for="climate">Climate:</label>
         <input type="text" name="climate" id="climate">
     </p>
-    <input class="ui button add-wine" type="submit" value="Add">
+    <input class="ui primary button add-wine" type="submit" value="Add">
 </form>

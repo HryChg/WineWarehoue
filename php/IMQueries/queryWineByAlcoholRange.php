@@ -8,6 +8,6 @@
         <label> to </label>
         <input type="text" name="highRange">
     </p>
-    <input class="ui button" type="submit" value="Query">
+    <input class="ui secondary button" type="submit" value="Query">
 
 </form>

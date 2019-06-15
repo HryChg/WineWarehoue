@@ -43,6 +43,6 @@
         <input name="address" type="text" placeholder="Enter new address">
     </p>
 
-    <input class="ui button update-supplier" type="submit" value="Update">
+    <input class="ui positive button update-supplier" type="submit" value="Update">
 
 </form>

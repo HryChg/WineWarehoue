@@ -25,12 +25,5 @@
         <label for="date">Restock Date (YYYY-MM-DD):</label>
         <input type="text" name="date" id="date">
     </p>
-    <input class="ui button restock-submit submit-form" type="submit" value="Add">
+    <input class="ui button primary restock-submit submit-form" type="submit" value="Add">
 </form>
-<!-- <script>
-$(document).ready(function() {
-    $(".restock-submit.submit-form").click(function(e) {
-        $("#restock-table").load('../../php/Restock/defaultView-restock.php');
-    });
-});
-</script> -->

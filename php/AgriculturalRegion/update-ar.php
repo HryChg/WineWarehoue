@@ -33,6 +33,6 @@
         <label>Climate </label>
         <input name="climate" type="text" placeholder="Enter new climate">
     </p>
-    <input class="ui button update-ar" type="submit" value="Update">
+    <input class="ui positive button update-ar" type="submit" value="Update">
 
 </form>

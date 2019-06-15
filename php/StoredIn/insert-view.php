@@ -13,5 +13,5 @@
         <label for="quantity">Quantity:</label>
         <input type="text" name="quantity" id="quantity">
     </p>
-    <input class="ui button storedin-submit" type="submit" value="Add">
+    <input class="ui primary button storedin-submit" type="submit" value="Add">
 </form>
