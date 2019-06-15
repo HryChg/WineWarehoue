@@ -124,6 +124,19 @@ ORDER BY totalQuantity DESC
 LIMIT 5;
 ```
 
+## Division Example!!! Display Wine where every retailer has ordered
+```sql
+SELECT wineID 
+FROM WineB
+WHERE wineID NOT IN (
+	SELECT w.wineID
+	FROM WineB w, OrderReceived o
+	WHERE (w.wineID, o.retailer) NOT IN (
+  	SELECT wineID, retailer
+ 	FROM OrderReceived
+))
+```
+
 find out the orderCount for each retailer
 
 ```sql
