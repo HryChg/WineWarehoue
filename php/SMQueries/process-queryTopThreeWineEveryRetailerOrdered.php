@@ -9,11 +9,6 @@ if (isset($_POST['action'])) {
 
         $conn = OpenCon();
 
-        $sqlForRetailerCount = "SELECT COUNT(DISTINCT retailer) FROM OrderReceived";
-        $retailerCount = $conn->query($sqlForRetailerCount);
-        $row = $retailerCount->fetch_assoc();
-        $totalNumberOfRetailers = $row["COUNT(DISTINCT retailer)"];
-
         $sql = "SELECT wineID 
                 FROM WineB
                 WHERE wineID NOT IN (
