@@ -15,22 +15,7 @@ $conn = OpenCon();
                 <?php include 'update.php'; ?>
             </div>
             <div class="five wide column">
-                <h1>Delete Return Shipment <br>(Work In Progress)</h1>
-                <div class="ui segment">
-                    <div class="ui placeholder">
-                        <div class="image header">
-                            <div class="line"></div>
-                            <div class="line"></div>
-                        </div>
-                        <div class="paragraph">
-                            <div class="line"></div>
-                            <div class="line"></div>
-                            <div class="line"></div>
-                            <div class="line"></div>
-                            <div class="line"></div>
-                        </div>
-                    </div>
-                </div>
+                <?php include 'delete.php'; ?>
             </div>
         </div>
     </div>
