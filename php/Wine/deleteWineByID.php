@@ -1,16 +1,17 @@
-<form class="ui form" action="../../php/IMQueries/process-queryPriceFromWineBByID.php" method="post">
+<script src="./../../php/Wine/delete-submit-wineid.js"></script>
+<form class="ui form" id="delete-wine-wineid" url="../../php/Wine/process-deleteWineByID.php" method="post">
 
-    <h3>Search for Wine Price by WineID</h3>
+    <h3>Delete WineID</h3>
+    <!-- TODO: Fix Bug - no update possibly because of foreign key -->
+    
     <?php
 
     include_once '../../connect.php'; 
     $conn = OpenCon();
 
     $result = $conn->query("select wineID from WineB");
-
-    echo "<p>
-        <label>WineID</label>
-        <select name='wineID'>";
+    echo "<label>WineID</label>";
+    echo "<p><select name='wineID'>";
     echo '<option value="">---Select wineID---</option>';
     while ($row = $result->fetch_assoc())
     {
@@ -23,6 +24,6 @@
     CloseCon($conn);
     ?>
 
-    <input class="ui button" type="submit" value="Query">
+    <input class="ui button delete-wine-wineid" type="submit" value="Delete">
 
 </form>

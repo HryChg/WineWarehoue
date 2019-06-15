@@ -9,10 +9,7 @@
     <?php
     include_once '../../connect.php'; 
     $conn = OpenCon();
-    $sql = "SELECT a.name, a.address
-            FROM SupplierA AS a 
-            INNER JOIN SupplierB AS b 
-            ON a.address = b.address";
+    $sql = "SELECT a.name, a.address FROM SupplierA a ORDER BY a.name, a.address";
     $result = $conn->query($sql);
 
     echo "<select name='address'>";

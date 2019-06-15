@@ -12,10 +12,7 @@
     include_once '../../connect.php'; 
     $conn = OpenCon();
 
-    $sql1 = "SELECT b.supplierID
-            FROM SupplierA AS a 
-            INNER JOIN SupplierB AS b 
-            ON a.address = b.address";
+    $sql1 = "SELECT b.supplierID FROM SupplierB b ORDER BY b.supplierID";
     $result1 = $conn->query($sql1);
 
     echo "<p><select name='supplierID'>";
@@ -25,14 +22,11 @@
     {
         unset($supplierID);
         $supplierID = $row['supplierID'];
-        echo '<option value="'.$supplierID.'">'.'SupplierID: '.$supplierID.'</option>';
+        echo '<option value="'.$supplierID.'">'.$supplierID.'</option>';
     }
 
     echo "</select></p>";
-    $sql2 = "SELECT b.phoneNo
-            FROM SupplierA AS a 
-            INNER JOIN SupplierB AS b 
-            ON a.address = b.address";
+    $sql2 = "SELECT b.phoneNo FROM SupplierB b ORDER BY b.phoneNo";
     $result2 = $conn->query($sql2);
 
     echo "<p><select name='phoneNo'>";
@@ -41,7 +35,7 @@
     {
         unset($phoneNo);
         $phoneNo = $row['phoneNo'];
-        echo '<option value="'.$phoneNo.'">'.'PhoneNo: '.$phoneNo.'</option>';
+        echo '<option value="'.$phoneNo.'">'.$phoneNo.'</option>';
     }
 
     echo "</select></p>";

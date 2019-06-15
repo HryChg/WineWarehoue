@@ -24,15 +24,17 @@ $result = mysqli_query($conn, $sql);
 
 if (!$result) {
     echo "Record unable to be added.";
-
     echo "<br/>";
 }
 if ($result) {
     echo "Record has been added";
-    myTable($conn, $sql);
     echo "<br/>";
 }
 
 
 CloseCon($conn);
+
+
+include_once '../../util/redirectHelper.php';
+redirect('http://localhost/WineWarehouse/ui/ShippingManager/index.php');
 ?>

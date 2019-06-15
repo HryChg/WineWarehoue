@@ -12,6 +12,7 @@
 
     $result1 = $conn->query("select wineTaste1 from WineA");
     $wineTaste1Array = array();
+    array_push($wineTaste1Array, "---Select wine taste---");
     while ($row = $result1->fetch_assoc()) {
         unset($wineTaste1);
         $wineTaste1 = $row['wineTaste1'];
@@ -25,7 +26,7 @@
         array_push($wineTaste2Array, $wineTaste2);
     }
     $combinedArray = array_unique(array_merge($wineTaste1Array, $wineTaste2Array));
-
+    sort($combinedArray);
     echo "<p><select name='wineTaste'>";
     foreach($combinedArray as $wineTaste) {
         echo '<option value="'.$wineTaste.'">'.$wineTaste.'</option>';

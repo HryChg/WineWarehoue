@@ -28,10 +28,10 @@ if (!empty($wineID) && !empty($locationID)) {
     $result = $conn->query($sql);
 }
 
+setStyle();
+displayNav("Inventory Manager");
+echo "<h1>Wine Query Results</h1>";
 if ($result->num_rows > 0) {
-    setStyle();
-    displayNav("Inventory Manager");
-    echo "<h1>Wine Query Results</h1>";
     myTable($conn, $sql);
 } else {
     echo "0 results";

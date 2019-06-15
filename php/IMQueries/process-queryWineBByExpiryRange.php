@@ -2,6 +2,8 @@
 
 include_once '../../connect.php';
 include_once '../../template/input-query/create-table.php';
+include '../../util/Display-IM-Header.php';
+include '../../util/Display-NavBar.php';
 
 $conn = OpenCon();
 
@@ -20,7 +22,7 @@ $sql1 = "SELECT w.wineID, w.expiryDate, s.locationID, s.quantityInLocation
         INNER JOIN StoredIn AS s 
         ON w.wineID = s.wineID
         WHERE expiryDate >= '$lowRangeDate' AND expiryDate <= '$highRangeDate'";
-$sql2 = "SELECT COUNT(w.wineID)
+$sql2 = "SELECT COUNT(w.wineID) AS 'Number of Wine Types'
         FROM WineB as w
         INNER JOIN StoredIn AS s 
         ON w.wineID = s.wineID
@@ -29,6 +31,9 @@ $sql2 = "SELECT COUNT(w.wineID)
 $result1 = $conn->query($sql1);
 $result2 = $conn->query($sql2);
 
+setStyle();
+displayNav("Inventory Manager");
+echo "<h1>Wine Query Results</h1>";
 if ($result1->num_rows > 0) {
     myTable($conn, $sql1);
 } else {

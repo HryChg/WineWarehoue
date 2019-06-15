@@ -1,3 +1,20 @@
+DROP TABLE ReturnedShipment;
+DROP TABLE Shipment;
+DROP TABLE OrderForWine;
+DROP TABLE OrderReceived;
+DROP TABLE StoredIn;
+DROP TABLE WineOrigin;
+DROP TABLE AgriculturalRegion;
+DROP TABLE Restock;
+DROP TABLE WineB;
+DROP TABLE WineA;
+DROP TABLE StorageArea;
+DROP TABLE SupplierB;
+DROP TABLE SupplierA;
+DROP TABLE ShippingManager;
+DROP TABLE InventoryManager;
+DROP TABLE Employee;
+
 CREATE TABLE Employee
 (employeeID INTEGER PRIMARY KEY, 
 type VARCHAR(20), 
@@ -189,6 +206,28 @@ INSERT INTO OrderReceived VALUES(100014, 005, 97802134, 88, 'BottleJockey', '888
 INSERT INTO OrderReceived VALUES(100015, 007, 98412234, 70, 'Liberty Wine Merchants', '777 HHH Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-30 12:00:12'));
 INSERT INTO OrderReceived VALUES(100016, 008, 97890456, 280, 'High Point', '555 FFF Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-30 16:37:12'));
 INSERT INTO OrderReceived VALUES(100017, 009, 97890456, 350, 'Gotham Steakhouse & Cocktail Bar', '222 CCC Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-31 18:00:12'));
+
+#Additional
+INSERT INTO OrderReceived VALUES(100018, 007, 98412234, 25, 'High Point', '555 FFF Road, Vancouver, BC', 'N', TIMESTAMP('2019-08-29 12:00:00'));
+INSERT INTO OrderReceived VALUES(100019, 007, 97802134, 25, 'High Point', '555 FFF Road, Vancouver, BC', 'N', TIMESTAMP('2019-08-29 12:00:00'));
+INSERT INTO OrderReceived VALUES(100020, 007, 98412234, 10, 'Gotham Steakhouse & Cocktail Bar', '222 CCC Road, Vancouver, BC', 'N', TIMESTAMP('2019-04-29 12:00:00'));
+INSERT INTO OrderReceived VALUES(100021, 007, 97890456, 5, 'Liberty Wine Merchants', '777 HHH Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-30 12:00:00'));
+INSERT INTO OrderReceived VALUES(100022, 007, 97802134, 5, 'Liberty Wine Merchants', '777 HHH Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-30 12:00:00'));
+INSERT INTO OrderReceived VALUES(100023, 005, 97890456, 12, 'BottleJockey', '888 III Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-30 10:00:12'));
+INSERT INTO OrderReceived VALUES(100024, 005, 98412234, 12, 'BottleJockey', '888 III Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-30 10:00:12'));
+INSERT INTO OrderReceived VALUES(100025, 005, 97890456, 1, 'Everything Wine', '666 GGG Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-29 18:30:00'));
+INSERT INTO OrderReceived VALUES(100026, 005, 98412234, 1, 'Everything Wine', '666 GGG Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-29 18:30:00'));
+INSERT INTO OrderReceived VALUES(100027, 006, 97890456, 5, 'Uva Wine & Cocktail Bar', '111 BBB Road, Vancouver, BC', 'Y', TIMESTAMP('2019-06-29 12:37:12'));
+INSERT INTO OrderReceived VALUES(100028, 006, 97802134, 5, 'Uva Wine & Cocktail Bar', '111 BBB Road, Vancouver, BC', 'Y', TIMESTAMP('2019-06-29 12:37:12'));
+INSERT INTO OrderReceived VALUES(100029, 009, 97890456, 20, 'Neverland Tea Salon', '444 EEE Road, Vancouver, BC', 'Y', TIMESTAMP('2019-05-22 15:35:18'));
+INSERT INTO OrderReceived VALUES(100030, 009, 98412234, 20, 'Neverland Tea Salon', '444 EEE Road, Vancouver, BC', 'Y', TIMESTAMP('2019-05-22 15:35:18'));
+INSERT INTO OrderReceived VALUES(100031, 008, 97890456, 13, 'Victor', '333 DDD Road, Vancouver, BC', 'N', TIMESTAMP('2019-05-20 09:25:18'));
+INSERT INTO OrderReceived VALUES(100032, 008, 98412234, 13, 'Victor', '333 DDD Road, Vancouver, BC', 'N', TIMESTAMP('2019-05-20 09:25:18'));
+INSERT INTO OrderReceived VALUES(100033, 008, 97802134, 13, 'Victor', '333 DDD Road, Vancouver, BC', 'N', TIMESTAMP('2019-05-20 09:25:18'));
+INSERT INTO OrderReceived VALUES(100034, 005, 97890456 , 100, 'The Stable House Bistro', '000 AAA Road, Vancouver, BC', 'N', TIMESTAMP('2019-05-17 10:10:30'));
+INSERT INTO OrderReceived VALUES(100035, 005, 98412234, 100, 'The Stable House Bistro', '000 AAA Road, Vancouver, BC', 'N', TIMESTAMP('2019-05-17 10:10:30'));
+INSERT INTO OrderReceived VALUES(100036, 005, 97802134, 100, 'The Stable House Bistro', '000 AAA Road, Vancouver, BC', 'N', TIMESTAMP('2019-05-17 10:10:30'));
+
 
 CREATE TABLE OrderForWine
 (orderID INTEGER, 

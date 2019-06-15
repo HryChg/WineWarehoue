@@ -2,6 +2,8 @@
 
 include_once '../../connect.php';
 include_once '../../template/input-query/create-table.php';
+include '../../util/Display-IM-Header.php';
+include '../../util/Display-NavBar.php';
 
 $conn = OpenCon();
 
@@ -12,13 +14,16 @@ $sql1 = "SELECT wineID, brandName, grapeType1, grapeType2, alcoholPercent
 	FROM wineB
 	WHERE alcoholPercent >= '$lowRange' AND alcoholPercent <= '$highRange'";
 
-$sql2 = "SELECT COUNT(wineID)
+$sql2 = "SELECT COUNT(wineID) AS 'Number of Wine Types'
 	FROM wineB
 	WHERE alcoholPercent >= '$lowRange' AND alcoholPercent <= '$highRange'";
 
 $result1 = $conn->query($sql1);
 $result2 = $conn->query($sql2);
 
+setStyle();
+displayNav("Inventory Manager");
+echo "<h1>Wine Query Results</h1>";
 if ($result1->num_rows > 0) {
     myTable($conn, $sql1);
 } else {

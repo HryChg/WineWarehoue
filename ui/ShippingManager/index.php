@@ -89,7 +89,7 @@
         <div class="ui fluid three item menu container">
             <a class="item" onclick="top10BackOrderedWine()">Top 10 BackOrdered Wine </a>
             <a class="item" onclick="top10TenRepeatWineOrder()">Top 10 Repeatedly Ordered on Wine</a>
-            <a class="item" onclick="top10TenWineEveryRetailerOrdered()">Top 10 Wines Every Retailer Likes</a>
+            <a class="item" onclick="top3TenWineEveryRetailerOrdered()">Top 3 Wines Every Retailer Likes</a>
         </div>
 
     </div>
@@ -119,11 +119,11 @@
             });
         }
 
-        function top10TenWineEveryRetailerOrdered() {
+        function top3TenWineEveryRetailerOrdered() {
             $.ajax({
                 type: "POST",
-                url: '../../php/SMQueries/process-queryTopTenWineEveryRetailerOrdered.php',
-                data: {action: 'queryTopTenWineEveryRetailerOrdered'},
+                url: '../../php/SMQueries/process-queryTopThreeWineEveryRetailerOrdered.php',
+                data: {action: 'queryTopThreeWineEveryRetailerOrdered'},
                 success: function (resultHTML) {
                     document.querySelector('#displaySpecialQueryResult').innerHTML = resultHTML;
                 }
@@ -133,10 +133,15 @@
 
     </script>
 
-    <h2 class="ui header">Most Recent Order</h2>
-    <div class="container">
-        <?php include '../../php/OrderReceived/View-MostRecentOrder.php'; ?>
+    <div class="ui grid centered">
+        <div class="fifteen wide column">
+            <h2 class="ui header">Most Recent Order</h2>
+            <div class="container">
+                <?php include '../../php/OrderReceived/View-MostRecentOrder.php'; ?>
+            </div>
+        </div>
     </div>
+
 </section>
 
 <div class="ui section divider"></div>
