@@ -3,13 +3,14 @@
 
 SELECT b.supplierID, a.name, b.phoneNo, a.address 
 FROM SupplierA AS a 
-RIGHT JOIN SupplierB AS b 
+LEFT JOIN SupplierB AS b 
 ON a.address = b.address
 UNION
 SELECT b.supplierID, a.name, b.phoneNo, b.address 
 FROM SupplierA AS a 
 RIGHT JOIN SupplierB AS b 
 ON a.address = b.address
+ORDER BY supplierID
 
 Decided to show only full contact information 
 as Managers may not find much use without all the information
@@ -22,12 +23,21 @@ include_once '../../template/input-query/create-table.php';
 
 $conn = OpenCon();
 
-$sql = "SELECT b.supplierID, a.name, b.phoneNo, b.address 
+// $sql = "SELECT b.supplierID, a.name, b.phoneNo, b.address 
+//         FROM SupplierA AS a 
+//         INNER JOIN SupplierB AS b 
+//         ON a.address = b.address";
+
+$sql = "SELECT b.supplierID, a.name, b.phoneNo, a.address 
         FROM SupplierA AS a 
-        INNER JOIN SupplierB AS b 
-        ON a.address = b.address";
-
-
+        LEFT JOIN SupplierB AS b 
+        ON a.address = b.address
+        UNION
+        SELECT b.supplierID, a.name, b.phoneNo, b.address 
+        FROM SupplierA AS a 
+        RIGHT JOIN SupplierB AS b 
+        ON a.address = b.address
+        ORDER BY supplierID;";
 
 $result = $conn->query($sql);
 

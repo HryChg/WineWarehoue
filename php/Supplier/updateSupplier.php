@@ -6,32 +6,38 @@
     <label>Supplier</label>
 
     <?php
-
     include_once '../../connect.php'; 
     $conn = OpenCon();
 
-    $result = $conn->query("select name from SupplierA");
+    $sql1 = "SELECT a.name
+            FROM SupplierA a 
+            INNER JOIN SupplierB b 
+            ON a.address = b.address";
+    $result1 = $conn->query($sql1);
 
-    echo "<p><select name='name'>";
+    echo "<select name='name'>";
     echo '<option value="">---Select name---</option>';
-    while ($row = $result->fetch_assoc()){
+    while ($row = $result1->fetch_assoc()){
         unset($name);
         $name = $row['name'];
         echo '<option value="'.$name.'">'.$name.'</option>';
     }
     echo "</select>";
 
-    // TODO: Figure out why certain entries remove from display -> should show null
-    $result = $conn->query("select supplierID from SupplierB");
+    $sql2 = "SELECT b.supplierID
+            FROM SupplierA AS a 
+            INNER JOIN SupplierB AS b 
+            ON a.address = b.address";
+    $result2 = $conn->query($sql2);
 
     echo "or<select name='supplierID'>";
     echo '<option value="">---Select supplierID---</option>';
-    while ($row = $result->fetch_assoc()) {
+    while ($row = $result2->fetch_assoc()) {
         unset($supplierID);
         $supplierID = $row['supplierID'];
         echo '<option value="'.$supplierID.'">'.$supplierID.'</option>';
     }
-    echo "</select></p>";
+    echo "</select>";
     CloseCon($conn);
     ?>
     <p>
