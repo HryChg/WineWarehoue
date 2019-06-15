@@ -133,10 +133,15 @@
 
     </script>
 
-    <h2 class="ui header">Most Recent Order</h2>
-    <div class="container">
-        <?php include '../../php/OrderReceived/View-MostRecentOrder.php'; ?>
+    <div class="ui grid centered">
+        <div class="fifteen wide column">
+            <h2 class="ui header">Most Recent Order</h2>
+            <div class="container">
+                <?php include '../../php/OrderReceived/View-MostRecentOrder.php'; ?>
+            </div>
+        </div>
     </div>
+
 </section>
 
 <div class="ui section divider"></div>
