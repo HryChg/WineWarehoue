@@ -18,7 +18,6 @@ if (!empty($brandName)) {
     $sql = "DELETE from WineOrigin where wineID = '$wineID';
             DELETE from WineB where wineID = '$wineID'";
 } elseif (!empty($regionName)) {
-    
     // Attempts: TODO
     // $sql = "UPDATE WineB
     //         SET wineID = -1 
@@ -27,9 +26,10 @@ if (!empty($brandName)) {
     //         DELETE from WineOrigin where regionName = '$regionName';
     //         DELETE from WineB where wineID = -1;";
 
-    // $sql = "CREATE VIEW ids AS (SELECT wineID from WineOrigin where regionName = '$regionName');
-    //         DELETE from WineOrigin where regionName = '$regionName';
-    //         DELETE from WineB where wineID IN (SELECT * FROM ids);";
+    $sql = "CREATE TABLE ids AS SELECT wineID from WineOrigin where regionName = '$regionName';
+            DELETE from WineOrigin where regionName = '$regionName';
+            DELETE from WineB where wineID IN (SELECT * FROM ids);
+            DROP TABLE ids;";
 
     // $sql = "DELETE from WineOrigin where regionName = '$regionName';
     //         DELETE from WineB where wineID IN
