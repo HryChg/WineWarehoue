@@ -34,8 +34,10 @@ setStyle();
 
 <!------------------------------------------------------------------------->
 
-<footer class="section">
-    <div class="center grey-text">Copyright 2019 WineWarehouse</div>
+<footer class="ui inverted vertical footer segment">
+    <div class="ui container">
+        Copyright 2019 WineWarehouse
+    </div>
 </footer>
 
 </body>
