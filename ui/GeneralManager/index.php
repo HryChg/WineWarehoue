@@ -49,7 +49,7 @@
 <body>
 <nav class="ui large menu">
     <div class="active item">
-        Employee
+        General Manager UI
     </div>
     <div class="right menu">
 
@@ -61,6 +61,7 @@
                 <div class="item"><a class="item" href="../Employee/index.php">Employee</a></div>
                 <div class="item"><a class="item" href="../InventoryManager/index.php">Inventory Manager</a></div>
                 <div class="item"><a class="item" href="../ShippingManager/index.php">Shipping Manager</a></div>
+                <div class="item"><a class="item" href="../GeneralManager/index.php">General Manager</a></div>
             </div>
         </div>
 

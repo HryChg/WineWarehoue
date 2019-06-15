@@ -40,6 +40,7 @@ function displayNav($user) {
                 <div class="item"><a class="item" href="../Employee/index.php">Employee</a></div>
                 <div class="item"><a class="item" href="../InventoryManager/index.php">Inventory Manager</a></div>
                 <div class="item"><a class="item" href="../ShippingManager/index.php">Shipping Manager</a></div>
+                <div class="item"><a class="item" href="../GeneralManager/index.php">General Manager</a></div>
             </div>
         </div>
 
