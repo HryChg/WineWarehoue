@@ -8,9 +8,11 @@
     <div class="five wide column">
         <?php include 'View-Update.php' ?>
     </div>
-    <div class="five wide column">
-        <?php include 'View-Delete.php' ?>
-    </div>
+
+<!--    Restrict This From User. Since too many things depend on orderID-->
+<!--    <div class="five wide column">-->
+<!--        --><?php //include 'View-Delete.php' ?>
+<!--    </div>-->
 
     <div class="row">
         <div class="four wide column" >
