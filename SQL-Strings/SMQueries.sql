@@ -61,7 +61,10 @@ SELECT wineID, SUM(quantity) as totalQuantity
 FROM OrderReceived
 GROUP BY wineID;
 
-
+-- find the top clients (retailer who order most frequently)
+SELECT retailer, COUNT(orderID) AS orderCount
+FROM OrderReceived
+GROUP BY retailer;
 
 
 ---------------------
