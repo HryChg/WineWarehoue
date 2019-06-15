@@ -23,7 +23,7 @@
     CloseCon($conn);
     ?>
     <p>
-        <label> value: </label>
+        <label> Value: </label>
         <input type="text" name="val">
     </p>
     <input class="ui button" type="submit" value="Query">

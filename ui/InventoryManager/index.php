@@ -75,8 +75,9 @@ if($_SESSION['employeeType'] != "IM") {
             <?php include '../../php/IMQueries/queryPriceFromWineBByID.php'; ?>
             <?php include '../../php/IMQueries/queryBrandFromWineAByGrape.php'; ?>
             <?php include '../../php/IMQueries/queryBrandFromWineAByWineTaste.php'; ?>
-            <?php include '../../php/IMQueries/queryWineBByExpiryRange.php'; ?>
             <?php include '../../php/IMQueries/queryWineByAlcoholRange.php'; ?>
+            <?php include '../../php/IMQueries/queryWineBySugarRange.php'; ?>
+            <?php include '../../php/IMQueries/queryWineBByExpiryRange.php'; ?>
             <?php include '../../php/IMQueries/queryWineByAgriAttribute.php'; ?>
             <?php include '../../php/IMQueries/queryMinPriceByBrand.php'; ?>        
         </div>

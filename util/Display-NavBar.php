@@ -4,12 +4,9 @@
 function displayNav($user) {
     $link = str_replace(' ','', $user);
     echo '<nav class="ui large menu">
-    <a class="item" href="../../ui/'.$link.'/index.php">
-        Home
-    </a>
-    <div class="item">'.
-        $user.
-    '</div>
+    <a class="item" href="../../ui/'.$link.'/index.php">'.
+    $user.
+    '</a>
     <div class="right menu">
         <a class="item" href="#StoredIn">Current Inventory</a>
         <a class="item" href="#Wine">Wines</a>
