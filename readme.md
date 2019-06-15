@@ -11,5 +11,5 @@ password: 222
 
 
 GeneralManager:
-username: Jenny K
+username: Jenny J
 password: 011
