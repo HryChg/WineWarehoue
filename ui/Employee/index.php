@@ -44,10 +44,13 @@
             /*background-image: url(...);   !* add custom arrow *!*/
         }
 
-        nav {
-            position: fixed;
-            width: 100%;
-            z-index: 1
+        section::before{
+            display: block;
+            content: " ";
+            margin-top: -70px;
+            height: 70px;
+            visibility: hidden;
+            pointer-events: none;
         }
     </style>
 
@@ -63,7 +66,7 @@
         z-index: 1
     }
 </style>
-
+<div class="navbar">
 <nav class="ui large menu">
     <div class="active item">
         Employee
@@ -92,7 +95,11 @@
         </div>
     </div>
 </nav>
+</div>
 
+<br>
+<br>
+<br>
 <section id="ViewEmployee" class="section">
     <div class="ui grid centered">
         <div class="fifteen wide column">
