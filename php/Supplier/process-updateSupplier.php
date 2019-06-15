@@ -8,8 +8,7 @@ $address = $_POST['address'];
 $phoneNo = $_POST['phoneNo'];
 
 $conn = OpenCon();
-$resultA;
-$resultB;
+$resultA; $resultB;
 // If both supplierID and name are empty, alert error
 if (!empty($supplierID) && !empty($name)) {
     // do nothing

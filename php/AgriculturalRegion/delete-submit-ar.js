@@ -13,8 +13,8 @@ $(document).ready(function() {
             method: "POST",
             data: data,
             success: function(){
-                $("#delete-ar")[0].reset();    
-                $("agricultural-region-table").load('../../php/AgriculturalRegion/defaultView-agriculturalRegion.php');       
+                $("#delete-ar")[0].reset();   
+                $("#agricultural-region-table").load('../../php/AgriculturalRegion/defaultView-agriculturalRegion.php');             
             },
             error: function(xhr){
                 var err = JSON.parse(xhr.responseText);

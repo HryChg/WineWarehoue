@@ -1,17 +1,17 @@
 <form class="ui form" action="../../php/IMQueries/process-queryWineByAgriAttribute.php" method="post">
 
-    <h3>Query Wine By Agricultural Region Attribute</h3>
+    <h3>Search Wine By Agricultural Region Attribute</h3>
 
-    <label>Agricultural Region Attribute (temperature or moisture or climate): </label>
+    <label>Agricultural Region Attribute (temperature or moisture): </label>
 
     <?php
 
-    //include_once '../../connect.php'; 
+    include_once '../../connect.php'; 
     $conn = OpenCon();
 
     $agriRegionAttrArray = array();
     array_push($agriRegionAttrArray, '---Select Agricultural Region Attribute---');
-    // array_push($agriRegionAttrArray, 'climate');
+    array_push($agriRegionAttrArray, 'climate');
     array_push($agriRegionAttrArray, 'moisture');
     array_push($agriRegionAttrArray, 'temperature');
 
