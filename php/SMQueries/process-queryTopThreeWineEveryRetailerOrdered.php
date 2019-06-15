@@ -8,7 +8,7 @@ include_once '../../template/input-query/create-table.php';
 // TODO populate at least two wine that every retailer has bought
 
 if (isset($_POST['action'])) {
-    if ($_POST['action'] == 'queryTopTenWineEveryRetailerOrdered') {
+    if ($_POST['action'] == 'queryTopThreeWineEveryRetailerOrdered') {
 
         $conn = OpenCon();
 
@@ -25,7 +25,7 @@ if (isset($_POST['action'])) {
                       ) AS retailerCountAndQuantityForEachWine
                 WHERE retailerCountAndQuantityForEachWine.retailerCount = '$totalNumberOfRetailers'
                 ORDER BY totalQuantity DESC
-                LIMIT 10";
+                LIMIT 3";
 
         $result = $conn->query($sql);
 
