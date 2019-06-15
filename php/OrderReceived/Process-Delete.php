@@ -1,5 +1,6 @@
 <?php
 include_once '../../connect.php';
+include_once '../../util/redirectHelper.php';
 
 /* Attempt MySQL server connection. */
 $conn = OpenCon();
@@ -23,8 +24,12 @@ if (!$result) {
 if ($result) {
     echo "Record has been deleted";
     echo "<br/>";
+
+    redirect('http://localhost/WineWarehouse/ui/ShippingManager/index.php');
 }
 
 
 CloseCon($conn);
+
+
 ?>
