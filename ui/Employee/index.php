@@ -77,6 +77,31 @@
             <h1 class="ui header">View All Employees</h1>
             <?php include '../../php/Employee/View.php' ?>
         </div>
+        <div class="fifteen wide column">
+            <h1>View All Wine</h1>
+            <?php include '../../php/Wine/defaultView-wine.php'; ?>
+        </div>
+
+        <div class="fifteen wide column">
+            <h1>Suppliers</h1>
+            <?php include '../../php/Supplier/defaultView-supplier.php'; ?>
+        </div>
+
+        <div class="fifteen wide column">
+            <h1>View Most Recent Order</h1>
+            <?php include '../../php/OrderReceived/View-MostRecentOrder.php'; ?>
+        </div>
+
+        <div class="fifteen wide column">
+            <h1>View Shipment</h1>
+            <?php
+            require_once '../../connect.php';
+            $conn = OpenCon();
+            include '../../php/Shipment/view_table.php';
+            CloseCon($conn);
+            ?>
+        </div>
+
     </div>
 </section>
 
