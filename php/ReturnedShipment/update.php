@@ -45,6 +45,8 @@ if (isset($_POST['submit_update'])) {
         }
     }
 
+    $_POST = array(); 
+
 }
 
 
