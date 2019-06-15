@@ -7,25 +7,25 @@ function displayNav($user) {
     echo '
 <head>
     <title>Wine Warehouse Login</title>
-    <style type="text/css">
-        .navbar {
-            overflow: hidden;
-            background-color: #8d253e;
+    <style>
+        nav {
             position: fixed;
             top: 0;
             width: 100%;
+            margin:0;
+            margin-bottom: 10px;
         }
     </style>
 
 </head>
 <body>
-<div class="navbar">
-<nav class="ui large menu">
 
+<nav class="ui large menu">
     <a class="item" href="../../ui/'.$link.'/index.php">'.
     $user.
     '</a>
     <div class="right menu">        
+        <a class="item" href="#Special Features">Special Features</a>
         <a class="item" href="#StoredIn">Current Inventory</a>
         <a class="item" href="#Wine">Wines</a>
         <a class="item" href="#AgriculturalRegion">Wine Agricultural Regions</a>
@@ -51,7 +51,6 @@ function displayNav($user) {
 </body>    
 </nav>
 
-</div> 
 ';
 }
 
