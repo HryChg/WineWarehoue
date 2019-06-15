@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -13,8 +16,9 @@ setStyle();
 <body>
 
 <?php
-if(!isset($_SESSION['user'])) {
-    header("Location:../../ui/Login/index.php");
+if($_SESSION['employeeType'] == "IM") {
+    print_r($_SESSION['employeeType']);
+    //header("Location:../../ui/Login/index.php");
 }
 ?>
 

@@ -5,9 +5,8 @@ include '../../connect.php';
 
 $conn = OpenCon();
 
-$user = $_POST['user'];
-$pass = $_POST['pass'];
-$_SESSION['user'] = NULL;
+$user = $_POST["user"];
+$pass = $_POST["pass"];
 
 $user = mysqli_real_escape_string($conn, $user);
 $pass = mysqli_real_escape_string($conn, $pass);
@@ -21,8 +20,10 @@ $pass = mysqli_real_escape_string($conn, $pass);
 $result = $conn->query($sql);
 
 if ($result->num_rows == 1) {
+    printf("logged in");
 
-    $_SESSION['user'] = $user;
+    $_SESSION['username'] = $user;
+    $_SESSION['employeeType'] = "IM";
 
     header("Location: ../../ui/InventoryManager/index.php");
     exit();

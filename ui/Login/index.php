@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(isset($_SESSION['username'])) {
+    session_unset();
+    session_destroy();;
+}
+?>
 <!DOCTYPE html>
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -9,7 +16,6 @@ setStyle();
 
 ?>
 <body>
-
 
 <!------------------------------------------------------------------------->
 <section id="Login" class="section center">
