@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -12,7 +15,11 @@ setStyle();
 ?>
 <body>
 
-
+<?php
+if($_SESSION['employeeType'] != "IM") {
+    header("Location:../../ui/Login/index.php");
+}
+?>
 
 <?php displayNav("Inventory Manager")?>
 
@@ -63,13 +70,14 @@ setStyle();
             <?php include '../../php/Wine/deleteWineByBrand.php'; ?>
             <?php include '../../php/Wine/deleteWineByID.php'; ?>
             <?php include '../../php/WineOrigin/deleteWineOrigin.php'; ?>
-        </div>
+        </div>        
         <div class="column">
+            <?php include '../../php/IMQueries/queryPriceFromWineBByID.php'; ?>
             <?php include '../../php/IMQueries/queryBrandFromWineAByGrape.php'; ?>
             <?php include '../../php/IMQueries/queryBrandFromWineAByWineTaste.php'; ?>
-            <?php include '../../php/IMQueries/queryPriceFromWineBByID.php'; ?>
-            <?php include '../../php/IMQueries/queryWineBByExpiryRange.php'; ?>
             <?php include '../../php/IMQueries/queryWineByAlcoholRange.php'; ?>
+            <?php include '../../php/IMQueries/queryWineBySugarRange.php'; ?>
+            <?php include '../../php/IMQueries/queryWineBByExpiryRange.php'; ?>
             <?php include '../../php/IMQueries/queryWineByAgriAttribute.php'; ?>
             <?php include '../../php/IMQueries/queryMinPriceByBrand.php'; ?>        
         </div>
@@ -86,7 +94,7 @@ setStyle();
     
     <div class="ui equal width relaxed grid">
         <div class="column">
-            <?php include '../../php/AgriculturalRegion/update.php'; ?>
+            <?php include '../../php/AgriculturalRegion/update-ar.php'; ?>
         </div>
         <div class="column">
             <?php include '../../php/AgriculturalRegion/deleteRegionByName.php'; ?>
@@ -147,7 +155,6 @@ setStyle();
 </section>
 
 <!------------------------------------------------------------------------->
-<?php CloseCon($conn); ?>
 
 <footer class="section">
     <div class="center grey-text">Copyright 2019 WineWarehouse</div>

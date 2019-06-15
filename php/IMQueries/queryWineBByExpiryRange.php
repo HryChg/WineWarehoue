@@ -1,6 +1,6 @@
 <form class="ui form" action="../../php/IMQueries/process-queryWineBByExpiryRange.php" method="post">
 
-    <h3>Query Wine By Expiry Date</h3>
+    <h3>Search Wine By Expiry Date</h3>
 
     <p>
         <label>Expiry Date Range(YYYY-MM-DD): </label>

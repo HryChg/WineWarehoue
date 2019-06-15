@@ -24,7 +24,8 @@
         array_push($grapeType2Array, $grapeType2);
     }
     $combinedArray = array_unique(array_merge($grapeType1Array, $grapeType2Array));
-
+    sort($combinedArray);
+    
     echo "<select name='grapeType'>";
     foreach($combinedArray as $grapeType) {
         echo '<option value="'.$grapeType.'">'.$grapeType.'</option>';

@@ -1,3 +1,5 @@
+
+<html>
 <form class="ui form" action="../../php/Login/loginAsIM.php" method="post">
     <h3>Login as Inventory Manager</h3>
     <p>
@@ -6,7 +8,8 @@
     </p>
     <p>
         <label for="pass">Password:</label>
-        <input type="text" name="pass">
+        <input type="password" name="pass">
     </p>
     <input class="ui button" type="submit" value="Login">
 </form>
+</html>

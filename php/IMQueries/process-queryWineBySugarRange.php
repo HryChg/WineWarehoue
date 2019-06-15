@@ -10,13 +10,13 @@ $conn = OpenCon();
 $lowRange = $_POST['lowRange'];
 $highRange = $_POST['highRange'];
 
-$sql1 = "SELECT wineID, brandName, grapeType1, grapeType2, alcoholPercent
+$sql1 = "SELECT wineID, brandName, grapeType1, grapeType2, sugarLevel
 	FROM wineB
-	WHERE alcoholPercent >= '$lowRange' AND alcoholPercent <= '$highRange'";
+	WHERE sugarLevel >= '$lowRange' AND sugarLevel <= '$highRange'";
 
 $sql2 = "SELECT COUNT(wineID) AS 'Number of Wine Types'
 	FROM wineB
-	WHERE alcoholPercent >= '$lowRange' AND alcoholPercent <= '$highRange'";
+	WHERE sugarLevel >= '$lowRange' AND sugarLevel <= '$highRange'";
 
 $result1 = $conn->query($sql1);
 $result2 = $conn->query($sql2);
