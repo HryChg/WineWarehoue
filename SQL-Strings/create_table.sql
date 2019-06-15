@@ -212,6 +212,7 @@ INSERT INTO OrderReceived VALUES(100018, 007, 98412234, 25, 'High Point', '555 F
 INSERT INTO OrderReceived VALUES(100019, 007, 97802134, 25, 'High Point', '555 FFF Road, Vancouver, BC', 'N', TIMESTAMP('2019-08-29 12:00:00'));
 INSERT INTO OrderReceived VALUES(100020, 007, 98412234, 10, 'Gotham Steakhouse & Cocktail Bar', '222 CCC Road, Vancouver, BC', 'N', TIMESTAMP('2019-04-29 12:00:00'));
 INSERT INTO OrderReceived VALUES(100021, 007, 97890456, 5, 'Liberty Wine Merchants', '777 HHH Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-30 12:00:00'));
+INSERT INTO OrderReceived VALUES(100021, 007, 97802134, 5, 'Liberty Wine Merchants', '777 HHH Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-30 12:00:00'));
 INSERT INTO OrderReceived VALUES(100022, 005, 97890456, 12, 'BottleJockey', '888 III Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-30 10:00:12'));
 INSERT INTO OrderReceived VALUES(100023, 005, 98412234, 12, 'BottleJockey', '888 III Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-30 10:00:12'));
 INSERT INTO OrderReceived VALUES(100024, 005, 97890456, 1, 'Everything Wine', '666 GGG Road, Vancouver, BC', 'N', TIMESTAMP('2019-06-29 18:30:00'));
