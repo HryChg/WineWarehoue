@@ -77,6 +77,20 @@
             <h1 class="ui header">View All Employees</h1>
             <?php include '../../php/Employee/View.php' ?>
         </div>
+        <div class="row">
+            <div class="five wide column">
+                <h1 class="ui header">Add Employee</h1>
+                <?php include '../../php/Employee/View-Add.php' ?>
+            </div>
+            <div class="five wide column">
+                <h1 class="ui header">Update Employee</h1>
+                <?php include '../../php/Employee/View-Update.php' ?>
+            </div>
+            <div class="five wide column">
+                <h1 class="ui header">Delete Employee</h1>
+                <?php include '../../php/Employee/View-Delete.php' ?>
+            </div>
+        </div>
     </div>
 </section>
 
