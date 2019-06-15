@@ -25,7 +25,8 @@ $sql = "SELECT b.wineID, b.price, b.color, a.brandName, a.grapeType1, a.grapeTyp
         FROM WineA a 
         RIGHT JOIN WineB b 
         ON a.grapeType1 = b.grapeType1 AND a.grapeType2 = b.grapeType2 AND a.brandName = b.brandName 
-        LEFT JOIN WineOrigin o ON b.wineID = o.wineID;";
+        LEFT JOIN WineOrigin o ON b.wineID = o.wineID
+        ORDER BY wineID;";
 
 $result = $conn->query($sql);
 

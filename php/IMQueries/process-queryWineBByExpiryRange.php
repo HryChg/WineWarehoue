@@ -9,8 +9,12 @@ $conn = OpenCon();
 
 $lowRange = $_POST['lowRange'];
 $highRange = $_POST['highRange'];
+
+setStyle();
+echo "<body><div class='queryResult'>";
+echo "<h1>Wine Query Results</h1>";
 if ((!preg_match("/[\d]{4}-[\d]{2}-[\d]{2}/", $lowRange))|| (!preg_match("/[\d]{4}-[\d]{2}-[\d]{2}/", $highRange))) {
-    echo 'Invalid Format.';
+    echo '<p>Invalid Format.</p>';
 }
 else {
 
@@ -31,9 +35,6 @@ $sql2 = "SELECT COUNT(w.wineID) AS 'Number of Wine Types'
 $result1 = $conn->query($sql1);
 $result2 = $conn->query($sql2);
 
-setStyle();
-echo "<body><div class='queryResult'>";
-echo "<h1>Wine Query Results</h1>";
 if ($result1->num_rows > 0) {
     myTable($conn, $sql1);
 } else {
