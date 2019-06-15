@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,6 +50,14 @@
 
 </head>
 <body>
+
+<?php
+if($_SESSION['employeeType'] != "GM") {
+    header("Location:../../ui/Login/index.php");
+}
+?>
+
+
 <nav class="ui large menu">
     <div class="active item">
         General Manager UI

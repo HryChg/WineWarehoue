@@ -69,7 +69,7 @@ session_start();
 <body>
 
 <?php
-if($_SESSION['employeeType'] != "SM") {
+if(($_SESSION['employeeType'] != "SM") && ($_SESSION['employeeType'] != "GM")) {
     header("Location:../../ui/Login/index.php");
 }
 ?>
