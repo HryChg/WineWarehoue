@@ -10,36 +10,38 @@ if (isset($_POST['delete_orderforwine'])) {
         empty($_POST['locationID']) or
         empty($_POST['orderID'])) {
         $errors = 'All fields are required';
-}
+        }
 
-if ($errors) {
+    if ($errors) {
         //error is echoed
-} else {
+    } else {
 
-    $orderID = mysqli_real_escape_string($conn, $_POST['orderID']);
-    $wineID = mysqli_real_escape_string($conn, $_POST['wineID']);
-    $locationID = mysqli_real_escape_string($conn, $_POST['locationID']);
+        $orderID = mysqli_real_escape_string($conn, $_POST['orderID']);
+        $wineID = mysqli_real_escape_string($conn, $_POST['wineID']);
+        $locationID = mysqli_real_escape_string($conn, $_POST['locationID']);
         // create sql
-    $sql ="DELETE FROM OrderForWine WHERE orderID = '$orderID' AND wineID = '$wineID' AND locationID = '$locationID';";
+        $sql ="DELETE FROM OrderForWine WHERE orderID = '$orderID' AND wineID = '$wineID' AND locationID = '$locationID';";
         // save to db and check
 
-    echo $sql;
+        echo $sql;
 
-    if (mysqli_query($conn, $sql)) {
+        if (mysqli_query($conn, $sql)) {
             // success
-        $success = 'Deleted!!';
-        #echo "<meta http-equiv='refresh' content='0'>";
+            $success = 'Deleted!!';
+            echo "<meta http-equiv='refresh' content='0'>";
 
-    } else {
-        echo 'query error: ' . mysqli_error($conn);
+        } else {
+            echo 'query error: ' . mysqli_error($conn);
+        }
+
+
     }
 
-
+    $_POST = array();
 }
 
-$_POST = array();
-$errors = '';
-}
+
+
 
 ?>
 
