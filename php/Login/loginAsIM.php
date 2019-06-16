@@ -15,7 +15,7 @@ $pass = mysqli_real_escape_string($conn, $pass);
 	FROM InventoryManager i
 	INNER JOIN Employee e
 	ON i.employeeID = e.employeeID
-	WHERE e.name = '$user' AND i.password = '$pass'";
+	WHERE e.name = '$user' AND i.password = '$pass' AND e.employed = 'Y'";
 
 $result = $conn->query($sql);
 
