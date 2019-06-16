@@ -12,12 +12,13 @@ $name = mysqli_real_escape_string($conn, $_POST['name']);
 
 
 // Attempt insert query execution
-$sql = "INSERT INTO Employee VALUES ('$employeeID', '$type', '$name')";
+$sql = "INSERT INTO Employee VALUES ('$employeeID', '$type', '$name', 'Y')";
 $result = mysqli_query($conn, $sql);
 
 
 if (!$result) {
     echo "Record unable to be added.";
+    echo 'query error: ' . mysqli_error($conn);
     echo "<br/>";
 }
 if ($result) {
