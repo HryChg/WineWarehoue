@@ -27,6 +27,7 @@ function displayEmployeeAttributes()
         unset($type);
         $type = $row['Field'];
         if ($type == 'employeeID') continue;
+        if ($type == 'employed') continue;
         echo '<option value="' . $type . '">' . $type . '</option>';
     }
     echo "</select>";
