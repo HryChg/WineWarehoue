@@ -16,7 +16,8 @@ $sql = "SELECT r.employeeID, e.name as employeeName, r.supplierID, s.name as sup
             FROM SupplierA 
             INNER JOIN SupplierB 
             ON SupplierA.address = SupplierB.address) AS s
-                ON r.supplierID = s.supplierID";
+                ON r.supplierID = s.supplierID
+                ORDER BY r.employeeID;";
 
 $result = $conn->query($sql);
 

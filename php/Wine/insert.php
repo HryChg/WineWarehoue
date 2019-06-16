@@ -50,7 +50,7 @@ if (!$resultWB) {
     echo "<br/>";
 }
 if (!$resultWO) {
-    echo "Partial record added. Invalid wine region, barcode or year.";
+    echo "Partial record added. Invalid wine region, id or year.";
     echo "<br/>";
 }
 if (!$resultAR) {
