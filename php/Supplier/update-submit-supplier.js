@@ -15,7 +15,8 @@ $(document).ready(function() {
             data: data,
             success: function(){
                 $("#update-supplier")[0].reset();   
-                $("#supplier-table").load('../../php/Supplier/defaultView-supplier.php');             
+                $("#supplier-table").load('../../php/Supplier/defaultView-supplier.php');
+                $("#delete-supplier-form").load('../../php/Supplier/deleteSupplier.php');				
             },
             error: function(xhr){
                 var err = JSON.parse(xhr.responseText);
