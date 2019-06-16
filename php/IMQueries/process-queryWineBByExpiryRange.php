@@ -38,12 +38,12 @@ $result2 = $conn->query($sql2);
 if ($result1->num_rows > 0) {
     myTable($conn, $sql1);
 } else {
-    echo "0 results";
+    echo "<p>0 results</p>";
 }
     if ($result2->num_rows > 0) {
         myTable($conn, $sql2);
     } else {
-        echo "0 results";
+        echo "<p>0 results</p>";
     }
 }
 echo '<a class="ui button" href="../../ui/InventoryManager/index.php">Back</a>';

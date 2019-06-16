@@ -44,7 +44,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
         myTable($conn, $sql);
     } else {
-        echo "0 results";
+        echo "<p>0 results</p>";
     }
 
 CloseCon($conn);
