@@ -2,12 +2,12 @@
 <form class="ui form" id="delete-ar" url="../../php/AgriculturalRegion/process-deleteRegionByName.php" method="post">
 
    <h3>Delete Agricultural Region</h3>
-
+   <p>Only regions not associated with a wine can be deleted.</p>
     <?php
 
     include_once '../../connect.php'; 
     $conn = OpenCon();
-    $result = $conn->query("select name from AgriculturalRegion");
+    $result = $conn->query("SELECT name from AgriculturalRegion WHERE name NOT IN (SELECT regionName from WineOrigin)");
 
     echo "<div class='field'>
         <label>Agricultural Region</label>
