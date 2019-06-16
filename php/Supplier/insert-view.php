@@ -1,7 +1,7 @@
 <script src="./../../php/Supplier/insert-supplier.js"></script>
 <form class="ui form" id="supplier-form" method="post" url="../../php/Supplier/insert.php">
     <h3>Add Supplier</h3>
-    <div class='field'>
+    <div class='field required'>
         <label for="id">Supplier ID</label>
         <input type="text" name="id" id="id">
     </div>

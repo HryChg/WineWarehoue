@@ -7,6 +7,23 @@ $(document).ready(function() {
         $(form).each(function(id, obj){
             data[obj.name] = obj.value;
         });
+        let msg = "";
+        if (data['wineid'] == 0) {
+            msg += "Please enter a wineID. \n";
+        }
+        if (data['alcohol'] < 0 || data['alcohol'] > 100){
+            msg += "Alcohol outside of range 0-100%. \n";
+        }
+        if (data['sugar'] < 0 || data['sugar'] > 1){
+            msg += "Sugar outside of range of 0-1. \n";
+        }
+        if (data['acid'] < 0 || data['acid'] > 7){
+            msg += "Acid outside of pH range of 0-7. \n";
+        }
+        if (msg !== "") {
+            alert(msg);
+            data = {};
+        }
         // alert($("#add-wine").serialize()); // Debug Tool
         $.ajax({
             url: $("#add-wine").attr("url"),
