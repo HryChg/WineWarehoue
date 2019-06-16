@@ -9,15 +9,16 @@ if (isset($_POST['action'])) {
         $conn = OpenCon();
 
         $sql = "SELECT transportationMode
-        FROM Shipment
-        WHERE TIMESTAMPDIFF(SECOND, expectedDeliveryDate, actualDeliveryDate)>= ALL 
-            (SELECT TIMESTAMPDIFF(SECOND, expectedDeliveryDate, actualDeliveryDate) FROM Shipment);";
+        FROM Shipment s
+        WHERE TIMESTAMPDIFF(SECOND, s.actualDeliveryDate, s.expectedDeliveryDate) = 
+            (SELECT MAX(TIMESTAMPDIFF(SECOND, t.actualDeliveryDate, t.expectedDeliveryDate)) FROM Shipment t);";
 
         $result = $conn->query($sql);
 
         if ($result) {
             myTable($conn, $sql);
         }
+    // }
     }
 
     CloseCon($conn);
