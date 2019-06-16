@@ -1,4 +1,6 @@
 <?php
+include_once '../../connect.php';
+
 function displayEmployeeOption()
 {
     $conn = OpenCon();
