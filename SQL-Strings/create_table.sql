@@ -1,20 +1,20 @@
-DROP TABLE ReturnedShipment;
-DROP TABLE Shipment;
-DROP TABLE OrderForWine;
-DROP TABLE OrderReceived;
-DROP TABLE StoredIn;
-DROP TABLE WineOrigin;
-DROP TABLE AgriculturalRegion;
-DROP TABLE Restock;
-DROP TABLE WineB;
-DROP TABLE WineA;
-DROP TABLE StorageArea;
-DROP TABLE SupplierB;
-DROP TABLE SupplierA;
-DROP TABLE ShippingManager;
-DROP TABLE InventoryManager;
-DROP TABLE GeneralManager;
-DROP TABLE Employee;
+DROP TABLE IF EXISTS ReturnedShipment;
+DROP TABLE IF EXISTS Shipment;
+DROP TABLE IF EXISTS OrderForWine;
+DROP TABLE IF EXISTS OrderReceived;
+DROP TABLE IF EXISTS StoredIn;
+DROP TABLE IF EXISTS WineOrigin;
+DROP TABLE IF EXISTS AgriculturalRegion;
+DROP TABLE IF EXISTS Restock;
+DROP TABLE IF EXISTS WineB;
+DROP TABLE IF EXISTS WineA;
+DROP TABLE IF EXISTS StorageArea;
+DROP TABLE IF EXISTS SupplierB;
+DROP TABLE IF EXISTS SupplierA;
+DROP TABLE IF EXISTS ShippingManager;
+DROP TABLE IF EXISTS InventoryManager;
+DROP TABLE IF EXISTS GeneralManager;
+DROP TABLE IF EXISTS Employee;
 
 CREATE TABLE Employee
 (employeeID INTEGER PRIMARY KEY, 
