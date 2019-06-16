@@ -247,7 +247,7 @@ retailer VARCHAR(40),
 address VARCHAR(40), 
 backorder CHAR(1),
 orderReceivedDate TIMESTAMP,
-FOREIGN KEY (employeeID) REFERENCES ShippingManager(employeeID),
+FOREIGN KEY (employeeID) REFERENCES Employee(employeeID),
 FOREIGN KEY (wineID) REFERENCES WineB(wineID));
 INSERT INTO OrderReceived VALUES(100000, 005, 98412310, 100, 'The Stable House Bistro', '000 AAA Road, Vancouver, BC', 'N', TIMESTAMP('2019-05-17 10:10:30'));
 INSERT INTO OrderReceived VALUES(100001, 006, 98412234, 200, 'Uva Wine & Cocktail Bar', '111 BBB Road, Vancouver, BC', 'N', TIMESTAMP('2019-05-01 11:30:44'));

@@ -10,8 +10,19 @@ echo "<body><div>";
 
 // Escape user inputs for security
 $employeeID = mysqli_real_escape_string($conn, $_POST['employeeID']);
+
 $sql = "UPDATE Employee SET employed = 'N' WHERE employeeID = $employeeID;";
 $result = mysqli_query($conn, $sql);
+
+
+$sql1 = "DELETE FROM ShippingManager WHERE employeeID = $employeeID;";
+$result1 = mysqli_query($conn, $sql1);
+
+$sql2 = "DELETE FROM InventoryManager WHERE employeeID = $employeeID;";
+$result2 = mysqli_query($conn, $sql2);
+
+$sql3 = "DELETE FROM GeneralManager WHERE employeeID = $employeeID;";
+$result3 = mysqli_query($conn, $sql3);
 
 
 if (!$result) {

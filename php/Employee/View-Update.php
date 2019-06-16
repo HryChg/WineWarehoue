@@ -3,14 +3,19 @@ include_once '../../connect.php';
 
 function displayEmployeeOption()
 {
+
     $conn = OpenCon();
-    $result = $conn->query("SELECT employeeID, name From Employee");
-    echo "<select name='employeeID' class='ui dropdown'>";
+    $result = $conn->query("SELECT employeeID, name, type From Employee");
+
+    echo "<select name='keys' class='ui dropdown'>";
     while ($row = $result->fetch_assoc()) {
-        unset($employeeID, $name);
+
+        unset($employeeID, $name, $type);
         $employeeID = $row['employeeID'];
         $name = $row['name'];
-        echo '<option value="' . $employeeID . '">' . 'EmployeeID: ' . $employeeID . ' ' . 'Name: ' . $name . '</option>';
+        $type = $row['type'];
+
+        echo '<option value="' . $employeeID . ','.$type.'">' . 'EmployeeID: ' . $employeeID . ' ' . 'Name: '.$name.' Type: '.$type.'</option>';
     }
     echo "</select>";
     CloseCon($conn);
@@ -43,7 +48,7 @@ function displayEmployeeAttributes()
         <form action="../../php/Employee/Process-Update.php" method="post">
             <div class="field">
                 <?php displayEmployeeOption() ?>
-                <label>Select the name of an employee:</label>
+                <label>Select an employee:</label>
             </div>
             <div class="field">
                 <?php displayEmployeeAttributes() ?>
@@ -52,8 +57,19 @@ function displayEmployeeAttributes()
 
             <div class="field">
                 <input name="value" type="text" placeholder="Enter new value">
-                <label>Enter New Value:</label>
+                <label>Enter new value:</label>
             </div>
+
+            <div class="field">
+                <input name="password" type="password" placeholder="Enter new password">
+                <label>Enter new password if applicable (or enter old one):</label>
+            </div>
+
+            <div class="field">
+                <input name="confirmpass" type="password" placeholder="Confirm new password">
+                <label>Re-enter new password if applicable (or enter old one):</label>
+            </div>
+
             <input class="positive ui button" type="submit" value="Update">
 
         </form>
