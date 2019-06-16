@@ -61,4 +61,5 @@ function displayOrderAttributes($conn){
         </div>
     </div>
     <input class="positive ui button" type="submit" value="Update">
+    <h4>Note. New employeeID should be an ShippingManager's id </h4>
 </form>
