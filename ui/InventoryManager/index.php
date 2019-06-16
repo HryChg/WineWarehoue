@@ -44,10 +44,10 @@ if(($_SESSION['employeeType'] != "IM") && ($_SESSION['employeeType'] != "GM")) {
 <h1 class="ui header">Special Features</h1>
 
 <div class="ui grid container">
-    <div class="ui fluid two item menu container">
+    <div class="ui fluid three item menu container">
         <a class="item" href='../../php/IMQueries/process-queryTopSupplier.php'>Check Top Supplier</a>
         <a class="item" href='../../php/IMQueries/process-queryMaxPriceOfWineB.php'>Check Most Expensive Wine In Inventory</a>
-
+        <a class="item" href='../../php/IMQueries/process-queryExpiredWineInStorage.php'>Check Expired Wines In Inventory</a>
     </div>
 </div>
 </section>
@@ -68,7 +68,10 @@ if(($_SESSION['employeeType'] != "IM") && ($_SESSION['employeeType'] != "GM")) {
             <div class="column" id="storedin-update-form">
                 <?php include '../../php/StoredIn/updateQuantityInLoc.php'; ?>
             </div>
-            <div class="column" id="storedin-search-form"><?php include '../../php/IMQueries/queryLocationAndQuantityByWineID.php'; ?></div>
+            <div class="column">
+                <div id="storedin-search-form"><?php include '../../php/IMQueries/queryLocationAndQuantityByWineID.php'; ?></div>
+                <div id="query-wine-expiry-form"><?php include '../../php/IMQueries/queryWineBByExpiryRange.php'; ?></div>
+            </div>
     </div>
 
 </section>
@@ -96,10 +99,8 @@ if(($_SESSION['employeeType'] != "IM") && ($_SESSION['employeeType'] != "GM")) {
             <div id="query-wine-taste-form"><?php include '../../php/IMQueries/queryBrandFromWineAByWineTaste.php'; ?></div>
             <div id="query-wine-alcohol-form"><?php include '../../php/IMQueries/queryWineByAlcoholRange.php'; ?></div>
             <div id="query-wine-sugar-form"><?php include '../../php/IMQueries/queryWineBySugarRange.php'; ?></div>
-            <div id="query-wine-expiry-form"><?php include '../../php/IMQueries/queryWineBByExpiryRange.php'; ?></div>
             <div id="query-wine-agri-form"><?php include '../../php/IMQueries/queryWineByAgriAttribute.php'; ?></div>
             <div id="query-wine-minprice-form"><?php include '../../php/IMQueries/queryMinPriceByBrand.php'; ?></div>
-            <div id="query-wine-minprice-form"><?php include '../../php/IMQueries/queryExpiredWineInStorage.php'; ?></div>
         </div>
     </div>
 

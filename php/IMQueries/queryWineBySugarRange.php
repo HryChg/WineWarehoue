@@ -9,7 +9,7 @@
         </div>
         <div class="to">to</div>
         <div class="field">
-            <input type="text" name="lowRange">
+            <input type="text" name="highRange">
         </div>
     </div>
     <input class="ui secondary button" type="submit" value="Query">

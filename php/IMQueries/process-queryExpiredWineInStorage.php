@@ -6,11 +6,11 @@ include '../../util/Display-IM-Header.php';
 include '../../util/Display-NavBar.php';
 
 $conn = OpenCon();
-$expiry = $_POST['expiry'];
+$expiry = !empty($_POST['expiry']) ? $_POST['expiry'] : '';
 
 setStyle();
 echo "<body><div class='queryResult'>";
-echo "<h1>Wine Query Results</h1>";
+echo "<h1>Expired Wine Results</h1>";
 if (!preg_match("/[\d]{4}-[\d]{2}-[\d]{2}/", $expiry) && ($expiry != '')) {
     echo '<p>Invalid Format.</p>';
 } else {

@@ -7,8 +7,8 @@ include '../../util/Display-NavBar.php';
 
 $conn = OpenCon();
 
-$lowRange = $_POST['lowRange'];
-$highRange = $_POST['highRange'];
+$lowRange = !empty($_POST['lowRange']) ? $_POST['lowRange'] : "1753-01-01";
+$highRange = !empty($_POST['highRange']) ? $_POST['highRange'] : "9999-12-31";
 
 setStyle();
 echo "<body><div class='queryResult'>";
