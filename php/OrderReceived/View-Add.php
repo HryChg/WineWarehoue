@@ -2,6 +2,7 @@
 
 <div class="ui segment">
     <form class="ui form container " action="../../php/OrderReceived/Process-Add.php" method="post">
+
         <div class="four fields">
             <div class="five wide field">
                 <input placeholder="" name="orderID" type="text" class="validate">
@@ -29,23 +30,29 @@
                 <input placeholder="" name="address" type="text" class="validate">
                 <label for="address">address</label>
             </div>
-
-        </div>
-
-        <div class="four fields">
-
             <div class="field">
                 <input placeholder="" name="backorder" type="text" class="validate">
                 <label for="backorder">backorder</label>
             </div>
-            <div class="eight wide field">
-                <input placeholder="" name="orderReceivedDate" type="text" class="validate">
-                <label for="orderReceivedDate">orderReceivedDate</label>
-            </div>
+
         </div>
+
+<!--        <div class="four fields">-->
+<!---->
+<!--            <div class="field">-->
+<!--                <input placeholder="" name="backorder" type="text" class="validate">-->
+<!--                <label for="backorder">backorder</label>-->
+<!--            </div>-->
+<!--            <div class="eight wide field">-->
+<!--                <input placeholder="" name="orderReceivedDate" type="text" class="validate">-->
+<!--                <label for="orderReceivedDate">orderReceivedDate</label>-->
+<!--            </div>-->
+<!--        </div>-->
 
 
         <input class="ui primary button" tabindex="0" type="submit" value="Add">
+
+        <h4>Note. Added employeeID should be an ShippingManager's id </h4>
     </form>
 </div>
 
