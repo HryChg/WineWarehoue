@@ -110,6 +110,18 @@ INSERT INTO WineA VALUES('pinot grigio', 'cabernet sauvignon', 'Foxglove', 'spic
 INSERT INTO WineA VALUES('shiraz', 'shiraz', 'Pine Ridge', 'rich', 'smooth');
 INSERT INTO WineA VALUES('chardonnay', 'zinfandel', 'Folonari', 'dry', 'smooth');
 INSERT INTO WineA VALUES('pinot grigio', 'zinfandel', 'Acrobat', 'rich', 'buttery');
+INSERT INTO WineA VALUES('chardonnay', 'chardonnay', 'Tavernello', 'fruity', 'buttery');
+INSERT INTO WineA VALUES('pinot grigio', 'sauvignon blanc', 'Blue Nun', 'dry', 'crisp');
+INSERT INTO WineA VALUES('pinot grigio', 'zinfandel', 'Armand de Brignac', 'herbal', 'dry');
+INSERT INTO WineA VALUES('pinot grigio', 'zinfandel', 'Cristol', 'rich', 'smooth');
+INSERT INTO WineA VALUES('pinot grigio', 'merlot', 'Ecco Domani', 'fruity', 'buttery');
+INSERT INTO WineA VALUES('chardonnay', 'zinfandel', 'Bogle', 'rich', 'buttery');
+INSERT INTO WineA VALUES('pinot grigio', 'zinfandel', 'Beringer', 'cherry', 'crisp');
+INSERT INTO WineA VALUES('cabernet sauvignon', 'merlot', 'Foxglove', 'cherry', 'crisp');
+INSERT INTO WineA VALUES('pinot grigio', 'zinfandel', 'Pine Ridge', 'spicy', 'fruity');
+INSERT INTO WineA VALUES('pinot grigio', 'cabernet sauvignon', 'Yellow Tail', 'herbal', 'currant');
+INSERT INTO WineA VALUES('shiraz', 'shiraz', 'Tavernello', 'rich', 'smooth');
+INSERT INTO WineA VALUES('chardonnay', 'zinfandel', 'Tavernello', 'herbal', 'dry');
 
 CREATE TABLE WineB
 (wineID INTEGER PRIMARY KEY, 
@@ -132,8 +144,19 @@ INSERT INTO WineB VALUES(10000001, 350, 'red', 'Bogle', 'pinot grigio', 'merlot'
 INSERT INTO WineB VALUES(10000002, 35, 'red', 'Beringer', 'cabernet sauvignon', 'merlot', 12.2, 3, 0.1, DATE('2075-01-05'));
 INSERT INTO WineB VALUES(10000003, 49.99, 'white', 'Foxglove', 'pinot grigio', 'cabernet sauvignon', 11.1, 4, 0.3, DATE('2055-04-01'));
 INSERT INTO WineB VALUES(10000004, 5, 'white', 'Pine Ridge', 'shiraz', 'shiraz', 13.1, 2, 0.2, DATE('2045-11-25'));
-INSERT INTO WineB VALUES(10000005, 3.50, 'red', 'Folonari', 'chardonnay', 'zinfandel', 15.1, 3.2, 0.4, DATE('2045-12-22'));
-INSERT INTO WineB VALUES(10000006, 20, 'red', 'Acrobat', 'pinot grigio', 'zinfandel', 14.4, 2.2, 0.3, DATE('2035-04-05'));
+INSERT INTO WineB VALUES(10000005, 3.50, 'red', 'Yellow Tail', 'chardonnay', 'zinfandel', 15.1, 3.2, 0.4, DATE('2045-12-22'));
+INSERT INTO WineB VALUES(10000006, 20, 'red', 'Tavernello', 'chardonnay', 'chardonnay', 15.0, 3.2, 0.5, DATE('2021-08-15'));
+INSERT INTO WineB VALUES(10000007, 30, 'white', 'Blue Nun', 'pinot grigio', 'sauvignon blanc', 14.2, 2.1, 0.4, DATE('2071-07-16'));
+INSERT INTO WineB VALUES(10000008, 40, 'white', 'Armand de Brignac', 'pinot grigio', 'zinfandel', 14.4, 2.2, 0.3, DATE('2125-04-05'));
+INSERT INTO WineB VALUES(10000009, 50, 'red', 'Cristol', 'pinot grigio', 'zinfandel', 14.4, 2.2, 0.3, DATE('2025-04-05'));
+INSERT INTO WineB VALUES(10000010, 60, 'red', 'Ecco Domani', 'pinot grigio', 'merlot', 12.1, 4.1, 0.2, DATE('2005-04-05'));
+INSERT INTO WineB VALUES(10000011, 70, 'white', 'Bogle', 'chardonnay', 'zinfandel', 15.0, 3.2, 0.5, DATE('2020-03-15'));
+INSERT INTO WineB VALUES(10000012, 80, 'white', 'Beringer', 'pinot grigio', 'zinfandel', 14.4, 2.2, 0.3, DATE('2035-05-05'));
+INSERT INTO WineB VALUES(10000013, 90, 'red', 'Foxglove',  'cabernet sauvignon', 'merlot', 12.2, 3, 0.1, DATE('2075-01-09'));
+INSERT INTO WineB VALUES(10000014, 100, 'red', 'Pine Ridge', 'pinot grigio', 'zinfandel', 14.4, 2.2, 0.3, DATE('2035-04-25'));
+INSERT INTO WineB VALUES(10000015, 3.50, 'red', 'Yellow Tail', 'pinot grigio', 'cabernet sauvignon', 11.1, 4, 0.3, DATE('2025-04-11'));
+INSERT INTO WineB VALUES(10000016, 20, 'red', 'Tavernello', 'shiraz', 'shiraz', 13.1, 2, 0.2, DATE('2045-12-25'));
+INSERT INTO WineB VALUES(10000017, 20, 'red', 'Tavernello', 'chardonnay', 'zinfandel', 15.1, 3.2, 0.4, DATE('2045-10-22'));
 
 
 CREATE TABLE Restock

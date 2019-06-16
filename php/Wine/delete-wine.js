@@ -29,6 +29,7 @@ $(document).ready(function() {
                 $("#query-wine-grape-form").load('../../php/IMQueries/queryBrandFromWineAByGrape.php');
                 $("#query-wine-taste-form").load('../../php/IMQueries/queryBrandFromWineAByWineTaste.php');
                 $("#query-wine-agri-form").load('../../php/IMQueries/queryWineByAgriAttribute.php');
+				$("#query-wine-minprice-form").load('../../php/IMQueries/queryMinPriceByBrand.php');
 				$("#storedin-update-form").load('../../php/StoredIn/updateQuantityInLoc.php');
 				$("#storedin-search-form").load('../../php/IMQueries/queryLocationAndQuantityByWineID.php');
 				$("#delete-ar-form").load('../../php/AgriculturalRegion/deleteRegionByName.php');
