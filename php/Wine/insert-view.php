@@ -2,7 +2,7 @@
 <form class="ui form" id="add-wine" method="post" url="../../php/Wine/insert.php">
     <h3>Add Wine</h3>
     <div class="field">
-        <label for="wineid">Wine Barcode</label>
+        <label for="wineid">Wine ID</label>
         <input type="text" name="wineid" id="wineid">
     </div>
     <div class="field">
