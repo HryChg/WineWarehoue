@@ -5,7 +5,7 @@
                 <input name="employeeID" type="text">
                 <label for="employeeID">employeeID</label>
             </div>
-            <input class="negative ui button" type="submit" value="Delete">
+            <input class="negative ui button" type="submit" value="Fire">
         </form>
     </div>
 </div>

@@ -99,7 +99,7 @@ if($_SESSION['employeeType'] != "GM") {
                 <?php include '../../php/Employee/View-Update.php' ?>
             </div>
             <div class="five wide column">
-                <h1 class="ui header">Delete Employee</h1>
+                <h1 class="ui header">Fire Employee</h1>
                 <?php include '../../php/Employee/View-Delete.php' ?>
             </div>
         </div>
