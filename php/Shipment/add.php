@@ -78,5 +78,6 @@ if (isset($_POST['add-shipment'])) {
         <div class="center">
             <input class="ui primary button" type="submit" name="add-shipment" value="Add">
         </div>
+        <h4>Note. Added employeeID should be an ShippingManager's id </h4>
     </form>
 </div>
