@@ -13,7 +13,9 @@ $(document).ready(function() {
             data: data,
             success: function(){
                 $("#restock-form")[0].reset();         
-                $("#restock-table").load('../../php/Restock/defaultView-restock.php');                   },
+                $("#restock-table").load('../../php/Restock/defaultView-restock.php');
+				$("#delete-supplier-form").load('../../php/Supplier/deleteSupplier.php');
+				},
             error: function(xhr){
                 var err = JSON.parse(xhr.responseText);
                 alert(err.Message + " Record unable to be added.");
