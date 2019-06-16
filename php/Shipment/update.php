@@ -109,29 +109,32 @@ if(isset($_POST['update_shipment_transportationMode']))
         <?php displayShipmentAttributes($conn); ?>
 
         <h4>Enter the values needed to be updated</h4>
-        <div class="fields">
+
             <div class="field">
                 <input name="transportationMode" type="text">
                 <label for="transportationMode">Transportation Mode</label>
+                <div class="red-text"><?php echo $errors; ?></div>
+                <input class="positive ui button" type="submit" value="Update Transportation Mode" name="update_shipment_transportationMode">
             </div>
-        </div>
-        <div class="red-text"><?php echo $errors; ?></div>
-        <input class="positive ui button" type="submit" value="Update Transportation Mode" name="update_shipment_transportationMode">
-        <div class="fields">
+
+
+
             <div class="field">
                 <input name="orderID" type="text">
                 <label for="orderID">orderID</label>
+                <div class="red-text"><?php echo $errors; ?></div>
+                <input class="positive ui button" type="submit" value="Update orderID" name="update_shipment_orderID">
             </div>
-        </div>
-        <div class="red-text"><?php echo $errors; ?></div>
-        <input class="positive ui button" type="submit" value="Update orderID" name="update_shipment_orderID">
-        <div class="fields">
+
+
+
             <div class="field">
                 <input name="employeeID" type="text">
                 <label for="employeeID">employeeID</label>
+                <div class="red-text"><?php echo $errors; ?></div>
+                <input class="positive ui button" type="submit" value="Update Employee ID" name="update_shipment_employeeID">
             </div>
-        </div>
-        <div class="red-text"><?php echo $errors; ?></div>
-        <input class="positive ui button" type="submit" value="Update Employee ID" name="update_shipment_employeeID">
+
+
     </form>
 </div>
