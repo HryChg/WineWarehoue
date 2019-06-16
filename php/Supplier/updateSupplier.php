@@ -24,7 +24,7 @@
 
     $sql2 = "SELECT b.supplierID FROM SupplierB b ORDER BY b.supplierID";
     $result2 = $conn->query($sql2);
-
+    echo "<div class='field'>";
     echo "<select name='supplierID'>";
     echo '<option value="">---Select supplierID---</option>';
     while ($row = $result2->fetch_assoc()) {
@@ -32,7 +32,7 @@
         $supplierID = $row['supplierID'];
         echo '<option value="'.$supplierID.'">'.$supplierID.'</option>';
     }
-    echo "</select>";
+    echo "</select></div>";
     CloseCon($conn);
     ?>
     <div class='field'>

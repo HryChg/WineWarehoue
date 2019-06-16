@@ -18,10 +18,11 @@ if (!empty($brandName)) {
     $sql = "DELETE from WineOrigin where wineID = '$wineID';
             DELETE from WineB where wineID = '$wineID'";
 } elseif (!empty($regionName)) {
-    $sql = "CREATE TABLE ids AS SELECT wineID from WineOrigin where regionName = '$regionName';
+    $sql = "DROP TABLE IF EXISTS ids;
+            CREATE TABLE ids AS SELECT wineID from WineOrigin where regionName = '$regionName';
             DELETE from WineOrigin where regionName = '$regionName';
             DELETE from WineB where wineID IN (SELECT * FROM ids);
-            DROP TABLE ids;";
+            DROP TABLE IF EXISTS ids;";
 }
 
 if ($conn->multi_query($sql) === TRUE) {

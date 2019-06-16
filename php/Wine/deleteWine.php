@@ -2,6 +2,11 @@
 <form class="ui form" id="delete-wine" url="../../php/Wine/process-deleteWine.php" method="post">
 
     <h3>Delete Wine</h3>
+    <p>The following wines <b>cannot</b> be deleted:
+        <br/>
+        - Wines referenced in orders
+        <br/>
+        - Wines in stock</p>
     <p>Choose <b>one</b> of the following:</p>
     <?php
 
@@ -27,7 +32,9 @@
     echo "</select></div>";
 
     // Delete Wine by WineID
-    $result = $conn->query("select wineID from WineB");
+    $sql = "SELECT wineID FROM WineB WHERE wineID not in (SELECT wineID from OrderForWine)
+                                       AND wineID not in (SELECT wineID from StoredIn)";
+    $result = $conn->query($sql);
     echo "<div class='field'>
         <label>WineID</label>
         <select name='wineID'>";

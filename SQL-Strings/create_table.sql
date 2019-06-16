@@ -70,6 +70,11 @@ INSERT INTO SupplierA VALUES('1825 Boundary Rd, Vancouver, BC', 'Constellation B
 INSERT INTO SupplierA VALUES('3855 Canada Way, Burnaby, BC', 'Fermented Grape');
 INSERT INTO SupplierA VALUES('55 Dunlevy Ave, Vancouver, BC', 'Vancouver Urban Winery');
 INSERT INTO SupplierA VALUES('328 W 2nd Ave, Vancouver, BC', 'City Side');
+INSERT INTO SupplierA VALUES('1200 152A St, Surrey, BC', 'Just Fine Wine');
+INSERT INTO SupplierA VALUES('1900 Boundary Rd, Vancouver, BC', 'Golden Ears');
+INSERT INTO SupplierA VALUES('3900 Canada Way, Burnaby, BC', 'Berezan Liquor');
+INSERT INTO SupplierA VALUES('1533 Dunlevy Ave, Vancouver, BC', 'Oak Barrel Wines');
+INSERT INTO SupplierA VALUES('301 W 3rd Ave, Vancouver, BC', 'Vineco');
 
 CREATE TABLE SupplierB
 (supplierID INTEGER PRIMARY KEY, 
@@ -80,6 +85,11 @@ INSERT INTO SupplierB VALUES(2, '604-451-9511', '1825 Boundary Rd, Vancouver, BC
 INSERT INTO SupplierB VALUES(3, '604-434-9463', '3855 Canada Way, Burnaby, BC');
 INSERT INTO SupplierB VALUES(4, '604-566-9463', '55 Dunlevy Ave, Vancouver, BC');
 INSERT INTO SupplierB VALUES(5, '604-428-6072', '328 W 2nd Ave, Vancouver, BC');
+INSERT INTO SupplierB VALUES(6, '604-555-4464', '1200 152A St, Surrey, BC');
+INSERT INTO SupplierB VALUES(7, '604-444-9511', '1900 Boundary Rd, Vancouver, BC');
+INSERT INTO SupplierB VALUES(8, '604-333-9463', '3900 Canada Way, Burnaby, BC');
+INSERT INTO SupplierB VALUES(9, '604-222-9463', '1533 Dunlevy Ave, Vancouver, BC');
+INSERT INTO SupplierB VALUES(10, '604-505-6072', '301 W 3rd Ave, Vancouver, BC');
 
 CREATE TABLE StorageArea
 (locationID VARCHAR(10) PRIMARY KEY, 
