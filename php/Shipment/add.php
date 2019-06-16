@@ -59,12 +59,12 @@ if (isset($_POST['add-shipment'])) {
         <div class="field">
             <input type="text" name="expectedDeliveryDate"
                    value="<?php echo htmlspecialchars($expectedDeliveryDate) ?>">
-            <label>Expected Delivery Date</label>
+            <label>Expected Delivery Date (YYYY-MM-DD HH:MM:SS)</label>
         </div>
         <div class="field">
             <input type="text" name="actualDeliveryDate"
                    value="<?php echo htmlspecialchars($actualDeliveryDate) ?>">
-            <label>Actual Delivery Date</label>
+            <label>Actual Delivery Date (YYYY-MM-DD HH:MM:SS)</label>
         </div>
         <div class="field">
             <input type="text" name="orderID" value="<?php echo htmlspecialchars($orderID) ?>">
