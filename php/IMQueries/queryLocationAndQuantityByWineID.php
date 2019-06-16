@@ -9,7 +9,7 @@
     $conn = OpenCon();
 
     // WineID selector
-    $result = $conn->query("select wineID from StoredIn");
+    $result = $conn->query("select distinct wineID from StoredIn");
     echo "<div class='field'>
         <label>WineID</label>
         <select name='wineID'>";
@@ -23,7 +23,7 @@
     echo "</select></div>";
 
     // LocationID selector
-    $result = $conn->query("select locationID from StoredIn");
+    $result = $conn->query("select locationID from StorageArea");
     echo "<div class='field'>
         <label>LocationID</label>
         <select name='locationID'>";

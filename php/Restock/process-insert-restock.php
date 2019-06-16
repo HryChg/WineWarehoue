@@ -12,10 +12,15 @@ $wine_id = $_POST['wineid'];
 $location_id = $_POST['locationID'];
 $quantity = $_POST['quantity'];
 $date = $_POST['date'];
- 
-// Attempt insert query execution
-$sql = "INSERT INTO Restock VALUES ('$employee_id', '$supplier_id', '$wine_id', '$location_id', '$quantity', DATE('$date'))";
-$result = mysqli_query($conn, $sql);
+
+$result = false;
+if (!preg_match("/[\d]{4}-[\d]{2}-[\d]{2}/", $date)) {
+    // TODO: This needs an alert somehow!!!
+} else {
+    // Attempt insert query execution
+    $sql = "INSERT INTO Restock VALUES ('$employee_id', '$supplier_id', '$wine_id', '$location_id', '$quantity', DATE('$date'))";
+    $result = mysqli_query($conn, $sql);
+}
 
 if (!$result) {
     echo "Record unable to be added.";

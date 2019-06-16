@@ -232,8 +232,6 @@ if(($_SESSION['employeeType'] != "SM") && ($_SESSION['employeeType'] != "GM")) {
     <?php include '../../php/ShippingManager/index.php'; ?>
 </section>
 
-<div class="ui section divider"></div>
-
 <footer class="ui inverted vertical footer segment">
 
     <div class="ui container">

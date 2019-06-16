@@ -21,6 +21,7 @@ $(document).ready(function() {
                 $("#query-wine-grape-form").load('../../php/IMQueries/queryBrandFromWineAByGrape.php');
                 $("#query-wine-taste-form").load('../../php/IMQueries/queryBrandFromWineAByWineTaste.php');
                 $("#query-wine-minprice-form").load('../../php/IMQueries/queryMinPriceByBrand.php');
+                $("#insert-restock-form").load('../../php/Restock/insert-restock.php');
             },
             error: function(xhr){
                 var err = JSON.parse(xhr.responseText);
