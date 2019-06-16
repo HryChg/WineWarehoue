@@ -48,7 +48,13 @@
     echo "</select></div>";
 
     // Delete Wine by WineOrigin
-    $result = $conn->query("SELECT DISTINCT regionName from WineOrigin");
+    $result = $conn->query("SELECT DISTINCT regionName From wineorigin 
+                            where wineID not in
+                            (SELECT s.wineID
+                            from storedin s)
+                            and wineID not in
+                            (SELECT o.wineID
+                            from orderforwine o)");
     echo "<div class='field'><label>WineOrigin</label>";
     echo "<select name='regionName'>";
     echo '<option value="">---Select WineOrigin---</option>';
