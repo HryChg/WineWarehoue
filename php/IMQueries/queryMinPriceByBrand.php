@@ -5,13 +5,13 @@ $conn = OpenCon();
 
 <form class="ui form" action="../../php/IMQueries/process-queryMinPriceByBrand.php" method="post">
 
-    <h3>Search Wine Brand Minimum Price</h3>
+    <h3>Search Wine Brand and Minimum Price</h3>
 
     <div class="field">
         <label>Wine Brand</label>
         
         <?php
-        $result = $conn->query("SELECT brandName from WineB
+        $result = $conn->query("SELECT DISTINCT brandName from WineB
                                 ORDER BY brandName");
 
         echo "<select name='brandName'>";

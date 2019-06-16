@@ -95,12 +95,12 @@ if(($_SESSION['employeeType'] != "IM") && ($_SESSION['employeeType'] != "GM")) {
         </div>        
         <div class="column">
             <div id="query-wine-price-form"><?php include '../../php/IMQueries/queryPriceFromWineBByID.php'; ?></div>
+            <div id="query-wine-minprice-form"><?php include '../../php/IMQueries/queryMinPriceByBrand.php'; ?></div>
             <div id="query-wine-grape-form"><?php include '../../php/IMQueries/queryBrandFromWineAByGrape.php'; ?></div>
             <div id="query-wine-taste-form"><?php include '../../php/IMQueries/queryBrandFromWineAByWineTaste.php'; ?></div>
             <div id="query-wine-alcohol-form"><?php include '../../php/IMQueries/queryWineByAlcoholRange.php'; ?></div>
             <div id="query-wine-sugar-form"><?php include '../../php/IMQueries/queryWineBySugarRange.php'; ?></div>
             <div id="query-wine-agri-form"><?php include '../../php/IMQueries/queryWineByAgriAttribute.php'; ?></div>
-            <div id="query-wine-minprice-form"><?php include '../../php/IMQueries/queryMinPriceByBrand.php'; ?></div>
         </div>
     </div>
 
