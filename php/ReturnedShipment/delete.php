@@ -4,17 +4,6 @@ include_once '../../template/input-query/create-table.php';
 $shipmentID = $returnID ='';
 
 
-// if (isset($_POST['return_delete'])) {
-//     $shipmentID = mysqli_real_escape_string($conn, $_POST['shipmentID']);
-//     $returnID = mysqli_real_escape_string($conn, $_POST['returnID']);
-//     $sql = "DELETE FROM ReturnedShipment WHERE shipmentID = '$shipmentID' AND returnID='returnID';";
-//     $result = mysqli_query($conn, $sql);
-
-//     echo "<meta http-equiv='refresh' content='0'>";
-
-//     $_POST = array();
-// }
-
 if (isset($_POST['return_delete'])) {
     if (empty($_POST['shipmentID']) or
         empty($_POST['returnID'])) {

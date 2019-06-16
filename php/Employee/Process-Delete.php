@@ -6,19 +6,17 @@ $conn = OpenCon();
 
 // Escape user inputs for security
 $employeeID = mysqli_real_escape_string($conn, $_POST['employeeID']);
-
-
-
-$sql = "DELETE FROM Employee WHERE employeeID = $employeeID;";
+$sql = "UPDATE Employee SET employed = 'N' WHERE employeeID = $employeeID;";
 $result = mysqli_query($conn, $sql);
 
 
 if (!$result) {
-    echo "Record unable to be deleted.";
+    echo "Employee unable to be fired. <br>";
+    echo 'query error: ' . mysqli_error($conn);
     echo "<br/>";
 }
 if ($result) {
-    echo "Record has been deleted";
+    echo "Employee has been fired";
     echo "<br/>";
 }
 
