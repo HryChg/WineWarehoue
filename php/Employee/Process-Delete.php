@@ -1,8 +1,12 @@
 <?php
 include '../../connect.php';
+include '../../util/Display-IM-Header.php';
 
 /* Attempt MySQL server connection. */
 $conn = OpenCon();
+
+setStyle();
+echo "<body><div>";
 
 // Escape user inputs for security
 $employeeID = mysqli_real_escape_string($conn, $_POST['employeeID']);
@@ -20,6 +24,7 @@ if ($result) {
     echo "<br/>";
 }
 
-
+echo '<a class="ui button" href="../../ui/GeneralManager/index.php">Back</a>';
+echo "</div></body>";
 CloseCon($conn);
 ?>
