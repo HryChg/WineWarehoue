@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 function displayShipmentAttributes($conn)
 {
@@ -9,7 +9,7 @@ function displayShipmentAttributes($conn)
     while ($row = $result->fetch_assoc()) {
         unset($shipmentID);
         $shipmentID = $row['shipmentID'];
-        echo '<option value="' .$shipmentID.'">' . 'shipmentID: ' . $shipmentID . '</option>';
+        echo '<option value="' . $shipmentID . '">' . 'shipmentID: ' . $shipmentID . '</option>';
         // use '.' to append string
 
     }
@@ -17,11 +17,10 @@ function displayShipmentAttributes($conn)
 }
 
 $shipmentID = $transportationMode = $expectedDeliveryDate = $actualDeliveryDate = $orderID = $employeeID = '';
-$errors = $success ='';
+$errors = $success = '';
 
 
-if(isset($_POST['update_shipment_transportationMode']))
-{
+if (isset($_POST['update_shipment_transportationMode'])) {
     if (empty($_POST['transportationMode'])) {
         $errors = 'Empty Field';
     }
@@ -46,9 +45,8 @@ if(isset($_POST['update_shipment_transportationMode']))
 
     $_POST = array();
 
-} else if (isset($_POST['update_shipment_orderID']))
-{
-     if (empty($_POST['orderID'])) {
+} else if (isset($_POST['update_shipment_orderID'])) {
+    if (empty($_POST['orderID'])) {
         $errors = 'Empty Field';
     }
 
@@ -70,10 +68,9 @@ if(isset($_POST['update_shipment_transportationMode']))
         }
     }
 
-    $_POST = array();   
-} else if(isset($_POST['update_shipment_employeeID']))
-{
-     if (empty($_POST['employeeID'])) {
+    $_POST = array();
+} else if (isset($_POST['update_shipment_employeeID'])) {
+    if (empty($_POST['employeeID'])) {
         $errors = 'Empty Field';
     }
 
@@ -95,8 +92,8 @@ if(isset($_POST['update_shipment_transportationMode']))
         }
     }
 
-    $_POST = array();   
-} 
+    $_POST = array();
+}
 
 
 ?>
@@ -110,31 +107,37 @@ if(isset($_POST['update_shipment_transportationMode']))
 
         <h4>Enter the values needed to be updated</h4>
 
-            <div class="field">
-                <input name="transportationMode" type="text">
-                <label for="transportationMode">Transportation Mode</label>
+        <div class="field">
+            <label for="transportationMode">Transportation Mode</label>
+
+            <div class="ui action input">
                 <div class="red-text"><?php echo $errors; ?></div>
-                <input class="positive ui button" type="submit" value="Update Transportation Mode" name="update_shipment_transportationMode">
+                <input name="transportationMode" type="text"/>
+                <input class="positive ui button" type="submit" value="Update Transportation Mode"
+                       name="update_shipment_transportationMode">
             </div>
+        </div>
 
 
+        <div class="field">
+            <label for="orderID">orderID</label>
 
-            <div class="field">
-                <input name="orderID" type="text">
-                <label for="orderID">orderID</label>
+            <div class="ui action input">
                 <div class="red-text"><?php echo $errors; ?></div>
+                <input name="orderID" type="text"/>
                 <input class="positive ui button" type="submit" value="Update orderID" name="update_shipment_orderID">
             </div>
+        </div>
 
 
-
-            <div class="field">
-                <input name="employeeID" type="text">
-                <label for="employeeID">employeeID</label>
+        <div class="field">
+            <label for="employeeID">employeeID</label>
+            <div class="ui action input">
                 <div class="red-text"><?php echo $errors; ?></div>
-                <input class="positive ui button" type="submit" value="Update Employee ID" name="update_shipment_employeeID">
+                <input name="employeeID" type="text"/>
+                <input class="positive ui button" type="submit" value="Update Employee ID"
+                       name="update_shipment_employeeID">
             </div>
-
-
+        </div>
     </form>
 </div>
