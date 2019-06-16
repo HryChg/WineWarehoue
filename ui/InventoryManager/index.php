@@ -159,7 +159,9 @@ if(($_SESSION['employeeType'] != "IM") && ($_SESSION['employeeType'] != "GM")) {
 
     <div class="ui equal width relaxed grid">
         <div class="column">
-            <?php include '../../php/Restock/insert-restock.php'; ?>
+            <div id="insert-restock-form">
+                <?php include '../../php/Restock/insert-restock.php'; ?>
+            </div>
         </div>
     </div>
 
