@@ -6,7 +6,7 @@ $(document).ready(function() {
         $(form).each(function(id, obj){
             data[obj.name] = obj.value;
         });
-        alert($("#restock-form").serialize()); // Debug Tool
+        // alert($("#restock-form").serialize()); // Debug Tool
         $.ajax({
             url: $("#restock-form").attr("url"),
             method: "POST",
