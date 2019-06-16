@@ -19,19 +19,20 @@ DROP TABLE Employee;
 CREATE TABLE Employee
 (employeeID INTEGER PRIMARY KEY, 
 type VARCHAR(20), 
-name VARCHAR(20));
-INSERT INTO Employee VALUES(000, 'InventoryManager', 'Alexa A');
-INSERT INTO Employee VALUES(001, 'InventoryManager', 'Cortana M');
-INSERT INTO Employee VALUES(002, 'InventoryManager', 'Bob B');
-INSERT INTO Employee VALUES(003, 'InventoryManager', 'Carla C');
-INSERT INTO Employee VALUES(004, 'InventoryManager', 'Dylan D');
-INSERT INTO Employee VALUES(005, 'ShippingManager', 'Echo G');
-INSERT INTO Employee VALUES(006, 'ShippingManager', 'Felix F');
-INSERT INTO Employee VALUES(007, 'ShippingManager', 'Gerda G');
-INSERT INTO Employee VALUES(008, 'ShippingManager', 'Hilda H');
-INSERT INTO Employee VALUES(009, 'ShippingManager', 'Ian I');
-INSERT INTO Employee VALUES(010, 'GeneralEmployee', 'Deep M');
-INSERT INTO Employee VALUES(011, 'GeneralManager', 'Jenny J');
+name VARCHAR(20),
+employed CHAR(1));
+INSERT INTO Employee VALUES(000, 'InventoryManager', 'Alexa A', 'Y');
+INSERT INTO Employee VALUES(001, 'InventoryManager', 'Cortana M', 'Y');
+INSERT INTO Employee VALUES(002, 'InventoryManager', 'Bob B', 'Y');
+INSERT INTO Employee VALUES(003, 'InventoryManager', 'Carla C', 'Y');
+INSERT INTO Employee VALUES(004, 'InventoryManager', 'Dylan D', 'Y');
+INSERT INTO Employee VALUES(005, 'ShippingManager', 'Echo G', 'Y');
+INSERT INTO Employee VALUES(006, 'ShippingManager', 'Felix F', 'Y');
+INSERT INTO Employee VALUES(007, 'ShippingManager', 'Gerda G', 'Y');
+INSERT INTO Employee VALUES(008, 'ShippingManager', 'Hilda H', 'Y');
+INSERT INTO Employee VALUES(009, 'ShippingManager', 'Ian I', 'Y');
+INSERT INTO Employee VALUES(010, 'GeneralEmployee', 'Deep M', 'Y');
+INSERT INTO Employee VALUES(011, 'GeneralManager', 'Jenny J', 'Y');
 
 CREATE TABLE GeneralManager
 (employeeID INTEGER PRIMARY KEY,
