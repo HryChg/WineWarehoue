@@ -11,7 +11,7 @@ $user = mysqli_real_escape_string($conn, $user);
 
 $sql = "SELECT name
 	FROM Employee
-	WHERE name = '$user'";
+	WHERE name = '$user'  AND employed = 'Y'";
 
 $result = $conn->query($sql);
 

@@ -15,7 +15,7 @@ $sql = "SELECT g.employeeID
 	FROM GeneralManager g
 	INNER JOIN Employee e
 	ON g.employeeID = e.employeeID
-	WHERE e.name = '$user' AND g.password = '$pass'";
+	WHERE e.name = '$user' AND g.password = '$pass' AND e.employed = 'Y'";
 
 $result = $conn->query($sql);
 
