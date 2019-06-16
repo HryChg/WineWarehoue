@@ -7,7 +7,7 @@ require_once '../../connect.php';
 $conn = OpenCon();
 
 $sql = "
-  SELECT employeeID, type, name
+  SELECT employeeID, type, name, employed
   FROM Employee
   ";
 $result = $conn->query($sql);
@@ -20,6 +20,7 @@ if ($result->num_rows > 0) {
             <th class='border-class'>employeeID</th>
             <th class='border-class'>type</th>
             <th class='borderclass'>name</th>
+            <th class='borderclass'>employed</th>
             
         </tr>
         ";
@@ -31,6 +32,7 @@ if ($result->num_rows > 0) {
             <td class='borderclass'>" . $row["employeeID"] . "</td>
             <td class='borderclass'>" . $row["type"] . "</td>
             <td class='borderclass'>" . $row["name"] . "</td>
+            <td class='borderclass'>" . $row["employed"] . "</td>
         </tr>";
     }
     echo "</table>";
