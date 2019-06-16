@@ -7,6 +7,23 @@ $(document).ready(function() {
         $(form).each(function(id, obj){
             data[obj.name] = obj.value;
         });
+        let msg = "";
+        if (data['wineid'] == 0) {
+            msg += "Please enter a wineID. \n";
+        }
+        if (data['alcohol'] < 0 || data['alcohol'] > 100){
+            msg += "Alcohol outside of range 0-100%. \n";
+        }
+        if (data['sugar'] < 0 || data['sugar'] > 1){
+            msg += "Sugar outside of range of 0-1. \n";
+        }
+        if (data['acid'] < 0 || data['acid'] > 7){
+            msg += "Acid outside of pH range of 0-7. \n";
+        }
+        if (msg !== "") {
+            alert(msg);
+            data = {};
+        }
         // alert($("#add-wine").serialize()); // Debug Tool
         $.ajax({
             url: $("#add-wine").attr("url"),
@@ -20,7 +37,11 @@ $(document).ready(function() {
                 $("#query-wine-price-form").load('../../php/IMQueries/queryPriceFromWineBByID.php');
                 $("#query-wine-grape-form").load('../../php/IMQueries/queryBrandFromWineAByGrape.php');
                 $("#query-wine-taste-form").load('../../php/IMQueries/queryBrandFromWineAByWineTaste.php');
-                $("#query-wine-minprice-form").load('../../php/IMQueries/queryMinPriceByBrand.php');
+                $("#query-wine-agri-form").load('../../php/IMQueries/queryWineByAgriAttribute.php');
+				$("#query-wine-minprice-form").load('../../php/IMQueries/queryMinPriceByBrand.php');
+				$("#storedin-update-form").load('../../php/StoredIn/updateQuantityInLoc.php');
+				$("#storedin-search-form").load('../../php/IMQueries/queryLocationAndQuantityByWineID.php');
+				$("#delete-ar-form").load('../../php/AgriculturalRegion/deleteRegionByName.php');
                 $("#insert-restock-form").load('../../php/Restock/insert-restock.php');
             },
             error: function(xhr){

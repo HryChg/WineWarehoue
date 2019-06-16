@@ -15,9 +15,11 @@ $sql = "SELECT s.wineID, w.brandName, s.locationID, s.quantityInLocation
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    myTable($conn, $sql);
+	echo "<div class='table-container'>";
+	myTable($conn, $sql);
+	echo "</div>";
 } else {
-    echo "0 results";
+    echo "<p>0 results</p>";
 }
 
 CloseCon($conn);

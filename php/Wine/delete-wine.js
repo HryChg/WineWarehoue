@@ -28,7 +28,11 @@ $(document).ready(function() {
                 $("#query-wine-price-form").load('../../php/IMQueries/queryPriceFromWineBByID.php');
                 $("#query-wine-grape-form").load('../../php/IMQueries/queryBrandFromWineAByGrape.php');
                 $("#query-wine-taste-form").load('../../php/IMQueries/queryBrandFromWineAByWineTaste.php');
-                $("#query-wine-minprice-form").load('../../php/IMQueries/queryMinPriceByBrand.php');
+                $("#query-wine-agri-form").load('../../php/IMQueries/queryWineByAgriAttribute.php');
+				$("#query-wine-minprice-form").load('../../php/IMQueries/queryMinPriceByBrand.php');
+				$("#storedin-update-form").load('../../php/StoredIn/updateQuantityInLoc.php');
+				$("#storedin-search-form").load('../../php/IMQueries/queryLocationAndQuantityByWineID.php');
+				$("#delete-ar-form").load('../../php/AgriculturalRegion/deleteRegionByName.php');
                 $("#insert-restock-form").load('../../php/Restock/insert-restock.php');
             },
             error: function(xhr){

@@ -31,10 +31,12 @@ $sql = "SELECT b.wineID, b.price, b.color, a.brandName, a.grapeType1, a.grapeTyp
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-        myTable($conn, $sql);
-    } else {
-        echo "0 results";
-    }
+	echo "<div class='table-container'>";
+	myTable($conn, $sql);
+	echo "</div>";
+} else {
+	echo "<p>0 results</p>";
+}
 
 CloseCon($conn);
 

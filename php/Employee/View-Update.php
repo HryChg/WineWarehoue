@@ -46,7 +46,7 @@ function displayEmployeeAttributes()
                 <label>Select the name of an employee:</label>
             </div>
             <div class="field">
-                <? displayEmployeeAttributes() ?>
+                <?php displayEmployeeAttributes() ?>
                 <label>Choose the attribute to update:</label>
             </div>
 

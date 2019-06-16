@@ -2,6 +2,10 @@
 <form class="ui form" id="delete-supplier" method="post" url="../../php/Supplier/process-deleteSupplier.php">
 
     <h3>Delete Supplier</h3>
+    <p>The following suppliers <b>cannot</b> be deleted:
+        <br/>
+        - Suppliers who we have ordered from
+        </p>
     <p>Choose <b>one</b> of the following:</p>
 
     <div class='field'>
@@ -12,7 +16,11 @@
     $conn = OpenCon();
 
     // Delete by Name
-    $sql = "SELECT a.name FROM SupplierA a ORDER BY a.name";
+    $sql = "SELECT a.name FROM SupplierA a, SupplierB b
+            where a.address = b.address 
+            AND b.supplierID NOT IN 
+                (SELECT supplierID FROM Restock) 
+                ORDER BY a.name";
     $result = $conn->query($sql);
 
     echo "<select name='name'>";
@@ -26,7 +34,10 @@
     echo "</select></div>";
 
     // Delete by ID
-    $sql = "SELECT supplierID FROM SupplierB ORDER BY supplierID";
+    $sql = "SELECT supplierID FROM SupplierB
+            WHERE supplierID NOT IN 
+                (SELECT supplierID FROM Restock) 
+                ORDER BY supplierID";
     $result = $conn->query($sql);
 
     echo "<div class='field'><label>SupplierID</label>";
@@ -41,7 +52,10 @@
     echo "</select></div>";
 
     // Delete by Phone
-    $sql = "SELECT phoneNo FROM SupplierB ORDER BY phoneNo";
+    $sql = "SELECT phoneNo FROM SupplierB 
+            WHERE supplierID NOT IN 
+                (SELECT supplierID FROM Restock) 
+                ORDER BY phoneNo";
     $result = $conn->query($sql);
 
     echo "<div class='field'><label>PhoneNo</label>";

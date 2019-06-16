@@ -1,7 +1,8 @@
+<!-- Restrictions have been applied to insert-wine.js -->
 <script src="./../../php/Wine/insert-wine.js"></script>
 <form class="ui form" id="add-wine" method="post" url="../../php/Wine/insert.php">
     <h3>Add Wine</h3>
-    <div class="field">
+    <div class="field required">
         <label for="wineid">Wine ID</label>
         <input type="text" name="wineid" id="wineid">
     </div>
@@ -46,11 +47,11 @@
         <input type="text" name="alcohol" id="alcohol">
     </div>
     <div class="field">
-        <label for="acid">Acidity (pH)</label>
+        <label for="acid">Acidity (pH 0-7)</label>
         <input type="text" name="acid" id="acid">
     </div>
     <div class="field">
-        <label for="sugar">Sugar (from 0-1)</label>
+        <label for="sugar">Sugar (0-1)</label>
         <input type="text" name="sugar" id="sugar">
     </div>
     <div class="field">

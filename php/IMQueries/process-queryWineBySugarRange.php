@@ -7,8 +7,9 @@ include '../../util/Display-NavBar.php';
 
 $conn = OpenCon();
 
-$lowRange = $_POST['lowRange'];
-$highRange = $_POST['highRange'];
+$lowRange = !empty($_POST['lowRange']) ? $_POST['lowRange'] : 0;
+$highRange = !empty($_POST['highRange']) ? $_POST['highRange'] : 1;
+echo $lowRange; echo $highRange;
 
 $sql1 = "SELECT wineID, brandName, grapeType1, grapeType2, sugarLevel
 	FROM wineB
@@ -27,15 +28,15 @@ echo "<h1>Wine Query Results</h1>";
 if ($result1->num_rows > 0) {
     myTable($conn, $sql1);
 } else {
-    echo "0 results";
+    echo "<p>0 results</p>";
 }
 if ($result2->num_rows > 0) {
     myTable($conn, $sql2);
 } else {
-    echo "0 results";
+    echo "<p>0 results</p>";
 }
 
-echo '<a class="ui button" href="../../ui/InventoryManager/index.php">Back</a>';
+echo '<p><a class="ui button" href="../../ui/InventoryManager/index.php">Back</a></p>';
 echo "</div></body>";
 CloseCon($conn);
 

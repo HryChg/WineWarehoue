@@ -44,6 +44,11 @@ function setStyle() {
             width: 100%;
         }
 
+        .table-container{
+            max-height:450px;
+            overflow-y:scroll;
+        }
+
         .queryResult {
             padding: 20px;
         }

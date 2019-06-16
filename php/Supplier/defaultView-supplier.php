@@ -42,10 +42,12 @@ $sql = "SELECT b.supplierID, a.name, b.phoneNo, a.address
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-        myTable($conn, $sql);
-    } else {
-        echo "0 results";
-    }
+	echo "<div class='table-container'>";
+	myTable($conn, $sql);
+	echo "</div>";
+} else {
+	echo "<p>0 results</p>";
+}
 
 CloseCon($conn);
 

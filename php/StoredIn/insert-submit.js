@@ -16,6 +16,7 @@ $(document).ready(function() {
                 $("#storedin-table").load('../../php/StoredIn/defaultView-storedin.php');
                 $("#storedin-update-form").load('../../php/StoredIn/updateQuantityInLoc.php');
                 $("#storedin-search-form").load('../../php/IMQueries/queryLocationAndQuantityByWineID.php');
+				$("#delete-wine-form").load('../../php/Wine/deleteWine.php');
             },
             error: function(xhr){
                 var err = JSON.parse(xhr.responseText);

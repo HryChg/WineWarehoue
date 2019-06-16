@@ -8,28 +8,20 @@ if (isset($_POST['action'])) {
     if ($_POST['action'] == 'queryBestTransportationMode') {
         $conn = OpenCon();
 
-        $queries = [
-          "CREATE VIEW difference_view AS
-          SELECT transportationMode, TIMESTAMPDIFF(SECOND, expectedDeliveryDate, actualDeliveryDate) AS difference 
-          FROM SHIPMENT;",
-          "SELECT transportationMode
-          FROM difference_view
-          GROUP by transportationMode
-          ORDER by difference DESC
-          LIMIT 1"
-      ];
+        $sql = "SELECT transportationMode
+        FROM Shipment s
+        WHERE TIMESTAMPDIFF(SECOND, s.actualDeliveryDate, s.expectedDeliveryDate) = 
+            (SELECT MAX(TIMESTAMPDIFF(SECOND, t.actualDeliveryDate, t.expectedDeliveryDate)) FROM Shipment t);";
 
-      foreach ($queries as $query) {
-        $result = $conn->query($query);
+        $result = $conn->query($sql);
 
         if ($result) {
-            myTable($conn, $query);
+            myTable($conn, $sql);
         }
+    // }
     }
 
-
     CloseCon($conn);
-}
 }
 
 ?>

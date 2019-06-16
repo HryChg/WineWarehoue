@@ -19,6 +19,10 @@ $(document).ready(function() {
         $(form).each(function(id, obj){
             data[obj.name] = obj.value;
         });
+        // if (data['id'] === 0){
+        //     alert("Please include a Supplier ID!");
+        //     data = {};
+        // }
         // alert($("#supplier-form").serialize()); // Debug Tool
         $.ajax({
             url: $("#supplier-form").attr("url"),

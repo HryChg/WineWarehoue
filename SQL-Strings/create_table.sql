@@ -1,20 +1,20 @@
-DROP TABLE ReturnedShipment;
-DROP TABLE Shipment;
-DROP TABLE OrderForWine;
-DROP TABLE OrderReceived;
-DROP TABLE StoredIn;
-DROP TABLE WineOrigin;
-DROP TABLE AgriculturalRegion;
-DROP TABLE Restock;
-DROP TABLE WineB;
-DROP TABLE WineA;
-DROP TABLE StorageArea;
-DROP TABLE SupplierB;
-DROP TABLE SupplierA;
-DROP TABLE ShippingManager;
-DROP TABLE InventoryManager;
-DROP TABLE GeneralManager;
-DROP TABLE Employee;
+DROP TABLE IF EXISTS ReturnedShipment;
+DROP TABLE IF EXISTS Shipment;
+DROP TABLE IF EXISTS OrderForWine;
+DROP TABLE IF EXISTS OrderReceived;
+DROP TABLE IF EXISTS StoredIn;
+DROP TABLE IF EXISTS WineOrigin;
+DROP TABLE IF EXISTS AgriculturalRegion;
+DROP TABLE IF EXISTS Restock;
+DROP TABLE IF EXISTS WineB;
+DROP TABLE IF EXISTS WineA;
+DROP TABLE IF EXISTS StorageArea;
+DROP TABLE IF EXISTS SupplierB;
+DROP TABLE IF EXISTS SupplierA;
+DROP TABLE IF EXISTS ShippingManager;
+DROP TABLE IF EXISTS InventoryManager;
+DROP TABLE IF EXISTS GeneralManager;
+DROP TABLE IF EXISTS Employee;
 
 CREATE TABLE Employee
 (employeeID INTEGER PRIMARY KEY, 
@@ -70,6 +70,11 @@ INSERT INTO SupplierA VALUES('1825 Boundary Rd, Vancouver, BC', 'Constellation B
 INSERT INTO SupplierA VALUES('3855 Canada Way, Burnaby, BC', 'Fermented Grape');
 INSERT INTO SupplierA VALUES('55 Dunlevy Ave, Vancouver, BC', 'Vancouver Urban Winery');
 INSERT INTO SupplierA VALUES('328 W 2nd Ave, Vancouver, BC', 'City Side');
+INSERT INTO SupplierA VALUES('1200 152A St, Surrey, BC', 'Just Fine Wine');
+INSERT INTO SupplierA VALUES('1900 Boundary Rd, Vancouver, BC', 'Golden Ears');
+INSERT INTO SupplierA VALUES('3900 Canada Way, Burnaby, BC', 'Berezan Liquor');
+INSERT INTO SupplierA VALUES('1533 Dunlevy Ave, Vancouver, BC', 'Oak Barrel Wines');
+INSERT INTO SupplierA VALUES('301 W 3rd Ave, Vancouver, BC', 'Vineco');
 
 CREATE TABLE SupplierB
 (supplierID INTEGER PRIMARY KEY, 
@@ -80,6 +85,11 @@ INSERT INTO SupplierB VALUES(2, '604-451-9511', '1825 Boundary Rd, Vancouver, BC
 INSERT INTO SupplierB VALUES(3, '604-434-9463', '3855 Canada Way, Burnaby, BC');
 INSERT INTO SupplierB VALUES(4, '604-566-9463', '55 Dunlevy Ave, Vancouver, BC');
 INSERT INTO SupplierB VALUES(5, '604-428-6072', '328 W 2nd Ave, Vancouver, BC');
+INSERT INTO SupplierB VALUES(6, '604-555-4464', '1200 152A St, Surrey, BC');
+INSERT INTO SupplierB VALUES(7, '604-444-9511', '1900 Boundary Rd, Vancouver, BC');
+INSERT INTO SupplierB VALUES(8, '604-333-9463', '3900 Canada Way, Burnaby, BC');
+INSERT INTO SupplierB VALUES(9, '604-222-9463', '1533 Dunlevy Ave, Vancouver, BC');
+INSERT INTO SupplierB VALUES(10, '604-505-6072', '301 W 3rd Ave, Vancouver, BC');
 
 CREATE TABLE StorageArea
 (locationID VARCHAR(10) PRIMARY KEY, 
@@ -110,6 +120,18 @@ INSERT INTO WineA VALUES('pinot grigio', 'cabernet sauvignon', 'Foxglove', 'spic
 INSERT INTO WineA VALUES('shiraz', 'shiraz', 'Pine Ridge', 'rich', 'smooth');
 INSERT INTO WineA VALUES('chardonnay', 'zinfandel', 'Folonari', 'dry', 'smooth');
 INSERT INTO WineA VALUES('pinot grigio', 'zinfandel', 'Acrobat', 'rich', 'buttery');
+INSERT INTO WineA VALUES('chardonnay', 'chardonnay', 'Tavernello', 'fruity', 'buttery');
+INSERT INTO WineA VALUES('pinot grigio', 'sauvignon blanc', 'Blue Nun', 'dry', 'crisp');
+INSERT INTO WineA VALUES('pinot grigio', 'zinfandel', 'Armand de Brignac', 'herbal', 'dry');
+INSERT INTO WineA VALUES('pinot grigio', 'zinfandel', 'Cristol', 'rich', 'smooth');
+INSERT INTO WineA VALUES('pinot grigio', 'merlot', 'Ecco Domani', 'fruity', 'buttery');
+INSERT INTO WineA VALUES('chardonnay', 'zinfandel', 'Bogle', 'rich', 'buttery');
+INSERT INTO WineA VALUES('pinot grigio', 'zinfandel', 'Beringer', 'cherry', 'crisp');
+INSERT INTO WineA VALUES('cabernet sauvignon', 'merlot', 'Foxglove', 'cherry', 'crisp');
+INSERT INTO WineA VALUES('pinot grigio', 'zinfandel', 'Pine Ridge', 'spicy', 'fruity');
+INSERT INTO WineA VALUES('pinot grigio', 'cabernet sauvignon', 'Yellow Tail', 'herbal', 'currant');
+INSERT INTO WineA VALUES('shiraz', 'shiraz', 'Tavernello', 'rich', 'smooth');
+INSERT INTO WineA VALUES('chardonnay', 'zinfandel', 'Tavernello', 'herbal', 'dry');
 
 CREATE TABLE WineB
 (wineID INTEGER PRIMARY KEY, 
@@ -132,8 +154,19 @@ INSERT INTO WineB VALUES(10000001, 350, 'red', 'Bogle', 'pinot grigio', 'merlot'
 INSERT INTO WineB VALUES(10000002, 35, 'red', 'Beringer', 'cabernet sauvignon', 'merlot', 12.2, 3, 0.1, DATE('2075-01-05'));
 INSERT INTO WineB VALUES(10000003, 49.99, 'white', 'Foxglove', 'pinot grigio', 'cabernet sauvignon', 11.1, 4, 0.3, DATE('2055-04-01'));
 INSERT INTO WineB VALUES(10000004, 5, 'white', 'Pine Ridge', 'shiraz', 'shiraz', 13.1, 2, 0.2, DATE('2045-11-25'));
-INSERT INTO WineB VALUES(10000005, 3.50, 'red', 'Folonari', 'chardonnay', 'zinfandel', 15.1, 3.2, 0.4, DATE('2045-12-22'));
-INSERT INTO WineB VALUES(10000006, 20, 'red', 'Acrobat', 'pinot grigio', 'zinfandel', 14.4, 2.2, 0.3, DATE('2035-04-05'));
+INSERT INTO WineB VALUES(10000005, 3.50, 'red', 'Yellow Tail', 'chardonnay', 'zinfandel', 15.1, 3.2, 0.4, DATE('2045-12-22'));
+INSERT INTO WineB VALUES(10000006, 20, 'red', 'Tavernello', 'chardonnay', 'chardonnay', 15.0, 3.2, 0.5, DATE('2021-08-15'));
+INSERT INTO WineB VALUES(10000007, 30, 'white', 'Blue Nun', 'pinot grigio', 'sauvignon blanc', 14.2, 2.1, 0.4, DATE('2071-07-16'));
+INSERT INTO WineB VALUES(10000008, 40, 'white', 'Armand de Brignac', 'pinot grigio', 'zinfandel', 14.4, 2.2, 0.3, DATE('2125-04-05'));
+INSERT INTO WineB VALUES(10000009, 50, 'red', 'Cristol', 'pinot grigio', 'zinfandel', 14.4, 2.2, 0.3, DATE('2025-04-05'));
+INSERT INTO WineB VALUES(10000010, 60, 'red', 'Ecco Domani', 'pinot grigio', 'merlot', 12.1, 4.1, 0.2, DATE('2005-04-05'));
+INSERT INTO WineB VALUES(10000011, 70, 'white', 'Bogle', 'chardonnay', 'zinfandel', 15.0, 3.2, 0.5, DATE('2020-03-15'));
+INSERT INTO WineB VALUES(10000012, 80, 'white', 'Beringer', 'pinot grigio', 'zinfandel', 14.4, 2.2, 0.3, DATE('2035-05-05'));
+INSERT INTO WineB VALUES(10000013, 90, 'red', 'Foxglove',  'cabernet sauvignon', 'merlot', 12.2, 3, 0.1, DATE('2075-01-09'));
+INSERT INTO WineB VALUES(10000014, 100, 'red', 'Pine Ridge', 'pinot grigio', 'zinfandel', 14.4, 2.2, 0.3, DATE('2035-04-25'));
+INSERT INTO WineB VALUES(10000015, 3.50, 'red', 'Yellow Tail', 'pinot grigio', 'cabernet sauvignon', 11.1, 4, 0.3, DATE('2025-04-11'));
+INSERT INTO WineB VALUES(10000016, 20, 'red', 'Tavernello', 'shiraz', 'shiraz', 13.1, 2, 0.2, DATE('2045-12-25'));
+INSERT INTO WineB VALUES(10000017, 20, 'red', 'Tavernello', 'chardonnay', 'zinfandel', 15.1, 3.2, 0.4, DATE('2045-10-22'));
 
 
 CREATE TABLE Restock
@@ -184,6 +217,11 @@ INSERT INTO WineOrigin VALUES('Champagne', 98412234, 2018);
 INSERT INTO WineOrigin VALUES('Provence', 97802134, 1970);
 INSERT INTO WineOrigin VALUES('Tuscany', 97890456, 1999);
 INSERT INTO WineOrigin VALUES('Sicily', 96458941, 2009);
+INSERT INTO WineOrigin VALUES('Liechtenstein', 10000000, 2011);
+INSERT INTO WineOrigin VALUES('Liechtenstein', 10000001, 2018);
+INSERT INTO WineOrigin VALUES('Saxony', 10000002, 1970);
+INSERT INTO WineOrigin VALUES('Sardinia', 10000003, 1999);
+INSERT INTO WineOrigin VALUES('Sardinia', 10000004, 2009);
 
 CREATE TABLE StoredIn
 (wineID INTEGER, 
