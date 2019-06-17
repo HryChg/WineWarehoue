@@ -13,7 +13,26 @@ $name = mysqli_real_escape_string($conn, $_POST['name']);
 $pass = mysqli_real_escape_string($conn, $_POST['password']);
 $confirmPass = mysqli_real_escape_string($conn, $_POST['confirmPassword']);
 
+
 setStyle();
+
+if ($pass === '' || $confirmPass === '') {
+    echo 'at least one of your password fields is empty <br>';
+    echo '<a class="ui button" href="../../ui/GeneralManager/index.php">Back</a>';
+    CloseCon($conn);
+    return;
+}
+
+if ($pass !== $confirmPass){
+    echo 'your passwords did not match<br>';
+    echo '<a class="ui button" href="../../ui/GeneralManager/index.php">Back</a>';
+    CloseCon($conn);
+    return;
+}
+
+
+
+
 echo "<body><div>";
 // Attempt insert query execution
 
