@@ -9,15 +9,19 @@ if (isset($_POST['action'])) {
 
         $conn = OpenCon();
 
-        $sql = "SELECT wineID 
-                FROM WineB
-                WHERE wineID NOT IN (
-                    SELECT w.wineID
-                    FROM WineB w, OrderReceived o
-                    WHERE (w.wineID, o.retailer) NOT IN (
-                    SELECT wineID, retailer
-                    FROM OrderReceived
-                ))";
+        $sql = "SELECT w1.wineID 
+                FROM WineB w1
+                WHERE NOT EXISTS(
+                  SELECT w.wineID FROM WineB w, OrderReceived o1
+                  WHERE NOT EXISTS (
+                    SELECT o.wineID, o.retailer
+                    FROM OrderReceived o
+                    WHERE w.wineID = o.wineID
+                      AND o1.retailer = o.retailer
+                  )
+                  AND w1.wineID=w.wineID
+                ) 
+                LIMIT 3";
 
         $result = $conn->query($sql);
 

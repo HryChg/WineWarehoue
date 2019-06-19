@@ -16,7 +16,7 @@ GROUP BY wineID
 ORDER BY repeatWineCount DESC
 LIMIT 10;
 
--- identify top 3 wine where every retailer has ordered // DIVISION
+-- identify top 3 wine where every retailer has ordered // DIVISION w/ NOT IN
 SELECT wineID
 FROM WineB
 WHERE wineID NOT IN (
@@ -26,6 +26,21 @@ WHERE wineID NOT IN (
   	SELECT wineID, retailer
  	FROM OrderReceived
 ))
+LIMIT 3;
+
+-- identify top 3 wine where every retailer has ordered // DIVISION w/ NOT EXISTS
+SELECT w1.wineID
+FROM WineB w1
+WHERE NOT EXISTS(
+  SELECT w.wineID FROM WineB w, OrderReceived o1
+  WHERE NOT EXISTS (
+    SELECT o.wineID, o.retailer
+    FROM OrderReceived o
+    WHERE w.wineID = o.wineID
+      AND o1.retailer = o.retailer
+  )
+  AND w1.wineID=w.wineID
+)
 LIMIT 3;
 
 --figure out best transportation mode by comparing actual and expected delivery dates
