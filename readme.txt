@@ -13,3 +13,6 @@ password: 222
 GeneralManager:
 username: Jenny J
 password: 011
+
+
+Please save this project in root directory of htdocs folder.
